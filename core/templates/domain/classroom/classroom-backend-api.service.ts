@@ -22,6 +22,8 @@ import { Injectable } from '@angular/core';
 
 import { ClassroomDomainConstants } from
   'domain/classroom/classroom-domain.constants';
+import { ObjectKeysCaseChangeService } from
+  'services/object-keys-case-change.service';
 import { TopicSummaryObjectFactory } from
   'domain/topic/TopicSummaryObjectFactory';
 import { UrlInterpolationService } from
@@ -39,6 +41,7 @@ export class ClassroomBackendApiService {
   constructor(
     private urlInterpolationService: UrlInterpolationService,
     private http: HttpClient,
+    private objectKeysCaseChangeService: ObjectKeysCaseChangeService,
     private topicSummaryObjectFactory: TopicSummaryObjectFactory
   ) {}
 
@@ -53,6 +56,8 @@ export class ClassroomBackendApiService {
     this.http.get(classroomDataUrl).toPromise().then((data: any) => {
       this.topicSummaryObjects = data.topic_summary_dicts.map(
         (summaryDict) => {
+          summaryDict = this.objectKeysCaseChangeService.snakeToCamel(
+            summaryDict);
           return this.topicSummaryObjectFactory.createFromBackendDict(
             summaryDict);
         }

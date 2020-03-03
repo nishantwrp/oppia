@@ -24,7 +24,7 @@ import { ClassroomDomainConstants } from
   'domain/classroom/classroom-domain.constants';
 import { ObjectKeysCaseChangeService } from
   'services/object-keys-case-change.service';
-import { TopicSummaryObjectFactory } from
+import { TopicSummaryObjectFactory, TopicSummary} from
   'domain/topic/TopicSummaryObjectFactory';
 import { UrlInterpolationService } from
   'domain/utilities/url-interpolation.service';
@@ -33,11 +33,7 @@ import { UrlInterpolationService } from
   providedIn: 'root'
 })
 export class ClassroomBackendApiService {
-  // TODO(#7176): Replace 'any' with the exact type. This has been kept as
-  // 'any' because 'subtopicDataBackendDict' is a dict with underscore_cased
-  // keys which give tslint errors against underscore_casing in favor of
-  // camelCasing.
-  topicSummaryObjects: any = null;
+  topicSummaryObjects: TopicSummary[] = null;
   constructor(
     private urlInterpolationService: UrlInterpolationService,
     private http: HttpClient,

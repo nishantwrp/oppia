@@ -25,8 +25,6 @@ import { IWarning, baseInteractionValidationService } from
   'interactions/base-interaction-validation.service';
 import { Outcome } from
   'domain/exploration/OutcomeObjectFactory';
-import { TypeService } from
-  'services/type.service';
 
 import { AppConstants } from 'app.constants';
 
@@ -36,8 +34,7 @@ import { AppConstants } from 'app.constants';
 export class DragAndDropSortInputValidationService {
   constructor(
       private baseInteractionValidationServiceInstance:
-        baseInteractionValidationService,
-      private typeService: TypeService) {}
+        baseInteractionValidationService) {}
 
   // TODO(#7176): Replace 'any' with the exact type. This has been kept as
   // 'any' because 'customizationArgs' is a dict with possible underscore_cased
@@ -153,8 +150,7 @@ export class DragAndDropSortInputValidationService {
             break;
           case 'IsEqualToOrdering':
           case 'IsEqualToOrderingWithOneItemAtIncorrectPosition':
-            for (var k = 0; k < this.typeService.getStringType(
-              inputs.x).length; k++) {
+            for (var k = 0; k < inputs.x.length; k++) {
               if (inputs.x[k].length === 0) {
                 areAnyItemsEmpty = true;
               } else {

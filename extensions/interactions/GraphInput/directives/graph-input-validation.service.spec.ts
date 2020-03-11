@@ -27,6 +27,8 @@ import { GraphInputValidationService } from
 import { Outcome, OutcomeObjectFactory } from
   'domain/exploration/OutcomeObjectFactory';
 import { RuleObjectFactory } from 'domain/exploration/RuleObjectFactory';
+import { RuleInputsTypeFactory } from
+  'domain/exploration/RuleInputsTypeFactory';
 
 import { AppConstants } from 'app.constants';
 
@@ -38,7 +40,7 @@ describe('GraphInputValidationService', () => {
   let currentState: string, customizationArguments: any;
   let answerGroups: AnswerGroup[], goodDefaultOutcome: Outcome;
   let oof: OutcomeObjectFactory, agof: AnswerGroupObjectFactory;
-  let rof: RuleObjectFactory;
+  let rof: RuleObjectFactory, ritf: RuleInputsTypeFactory;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -50,6 +52,7 @@ describe('GraphInputValidationService', () => {
     oof = TestBed.get(OutcomeObjectFactory);
     agof = TestBed.get(AnswerGroupObjectFactory);
     rof = TestBed.get(RuleObjectFactory);
+    ritf = new RuleInputsTypeFactory();
     currentState = 'First State';
     goodDefaultOutcome = oof.createFromBackendDict({
       dest: 'Second State',
@@ -134,9 +137,12 @@ describe('GraphInputValidationService', () => {
   it('The graph used in the rule x in group y exceeds supported maximum ' +
     'number of vertices of 10 for isomorphism check.',
   () => {
-    answerGroups[0].rules[0].inputs.g.vertices = new Array(11);
-    answerGroups[0].rules[1].inputs.g.vertices = new Array(11);
-    answerGroups[1].rules[0].inputs.g.vertices = new Array(11);
+    ritf.graphDictInstance(
+      answerGroups[0].rules[0].inputs.g).vertices = new Array(11);
+    ritf.graphDictInstance(
+      answerGroups[0].rules[1].inputs.g).vertices = new Array(11);
+    ritf.graphDictInstance(
+      answerGroups[1].rules[0].inputs.g).vertices = new Array(11);
     var warnings = validatorService.getAllWarnings(
       currentState, customizationArguments, answerGroups,
       goodDefaultOutcome);

@@ -24,7 +24,7 @@ import { downgradeInjectable } from '@angular/upgrade/static';
 
 import { UtilsService } from 'services/utils.service';
 
-interface Note {
+export interface Note {
   readableNoteName: string,
   noteDuration: {
     num: number,

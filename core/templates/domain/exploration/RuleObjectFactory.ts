@@ -20,13 +20,12 @@
 import { downgradeInjectable } from '@angular/upgrade/static';
 import { Injectable } from '@angular/core';
 
+import { RuleInputs } from 'domain/exploration/RuleInputsTypeFactory';
+
 export class Rule {
   type: string;
-  // TODO(#7165): Replace 'any' with the exact type. This has been typed
-  // as 'any' since 'inputs' is a complex object having varying types. A general
-  // type needs to be found.
-  inputs: any;
-  constructor(type: string, inputs: any) {
+  inputs: RuleInputs;
+  constructor(type: string, inputs: RuleInputs) {
     this.type = type;
     this.inputs = inputs;
   }
@@ -45,7 +44,7 @@ export class Rule {
   providedIn: 'root'
 })
 export class RuleObjectFactory {
-  createNew(type: string, inputs: any): Rule {
+  createNew(type: string, inputs: RuleInputs): Rule {
     return new Rule(type, inputs);
   }
   // TODO(#7176): Replace 'any' with the exact type. This has been kept as

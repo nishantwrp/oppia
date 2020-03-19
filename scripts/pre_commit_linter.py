@@ -508,6 +508,9 @@ BAD_PATTERNS_MAP = {
     '.py': BAD_PATTERNS_PYTHON_REGEXP
 }
 
+EXCLUDED_FILES_ANY_TYPE_CHECK = [
+]
+
 REQUIRED_STRINGS_CONSTANTS = {
     'DEV_MODE: true': {
         'message': 'Please set the DEV_MODE variable in constants.ts'
@@ -3109,6 +3112,47 @@ def _join_linting_process(linting_processes, result_queues, result_stdouts):
     return summary_messages
 
 
+def _check_any_type(verbose_mode_enabled):
+    """Checks if the type of any variable is declared as any
+    in typescript files.
+    """
+
+    if verbose_mode_enabled:
+        python_utils.PRINT('Starting any type check')
+        python_utils.PRINT('----------------------------------------')
+
+    files_to_check = _FILES['.ts']
+    pattern_to_match = r':\ *\n*\ *any'
+
+    with _redirect_stdout(_TARGET_STDOUT):
+        failed = False
+        summary_messages = []
+
+        for file_path in files_to_check:
+            if file_path in EXCLUDED_FILES_ANY_TYPE_CHECK:
+                continue
+
+            file_content = FILE_CACHE.read(file_path)
+            if re.findall(pattern_to_match, file_content):
+                failed = True
+                python_utils.PRINT(
+                    '%s --> ANY type found in this file' % file_path)
+                python_utils.PRINT('')
+
+        if failed:
+            summary_message = (
+                '%s ANY type check failed' % _MESSAGE_TYPE_FAILED)
+        else:
+            summary_message = (
+                '%s ANY type check passed' % _MESSAGE_TYPE_SUCCESS)
+
+        summary_messages.append(summary_message)
+        python_utils.PRINT(summary_message)
+        python_utils.PRINT('')
+
+    return summary_messages
+
+
 def main(args=None):
     """Main method for pre commit linter script that lints Python, JavaScript,
     HTML, and CSS files.
@@ -3131,13 +3175,14 @@ def main(args=None):
         _FILES['.js'], _FILES['.ts'], _FILES['.py'], _FILES['.html'],
         _FILES['.css'], verbose_mode_enabled)
     code_owner_message = _check_codeowner_file(verbose_mode_enabled)
+    any_type_message = _check_any_type(verbose_mode_enabled)
     # Pylint requires to provide paramter "this_bases" and "d", guess due to
     # meta class.
     js_ts_lint_checks_manager = JsTsLintChecksManager( # pylint: disable=no-value-for-parameter
         verbose_mode_enabled)
     other_lint_checks_manager = OtherLintChecksManager(   # pylint: disable=no-value-for-parameter
         verbose_mode_enabled)
-    all_messages = code_owner_message
+    all_messages = code_owner_message + any_type_message
     js_message = js_ts_lint_checks_manager.perform_all_lint_checks()
     other_messages = other_lint_checks_manager.perform_all_lint_checks()
     all_messages += js_message + other_messages

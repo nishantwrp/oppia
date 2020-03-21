@@ -19,6 +19,7 @@
 
 // The module needs to be loaded before everything else since it defines the
 // main module the elements are attached to.
+require('third_party.import.ts');
 require('pages/exploration-editor-page/exploration-editor-page.module.ts');
 require('App.ts');
 

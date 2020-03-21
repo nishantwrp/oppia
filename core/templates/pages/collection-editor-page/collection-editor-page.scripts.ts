@@ -18,6 +18,7 @@
 
 // The module needs to be loaded before everything else since it defines the
 // main module the elements are attached to.
+require('third_party.import.ts');
 require('pages/collection-editor-page/collection-editor-page.module.ts');
 require('App.ts');
 

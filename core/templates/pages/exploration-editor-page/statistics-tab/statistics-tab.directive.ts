@@ -94,7 +94,6 @@ angular.module('oppia').directive('statisticsTab', [
                 var states = StatesObjectFactory.createFromBackendDict(
                   statesDict);
                 var initStateName = response.exploration.init_state_name;
-
                 ctrl.playthroughsAreAvailable =
                   ExplorationFeaturesService.isPlaythroughRecordingEnabled() &&
                   !ExplorationFeaturesService.isImprovementsTabEnabled();

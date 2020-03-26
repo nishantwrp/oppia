@@ -3122,7 +3122,7 @@ def _check_any_type(verbose_mode_enabled):
         python_utils.PRINT('----------------------------------------')
 
     files_to_check = _FILES['.ts']
-    pattern_to_match = r':\ *\n*\ *any'
+    patterns_to_match = [r':\ *any', r'^\ *any']
 
     with _redirect_stdout(_TARGET_STDOUT):
         failed = False
@@ -3133,11 +3133,20 @@ def _check_any_type(verbose_mode_enabled):
                 continue
 
             file_content = FILE_CACHE.read(file_path)
-            if re.findall(pattern_to_match, file_content):
-                failed = True
-                python_utils.PRINT(
-                    '%s --> ANY type found in this file' % file_path)
-                python_utils.PRINT('')
+            starts_with_type = False
+
+            for line_number, line in enumerate(file_content.split('\n')):
+                if ((starts_with_type and re.findall(
+                        patterns_to_match[1], line)) or re.findall(
+                            patterns_to_match[0], line)):
+                    failed = True
+                    python_utils.PRINT(
+                        '%s --> ANY type found in this file. Line no. %s' % (
+                            file_path, line_number + 1))
+                    python_utils.PRINT('')
+
+                if line:
+                    starts_with_type = line[len(line) - 1] == ':'
 
         if failed:
             summary_message = (

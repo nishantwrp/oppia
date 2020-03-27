@@ -16,6 +16,7 @@
  * @fileoverview Directive for the audio translation bar.
  */
 
+require('wavesurfer.import.ts');
 require(
   'components/forms/custom-forms-directives/audio-file-uploader.directive.ts');
 require('filters/format-timer.filter.ts');

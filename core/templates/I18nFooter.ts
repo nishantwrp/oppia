@@ -18,6 +18,7 @@
  * @author milagro.teruel@gmail.com (Milagro Teruel)
  */
 
+require('translate.import.ts');
 require('services/translation-file-hash-loader.service.ts');
 
 angular.module('oppia').directive('i18nFooter', [

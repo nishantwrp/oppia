@@ -16,6 +16,8 @@
  * @fileoverview Loads scripts needed for ui-codemirror.
  */
 
+import 'angular.import.ts';
+
 const CodeMirror = require('static/code-mirror-5.17.0/lib/codemirror.js');
 Object.defineProperty(window, 'CodeMirror', {
   value: CodeMirror,

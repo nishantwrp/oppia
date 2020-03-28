@@ -18,6 +18,7 @@
 
 import 'core-js/es7/reflect';
 import 'zone.js';
+import 'angular.import.ts';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { Component, NgModule, StaticProvider } from '@angular/core';

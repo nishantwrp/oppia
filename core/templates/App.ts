@@ -25,6 +25,7 @@ require('directives/focus-on.directive.ts');
 
 require('pages/Base.ts');
 
+require('jquery-ui.import.ts');
 require('service.import.ts');
 
 require('services/context.service.ts');

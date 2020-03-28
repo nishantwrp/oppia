@@ -33,7 +33,7 @@ module.exports = function(config) {
       'core/templates/**/*.template.html',
       // Any of the *.module.ts files could be used here, we use
       // about-page.module.ts because it is first alphabetically.
-      'core/templates/pages/about-page/about-page.module.ts',
+      'core/templates/pages/about-page/about-page.scripts.ts',
       // This is a file that is generated on running the run_frontend_tests.py
       // script. This generated file is a combination of all the spec files
       // since Karma is unable to run tests on multiple files due to some
@@ -154,7 +154,13 @@ module.exports = function(config) {
           'node_modules',
           'third_party',
         ],
-        extensions: ['.ts', '.js', '.json', '.html', '.svg', '.png']
+        extensions: ['.ts', '.js', '.json', '.html', '.svg', '.png'],
+        alias: {
+          '@angular/upgrade/static': (
+            '@angular/upgrade/bundles/upgrade-static.umd.js'),
+          messageformat: 'static/messageformat-2.0.5/messageformat.js',
+          'popper.js': 'static/popperJs-1.15.0/dist/umd/popper.js'
+        }
       },
       devtool: 'inline-cheap-source-map',
       module: {

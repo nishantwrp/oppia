@@ -22,6 +22,7 @@ require('pages/exploration-player-page/exploration-player-page.module.ts');
 require('App.ts');
 require('third-party-imports/guppy.import.ts');
 require('third-party-imports/math-expressions.import.ts');
+require('third-party-imports/skulpt.import.ts');
 require('pages/exploration-player-page/exploration-player-page.controller.ts');
 require(
   'pages/exploration-player-page/layout-directives/' +

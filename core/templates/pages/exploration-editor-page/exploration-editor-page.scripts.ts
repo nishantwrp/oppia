@@ -22,6 +22,7 @@
 require('pages/exploration-editor-page/exploration-editor-page.module.ts');
 require('App.ts');
 require('third-party-imports/guppy.import.ts');
+require('third-party-imports/math-expressions.import.ts');
 require(
   'pages/exploration-editor-page/editor-navigation/' +
   'editor-navbar-breadcrumb.directive.ts');

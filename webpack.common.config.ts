@@ -665,13 +665,10 @@ module.exports = {
           loader: 'cache-loader'
         },
         {
-          loader: 'thread-loader'
-        },
-        {
           loader: 'ts-loader',
           options: {
             // Typescript checks do the type checking.
-            happyPackMode: true
+            transpileOnly: true
           }
         }
       ]

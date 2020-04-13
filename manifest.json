@@ -200,10 +200,7 @@
         "downloadFormat": "zip",
         "url": "https://github.com/Foxandxss/angular-toastr/archive/1.7.0.zip",
         "rootDirPrefix": "angular-toastr-",
-        "targetDirPrefix": "angular-toastr-",
-        "bundle": {
-          "css": ["dist/angular-toastr.min.css"]
-        }
+        "targetDirPrefix": "angular-toastr-"
       },
       "popperJs": {
         "version": "1.15.0",
@@ -236,20 +233,14 @@
         "url": "https://github.com/angular/bower-material/archive/v1.1.19.zip",
         "rootDirPrefix": "bower-material-",
         "targetDirPrefix": "bower-material-",
-        "files": ["angular-material.css", "angular-material.js"],
-        "bundle": {
-          "css": ["angular-material.css"]
-        }
+        "files": ["angular-material.css", "angular-material.js"]
       },
       "codemirror": {
         "version": "5.17.0",
         "downloadFormat": "zip",
         "url": "https://github.com/codemirror/CodeMirror/archive/5.17.0.zip",
         "rootDirPrefix": "CodeMirror-",
-        "targetDirPrefix": "code-mirror-",
-        "bundle": {
-          "css": ["lib/codemirror.css", "addon/merge/merge.css"]
-        }
+        "targetDirPrefix": "code-mirror-"
       },
       "diff-match-patch": {
         "version": "1.0.0",
@@ -265,12 +256,6 @@
         "rootDir": "fontawesome-free-5.9.0-web",
         "targetDir": "fontawesome-free-5.9.0-web",
         "bundle": {
-          "css": [
-            "css/fontawesome.min.css",
-            "css/brands.min.css",
-            "css/regular.min.css",
-            "css/solid.min.css"
-          ],
           "fontsPath": "webfonts"
         }
       },
@@ -370,20 +355,14 @@
         "downloadFormat": "zip",
         "url": "https://github.com/oppia/ng-joyride/archive/b117e019582433995393f81e2006a6bc36ca1cf2.zip",
         "rootDirPrefix": "ng-joyride-",
-        "targetDir": "ng-joyride-b117e0",
-        "bundle": {
-          "css": ["ng-joyride.css"]
-        }
+        "targetDir": "ng-joyride-b117e0"
       },
       "ngImageCrop": {
         "version": "0.3.2",
         "downloadFormat": "zip",
         "url": "https://github.com/alexk111/ngImgCrop/archive/v0.3.2.zip",
         "rootDirPrefix": "ngImgCrop-",
-        "targetDirPrefix": "ng-img-crop-",
-        "bundle": {
-          "css": ["compile/minified/ng-img-crop.css"]
-        }
+        "targetDirPrefix": "ng-img-crop-"
       },
       "ngInfiniteScroll": {
         "version": "1.0.0",
@@ -398,10 +377,7 @@
         "downloadFormat": "zip",
         "url": "https://github.com/select2/select2/archive/4.0.3.zip",
         "rootDirPrefix": "select2-",
-        "targetDirPrefix": "select2-",
-        "bundle": {
-          "css": ["dist/css/select2.css"]
-        }
+        "targetDirPrefix": "select2-"
       },
       "ckeditor": {
         "version": "4.12.1",
@@ -451,10 +427,7 @@
         "downloadFormat": "zip",
         "url": "https://github.com/angular-ui-tree/angular-ui-tree/archive/master.zip",
         "rootDirPrefix": "angular-ui-tree-master",
-        "targetDirPrefix": "ui-tree-2.22.6",
-        "bundle": {
-          "css": ["dist/angular-ui-tree.min.css"]
-        }
+        "targetDirPrefix": "ui-tree-2.22.6"
       },
       "uiUtils": {
         "version": "0.1.1",

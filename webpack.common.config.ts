@@ -690,6 +690,7 @@ module.exports = {
       include: [
         path.resolve(__dirname, 'extensions'),
         path.resolve(__dirname, 'node_modules'),
+        path.resolve(__dirname, 'third_party'),
       ],
       use: ['style-loader', 'css-loader']
     }]

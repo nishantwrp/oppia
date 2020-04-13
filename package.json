@@ -103,6 +103,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "angular": "1.7.9",
     "angular-cookies": "1.7.9",
     "angular-route": "1.7.9",

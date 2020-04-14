@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 require('static/bower-angular-translate-2.18.1/angular-translate.min.js');
 require('static/bower-angular-translate-loader-static-files-2.18.1/angular-translate-loader-static-files.min.js');
 require('static/bower-angular-translate-storage-cookie-2.18.1/angular-translate-storage-cookie.min.js');

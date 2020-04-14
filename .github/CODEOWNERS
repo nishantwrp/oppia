@@ -540,6 +540,13 @@
 
 # Typings.
 /typings @ankita240796
+/core/templates/headroom.import.ts @nishantwrp
+/core/templates/select2.import.ts @nishantwrp
+/core/templates/service.import.ts @nishantwrp
+/core/templates/angular.import.ts @nishantwrp
+/core/templates/jquery-ui.import.ts @nishantwrp
+/core/templates/translate.import.ts @nishantwrp
+/core/templates/wavesurfer.import.ts @nishantwrp
 
 
 # User Data Takeout.

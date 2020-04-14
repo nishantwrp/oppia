@@ -15,6 +15,7 @@ require('static/ui-bootstrap-2.5.0/ui-bootstrap-tpls-2.5.0.js');
 require('static/bower-material-1.1.19/angular-material.js');
 require('static/nginfinitescroll-1.0.0/ng-infinite-scroll.min.js');
 require('static/ui-utils-0.1.1/ui-utils.js');
+// eslint-disable-next-line max-len
 require('static/angular-drag-and-drop-lists-2.1.0/angular-drag-and-drop-lists.min.js');
 window.math = require('static/math-js-5.10.3/math.js');
 require('headroom.import.ts');
@@ -26,11 +27,6 @@ require('static/bower-material-1.1.19/angular-material.css');
 require('static/ng-joyride-b117e0/ng-joyride.css');
 require('static/ui-tree-2.22.6/dist/angular-ui-tree.min.css');
 
-// Font Awesome Libraries
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/brands';
 
 // Codemirror CSS
 require('static/code-mirror-5.17.0/lib/codemirror.css');

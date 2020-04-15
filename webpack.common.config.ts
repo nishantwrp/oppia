@@ -47,7 +47,9 @@ module.exports = {
     extensions: ['.ts', '.js', '.json', '.html', '.svg', '.png'],
     alias: {
       '@angular/upgrade/static': (
-        '@angular/upgrade/bundles/upgrade-static.umd.js')
+        '@angular/upgrade/bundles/upgrade-static.umd.js'),
+      messageformat: 'static/messageformat-2.0.5/messageformat.js',
+      'popper.js': 'static/popperJs-1.15.0/dist/umd/popper.js'
     }
   },
   entry: {
@@ -689,6 +691,9 @@ module.exports = {
       ],
       use: ['style-loader', 'css-loader']
     }]
+  },
+  externals: {
+    jquery: 'jQuery'
   },
   optimization: {
     runtimeChunk: 'single',

@@ -1,10 +1,5 @@
 var argv = require('yargs').argv;
 var path = require('path');
-var generatedJs = 'third_party/generated/js/third_party.js';
-if (argv.prodEnv) {
-  generatedJs = (
-    'third_party/generated/js/third_party.min.js');
-}
 
 module.exports = function(config) {
   config.set({
@@ -23,7 +18,6 @@ module.exports = function(config) {
       'third_party/static/headroom-js-0.9.4/angular.headroom.min.js',
       'third_party/static/math-expressions-1.7.0/math-expressions.js',
       'third_party/static/ckeditor-4.12.1/ckeditor.js',
-      generatedJs,
       // Note that unexpected errors occur ("Cannot read property 'num' of
       // undefined" in MusicNotesInput.js) if the order of core/templates/...
       // and extensions/... are switched. The test framework may be flaky.
@@ -113,7 +107,7 @@ module.exports = function(config) {
           '--no-sandbox',
           '--disable-gpu',
           '--disable-dev-shm-usage',
-          '--js-flags=--max-old-space-size=2048'
+          '--js-flags=--max-old-space-size=4096'
         ]
       }
     },
@@ -153,7 +147,11 @@ module.exports = function(config) {
           'node_modules',
           'third_party',
         ],
-        extensions: ['.ts', '.js', '.json', '.html', '.svg', '.png']
+        extensions: ['.ts', '.js', '.json', '.html', '.svg', '.png'],
+        alias: {
+          messageformat: 'static/messageformat-2.0.5/messageformat.js',
+          'popper.js': 'static/popperJs-1.15.0/dist/umd/popper.js'
+        }
       },
       devtool: 'inline-cheap-source-map',
       module: {

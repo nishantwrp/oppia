@@ -60,7 +60,7 @@ require('domain/utilities/url-interpolation.service.ts');
 
 require('app.constants.ajs.ts');
 
-require('generated/js/third_party.js');
+require('generated/js/third_party.min.js');
 
 require('google-analytics.initializer.ts');
 

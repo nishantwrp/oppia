@@ -63,6 +63,11 @@ require('app.constants.ajs.ts');
 require('generated/js/third_party.min.js');
 require('generated/css/third_party.min.css');
 
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 require('google-analytics.initializer.ts');
 
 // The following file uses constants in app.constants.ts and hence needs to be

@@ -690,11 +690,7 @@ module.exports = {
     },
     {
       test: /(directive|component)\.html$/,
-      loader: 'html-loader',
-      options: {
-        attributes: false,
-        minimize: htmlMinifyConfig,
-      },
+      loader: 'html-loader'
     },
     {
       test: /\.css$/,

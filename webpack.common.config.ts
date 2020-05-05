@@ -667,16 +667,10 @@ module.exports = {
       ],
       use: [
         {
-          loader: 'cache-loader'
-        },
-        {
-          loader: 'thread-loader'
-        },
-        {
           loader: 'ts-loader',
           options: {
             // Typescript checks do the type checking.
-            happyPackMode: true
+            transpileOnly: true
           }
         }
       ]
@@ -686,11 +680,11 @@ module.exports = {
         include: /.html$/,
         exclude: /directive\.html$/
       },
-      loader: ['cache-loader', 'underscore-template-loader']
+      loader: ['underscore-template-loader']
     },
     {
       test: /directive\.html$/,
-      loader: ['cache-loader', 'html-loader']
+      loader: ['html-loader']
     },
     {
       test: /\.css$/,
@@ -698,7 +692,7 @@ module.exports = {
         path.resolve(__dirname, 'extensions'),
         path.resolve(__dirname, 'node_modules'),
       ],
-      use: ['cache-loader', 'style-loader', 'css-loader']
+      use: ['style-loader', 'css-loader']
     }]
   },
   optimization: {

@@ -26,9 +26,24 @@ import { UrlInterpolationService } from
 import { WindowRef } from
   'services/contextual/window-ref.service.ts';
 
+import { LoggerService } from
+  'services/contextual/logger.service';
+import { AlertsService } from
+  'services/alerts.service';
+import { UrlService } from
+  'services/contextual/url.service';
+import { UtilsService } from
+  'services/utils.service';
+
+const urlInterpolationService = new UrlInterpolationService(
+  new AlertsService(new LoggerService()), new UrlService(new WindowRef()),
+  new UtilsService()
+);
+
 @Component({
   selector: 'about-page',
-  template: require('./about-page.component.html'),
+  templateUrl: urlInterpolationService.getDirectiveTemplateUrl(
+    '/pages/about-page/about-page.component.html'),
   styleUrls: []
 })
 export class AboutPageComponent implements OnInit {

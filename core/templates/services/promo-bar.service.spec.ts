@@ -42,8 +42,8 @@ describe('Promo bar Service', function() {
   it('should return promo bar data', function() {
     var requestUrl = '/promo_bar_handler';
     $httpBackend.expect('GET', requestUrl).respond(200, {
-      promo_bar_enabled: true,
-      promo_bar_message: 'test message'
+      promoBarEnabled: true,
+      promoBarMessage: 'test message'
     });
 
     PromoBarService.getPromoBarData().then(function(data) {

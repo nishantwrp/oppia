@@ -64,35 +64,35 @@ describe('Editable exploration backend API service', function() {
 
     // Sample exploration object returnable from the backend
     sampleDataResults = {
-      exploration_id: '0',
-      init_state_name: 'Introduction',
-      language_code: 'en',
+      explorationId: '0',
+      initStateName: 'Introduction',
+      languageCode: 'en',
       states: {
         Introduction: {
-          param_changes: [],
+          paramChanges: [],
           content: {
             html: '',
-            audio_translations: {}
+            audioTranslations: {}
           },
-          unresolved_answers: {},
+          unresolvedAnswers: {},
           interaction: {
-            customization_args: {},
-            answer_groups: [],
-            default_outcome: {
-              param_changes: [],
+            customizationArgs: {},
+            answerGroups: [],
+            defaultOutcome: {
+              paramChanges: [],
               dest: 'Introduction',
               feedback: {
                 html: '',
-                audio_translations: {}
+                audioTranslations: {}
               }
             },
-            confirmed_unclassified_answers: [],
+            confirmedUnclassifiedAnswers: [],
             id: null
           }
         }
       },
       username: 'test',
-      user_email: 'test@example.com',
+      userEmail: 'test@example.com',
       version: 1
     };
   }));

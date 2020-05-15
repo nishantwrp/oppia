@@ -48,7 +48,7 @@ describe('Signup controller', function() {
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('/signuphandler/data').respond({
         username: 'myUsername',
-        has_agreed_to_latest_terms: false
+        hasAgreedToLatestTerms: false
       });
       rootScope = $rootScope;
       CsrfService = $injector.get('CsrfTokenService');

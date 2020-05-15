@@ -294,8 +294,8 @@ angular.module('oppia').directive('explorationEditorPage', [
               ctrl.explorationInitStateNameService = (
                 ExplorationInitStateNameService);
 
-              ctrl.currentUserIsAdmin = explorationData.is_admin;
-              ctrl.currentUserIsModerator = explorationData.is_moderator;
+              ctrl.currentUserIsAdmin = explorationData.isAdmin;
+              ctrl.currentUserIsModerator = explorationData.isModerator;
 
               ctrl.currentUser = explorationData.user;
               ctrl.currentVersion = explorationData.version;

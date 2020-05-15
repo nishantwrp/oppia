@@ -78,7 +78,7 @@ angular.module('oppia').directive('adminPage', ['UrlInterpolationService',
             });
             ctrl.userEmail = '';
             AdminDataService.getDataAsync().then(function(response) {
-              ctrl.userEmail = response.user_email;
+              ctrl.userEmail = response.userEmail;
               // TODO(#8521): Remove the use of $rootScope.$apply()
               // once the directive is migrated to angular
               $rootScope.$apply();

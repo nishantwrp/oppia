@@ -35,10 +35,10 @@ describe('Read only collection backend API service', () => {
       objective: 'To pass',
       schema_version: '1',
       nodes: [{
-        exploration_id: '0'
+        explorationId: '0'
       }],
-      next_exploration_ids: [],
-      completed_exploration_ids: []
+      nextExplorationIds: [],
+      completedExplorationIds: []
     }
   };
   beforeEach(() => {

@@ -31,8 +31,8 @@ angular.module('oppia').factory('PromoBarService', [
         if (ENABLE_PROMO_BAR) {
           return $http.get('/promo_bar_handler', {}).then(
             function(response) {
-              promoBarData.promoBarEnabled = response.data.promo_bar_enabled;
-              promoBarData.promoBarMessage = response.data.promo_bar_message;
+              promoBarData.promoBarEnabled = response.data.promoBarEnabled;
+              promoBarData.promoBarMessage = response.data.promoBarMessage;
               return promoBarData;
             }
           );

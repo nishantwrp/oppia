@@ -256,23 +256,23 @@ angular.module('oppia').directive('preferencesPage', [
             var preferencesPromise = $http.get(_PREFERENCES_DATA_URL);
             preferencesPromise.then(function(response) {
               var data = response.data;
-              ctrl.userBio = data.user_bio;
-              ctrl.subjectInterests = data.subject_interests;
-              ctrl.preferredLanguageCodes = data.preferred_language_codes;
-              ctrl.profilePictureDataUrl = data.profile_picture_data_url;
-              ctrl.defaultDashboard = data.default_dashboard;
-              ctrl.canReceiveEmailUpdates = data.can_receive_email_updates;
+              ctrl.userBio = data.userBio;
+              ctrl.subjectInterests = data.subjectInterests;
+              ctrl.preferredLanguageCodes = data.preferredLanguageCodes;
+              ctrl.profilePictureDataUrl = data.profilePictureDataUrl;
+              ctrl.defaultDashboard = data.defaultDashboard;
+              ctrl.canReceiveEmailUpdates = data.canReceiveEmailUpdates;
               ctrl.canReceiveEditorRoleEmail =
-              data.can_receive_editor_role_email;
+              data.canReceiveEditorRoleEmail;
               ctrl.canReceiveSubscriptionEmail =
-                data.can_receive_subscription_email;
+                data.canReceiveSubscriptionEmail;
               ctrl.canReceiveFeedbackMessageEmail = (
-                data.can_receive_feedback_message_email);
+                data.canReceiveFeedbackMessageEmail);
               ctrl.preferredSiteLanguageCode =
-              data.preferred_site_language_code;
+              data.preferredSiteLanguageCode;
               ctrl.preferredAudioLanguageCode =
-                data.preferred_audio_language_code;
-              ctrl.subscriptionList = data.subscription_list;
+                data.preferredAudioLanguageCode;
+              ctrl.subscriptionList = data.subscriptionList;
               ctrl.hasPageLoaded = true;
               _forceSelect2Refresh();
             }).then(null, function onError(response) {

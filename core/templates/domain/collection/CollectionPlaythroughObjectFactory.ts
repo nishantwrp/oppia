@@ -83,8 +83,8 @@ export class CollectionPlaythroughObjectFactory {
   createFromBackendObject(
       collectionPlaythroughBackendObject: any): CollectionPlaythrough {
     return new CollectionPlaythrough(
-      collectionPlaythroughBackendObject.next_exploration_id,
-      collectionPlaythroughBackendObject.completed_exploration_ids);
+      collectionPlaythroughBackendObject.nextExplorationId,
+      collectionPlaythroughBackendObject.completedExplorationIds);
   }
 
   create(

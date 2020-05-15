@@ -257,7 +257,7 @@ angular.module('oppia').directive('topNavigationBar', [
                 $http.get('/notificationshandler').then(function(response) {
                   var data = response.data;
                   if ($window.location.pathname !== '/') {
-                    ctrl.numUnseenNotifications = data.num_unseen_notifications;
+                    ctrl.numUnseenNotifications = data.numUnseenNotifications;
                     if (ctrl.numUnseenNotifications > 0) {
                       $window.document.title = (
                         '(' + ctrl.numUnseenNotifications + ') ' +

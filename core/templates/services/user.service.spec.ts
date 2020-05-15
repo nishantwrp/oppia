@@ -81,14 +81,14 @@ describe('User Service', function() {
   it('should return userInfo data', function() {
     // creating a test user for checking profile picture of user.
     var sampleUserInfoBackendObject = {
-      is_moderator: false,
-      is_admin: false,
-      is_super_admin: false,
-      is_topic_manager: false,
-      can_create_collections: true,
-      preferred_site_language_code: null,
+      isModerator: false,
+      isAdmin: false,
+      isSuperAdmin: false,
+      isTopicManager: false,
+      canCreateCollections: true,
+      preferredSiteLanguageCode: null,
       username: 'tester',
-      user_is_logged_in: true
+      userIsLoggedIn: true
     };
     $httpBackend.expect('GET', '/userinfohandler').respond(
       200, sampleUserInfoBackendObject);
@@ -123,14 +123,14 @@ describe('User Service', function() {
 
   it('should not fetch userInfo if it is was fetched before', function() {
     var sampleUserInfoBackendObject = {
-      is_moderator: false,
-      is_admin: false,
-      is_super_admin: false,
-      is_topic_manager: false,
-      can_create_collections: true,
-      preferred_site_language_code: null,
+      isModerator: false,
+      isAdmin: false,
+      isSuperAdmin: false,
+      isTopicManager: false,
+      canCreateCollections: true,
+      preferredSiteLanguageCode: null,
       username: 'tester',
-      user_is_logged_in: true
+      userIsLoggedIn: true
     };
     $httpBackend.expect('GET', '/userinfohandler').respond(
       200, sampleUserInfoBackendObject);
@@ -149,14 +149,14 @@ describe('User Service', function() {
 
   it('should return new userInfo data if user is not logged', function() {
     var sampleUserInfoBackendObject = {
-      is_moderator: false,
-      is_admin: false,
-      is_super_admin: false,
-      is_topic_manager: false,
-      can_create_collections: true,
-      preferred_site_language_code: null,
+      isModerator: false,
+      isAdmin: false,
+      isSuperAdmin: false,
+      isTopicManager: false,
+      canCreateCollections: true,
+      preferredSiteLanguageCode: null,
       username: 'tester',
-      user_is_logged_in: false
+      userIsLoggedIn: true
     };
     $httpBackend.expect('GET', '/userinfohandler').respond(
       200, sampleUserInfoBackendObject);
@@ -172,19 +172,19 @@ describe('User Service', function() {
     var requestUrl = '/preferenceshandler/profile_picture';
     // Create a test user for checking profile picture of user.
     var sampleUserInfoBackendObject = {
-      is_moderator: false,
-      is_admin: false,
-      is_super_admin: false,
-      is_topic_manager: false,
-      can_create_collections: true,
-      preferred_site_language_code: null,
+      isModerator: false,
+      isAdmin: false,
+      isSuperAdmin: false,
+      isTopicManager: false,
+      canCreateCollections: true,
+      preferredSiteLanguageCode: null,
       username: 'tester',
-      user_is_logged_in: true
+      userIsLoggedIn: true
     };
     $httpBackend.expect('GET', '/userinfohandler').respond(
       200, sampleUserInfoBackendObject);
     $httpBackend.expect('GET', requestUrl).respond(
-      200, {profile_picture_data_url: 'image data'});
+      200, {profilePictureDataUrl: 'image data'});
 
     UserService.getProfileImageDataUrlAsync().then(function(dataUrl) {
       expect(dataUrl).toBe('image data');
@@ -205,14 +205,14 @@ describe('User Service', function() {
   it('should return the default profile image path when user is not logged',
     function() {
       var sampleUserInfoBackendObject = {
-        is_moderator: false,
-        is_admin: false,
-        is_super_admin: false,
-        is_topic_manager: false,
-        can_create_collections: true,
-        preferred_site_language_code: null,
+        isModerator: false,
+        isAdmin: false,
+        isSuperAdmin: false,
+        isTopicManager: false,
+        canCreateCollections: true,
+        preferredSiteLanguageCode: null,
         username: 'tester',
-        user_is_logged_in: false
+        userIsLoggedIn: true
       };
       $httpBackend.expect('GET', '/userinfohandler').respond(
         200, sampleUserInfoBackendObject);
@@ -228,7 +228,7 @@ describe('User Service', function() {
     var loginUrl = '/login';
     var currentUrl = 'home';
     $httpBackend.expect('GET', '/url_handler?current_url=' + currentUrl)
-      .respond({login_url: loginUrl});
+      .respond({loginUrl: loginUrl});
 
     UserService.getLoginUrlAsync().then(function(dataUrl) {
       expect(dataUrl).toBe(loginUrl);
@@ -239,11 +239,11 @@ describe('User Service', function() {
   it('should set a profile image data url', function() {
     var newProfileImageDataurl = '/avatar/x.png';
     $httpBackend.expect('PUT', '/preferenceshandler/data')
-      .respond({profile_picture_data_url: newProfileImageDataurl});
+      .respond({profilePictureDataUrl: newProfileImageDataurl});
 
     UserService.setProfileImageDataUrlAsync(newProfileImageDataurl).then(
       function(response) {
-        expect(response.data.profile_picture_data_url).toBe(
+        expect(response.data.profilePictureDataUrl).toBe(
           newProfileImageDataurl);
       }
     );

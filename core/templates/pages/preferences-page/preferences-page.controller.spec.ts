@@ -61,9 +61,9 @@ describe('Preferences Controller', function() {
       $componentController = _$componentController_;
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('/preferenceshandler/data').respond({
-        can_receive_email_updates: false,
-        can_receive_editor_role_email: true,
-        can_receive_feedback_message_email: true
+        canReceiveEmailUpdates: false,
+        canReceiveEditorRoleEmail: true,
+        canReceiveFeedbackMessageEmail: true
       });
 
       mockAlertsService = {};

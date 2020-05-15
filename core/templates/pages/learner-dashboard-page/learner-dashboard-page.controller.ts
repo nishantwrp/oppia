@@ -516,48 +516,48 @@ angular.module('oppia').directive('learnerDashboardPage', [
                 ctrl.startIncompleteCollectionIndex = 0;
                 ctrl.startCompletedCollectionIndex = 0;
                 ctrl.completedExplorationsList = (
-                  responseData.completed_explorations_list
+                  responseData.completedExplorationsList
                 );
                 ctrl.completedCollectionsList = (
-                  responseData.completed_collections_list
+                  responseData.completedCollectionsList
                 );
                 ctrl.incompleteExplorationsList = (
-                  responseData.incomplete_explorations_list
+                  responseData.incompleteExplorationsList
                 );
                 ctrl.incompleteCollectionsList = (
-                  responseData.incomplete_collections_list
+                  responseData.incompleteCollectionsList
                 );
                 ctrl.subscriptionsList = (
-                  responseData.subscription_list
+                  responseData.subscriptionList
                 );
                 ctrl.numberNonexistentIncompleteExplorations = (
-                  responseData.number_of_nonexistent_activities
-                    .incomplete_explorations
+                  responseData.numberOfNonexistentActivities
+                    .incompleteExplorations
                 );
                 ctrl.numberNonexistentIncompleteCollections = (
-                  responseData.number_of_nonexistent_activities
-                    .incomplete_collections
+                  responseData.numberOfNonexistentActivities
+                    .incompleteCollections
                 );
                 ctrl.numberNonexistentCompletedExplorations = (
-                  responseData.number_of_nonexistent_activities
-                    .completed_explorations
+                  responseData.numberOfNonexistentActivities
+                    .completedExplorations
                 );
                 ctrl.numberNonexistentCompletedCollections = (
-                  responseData.number_of_nonexistent_activities
-                    .completed_collections
+                  responseData.numberOfNonexistentActivities
+                    .completedCollections
                 );
                 ctrl.numberNonexistentExplorationsFromPlaylist = (
-                  responseData.number_of_nonexistent_activities
-                    .exploration_playlist
+                  responseData.numberOfNonexistentActivities
+                    .explorationPlaylist
                 );
                 ctrl.numberNonexistentCollectionsFromPlaylist = (
-                  responseData.number_of_nonexistent_activities
-                    .collection_playlist
+                  responseData.numberOfNonexistentActivities
+                    .collectionPlaylist
                 );
                 ctrl.completedToIncompleteCollections = (
-                  responseData.completed_to_incomplete_collections
+                  responseData.completedToIncompleteCollections
                 );
-                var threadSummaryDicts = responseData.thread_summaries;
+                var threadSummaryDicts = responseData.threadSummaries;
                 ctrl.threadSummaries = [];
                 for (
                   var index = 0; index < threadSummaryDicts.length; index++) {
@@ -566,9 +566,9 @@ angular.module('oppia').directive('learnerDashboardPage', [
                       threadSummaryDicts[index]));
                 }
                 ctrl.numberOfUnreadThreads =
-                  responseData.number_of_unread_threads;
-                ctrl.explorationPlaylist = responseData.exploration_playlist;
-                ctrl.collectionPlaylist = responseData.collection_playlist;
+                  responseData.numberOfUnreadThreads;
+                ctrl.explorationPlaylist = responseData.explorationPlaylist;
+                ctrl.collectionPlaylist = responseData.collectionPlaylist;
                 ctrl.activeSection =
                   LEARNER_DASHBOARD_SECTION_I18N_IDS.INCOMPLETE;
                 ctrl.activeSubsection = (

@@ -24,6 +24,7 @@ import http.cookies
 import json
 import logging
 import os
+import re
 import sys
 import time
 import traceback
@@ -283,6 +284,49 @@ class BaseHandler(webapp2.RequestHandler):
         """
         raise self.PageNotFoundException
 
+    def camelize_string(self, string):
+        """Changes the case of string from snake_case to camelCase.
+
+        Args:
+            string: str. The string whose case is to changed to camelCase
+            from snake_case.
+
+        Returns:
+            The string after changing the case of input string to camelCase.
+        """
+
+        snake_case_re = re.compile(r'([^\-_\s])[\-_\s]+([^\-_\s])')
+
+        return ''.join([
+            string[0].lower() if not string[:2].isupper() else string[0],
+            snake_case_re.sub(
+                lambda m: m.group(1) + m.group(2).upper(), string[1:]),
+        ])
+
+    def camelize(self, obj):
+        """Changes the case of the keys of dict from snake_case to camelCase.
+
+        Args:
+            obj: any object. If the object is a dict it changes
+            the case of it's dicts else if it is a list it iterates over all
+            the items in the list and changes the case of keys to camelCase
+            if it finds another dict. However, if the object is neither a dict
+            nor a list it returns the object.
+
+        Returns:
+            The object after changing the case of keys in the dictionaries
+            in the object to camelCase.
+        """
+
+        if isinstance(obj, dict):
+            return {
+                self.camelize_string(k):
+                self.camelize(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [self.camelize(v) for v in obj]
+
+        return obj
+
     def render_json(self, values):
         """Prepares JSON response to be sent to the client.
 
@@ -296,8 +340,13 @@ class BaseHandler(webapp2.RequestHandler):
             b'max-age=31536000; includeSubDomains')
         self.response.headers[b'X-Content-Type-Options'] = b'nosniff'
         self.response.headers[b'X-Xss-Protection'] = b'1; mode=block'
+        values['content_sad'] = True
+        values['content_1'] = True
+        values['content_1_dasd'] = True
 
-        json_output = json.dumps(values, cls=utils.JSONEncoderForHTML)
+        values_with_camelized_keys = self.camelize(values)
+        json_output = json.dumps(
+            values_with_camelized_keys, cls=utils.JSONEncoderForHTML)
         self.response.write('%s%s' % (feconf.XSSI_PREFIX, json_output))
 
     def render_downloadable_file(self, values, filename, content_type):

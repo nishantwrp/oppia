@@ -178,12 +178,12 @@ describe('Learner playlist service factory', function() {
 
     var learnerDashboardActivityIds = LearnerDashboardActivityIdsObjectFactory
       .createFromBackendDict({
-        incomplete_exploration_ids: [],
-        incomplete_collection_ids: [],
-        completed_exploration_ids: [],
-        completed_collection_ids: [],
-        exploration_playlist_ids: ['0', '1', '2'],
-        collection_playlist_ids: []
+        incompleteExplorationIds: [],
+        incompleteCollectionIds: [],
+        completedExplorationIds: [],
+        completedCollectionIds: [],
+        explorationPlaylistIds: ['0', '1', '2'],
+        collectionPlaylistIds: []
       });
 
     LearnerPlaylistService.removeFromLearnerPlaylist(
@@ -204,12 +204,12 @@ describe('Learner playlist service factory', function() {
     });
     var learnerDashboardActivityIds = LearnerDashboardActivityIdsObjectFactory
       .createFromBackendDict({
-        incomplete_exploration_ids: [],
-        incomplete_collection_ids: [],
-        completed_exploration_ids: [],
-        completed_collection_ids: [],
-        exploration_playlist_ids: [],
-        collection_playlist_ids: ['0', '1', '2']
+        incompleteExplorationIds: [],
+        incompleteCollectionIds: [],
+        completedExplorationIds: [],
+        completedCollectionIds: [],
+        explorationPlaylistIds: [],
+        collectionPlaylistIds: ['0', '1', '2']
       });
 
     LearnerPlaylistService.removeFromLearnerPlaylist(
@@ -231,12 +231,12 @@ describe('Learner playlist service factory', function() {
     });
     var learnerDashboardActivityIds = LearnerDashboardActivityIdsObjectFactory
       .createFromBackendDict({
-        incomplete_exploration_ids: [],
-        incomplete_collection_ids: [],
-        completed_exploration_ids: [],
-        completed_collection_ids: [],
-        exploration_playlist_ids: [],
-        collection_playlist_ids: ['0', '1', '2']
+        incompleteExplorationIds: [],
+        incompleteCollectionIds: [],
+        completedExplorationIds: [],
+        completedCollectionIds: [],
+        explorationPlaylistIds: [],
+        collectionPlaylistIds: ['0', '1', '2']
       });
 
     LearnerPlaylistService.removeFromLearnerPlaylist(

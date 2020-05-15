@@ -93,10 +93,10 @@ export class UserInfoObjectFactory {
   // errors against underscore_casing in favor of camelCasing.
   createFromBackendDict(data: any): UserInfo {
     return new UserInfo(
-      data.is_moderator, data.is_admin, data.is_super_admin,
-      data.is_topic_manager, data.can_create_collections,
-      data.preferred_site_language_code, data.username,
-      data.email, data.user_is_logged_in);
+      data.isModerator, data.isAdmin, data.isSuperAdmin,
+      data.isTopicManager, data.canCreateCollections,
+      data.preferredSiteLanguageCode, data.username,
+      data.email, data.userIsLoggedIn);
   }
   createDefault(): UserInfo {
     return new UserInfo(

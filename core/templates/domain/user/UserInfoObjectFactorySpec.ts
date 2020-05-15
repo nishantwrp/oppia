@@ -22,15 +22,15 @@ describe('User info factory', () => {
   let userInfoObjectFactory: UserInfoObjectFactory;
 
   var sampleUserInfoBackendObject = {
-    is_moderator: true,
-    is_admin: false,
-    is_super_admin: false,
-    is_topic_manager: false,
-    can_create_collections: true,
-    preferred_site_language_code: 'en',
+    isModerator: true,
+    isAdmin: false,
+    isSuperAdmin: false,
+    isTopicManager: false,
+    canCreateCollections: true,
+    preferredSiteLanguageCode: 'en',
     username: 'tester',
     email: 'tester@example.org',
-    user_is_logged_in: true
+    userIsLoggedIn: true
   };
 
   beforeEach(() => {

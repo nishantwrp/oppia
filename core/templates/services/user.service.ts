@@ -40,7 +40,7 @@ angular.module('oppia').factory('UserService', [
       return $http.get(
         '/userinfohandler'
       ).then(function(response) {
-        if (response.data.user_is_logged_in) {
+        if (response.data.userIsLoggedIn) {
           userInfo = UserInfoObjectFactory.createFromBackendDict(response.data);
           return $q.resolve(userInfo);
         } else {
@@ -59,8 +59,8 @@ angular.module('oppia').factory('UserService', [
             return $http.get(
               '/preferenceshandler/profile_picture'
             ).then(function(response) {
-              if (response.data.profile_picture_data_url) {
-                profilePictureDataUrl = response.data.profile_picture_data_url;
+              if (response.data.profilePictureDataUrl) {
+                profilePictureDataUrl = response.data.profilePictureDataUrl;
               }
               return profilePictureDataUrl;
             });
@@ -81,7 +81,7 @@ angular.module('oppia').factory('UserService', [
         };
         return $http.get('/url_handler', {params: urlParameters}).then(
           function(response) {
-            return response.data.login_url;
+            return response.data.loginUrl;
           }
         );
       },

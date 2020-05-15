@@ -52,7 +52,7 @@ angular.module('oppia').directive('profileLinkImage', [
             // picture, or the player is in preview mode.
             $http.get(ctrl.profileImageUrl).then(function(response) {
               ctrl.profilePicture = (
-                response.data.profile_picture_data_url_for_username ||
+                response.data.profilePictureDataUrlForUsername ||
                 DEFAULT_PROFILE_IMAGE_PATH);
             });
           };

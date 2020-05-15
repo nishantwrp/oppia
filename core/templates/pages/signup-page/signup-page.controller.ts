@@ -231,9 +231,9 @@ angular.module('oppia').directive('signupPage', [
               var data = response.data;
               LoaderService.hideLoadingScreen();
               ctrl.username = data.username;
-              ctrl.hasEverRegistered = data.has_ever_registered;
-              ctrl.hasAgreedToLatestTerms = data.has_agreed_to_latest_terms;
-              ctrl.showEmailPreferencesForm = data.can_send_emails;
+              ctrl.hasEverRegistered = data.hasEverRegistered;
+              ctrl.hasAgreedToLatestTerms = data.hasAgreedToLatestTerms;
+              ctrl.showEmailPreferencesForm = data.canSendEmails;
               ctrl.hasUsername = Boolean(ctrl.username);
               FocusManagerService.setFocus('usernameInputField');
             });

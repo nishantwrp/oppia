@@ -31,29 +31,29 @@ describe('Learner Dashboard Backend API Service', () => {
 
   var sampleDataResults = {
     username: 'test',
-    number_of_unread_threads: 0,
-    completed_to_incomplete_collections: [],
-    is_admin: false,
-    profile_picture_data_url: 'TestURL',
-    exploration_playlist: [],
-    user_email: 'test@example.com',
-    collection_playlist: [],
-    is_moderator: false,
-    number_of_nonexistent_activities: {
-      completed_collections: 0,
-      incomplete_collections: 0,
-      collection_playlist: 0,
-      incomplete_explorations: 0,
-      exploration_playlist: 0,
-      completed_explorations: 0
+    numberOfUnreadThreads: 0,
+    completedToIncompleteCollections: [],
+    isAdmin: false,
+    profilePictureDataUrl: 'TestURL',
+    explorationPlaylist: [],
+    userEmail: 'test@example.com',
+    collectionPlaylist: [],
+    isModerator: false,
+    numberOfNonexistentActivities: {
+      completedCollections: 0,
+      incompleteCollections: 0,
+      collectionPlaylist: 0,
+      incompleteExplorations: 0,
+      explorationPlaylist: 0,
+      completedExplorations: 0
     },
-    incomplete_collections_list: [],
-    thread_summaries: [],
-    incomplete_explorations_list: [],
-    subscription_list: [],
-    completed_explorations_list: [],
-    is_super_admin: false,
-    completed_collections_list: []
+    incompleteCollectionsList: [],
+    threadSummaries: [],
+    incompleteExplorationsList: [],
+    subscriptionList: [],
+    completedExplorationsList: [],
+    isSuperAdmin: false,
+    completedCollectionsList: []
   };
 
   var LEARNER_DASHBOARD_DATA_URL = '/learnerdashboardhandler/data';

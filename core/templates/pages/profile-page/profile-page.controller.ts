@@ -60,27 +60,27 @@ angular.module('oppia').directive('profilePage', [
               LoaderService.hideLoadingScreen();
               ctrl.username = {
                 title: 'Username',
-                value: data.profile_username,
-                helpText: (data.profile_username)
+                value: data.profileUsername,
+                helpText: (data.profileUsername)
               };
-              ctrl.usernameIsLong = data.profile_username.length > 16;
-              ctrl.userBio = data.user_bio;
+              ctrl.usernameIsLong = data.profileUsername.length > 16;
+              ctrl.userBio = data.userBio;
               ctrl.userDisplayedStatistics = [{
                 title: 'Impact',
-                value: data.user_impact_score,
+                value: data.userImpactScore,
                 helpText: (
                   'A rough measure of the impact of explorations created by ' +
                   'this user. Better ratings and more playthroughs improve ' +
                   'this score.')
               }, {
                 title: 'Created',
-                value: data.created_exp_summary_dicts.length
+                value: data.createdExpSummaryDicts.length
               }, {
                 title: 'Edited',
-                value: data.edited_exp_summary_dicts.length
+                value: data.editedExpSummaryDicts.length
               }];
 
-              ctrl.userEditedExplorations = data.edited_exp_summary_dicts.sort(
+              ctrl.userEditedExplorations = data.editedExpSummaryDicts.sort(
                 function(exploration1, exploration2) {
                   if (exploration1.ratings > exploration2.ratings) {
                     return 1;
@@ -101,8 +101,8 @@ angular.module('oppia').directive('profilePage', [
 
               ctrl.userNotLoggedIn = !data.username;
 
-              ctrl.isAlreadySubscribed = data.is_already_subscribed;
-              ctrl.isUserVisitingOwnProfile = data.is_user_visiting_own_profile;
+              ctrl.isAlreadySubscribed = data.isAlreadySubscribed;
+              ctrl.isUserVisitingOwnProfile = data.isUserVisitingOwnProfile;
 
               ctrl.subscriptionButtonPopoverText = '';
 
@@ -111,7 +111,7 @@ angular.module('oppia').directive('profilePage', [
               ctrl.startingExplorationNumber = 1;
               ctrl.endingExplorationNumber = 6;
               ctrl.Math = window.Math;
-              ctrl.profileIsOfCurrentUser = data.profile_is_of_current_user;
+              ctrl.profileIsOfCurrentUser = data.profileIsOfCurrentUser;
 
               ctrl.changeSubscriptionStatus = function() {
                 if (ctrl.userNotLoggedIn) {
@@ -128,12 +128,12 @@ angular.module('oppia').directive('profilePage', [
                   if (!ctrl.isAlreadySubscribed) {
                     ctrl.isAlreadySubscribed = true;
                     $http.post('/subscribehandler', {
-                      creator_username: data.profile_username
+                      creator_username: data.profileUsername
                     });
                   } else {
                     ctrl.isAlreadySubscribed = false;
                     $http.post('/unsubscribehandler', {
-                      creator_username: data.profile_username
+                      creator_username: data.profileUsername
                     });
                   }
                   ctrl.updateSubscriptionButtonPopoverText();
@@ -173,7 +173,7 @@ angular.module('oppia').directive('profilePage', [
               };
               ctrl.goToNextPage = function() {
                 if ((ctrl.currentPageNumber + 1) * ctrl.PAGE_SIZE >= (
-                  data.edited_exp_summary_dicts.length)) {
+                  data.editedExpSummaryDicts.length)) {
                   $log.error('Error: Cannot increment page');
                 } else {
                   ctrl.currentPageNumber++;
@@ -208,11 +208,11 @@ angular.module('oppia').directive('profilePage', [
               };
 
               ctrl.numUserPortfolioExplorations = (
-                data.edited_exp_summary_dicts.length);
-              ctrl.subjectInterests = data.subject_interests;
-              ctrl.firstContributionMsec = data.first_contribution_msec;
+                data.editedExpSummaryDicts.length);
+              ctrl.subjectInterests = data.subjectInterests;
+              ctrl.firstContributionMsec = data.firstContributionMsec;
               ctrl.profilePictureDataUrl = (
-                data.profile_picture_data_url || DEFAULT_PROFILE_PICTURE_URL);
+                data.profilePictureDataUrl || DEFAULT_PROFILE_PICTURE_URL);
               LoaderService.hideLoadingScreen();
             });
           };

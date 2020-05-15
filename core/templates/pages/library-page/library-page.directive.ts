@@ -245,13 +245,13 @@ angular.module('oppia').directive('libraryPage', [
                 }
               }).then(
                 function(response) {
-                  ctrl.activityList = response.data.activity_list;
+                  ctrl.activityList = response.data.activityList;
 
-                  ctrl.groupHeaderI18nId = response.data.header_i18n_id;
+                  ctrl.groupHeaderI18nId = response.data.headerI18nId;
 
                   $rootScope.$broadcast(
                     'preferredLanguageCodesLoaded',
-                    response.data.preferred_language_codes);
+                    response.data.preferredLanguageCodes);
 
                   LoaderService.hideLoadingScreen();
                 }, function() {
@@ -316,7 +316,7 @@ angular.module('oppia').directive('libraryPage', [
 
                 $rootScope.$broadcast(
                   'preferredLanguageCodesLoaded',
-                  response.data.preferred_language_codes);
+                  response.data.preferredLanguageCodes);
 
                 // Initialize the carousel(s) on the library index page.
                 // Pause is necessary to ensure all elements have loaded.

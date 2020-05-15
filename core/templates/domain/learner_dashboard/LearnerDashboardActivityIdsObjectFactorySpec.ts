@@ -28,12 +28,12 @@ describe('Learner dashboard activity ids object factory', () => {
     learnerDashboardActivityIdsObjectFactory = (
       new LearnerDashboardActivityIdsObjectFactory());
     learnerDashboardActivityIdsDict = {
-      incomplete_exploration_ids: ['0', '1'],
-      incomplete_collection_ids: ['2', '3'],
-      completed_exploration_ids: ['4', '5'],
-      completed_collection_ids: ['6', '7'],
-      exploration_playlist_ids: ['8', '9'],
-      collection_playlist_ids: ['10', '11']
+      incompleteExplorationIds: ['0', '1'],
+      incompleteCollectionIds: ['2', '3'],
+      completedExplorationIds: ['4', '5'],
+      completedCollectionIds: ['6', '7'],
+      explorationPlaylistIds: ['8', '9'],
+      collectionPlaylistIds: ['10', '11']
     };
   });
 

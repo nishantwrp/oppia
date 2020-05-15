@@ -31,19 +31,19 @@ describe('Learner Dashboard Backend API Service', () => {
 
   var sampleDataResults = {
     username: 'test',
-    profile_picture_data_url: 'TestURL',
-    learner_dashboard_activity_ids: {
-      completed_exploration_ids: [],
-      exploration_playlist_ids: [],
-      completed_collection_ids: [],
-      incomplete_exploration_ids: [],
-      collection_playlist_ids: [],
-      incomplete_collection_ids: []
+    profilePictureDataUrl: 'TestURL',
+    learnerDashboardActivityIds: {
+      completedExplorationIds: [],
+      explorationPlaylistIds: [],
+      completedCollectionIds: [],
+      incompleteExplorationIds: [],
+      collectionPlaylistIds: [],
+      incompleteCollectionIds: []
     },
-    user_email: 'test@example.com',
-    is_admin: false,
-    is_super_admin: false,
-    is_moderator: false
+    userEmail: 'test@example.com',
+    isAdmin: false,
+    isSuperAdmin: false,
+    isModerator: false
   };
 
   var LEARNER_DASHBOARD_IDS_DATA_URL = '/learnerdashboardidshandler/data';

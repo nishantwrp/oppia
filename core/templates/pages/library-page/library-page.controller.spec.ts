@@ -81,15 +81,15 @@ describe('Library controller', function() {
       $componentController = _$componentController_;
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('/searchhandler/data').respond({
-        allow_yaml_file_upload: false,
-        explorations_list: [{
+        allowYamlFileUpload: false,
+        explorationsList: [{
           id: '3',
           title: 'Geography 2',
           category: 'Geography',
           objective: 'can view more maps',
           language: 'español',
-          last_updated: 12345678912345,
-          community_owned: false,
+          lastUpdated: 12345678912345,
+          communityOwned: false,
           status: 'featured'
         }, {
           id: '5',
@@ -97,8 +97,8 @@ describe('Library controller', function() {
           category: 'Geography',
           objective: 'can view maps',
           language: 'English',
-          last_updated: 12345678911111,
-          community_owned: false,
+          lastUpdated: 12345678911111,
+          communityOwned: false,
           status: 'public'
         }, {
           id: '6',
@@ -106,11 +106,11 @@ describe('Library controller', function() {
           category: 'Personal',
           objective: 'can be for myself',
           language: 'English',
-          last_updated: 12345678954322,
-          community_owned: false,
+          lastUpdated: 12345678954322,
+          communityOwned: false,
           status: 'public'
         }],
-        preferred_language_codes: ['en']
+        preferredLanguageCodes: ['en']
       });
 
       ctrl = $componentController('libraryPage', {

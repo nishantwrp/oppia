@@ -135,12 +135,12 @@ export class LearnerDashboardActivityIdsObjectFactory {
   createFromBackendDict(
       learnerDashboardActivityIdsDict: any): LearnerDashboardActivityIds {
     return new LearnerDashboardActivityIds(
-      learnerDashboardActivityIdsDict.incomplete_exploration_ids,
-      learnerDashboardActivityIdsDict.incomplete_collection_ids,
-      learnerDashboardActivityIdsDict.completed_exploration_ids,
-      learnerDashboardActivityIdsDict.completed_collection_ids,
-      learnerDashboardActivityIdsDict.exploration_playlist_ids,
-      learnerDashboardActivityIdsDict.collection_playlist_ids);
+      learnerDashboardActivityIdsDict.incompleteExplorationIds,
+      learnerDashboardActivityIdsDict.incompleteCollectionIds,
+      learnerDashboardActivityIdsDict.completedExplorationIds,
+      learnerDashboardActivityIdsDict.completedCollectionIds,
+      learnerDashboardActivityIdsDict.explorationPlaylistIds,
+      learnerDashboardActivityIdsDict.collectionPlaylistIds);
   }
 }
 

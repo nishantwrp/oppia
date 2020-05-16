@@ -142,15 +142,15 @@ describe('Exploration object factory', () => {
       objective: 'Your objective',
       tags: [],
       blurb: '',
-      author_notes: '',
-      states_schema_version: 15,
-      init_state_name: 'Introduction',
-      language_code: 'en',
+      authorNotes: '',
+      statesSchemaVersion: 15,
+      initStateName: 'Introduction',
+      languageCode: 'en',
       states: {
         'first state': firstState,
         'second state': secondState},
-      param_specs: {},
-      param_changes: [],
+      paramSpecs: {},
+      paramChanges: [],
       version: 1
     };
 

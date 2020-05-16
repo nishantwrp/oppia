@@ -120,13 +120,13 @@ describe('Skill object factory', () => {
       description: 'test description',
       misconceptions: [misconceptionDict1, misconceptionDict2],
       rubrics: [rubricDict],
-      skill_contents: skillContentsDict,
-      language_code: 'en',
+      skillContents: skillContentsDict,
+      languageCode: 'en',
       version: 3,
-      next_misconception_id: 6,
-      superseding_skill_id: '2',
-      all_questions_merged: false,
-      prerequisite_skill_ids: ['skill_1']
+      nextMisconceptionId: 6,
+      supersedingSkillId: '2',
+      allQuestionsMerged: false,
+      prerequisiteSkillIds: ['skill_1']
     };
   });
 

@@ -38,61 +38,61 @@ describe('Question backend Api service', () => {
 
     // Sample question object returnable from the backend
     sampleDataResults = {
-      question_dicts: [{
+      questionDicts: [{
         id: '0',
-        question_state_data: {
+        questionStateData: {
           content: {
             html: 'Question 1'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {}
+          recordedVoiceovers: {
+            voiceoversMapping: {}
           },
           interaction: {
-            answer_groups: [],
-            confirmed_unclassified_answers: [],
-            customization_args: {},
-            default_outcome: {
+            answerGroups: [],
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {},
+            defaultOutcome: {
               dest: null,
               feedback: {
                 html: 'Correct Answer'
               },
-              param_changes: [],
-              labelled_as_correct: true
+              paramChanges: [],
+              labelledAsCorrect: true
             },
             hints: [{
-              hint_content: {
+              hintContent: {
                 html: 'Hint 1'
               }
             }],
             solution: {
-              correct_answer: 'This is the correct answer',
-              answer_is_exclusive: false,
+              correctAnswer: 'This is the correct answer',
+              answerIsExclusive: false,
               explanation: {
                 html: 'Solution explanation'
               }
             },
             id: 'TextInput'
           },
-          param_changes: [],
-          solicit_answer_details: false
+          paramChanges: [],
+          solicitAnswerDetails: false
         },
-        language_code: 'en',
+        languageCode: 'en',
         version: 1
       }]
     };
 
     sampleResponse = {
-      question_summary_dicts: [{
-        skill_descriptions: [],
+      questionSummaryDicts: [{
+        skillDescriptions: [],
         summary: {
-          creator_id: '1',
-          created_on_msec: 0,
-          last_updated_msec: 0,
+          creatorId: '1',
+          createdOnMsec: 0,
+          lastUpdatedMsec: 0,
           id: '0',
-          question_content: ''
+          questionContent: ''
         }
       }],
-      next_start_cursor: null
+      nextStartCursor: null
     };
   });
 

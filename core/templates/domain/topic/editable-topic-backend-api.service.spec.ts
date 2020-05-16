@@ -61,46 +61,46 @@ describe('Editable topic backend API service', function() {
         name: 'Topic Name',
         description: 'Topic Description',
         version: '1',
-        canonical_story_references: [{
-          story_id: 'story_1',
-          story_is_published: true
+        canonicalStoryReferences: [{
+          storyId: 'story_1',
+          storyIsPublished: true
         }],
-        canonical_story_summary_dicts: [{
+        canonicalStorySummaryDicts: [{
           id: '0',
           title: 'Title',
-          node_count: 1,
-          story_is_published: false
+          nodeCount: 1,
+          storyIsPublished: false
         }],
-        additional_story_references: [{
-          story_id: 'story_2',
-          story_is_published: true
+        additionalStoryReferences: [{
+          storyId: 'story_2',
+          storyIsPublished: true
         }],
-        uncategorized_skill_ids: ['skill_id_1'],
+        uncategorizedSkillIds: ['skill_id_1'],
         subtopics: [],
-        language_code: 'en'
+        languageCode: 'en'
       },
-      grouped_skill_summary_dicts: {},
-      skill_id_to_description_dict: {
-        skill_id_1: 'Description 1'
+      groupedSkillSummaryDicts: {},
+      skillIdToDescriptionDict: {
+        skillId1: 'Description 1'
       },
-      skill_id_to_rubrics_dict: {
+      skillIdToRubricsDict: {
         skill_id_1: []
       },
-      subtopic_page: {
+      subtopicPage: {
         id: 'topicId-1',
         topicId: 'topicId',
-        page_contents: {
-          subtitled_html: {
+        pageContents: {
+          subtitledHtml: {
             html: '<p>Data</p>',
-            content_id: 'content'
+            contentId: 'content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {}
             }
           },
         },
-        language_code: 'en'
+        languageCode: 'en'
       }
     };
   }));

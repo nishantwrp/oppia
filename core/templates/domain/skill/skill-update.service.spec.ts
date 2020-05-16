@@ -141,10 +141,10 @@ describe('Skill update service', function() {
       description: 'test description',
       misconceptions: [misconceptionDict1, misconceptionDict2],
       rubrics: [rubricDict],
-      skill_contents: skillContentsDict,
-      language_code: 'en',
+      skillContents: skillContentsDict,
+      languageCode: 'en',
       version: 3,
-      prerequisite_skill_ids: ['skill_1']
+      prerequisiteSkillIds: ['skill_1']
     };
   }));
 

@@ -139,18 +139,18 @@ angular.module('oppia').factory('QuestionObjectFactory', [
       return new Question(
         questionBackendDict.id,
         StateObjectFactory.createFromBackendDict(
-          'question', questionBackendDict.question_state_data),
-        questionBackendDict.language_code, questionBackendDict.version,
-        questionBackendDict.linked_skill_ids
+          'question', questionBackendDict.questionStateData),
+        questionBackendDict.languageCode, questionBackendDict.version,
+        questionBackendDict.linkedSkillIds
       );
     };
 
     Question.prototype.toBackendDict = function(isNewQuestion) {
       var questionBackendDict = {
         id: null,
-        question_state_data: this._stateData.toBackendDict(),
-        language_code: this._languageCode,
-        linked_skill_ids: this._linkedSkillIds,
+        questionStateData: this._stateData.toBackendDict(),
+        languageCode: this._languageCode,
+        linkedSkillIds: this._linkedSkillIds,
         version: 1,
       };
       if (!isNewQuestion) {

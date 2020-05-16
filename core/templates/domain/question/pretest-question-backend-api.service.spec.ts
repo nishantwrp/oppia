@@ -31,47 +31,47 @@ describe('Pretest question backend API service', function() {
   var ERROR_STATUS_CODE = 500;
 
   var sampleDataResults = {
-    pretest_question_dicts: [{
+    pretestQuestionDicts: [{
       id: '0',
-      question_state_data: {
+      questionStateData: {
         content: {
           html: 'Question 1'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {}
+        recordedVoiceovers: {
+          voiceoversMapping: {}
         },
         interaction: {
-          answer_groups: [],
-          confirmed_unclassified_answers: [],
-          customization_args: {},
-          default_outcome: {
+          answerGroups: [],
+          confirmedUnclassifiedAnswers: [],
+          customizationArgs: {},
+          defaultOutcome: {
             dest: null,
             feedback: {
               html: 'Correct Answer'
             },
-            param_changes: [],
-            labelled_as_correct: true
+            paramChanges: [],
+            labelledAsCorrect: true
           },
           hints: [
             {
-              hint_content: {
+              hintContent: {
                 html: 'Hint 1'
               }
             }
           ],
           solution: {
-            correct_answer: 'This is the correct answer',
-            answer_is_exclusive: false,
+            correctAnswer: 'This is the correct answer',
+            answerIsExclusive: false,
             explanation: {
               html: 'Solution explanation'
             }
           },
           id: 'TextInput'
         },
-        param_changes: [],
-        solicit_answer_details: false
+        paramChanges: [],
+        solicitAnswerDetails: false
       },
-      language_code: 'en',
+      languageCode: 'en',
       version: 1
     }],
     next_start_cursor: null
@@ -107,7 +107,7 @@ describe('Pretest question backend API service', function() {
       flushMicrotasks();
 
       expect(successHandler).toHaveBeenCalledWith(
-        sampleDataResults.pretest_question_dicts);
+        sampleDataResults.pretestQuestionDicts);
       expect(failHandler).not.toHaveBeenCalled();
     })
   );

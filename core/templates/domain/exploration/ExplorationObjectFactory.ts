@@ -212,15 +212,15 @@ export class ExplorationObjectFactory {
   createFromBackendDict(explorationBackendDict: any): Exploration {
     /* eslint-enable dot-notation */
     return new Exploration(
-      explorationBackendDict.init_state_name,
+      explorationBackendDict.initStateName,
       this.paramChangesObjectFactory.createFromBackendList(
-        explorationBackendDict.param_changes),
+        explorationBackendDict.paramChanges),
       this.paramSpecsObjectFactory.createFromBackendDict(
-        explorationBackendDict.param_specs),
+        explorationBackendDict.paramSpecs),
       this.statesObjectFactory.createFromBackendDict(
         explorationBackendDict.states),
       explorationBackendDict.title,
-      explorationBackendDict.language_code,
+      explorationBackendDict.languageCode,
       this.logger, this.urlInterpolationService);
   }
 }

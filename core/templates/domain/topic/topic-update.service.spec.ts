@@ -118,50 +118,50 @@ describe('Topic update service', function() {
         name: 'Topic name',
         description: 'Topic description',
         version: 1,
-        uncategorized_skill_ids: ['skill_1'],
-        canonical_story_references: [{
-          story_id: 'story_1',
-          story_is_published: true
+        uncategorizedSkillIds: ['skill_1'],
+        canonicalStoryReferences: [{
+          storyId: 'story_1',
+          storyIsPublished: true
         }],
-        additional_story_references: [{
-          story_id: 'story_2',
-          story_is_published: true
+        additionalStoryReferences: [{
+          storyId: 'story_2',
+          storyIsPublished: true
         }],
         subtopics: [{
           id: 1,
           title: 'Title',
-          skill_ids: ['skill_2']
+          skillIds: ['skill_2']
         }],
-        next_subtopic_id: 2,
-        language_code: 'en'
+        nextSubtopicId: 2,
+        languageCode: 'en'
       },
       skillIdToDescriptionDict: {
-        skill_1: 'Description 1',
-        skill_2: 'Description 2'
+        skill1: 'Description 1',
+        skill2: 'Description 2'
       }
     };
     var sampleSubtopicPageObject = {
       id: 'topic_id-1',
-      topic_id: 'topic_id',
-      page_contents: {
-        subtitled_html: {
+      topicId: 'topic_id',
+      pageContents: {
+        subtitledHtml: {
           html: 'test content',
-          content_id: 'content'
+          contentId: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {
               en: {
                 filename: 'test.mp3',
-                file_size_bytes: 100,
-                needs_update: false,
-                duration_secs: 0.1
+                fileSizeBytes: 100,
+                needsUpdate: false,
+                durationSecs: 0.1
               }
             }
           }
         }
       },
-      language_code: 'en'
+      languageCode: 'en'
     };
     _firstSkillSummary = skillSummaryObjectFactory.create(
       'skill_1', 'Description 1');

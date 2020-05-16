@@ -33,12 +33,12 @@ describe('Creator Dashboard backend API service', () => {
     explorations_list: [{
       id: SAMPLE_EXP_ID,
       title: 'Sample Title',
-      activity_type: 'exploration',
+      activityType: 'exploration',
       category: 'Computing',
       objective: 'Sample objective',
-      language_code: 'en',
-      created_on_msec: 1466178691847.67,
-      last_updated_msec: 1466178759209.839,
+      languageCode: 'en',
+      createdOnMsec: 1466178691847.67,
+      lastUpdatedMsec: 1466178759209.839,
       status: 'public',
       rating: {
         5: 0,
@@ -47,26 +47,26 @@ describe('Creator Dashboard backend API service', () => {
         2: 0,
         1: 0
       },
-      community_owned: false,
+      communityOwned: false,
       tags: '',
-      thumbnail_icon_url: '/subjects/Computing.svg',
-      thumbnail_bg_color: '#bb8b2f',
-      num_views: 2,
-      num_open_threads: 0,
-      num_total_threads: 0
+      thumbnailIconUrl: '/subjects/Computing.svg',
+      thumbnailBgColor: '#bb8b2f',
+      numViews: 2,
+      numOpenThreads: 0,
+      numTotalThreads: 0
     }],
-    collections_list: [],
-    dashboard_stats: {
-      total_plays: 10,
-      num_ratings: 1,
-      average_ratings: 4.0,
-      total_open_feedback: 5
+    collectionsList: [],
+    dashboardStats: {
+      totalPlays: 10,
+      numRatings: 1,
+      averageRatings: 4.0,
+      totalOpenFeedback: 5
     },
-    last_week_stats: {
-      total_plays: 2,
-      average_ratings: 3.5,
-      num_ratings: 3,
-      total_open_feedback: 1
+    lastWeekStats: {
+      totalPlays: 2,
+      averageRatings: 3.5,
+      numRatings: 3,
+      totalOpenFeedback: 1
     }
   };
 

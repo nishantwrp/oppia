@@ -44,9 +44,9 @@ describe('Exploration id validation service', function() {
     validExpResults = {
       summaries: [{
         id: '0',
-        num_views: 0,
-        human_readable_contributors_summary: {},
-        created_on_msec: 1581965806278.269,
+        numViews: 0,
+        humanReadableContributorsSummary: {},
+        createdOnMsec: 1581965806278.269,
         ratings: {
           5: 0,
           4: 0,
@@ -54,16 +54,16 @@ describe('Exploration id validation service', function() {
           3: 0,
           2: 0
         },
-        last_updated_msec: 1581965806278.183,
-        language_code: 'en',
+        lastUpdatedMsec: 1581965806278.183,
+        languageCode: 'en',
         category: 'Test',
         objective: 'Dummy exploration for testing all interactions',
-        activity_type: 'exploration',
+        activityType: 'exploration',
         status: 'public',
-        thumbnail_bg_color: '#a33f40',
+        thumbnailBgColor: '#a33f40',
         tags: [],
-        thumbnail_icon_url: '/subjects/Lightbulb.svg',
-        community_owned: true,
+        thumbnailIconUrl: '/subjects/Lightbulb.svg',
+        communityOwned: true,
         title: 'Test of all interactions'
       }]
     };

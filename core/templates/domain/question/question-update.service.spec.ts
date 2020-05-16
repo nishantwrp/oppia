@@ -116,92 +116,92 @@ describe('Question update service', function() {
 
     sampleStateDict = {
       name: 'question',
-      classifier_model_id: 0,
+      classifierModelId: 0,
       content: {
         html: 'old content',
-        content_id: 'content'
+        contentId: 'content'
       },
-      param_changes: [],
+      paramChanges: [],
       interaction: {
-        answer_groups: [{
-          rule_specs: [{rule_type: 'Contains', inputs: {x: 'hola'}}],
+        answerGroups: [{
+          ruleSpecs: [{ruleType: 'Contains', inputs: {x: 'hola'}}],
           outcome: {
             dest: 'Me Llamo',
             feedback: {
-              content_id: 'feedback_1',
+              contentId: 'feedback_1',
               html: 'buen trabajo!'
             },
-            labelled_as_correct: true
+            labelledAsCorrect: true
           }
         }],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'Hola',
           feedback: {
-            content_id: 'default_outcome',
+            contentId: 'default_outcome',
             html: 'try again!'
           },
-          labelled_as_correct: false
+          labelledAsCorrect: false
         },
         hints: [],
         id: 'TextInput',
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
-      solicit_answer_details: false,
-      written_translations: {
-        translations_mapping: {
+      solicitAnswerDetails: false,
+      writtenTranslations: {
+        translationsMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       }
     };
 
     expectedOutputStateDict = {
       name: 'question',
-      classifier_model_id: 0,
+      classifierModelId: 0,
       content: {
         html: 'test content',
-        content_id: 'content'
+        contentId: 'content'
       },
-      param_changes: [],
+      paramChanges: [],
       interaction: {
-        answer_groups: [{
-          rule_specs: [{rule_type: 'Contains', inputs: {x: 'hola'}}],
+        answerGroups: [{
+          ruleSpecs: [{ruleType: 'Contains', inputs: {x: 'hola'}}],
           outcome: {
             dest: 'Me Llamo',
             feedback: {
-              content_id: 'feedback_1',
+              contentId: 'feedback_1',
               html: 'buen trabajo!'
             },
-            labelled_as_correct: true
+            labelledAsCorrect: true
           }
         }],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'Hola',
           feedback: {
-            content_id: 'default_outcome',
+            contentId: 'default_outcome',
             html: 'try again!'
           },
-          labelled_as_correct: false
+          labelledAsCorrect: false
         },
         hints: [],
         id: 'TextInput',
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
-      solicit_answer_details: false,
-      written_translations: {
-        translations_mapping: {
+      solicitAnswerDetails: false,
+      writtenTranslations: {
+        translationsMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       }
     };
@@ -211,8 +211,8 @@ describe('Question update service', function() {
 
     sampleQuestionBackendObject = {
       id: '0',
-      question_state_data: sampleStateDict,
-      language_code: 'en',
+      questionStateData: sampleStateDict,
+      languageCode: 'en',
       version: 1
     };
     sampleQuestion = QuestionObjectFactory.createFromBackendDict(

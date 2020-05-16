@@ -101,10 +101,10 @@ export class SubtopicPageObjectFactory {
   // camelCasing.
   createFromBackendDict(subtopicPageBackendDict: any): SubtopicPage {
     return new SubtopicPage(
-      subtopicPageBackendDict.id, subtopicPageBackendDict.topic_id,
+      subtopicPageBackendDict.id, subtopicPageBackendDict.topicId,
       this.subtopicPageContentsObjectFactory.createFromBackendDict(
-        subtopicPageBackendDict.page_contents),
-      subtopicPageBackendDict.language_code
+        subtopicPageBackendDict.pageContents),
+      subtopicPageBackendDict.languageCode
     );
   }
 

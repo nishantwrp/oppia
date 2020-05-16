@@ -45,7 +45,7 @@ export class Collection {
     this._id = collectionBackendObject.id;
     this._title = collectionBackendObject.title;
     this._objective = collectionBackendObject.objective;
-    this._languageCode = collectionBackendObject.language_code;
+    this._languageCode = collectionBackendObject.languageCode;
     this._tags = collectionBackendObject.tags;
     this._category = collectionBackendObject.category;
     this._version = collectionBackendObject.version;

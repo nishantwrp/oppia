@@ -470,12 +470,12 @@ export class TopicObjectFactory {
     return new Topic(
       topicBackendDict.id, topicBackendDict.name,
       topicBackendDict.abbreviated_name,
-      topicBackendDict.description, topicBackendDict.language_code,
+      topicBackendDict.description, topicBackendDict.languageCode,
       canonicalStoryReferences, additionalStoryReferences,
-      topicBackendDict.uncategorized_skill_ids,
-      topicBackendDict.next_subtopic_id, topicBackendDict.version,
-      subtopics, topicBackendDict.thumbnail_filename,
-      topicBackendDict.thumbnail_bg_color,
+      topicBackendDict.uncategorizedSkillIds,
+      topicBackendDict.nextSubtopiId, topicBackendDict.version,
+      subtopics, topicBackendDict.thumbnailFilename,
+      topicBackendDict.thumbnailBgColor,
       skillIdToDescriptionDict, this.skillSummaryObjectFactory,
       this.subtopicObjectFactory, this.storyReferenceObjectFactory
     );

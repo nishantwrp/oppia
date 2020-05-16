@@ -80,7 +80,7 @@ describe('Exploration Summary Backend Api Service', function() {
         title: 'Title 1',
         category: 'Category 1',
         status: 'public',
-        language_code: 'en'
+        languageCode: 'en'
       }];
 
       var requestUrl = '/explorationsummarieshandler/data?' +
@@ -108,12 +108,12 @@ describe('Exploration Summary Backend Api Service', function() {
         title: 'Title 1',
         category: 'Category 1',
         status: 'public',
-        language_code: 'en'
+        languageCode: 'en'
       }, {
         title: 'Title 2',
         category: 'Category 2',
         status: 'private',
-        language_code: 'en'
+        languageCode: 'en'
       }];
 
       var requestUrl = '/explorationsummarieshandler/data?' +

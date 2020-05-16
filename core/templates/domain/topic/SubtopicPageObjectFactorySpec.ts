@@ -56,36 +56,36 @@ describe('Subtopic page object factory', () => {
   it('should be able to copy from another subtopic page', () => {
     var firstSubtopicPage = subtopicPageObjectFactory.createFromBackendDict({
       id: 'topic_id-1',
-      topic_id: 'topic_id',
-      page_contents: {
-        subtitled_html: {
+      topicId: 'topic_id',
+      pageContents: {
+        subtitledHtml: {
           html: '<p>Data</p>',
-          content_id: 'content'
+          contentId: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {}
           }
         }
       },
-      language_code: 'en'
+      languageCode: 'en'
     });
 
     var secondSubtopicPage = subtopicPageObjectFactory.createFromBackendDict({
       id: 'topic_id2-2',
-      topic_id: 'topic_id2',
-      page_contents: {
-        subtitled_html: {
+      topicId: 'topic_id2',
+      pageContents: {
+        subtitledHtml: {
           html: '<p>Data2</p>',
-          content_id: 'content'
+          contentId: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {}
           }
         }
       },
-      language_code: 'en'
+      languageCode: 'en'
     });
 
     expect(firstSubtopicPage).not.toBe(secondSubtopicPage);

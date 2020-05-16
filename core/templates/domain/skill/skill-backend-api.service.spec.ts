@@ -100,25 +100,25 @@ describe('Skill backend API service', function() {
       id: '1',
       description: 'test description',
       misconceptions: [misconceptionDict1, misconceptionDict2],
-      skill_contents: skillContentsDict,
-      language_code: 'en',
+      skillContents: skillContentsDict,
+      languageCode: 'en',
       version: 3,
-      prerequisite_skill_ids: []
+      prerequisiteSkillIds: []
     };
 
     var skillDict2 = {
       id: '2',
       description: 'test description 2',
       misconceptions: [misconceptionDict1],
-      skill_contents: skillContentsDict,
-      language_code: 'en',
+      skillContents: skillContentsDict,
+      languageCode: 'en',
       version: 2,
-      prerequisite_skill_ids: []
+      prerequisiteSkillIds: []
     };
 
     sampleResponse = {
       skill: skillDict,
-      grouped_skill_summaries: {}
+      groupedSkillSummaries: {}
     };
 
     sampleResponse2 = {

@@ -124,9 +124,9 @@ angular.module('oppia').factory('CompareVersionsService', [
             links: diffGraphData.links,
             finalStateIds: diffGraphData.finalStateIds,
             v1InitStateId: diffGraphData.originalStateIds[
-              response.v1Data.exploration.init_state_name],
+              response.v1Data.exploration.initStateName],
             v2InitStateId: diffGraphData.stateIds[
-              response.v2Data.exploration.init_state_name],
+              response.v2Data.exploration.initStateName],
             v1States: v1States,
             v2States: v2States
           };

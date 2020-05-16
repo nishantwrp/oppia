@@ -38,27 +38,27 @@ describe('Exploration data service', function() {
     draft_change_list_id: 3,
     version: 1,
     exploration: {
-      init_state_name: 'Introduction',
+      initStateName: 'Introduction',
       states: {
         Introduction: {
-          param_changes: [],
+          paramChanges: [],
           content: {
             html: '',
-            audio_translations: {}
+            audioTranslations: {}
           },
-          unresolved_answers: {},
+          unresolvedAnswers: {},
           interaction: {
-            customization_args: {},
-            answer_groups: [],
-            default_outcome: {
-              param_changes: [],
+            customizationArgs: {},
+            answerGroups: [],
+            defaultOutcome: {
+              paramChanges: [],
               dest: 'Introduction',
               feedback: {
                 html: '',
-                audio_translations: {}
+                audioTranslations: {}
               }
             },
-            confirmed_unclassified_answers: [],
+            confirmedUnclassifiedAnswers: [],
             id: null
           }
         }

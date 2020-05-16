@@ -161,11 +161,11 @@ export class StoryObjectFactory {
       storyBackendDict.id, storyBackendDict.title,
       storyBackendDict.description, storyBackendDict.notes,
       this.storyContentsObjectFactory.createFromBackendDict(
-        storyBackendDict.story_contents),
-      storyBackendDict.language_code,
-      storyBackendDict.version, storyBackendDict.corresponding_topic_id,
-      storyBackendDict.thumbnail_bg_color,
-      storyBackendDict.thumbnail_filename
+        storyBackendDict.storyContents),
+      storyBackendDict.languageCode,
+      storyBackendDict.version, storyBackendDict.correspondingTopicId,
+      storyBackendDict.thumbnailBgColor,
+      storyBackendDict.thumbnailFilename
     );
   }
 

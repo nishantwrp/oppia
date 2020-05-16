@@ -17,16 +17,16 @@
  */
 
 export interface ISkillBackendDict {
-  'all_questions_merged': boolean;
+  allQuestionsMerged: boolean;
   description: string;
   id: string;
-  'language_code': string;
+  languageCode: string;
   misconceptions: IMisconceptionBackendDict[];
-  'next_misconception_id': number;
-  'prerequisite_skill_ids': string[];
+  nextMisconceptionId: number;
+  prerequisiteSkillIds: string[];
   rubrics: IRubricBackendDict[];
-  'skill_contents': IConceptCardBackendDict;
-  'superseding_skill_id': string;
+  skillContents: IConceptCardBackendDict;
+  supersedingSkillId: string;
   version: number;
 }
 
@@ -214,13 +214,13 @@ export class Skill {
       rubrics: this._rubrics.map((rubric: Rubric) => {
         return rubric.toBackendDict();
       }),
-      skill_contents: this._conceptCard.toBackendDict(),
-      language_code: this._languageCode,
+      skillContents: this._conceptCard.toBackendDict(),
+      languageCode: this._languageCode,
       version: this._version,
-      next_misconception_id: this._nextMisconceptionId,
-      superseding_skill_id: this._supersedingSkillId,
-      all_questions_merged: this._allQuestionsMerged,
-      prerequisite_skill_ids: this._prerequisiteSkillIds
+      nextMisconceptionId: this._nextMisconceptionId,
+      supersedingSkillId: this._supersedingSkillId,
+      allQuestionsMerged: this._allQuestionsMerged,
+      prerequisiteSkillIds: this._prerequisiteSkillIds
     };
   }
   getValidationIssues(): string[] {
@@ -267,13 +267,13 @@ export class SkillObjectFactory {
         skillBackendDict.misconceptions),
       this.generateRubricsFromBackendDict(skillBackendDict.rubrics),
       this.conceptCardObjectFactory.createFromBackendDict(
-        skillBackendDict.skill_contents),
-      skillBackendDict.language_code,
+        skillBackendDict.skillContents),
+      skillBackendDict.languageCode,
       skillBackendDict.version,
-      skillBackendDict.next_misconception_id,
-      skillBackendDict.superseding_skill_id,
-      skillBackendDict.all_questions_merged,
-      skillBackendDict.prerequisite_skill_ids);
+      skillBackendDict.nextMisconceptionId,
+      skillBackendDict.supersedingSkillId,
+      skillBackendDict.allQuestionsMerged,
+      skillBackendDict.prerequisiteSkillIds);
   }
 
   generateMisconceptionsFromBackendDict(

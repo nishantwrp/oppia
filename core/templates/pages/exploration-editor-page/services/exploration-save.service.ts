@@ -521,7 +521,7 @@ angular.module('oppia').factory('ExplorationSaveService', [
             nodes: diffGraphData.nodes,
             links: diffGraphData.links,
             finalStateIds: diffGraphData.finalStateIds,
-            v1InitStateId: diffGraphData.originalStateIds[data.init_state_name],
+            v1InitStateId: diffGraphData.originalStateIds[data.initStateName],
             v2InitStateId: diffGraphData.stateIds[
               ExplorationInitStateNameService.displayed],
             v1States: oldStates,

@@ -56,10 +56,10 @@ export class Outcome {
     return {
       dest: this.dest,
       feedback: this.feedback.toBackendDict(),
-      labelled_as_correct: this.labelledAsCorrect,
-      param_changes: this.paramChanges,
-      refresher_exploration_id: this.refresherExplorationId,
-      missing_prerequisite_skill_id: this.missingPrerequisiteSkillId
+      labelledAsCorrect: this.labelledAsCorrect,
+      paramChanges: this.paramChanges,
+      refresherExplorationId: this.refresherExplorationId,
+      missingPrerequisiteSkillId: this.missingPrerequisiteSkillId
     };
   }
 
@@ -110,10 +110,10 @@ export class OutcomeObjectFactory {
       outcomeDict.dest,
       this.subtitledHtmlObjectFactory.createFromBackendDict(
         outcomeDict.feedback),
-      outcomeDict.labelled_as_correct,
-      outcomeDict.param_changes,
-      outcomeDict.refresher_exploration_id,
-      outcomeDict.missing_prerequisite_skill_id);
+      outcomeDict.labelledAsCorrect,
+      outcomeDict.paramChanges,
+      outcomeDict.refresherExplorationId,
+      outcomeDict.missingPrerequisiteSkillId);
   }
 }
 

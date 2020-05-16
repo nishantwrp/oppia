@@ -51,111 +51,111 @@ describe('Extracting Image file names in the state service', () => {
       objective: 'Your objective',
       tags: [],
       blurb: '',
-      author_notes: '',
-      states_schema_version: 15,
-      init_state_name: 'Introduction',
+      authorNotes: '',
+      statesSchemaVersion: 15,
+      initStateName: 'Introduction',
       states: {
         'State 1': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: ''
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
             id: 'Continue',
-            default_outcome: {
+            defaultOutcome: {
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
               dest: 'State 3',
-              param_changes: []
+              paramChanges: []
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               buttonText: {
                 value: 'Continue'
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         },
         'State 3': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'Congratulations, you have finished!'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
             id: 'EndExploration',
-            default_outcome: null,
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            defaultOutcome: null,
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               recommendedExplorationIds: {
                 value: []
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         },
         Introduction: {
-          classifier_model_id: null,
-          param_changes: [],
+          classifierModelId: null,
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'Multiple Choice'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {}
             }
           },
           interaction: {
             id: 'MultipleChoiceInput',
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Introduction',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: 'Try Again!'
               }
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               choices: {
                 value: [
                   '<p> Go to ItemSelection <oppia-noninteractive-image' +
@@ -167,47 +167,47 @@ describe('Extracting Image file names in the state service', () => {
                 ]
               }
             },
-            answer_groups: [
+            answerGroups: [
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 4',
                   feedback: {
-                    content_id: 'feedback_1',
+                    contentId: 'feedback_1',
                     html: '<p>We are going to ItemSelection' +
                           '<oppia-noninteractive-image filepath-with-value=' +
                           '"&amp;quot;sIOutcomeFeedback.png&amp;quot;">' +
                           '</oppia-noninteractive-image></p>'
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [
+                ruleSpecs: [
                   {
                     inputs: {
                       x: 0
                     },
-                    rule_type: 'Equals'
+                    ruleType: 'Equals'
                   }
                 ]
               },
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 5',
                   feedback: {
-                    content_id: 'feedback_2',
+                    contentId: 'feedback_2',
                     html: "Let's go to state 5 ImageAndRegion"
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [
+                ruleSpecs: [
                   {
                     inputs: {
                       x: 1
                     },
-                    rule_type: 'Equals'
+                    ruleType: 'Equals'
                   }
                 ]
               }
@@ -215,47 +215,47 @@ describe('Extracting Image file names in the state service', () => {
             hints: [],
             solution: null
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {}
             }
           }
         },
         'State 4': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '<p><oppia-noninteractive-image filepath-with-value="&amp;' +
                   'quot;s4Content.png&amp;quot;">' +
                   '</oppia-noninteractive-image></p>'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {}
             }
           },
           interaction: {
             id: 'ItemSelectionInput',
-            default_outcome: {
+            defaultOutcome: {
               feedback: {
-                content_id: 'content',
+                contentId: 'content',
                 html: '<p>Try Again! <oppia-noninteractive-image' +
                       'filepath-with-value="&amp;quot;' +
                       's4DefaultOutcomeFeedback.png&amp;quot;">' +
                       '</oppia-noninteractive-image></p>'
               },
               dest: 'State 4',
-              param_changes: []
+              paramChanges: []
             },
-            confirmed_unclassifies_answers: [],
-            customization_args: {
+            confirmedUnclassifiesAnswers: [],
+            customizationArgs: {
               minAllowableSelectionCount: {
                 value: 1
               },
@@ -274,19 +274,19 @@ describe('Extracting Image file names in the state service', () => {
             },
             hints: [],
             solution: null,
-            answer_groups: [
+            answerGroups: [
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 6',
                   feedback: {
-                    content_id: 'feedback_1',
+                    contentId: 'feedback_1',
                     html: "It is choice number 1. Let's go to the Text Input"
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [
+                ruleSpecs: [
                   {
                     inputs: {
                       x: [
@@ -295,22 +295,22 @@ describe('Extracting Image file names in the state service', () => {
                         '</oppia-noninteractive-image></p>'
                       ]
                     },
-                    rule_type: 'Equals'
+                    ruleType: 'Equals'
                   }
                 ]
               },
               {
-                labelled_as_correct: true,
+                labelledAsCorrect: true,
                 outcome: {
                   dest: 'State 1',
                   feedback: {
-                    content_id: 'feedback_2',
+                    contentId: 'feedback_2',
                     html: 'It is choice number 2'
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [
+                ruleSpecs: [
                   {
                     inputs: {
                       x: [
@@ -319,142 +319,142 @@ describe('Extracting Image file names in the state service', () => {
                         '</oppia-noninteractive-image></p>'
                       ]
                     },
-                    rule_type: 'Equals'
+                    ruleType: 'Equals'
                   }
                 ]
               }
             ]
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {}
             }
           }
         },
         'State 5': {
-          classifier_model_id: null,
-          param_changes: [],
+          classifierModelId: null,
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: ''
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {},
-              feedback_3: {},
-              feedback_4: {},
-              feedback_5: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {},
+              feedback3: {},
+              feedback4: {},
+              feedback5: {}
             }
           },
           interaction: {
             id: 'ImageClickInput',
-            confirmed_unclassified_answers: [],
-            default_outcome: {
+            confirmedUnclassifiedAnswers: [],
+            defaultOutcome: {
               dest: 'State 5',
               feedback: {
-                content_id: 'content',
+                contentId: 'content',
                 html: 'Try Again!'
               }
             },
-            answer_groups: [
+            answerGroups: [
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 5',
                   feedback: {
-                    content_id: 'feeedback_1',
+                    contentId: 'feeedback_1',
                     html: '<p>That is the class definition. Try again.</p>'
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [{
+                ruleSpecs: [{
                   inputs: {
                     x: 'classdef'
                   },
-                  rule_type: 'IsInRegion'
+                  ruleType: 'IsInRegion'
                 }]
               },
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 5',
                   feedback: {
-                    content_id: 'feeedback_2',
+                    contentId: 'feeedback_2',
                     html: '<p>That is a function, which is close to what you' +
                           'are looking for. Try again!</p>'
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [{
+                ruleSpecs: [{
                   inputs: {
                     x: 'instancefunc'
                   },
-                  rule_type: 'IsInRegion'
+                  ruleType: 'IsInRegion'
                 }]
               },
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 5',
                   feedback: {
-                    content_id: 'feeedback_3',
+                    contentId: 'feeedback_3',
                     html: '<p>That is the class docstring. Try again.</p>'
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [{
+                ruleSpecs: [{
                   inputs: {
                     x: 'docstring'
                   },
-                  rule_type: 'IsInRegion'
+                  ruleType: 'IsInRegion'
                 }]
               },
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 5',
                   feedback: {
-                    content_id: 'feeedback_4',
+                    contentId: 'feeedback_4',
                     html: "<p>That's a classmethod. It does execute code," +
                           "but it doesn't construct anything. Try again!</p>"
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [{
+                ruleSpecs: [{
                   inputs: {
                     x: 'classfunc'
                   },
-                  rule_type: 'IsInRegion'
+                  ruleType: 'IsInRegion'
                 }]
               },
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 1',
                   feedback: {
-                    content_id: 'feeedback_5',
+                    contentId: 'feeedback_5',
                     html: '<p>You found it! This is the code responsible for' +
                           'constructing a new class object.</p>'
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null
                 },
-                rule_specs: [{
+                ruleSpecs: [{
                   inputs: {
                     x: 'ctor'
                   },
-                  rule_type: 'IsInRegion'
+                  ruleType: 'IsInRegion'
                 }]
               }
             ],
@@ -521,46 +521,46 @@ describe('Extracting Image file names in the state service', () => {
             hints: [],
             solution: null
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {},
-              feedback_3: {},
-              feedback_4: {},
-              feedback_5: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {},
+              feedback3: {},
+              feedback4: {},
+              feedback5: {}
             }
           }
         },
         'State 6': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '<p>Text Input Content</p>'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {},
-              hint_1: {},
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {},
+              hint1: {},
               solution: {}
             }
           },
           interaction: {
             id: 'TextInput',
-            default_outcome: {
+            defaultOutcome: {
               dest: 'State 6',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: '<p>Try again.</p>'
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
             confirmed_unclassified_answers: [],
             customization_args: {
@@ -571,76 +571,76 @@ describe('Extracting Image file names in the state service', () => {
                 value: ''
               }
             },
-            answer_groups: [{
-              rule_specs: [{
+            answerGroups: [{
+              ruleSpecs: [{
                 inputs: {
                   x: '1'
                 },
-                rule_type: 'Contains'
+                ruleType: 'Contains'
               }],
               outcome: {
                 dest: 'State 1',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: "<p>Let's go to State 1</p>"
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               }
             }, {
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: '2'
                 },
-                rule_type: 'Contains'
+                ruleType: 'Contains'
               }],
               outcome: {
                 dest: 'State 1',
                 feedback: {
-                  content_id: 'feedback_2',
+                  contentId: 'feedback_2',
                   html: "<p>Let's go to State 1</p>"
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               }
             }],
             hints: [{
-              hint_content: {
-                content_id: 'hint_1',
+              hintContent: {
+                contentId: 'hint_1',
                 html: '<p><oppia-noninteractive-image filepath-with-value="' +
                       '&amp;quot;s6Hint1.png&amp;quot;">' +
                       '</oppia-noninteractive-image></p>'
               }
             }],
             solution: {
-              answer_is_exclusive: false,
-              correct_answer: 'cat',
+              answerIsExclusive: false,
+              correctAnswer: 'cat',
               explanation: {
-                content_id: 'solution',
+                contentId: 'solution',
                 html: '<p><oppia-noninteractive-image filepath-with-value="' +
                       '&amp;quot;s6SolutionExplanation.png&amp;quot;">' +
                       '</oppia-noninteractive-image></p>'
               }
             },
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {},
-              hint_1: {},
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {},
+              hint1: {},
               solution: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         }
       },
-      param_specs: {},
-      param_changes: [],
+      paramSpecs: {},
+      paramChanges: [],
       version: 1
     };
 

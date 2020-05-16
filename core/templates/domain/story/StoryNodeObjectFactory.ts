@@ -273,14 +273,14 @@ export class StoryNodeObjectFactory {
     return new StoryNode(
       storyNodeBackendObject.id, storyNodeBackendObject.title,
       storyNodeBackendObject.description,
-      storyNodeBackendObject.destination_node_ids,
-      storyNodeBackendObject.prerequisite_skill_ids,
-      storyNodeBackendObject.acquired_skill_ids,
+      storyNodeBackendObject.destinationNodeIds,
+      storyNodeBackendObject.prerequisiteSkillIds,
+      storyNodeBackendObject.acquiredSkillIds,
       storyNodeBackendObject.outline,
-      storyNodeBackendObject.outline_is_finalized,
-      storyNodeBackendObject.exploration_id,
-      storyNodeBackendObject.thumbnail_bg_color,
-      storyNodeBackendObject.thumbnail_filename
+      storyNodeBackendObject.outlineIsFinalized,
+      storyNodeBackendObject.explorationId,
+      storyNodeBackendObject.thumbnailBgColor,
+      storyNodeBackendObject.thumbnailFilename
     );
   }
 

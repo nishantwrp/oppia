@@ -100,100 +100,100 @@ describe('Solution Verification Service', function() {
         },
         interaction: {
           id: 'TextInput',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'End State',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            rule_specs: [{
+            ruleSpecs: [{
               inputs: {x: 'abc'},
-              rule_type: 'Contains'
+              ruleType: 'Contains'
             }]
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'First State',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            labelled_as_correct: false,
-            param_changes: [],
-            refresher_exploration_id: null
+            labelledAsCorrect: false,
+            paramChanges: [],
+            refresherExplorationId: null
           },
           hints: [{
-            hint_content: {
-              content_id: 'hint_1',
+            hintContent: {
+              contentId: 'hint_1',
               html: 'one'
             }
           }, {
-            hint_content: {
-              content_id: 'hint_2',
+            hintContent: {
+              contentId: 'hint_2',
               html: 'two'
             }
           }]
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
-            hint_1: {},
-            hint_2: {}
+            defaultOutcome: {},
+            feedback1: {},
+            hint1: {},
+            hint2: {}
           }
         }
       },
       'End State': {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: ''
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
         interaction: {
           id: 'TextInput',
-          answer_groups: [{
-            rule_specs: [],
+          answerGroups: [{
+            ruleSpecs: [],
             outcome: {
               dest: 'default',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             }
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'default',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            param_changes: []
+            paramChanges: []
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         }
       }

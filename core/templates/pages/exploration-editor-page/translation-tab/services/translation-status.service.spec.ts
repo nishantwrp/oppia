@@ -181,213 +181,213 @@ describe('Translation status service', function() {
         First: {
           content: {
             html: '<p>This is first card.</p>',
-            content_id: 'content'
+            contentId: 'content'
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_2: {
+              defaultOutcome: {},
+              feedback2: {
                 hi: {
                   html: '<p>This is feedback 1.</p>',
-                  needs_update: false
+                  needsUpdate: false
                 }
               },
-              feedback_1: {
+              feedback1: {
                 hi: {
                   html: '<p>This is first card.</p>',
-                  needs_update: false
+                  needsUpdate: false
                 }
               }
             }
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_2: {
+              defaultOutcome: {},
+              feedback2: {
                 en: {
-                  needs_update: false,
+                  needsUpdate: false,
                   filename: 'filename1.mp3',
-                  file_size_bytes: 43467,
-                  duration_secs: 4.3
+                  fileSizeBytes: 43467,
+                  durationSecs: 4.3
                 }
               },
-              feedback_1: {}
+              feedback1: {}
             }
           },
           interaction: {
-            answer_groups: [{
-              tagged_skill_misconception_id: null,
+            answerGroups: [{
+              taggedSkillMisconceptionId: null,
               outcome: {
-                refresher_exploration_id: null,
-                param_changes: [],
-                labelled_as_correct: false,
+                refresherExplorationId: null,
+                paramChanges: [],
+                labelledAsCorrect: false,
                 feedback: {
                   html: '<p>This is feedback1</p>',
-                  content_id: 'feedback_1'
+                  contentId: 'feedback_1'
                 },
-                missing_prerequisite_skill_id: null,
+                missingPrerequisiteSkillId: null,
                 dest: 'Second'
               },
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: 0
                 },
-                rule_type: 'Equals'
+                ruleType: 'Equals'
               }],
-              training_data: []
+              trainingData: []
             },
             {
-              tagged_skill_misconception_id: null,
+              taggedSkillMisconceptionId: null,
               outcome: {
-                refresher_exploration_id: null,
-                param_changes: [],
-                labelled_as_correct: false,
+                refresherExplorationId: null,
+                paramChanges: [],
+                labelledAsCorrect: false,
                 feedback: {
                   html: '<p>This is feedback2</p>',
-                  content_id: 'feedback_2'
+                  contentId: 'feedback_2'
                 },
-                missing_prerequisite_skill_id: null,
+                missingPrerequisiteSkillId: null,
                 dest: 'First'
               },
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: 1
                 },
-                rule_type: 'Equals'
+                ruleType: 'Equals'
               }],
-              training_data: []
+              trainingData: []
             }],
             solution: null,
             hints: [],
             id: 'MultipleChoiceInput',
-            customization_args: {
+            customizationArgs: {
               choices: {
                 value: ['<p>1</p>', '<p>2</p>']
               }
             },
-            default_outcome: {
-              refresher_exploration_id: null,
-              param_changes: [],
-              labelled_as_correct: false,
+            defaultOutcome: {
+              refresherExplorationId: null,
+              paramChanges: [],
+              labelledAsCorrect: false,
               feedback: {
                 html: '',
-                content_id: 'default_outcome'
+                contentId: 'default_outcome'
               },
-              missing_prerequisite_skill_id: null,
+              missingPrerequisiteSkillId: null,
               dest: 'First'
             },
-            confirmed_unclassified_answers: []
+            confirmedUnclassifiedAnswers: []
           },
-          solicit_answer_details: false,
-          classifier_model_id: null,
-          param_changes: []
+          solicitAnswerDetails: false,
+          classifierModelId: null,
+          paramChanges: []
         },
         Second: {
           content: {
             html: '<p>This is second card</p>',
-            content_id: 'content'
+            contentId: 'content'
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
           interaction: {
-            answer_groups: [{
-              tagged_skill_misconception_id: null,
+            answerGroups: [{
+              taggedSkillMisconceptionId: null,
               outcome: {
-                refresher_exploration_id: null,
-                param_changes: [],
-                labelled_as_correct: false,
+                refresherExplorationId: null,
+                paramChanges: [],
+                labelledAsCorrect: false,
                 feedback: {
                   html: '',
-                  content_id: 'feedback_1'
+                  contentId: 'feedback_1'
                 },
-                missing_prerequisite_skill_id: null,
+                missingPrerequisiteSkillId: null,
                 dest: 'Third'
               },
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: 0
                 },
-                rule_type: 'Equals'
+                ruleType: 'Equals'
               }],
-              training_data: []
+              trainingData: []
             }],
             solution: null,
             hints: [],
             id: 'MultipleChoiceInput',
-            customization_args: {
+            customizationArgs: {
               choices: {
                 value: ['<p>1</p>']
               }
             },
-            default_outcome: {
-              refresher_exploration_id: null,
-              param_changes: [],
-              labelled_as_correct: false,
+            defaultOutcome: {
+              refresherExplorationId: null,
+              paramChanges: [],
+              labelledAsCorrect: false,
               feedback: {
                 html: '',
-                content_id: 'default_outcome'
+                contentId: 'default_outcome'
               },
-              missing_prerequisite_skill_id: null,
+              missingPrerequisiteSkillId: null,
               dest: 'Second'
             },
-            confirmed_unclassified_answers: []
+            confirmedUnclassifiedAnswers: []
           },
-          solicit_answer_details: false,
-          classifier_model_id: null,
-          param_changes: []
+          solicitAnswerDetails: false,
+          classifierModelId: null,
+          paramChanges: []
         },
         Third: {
           content: {
             html: 'Congratulations, you have finished!',
-            content_id: 'content'
+            contentId: 'content'
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {}
             }
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
-                  needs_update: false,
+                  needsUpdate: false,
                   filename: 'content-en-s86jb5zajs.mp3',
-                  file_size_bytes: 38870,
-                  duration_secs: 38.8
+                  fileSizeBytes: 38870,
+                  durationSecs: 38.8
                 }
               }
             }
           },
           interaction: {
-            answer_groups: [],
+            answerGroups: [],
             solution: null,
             hints: [],
             id: 'EndExploration',
-            customization_args: {
+            customizationArgs: {
               recommendedExplorationIds: {
                 value: []
               }
             },
-            default_outcome: null,
-            confirmed_unclassified_answers: []
+            defaultOutcome: null,
+            confirmedUnclassifiedAnswers: []
           },
-          solicit_answer_details: false,
-          classifier_model_id: null,
-          param_changes: []
+          solicitAnswerDetails: false,
+          classifierModelId: null,
+          paramChanges: []
         }
       };
       ess.init(statesWithAudioDict);

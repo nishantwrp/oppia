@@ -37,53 +37,53 @@ describe('StateImprovementSuggestionService', () => {
     var statesDict1 = {
       state: {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
         interaction: {
           id: 'RuleTest',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'unused',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            rule_specs: [{
+            ruleSpecs: [{
               inputs: {
                 x: 10
               },
-              rule_type: 'Equals'
+              ruleType: 'Equals'
             }],
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'state',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            param_changes: []
+            paramChanges: []
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         }
       }
@@ -93,105 +93,105 @@ describe('StateImprovementSuggestionService', () => {
     var statesDict2 = {
       initial: {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
         interaction: {
           id: 'RuleTest',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'unused',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            rule_specs: [{
+            ruleSpecs: [{
               inputs: {
                 x: 10
               },
-              rule_type: 'Equals'
+              ruleType: 'Equals'
             }]
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'end',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            param_changes: []
+            paramChanges: []
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
       },
       end: {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
         interaction: {
           id: 'RuleTest',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'unused',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            rule_specs: [{
+            ruleSpecs: [{
               inputs: {
                 x: 10
               },
-              rule_type: 'Equals'
+              ruleType: 'Equals'
             }]
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: null,
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            param_changes: []
+            paramChanges: []
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
       }
@@ -201,105 +201,105 @@ describe('StateImprovementSuggestionService', () => {
     var statesDict3 = {
       'State 1': {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
         interaction: {
           id: 'RuleTest',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'next state',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            rule_specs: [{
+            ruleSpecs: [{
               inputs: {
                 x: 10
               },
-              rule_type: 'Equals'
+              ruleType: 'Equals'
             }]
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'State 1',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            param_changes: []
+            paramChanges: []
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
       },
       'State 2': {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
         interaction: {
           id: 'RuleTest',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'next state',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            rule_specs: [{
+            ruleSpecs: [{
               inputs: {
                 x: 10
               },
-              rule_type: 'Equals'
+              ruleType: 'Equals'
             }]
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'State 2',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            param_changes: []
+            paramChanges: []
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
       }

@@ -58,13 +58,13 @@ describe('NumericInputValidationService', () => {
     goodDefaultOutcome = oof.createFromBackendDict({
       dest: 'Second State',
       feedback: {
-        audio_translations: {},
-        html: ''
+        html: '',
+        audioTranslations: {}
       },
-      labelled_as_correct: false,
-      param_changes: [],
-      refresher_exploration_id: null,
-      missing_prerequisite_skill_id: null
+      labelledAsCorrect: false,
+      paramChanges: [],
+      refresherExplorationId: null,
+      missingPrerequisiteSkillId: null
     });
     equalsZeroRule = rof.createFromBackendDict({
       rule_type: 'Equals',

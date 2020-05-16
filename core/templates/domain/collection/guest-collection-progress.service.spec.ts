@@ -81,8 +81,8 @@ describe('Guest collection progress service', () => {
 
   var _createCollectionNode = function(expId, expTitle) {
     var collectionNodeBackendObject = {
-      exploration_id: expId,
-      exploration_summary: {
+      explorationId: expId,
+      explorationSummary: {
         title: expTitle,
         category: 'exp category',
         objective: 'exp objective'

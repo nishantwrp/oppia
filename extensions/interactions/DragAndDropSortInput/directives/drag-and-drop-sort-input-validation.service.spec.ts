@@ -64,11 +64,11 @@ describe('DragAndDropSortInputValidationService', () => {
       dest: 'Second State',
       feedback: {
         html: '',
-        audio_translations: {}
+        audioTranslations: {}
       },
-      labelled_as_correct: false,
-      param_changes: [],
-      refresher_exploration_id: null
+      labelledAsCorrect: false,
+      paramChanges: [],
+      refresherExplorationId: null
     });
 
     customizationArgs = {

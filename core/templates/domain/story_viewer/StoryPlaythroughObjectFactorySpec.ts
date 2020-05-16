@@ -32,13 +32,13 @@ describe('Story playthrough object factory', () => {
     var firstSampleReadOnlyStoryNodeBackendDict = {
       id: 'node_1',
       title: 'Title 1',
-      prerequisite_skill_ids: [],
-      acquired_skill_ids: [],
-      destination_node_ids: ['node_2'],
+      prerequisiteSkillIds: [],
+      acquiredSkillIds: [],
+      destinationNodeIds: ['node_2'],
       outline: 'Outline',
-      exploration_id: 'exp_id',
-      outline_is_finalized: false,
-      exp_summary_dict: {
+      explorationId: 'exp_id',
+      outlineIsFinalized: false,
+      expSummaryDict: {
         title: 'Title',
         status: 'private'
       },
@@ -47,13 +47,13 @@ describe('Story playthrough object factory', () => {
     var secondSampleReadOnlyStoryNodeBackendDict = {
       id: 'node_2',
       title: 'Title 2',
-      prerequisite_skill_ids: [],
-      acquired_skill_ids: [],
-      destination_node_ids: ['node_3'],
+      prerequisiteSkillIds: [],
+      acquiredSkillIds: [],
+      destinationNodeIds: ['node_3'],
       outline: 'Outline',
-      exploration_id: 'exp_id',
-      outline_is_finalized: false,
-      exp_summary_dict: {
+      explorationId: 'exp_id',
+      outlineIsFinalized: false,
+      expSummaryDict: {
         title: 'Title',
         status: 'private'
       },

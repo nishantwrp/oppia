@@ -54,76 +54,76 @@ describe('Learner answer info service', function() {
   beforeEach(angular.mock.inject(function($injector) {
     stateDict = {
       content: {
-        content_id: 'content',
+        contentId: 'content',
         html: 'content'
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {},
-          default_outcome: {},
-          feedback_1: {},
-          feedback_2: {}
+          defaultOutcome: {},
+          feedback1: {},
+          feedback2: {}
         }
       },
       interaction: {
         id: 'RuleTest',
-        answer_groups: [{
+        answerGroups: [{
           outcome: {
             dest: 'outcome 1',
             feedback: {
-              content_id: 'feedback_1',
+              contentId: 'feedback_1',
               html: ''
             },
-            labelled_as_correct: false,
-            param_changes: [],
-            refresher_exploration_id: null,
-            missing_prerequisite_skill_id: null
+            labelledAsCorrect: false,
+            paramChanges: [],
+            refresherExplorationId: null,
+            missingPrerequisiteSkillId: null
           },
-          rule_specs: [{
+          ruleSpecs: [{
             inputs: {
               x: 10
             },
-            rule_type: 'Equals'
+            ruleType: 'Equals'
           }]
         }, {
           outcome: {
             dest: 'outcome 2',
             feedback: {
-              content_id: 'feedback_2',
+              contentId: 'feedback_2',
               html: ''
             },
-            labelled_as_correct: false,
-            param_changes: [],
-            refresher_exploration_id: null,
-            missing_prerequisite_skill_id: null
+            labelledAsCorrect: false,
+            paramChanges: [],
+            refresherExplorationId: null,
+            missingPrerequisiteSkillId: null
           },
-          rule_specs: [{
+          ruleSpecs: [{
             inputs: {
               x: 5
             },
-            rule_type: 'Equals'
+            ruleType: 'Equals'
           }, {
             inputs: {
               x: 7
             },
-            rule_type: 'NotEquals'
+            ruleType: 'NotEquals'
           }, {
             inputs: {
               x: 6
             },
-            rule_type: 'Equals'
+            ruleType: 'Equals'
           }]
         }],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'default',
           feedback: {
-            content_id: 'default_outcome',
+            contentId: 'default_outcome',
             html: ''
           },
-          labelled_as_correct: false,
-          param_changes: [],
-          refresher_exploration_id: null,
-          missing_prerequisite_skill_id: null
+          labelledAsCorrect: false,
+          paramChanges: [],
+          refresherExplorationId: null,
+          missingPrerequisiteSkillId: null
         },
         hints: []
       },

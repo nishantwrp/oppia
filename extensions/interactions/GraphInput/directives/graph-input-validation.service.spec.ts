@@ -55,12 +55,12 @@ describe('GraphInputValidationService', () => {
       dest: 'Second State',
       feedback: {
         html: '',
-        audio_translations: {}
+        audioTranslations: {}
       },
-      labelled_as_correct: false,
-      param_changes: [],
-      refresher_exploration_id: null,
-      missing_prerequisite_skill_id: null
+      labelledAsCorrect: false,
+      paramChanges: [],
+      refresherExplorationId: null,
+      missingPrerequisiteSkillId: null
     });
 
     customizationArguments = {

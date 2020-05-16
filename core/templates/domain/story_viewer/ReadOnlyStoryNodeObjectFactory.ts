@@ -93,13 +93,13 @@ export class ReadOnlyStoryNodeObjectFactory {
   createFromBackendDict(storyNodeBackendDict: any): ReadOnlyStoryNode {
     return new ReadOnlyStoryNode(storyNodeBackendDict.id,
       storyNodeBackendDict.title,
-      storyNodeBackendDict.destination_node_ids,
-      storyNodeBackendDict.prerequisite_skill_ids,
-      storyNodeBackendDict.acquired_skill_ids,
+      storyNodeBackendDict.destinationNodeIds,
+      storyNodeBackendDict.prerequisiteSkillIds,
+      storyNodeBackendDict.acquiredSkillIds,
       storyNodeBackendDict.outline,
-      storyNodeBackendDict.outline_is_finalized,
-      storyNodeBackendDict.exploration_id,
-      storyNodeBackendDict.exp_summary_dict,
+      storyNodeBackendDict.outlineIsFinalized,
+      storyNodeBackendDict.explorationId,
+      storyNodeBackendDict.expSummaryDict,
       storyNodeBackendDict.completed);
   }
 }

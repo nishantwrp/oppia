@@ -183,21 +183,21 @@ describe('TrainingDataService', function() {
     ess.init({
       State: {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: 'State Content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
         interaction: {
           id: 'TextInput',
-          answer_groups: [{
-            rule_specs: [{
-              rule_type: 'Contains',
+          answerGroups: [{
+            ruleSpecs: [{
+              ruleType: 'Contains',
               inputs: {
                 x: 'Test'
               }
@@ -205,38 +205,38 @@ describe('TrainingDataService', function() {
             outcome: {
               dest: 'State',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: 'Feedback'
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null,
-              missing_prerequisite_skill_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null,
+              missingPrerequisiteSkillId: null
             },
-            training_data: [],
-            tagged_skill_misconception_id: null
+            trainingData: [],
+            taggedSkillMisconceptionId: null
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'State',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: 'Default'
             },
-            labelled_as_correct: false,
-            param_changes: [],
-            refresher_exploration_id: null,
-            missing_prerequisite_skill_id: null
+            labelledAsCorrect: false,
+            paramChanges: [],
+            refresherExplorationId: null,
+            missingPrerequisiteSkillId: null
           },
           hints: [],
-          confirmed_unclassified_answers: []
+          confirmedUnclassifiedAnswers: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {}
+            defaultOutcome: {},
+            feedback1: {}
           }
         },
       }

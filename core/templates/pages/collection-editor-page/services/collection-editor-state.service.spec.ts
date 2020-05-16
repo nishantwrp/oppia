@@ -149,13 +149,13 @@ describe('Collection editor state service', function() {
       title: 'Collection Under Test',
       category: 'Test',
       objective: 'To pass',
-      language_code: 'en',
-      schema_version: '3',
+      languageCode: 'en',
+      schemaVersion: '3',
       version: '1',
       nodes: [{
-        exploration_id: '0'
+        explorationId: '0'
       }, {
-        exploration_id: '1'
+        explorationId: '1'
       }]
     };
     secondBackendCollectionObject = {
@@ -163,31 +163,31 @@ describe('Collection editor state service', function() {
       title: 'Interesting collection',
       category: 'Test',
       objective: 'To be interesting',
-      language_code: 'en',
+      languageCode: 'en',
       tags: [],
-      schema_version: '3',
+      schemaVersion: '3',
       version: '3',
       nodes: [{
-        exploration_id: '0'
+        explorationId: '0'
       }]
     };
 
     var privateCollectionRightsObject = {
-      collection_id: '5',
-      can_edit: 'true',
-      can_unpublish: 'false',
-      is_private: 'true',
-      owner_names: ['A']
+      collectionId: '5',
+      canEdit: 'true',
+      canUnpublish: 'false',
+      isPrivate: 'true',
+      ownerNames: ['A']
     };
     fakeCollectionRightsBackendApiService.backendCollectionRightsObject = (
       privateCollectionRightsObject);
 
     unpublishablePublicCollectionRightsObject = {
-      collection_id: '5',
-      can_edit: 'true',
-      can_unpublish: 'true',
-      is_private: 'false',
-      owner_names: ['A']
+      collectionId: '5',
+      canEdit: 'true',
+      canUnpublish: 'true',
+      isPrivate: 'false',
+      ownerNames: ['A']
     };
   }));
 

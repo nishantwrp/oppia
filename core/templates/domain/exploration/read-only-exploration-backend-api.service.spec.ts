@@ -62,38 +62,38 @@ describe('Read only exploration backend API service', function() {
 
     // Sample exploration object returnable from the backend
     sampleDataResults = {
-      exploration_id: '0',
-      is_logged_in: true,
-      session_id: 'KERH',
+      explorationId: '0',
+      isLoggedIn: true,
+      sessionId: 'KERH',
       exploration: {
-        init_state_name: 'Introduction',
+        initStateName: 'Introduction',
         states: {
           Introduction: {
-            param_changes: [],
+            paramChanges: [],
             content: {
               html: '',
-              audio_translations: {}
+              audioTranslations: {}
             },
-            unresolved_answers: {},
+            unresolvedAnswers: {},
             interaction: {
-              customization_args: {},
-              answer_groups: [],
-              default_outcome: {
-                param_changes: [],
+              customizationArgs: {},
+              answerGroups: [],
+              defaultOutcome: {
+                paramChanges: [],
                 dest: 'Introduction',
                 feedback: {
                   html: '',
-                  audio_translations: {}
+                  audioTranslations: {}
                 }
               },
-              confirmed_unclassified_answers: [],
+              confirmedUnclassifiedAnswers: [],
               id: null
             }
           }
         }
       },
       version: 1,
-      state_classifier_mapping: {}
+      stateClassifierMapping: {}
     };
   }));
 

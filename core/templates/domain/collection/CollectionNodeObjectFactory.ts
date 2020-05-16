@@ -34,7 +34,7 @@ export class CollectionNode {
   // keys which give tslint errors against underscore_casing in favor of
   // camelCasing.
   constructor(collectionNodeBackendObject: any) {
-    this._explorationId = collectionNodeBackendObject.exploration_id;
+    this._explorationId = collectionNodeBackendObject.explorationId;
     this._explorationSummaryObject = cloneDeep(
       collectionNodeBackendObject.exploration_summary);
   }
@@ -119,8 +119,8 @@ export class CollectionNodeObjectFactory {
 
   createFromExplorationId(explorationId: string): CollectionNode {
     return this.create({
-      exploration_id: explorationId,
-      exploration_summary: null
+      explorationId: explorationId,
+      explorationSummary: null
     });
   }
 }

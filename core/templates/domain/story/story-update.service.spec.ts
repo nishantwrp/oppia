@@ -66,34 +66,34 @@ describe('Story update service', function() {
       description: 'Story description',
       notes: 'Story notes',
       version: 1,
-      corresponding_topic_id: 'topic_id',
-      story_contents: {
-        initial_node_id: 'node_2',
+      correspondingTopicId: 'topic_id',
+      storyContents: {
+        initialNodeId: 'node_2',
         nodes: [
           {
             id: 'node_1',
             title: 'Title 1',
             description: 'Description 1',
-            prerequisite_skill_ids: ['skill_1'],
-            acquired_skill_ids: ['skill_2'],
-            destination_node_ids: [],
+            prerequisiteSkillIds: ['skill_1'],
+            acquiredSkillIds: ['skill_2'],
+            destinationNodeIds: [],
             outline: 'Outline',
-            exploration_id: null,
-            outline_is_finalized: false
+            explorationId: null,
+            outlineIsFinalized: false
           }, {
             id: 'node_2',
             title: 'Title 2',
             description: 'Description 2',
-            prerequisite_skill_ids: ['skill_3'],
-            acquired_skill_ids: ['skill_4'],
-            destination_node_ids: ['node_1'],
+            prerequisiteSkillIds: ['skill_3'],
+            acquiredSkillIds: ['skill_4'],
+            destinationNodeIds: ['node_1'],
             outline: 'Outline 2',
-            exploration_id: 'exp_1',
-            outline_is_finalized: true
+            explorationId: 'exp_1',
+            outlineIsFinalized: true
           }],
-        next_node_id: 'node_3'
+        nextNodeId: 'node_3'
       },
-      language_code: 'en'
+      languageCode: 'en'
     };
     _sampleStory = storyObjectFactory.createFromBackendDict(
       sampleStoryBackendObject);

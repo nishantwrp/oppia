@@ -24,16 +24,16 @@ import { AnswerGroupsCacheService } from
 describe('Answer Groups Cache Service', () => {
   describe('AnswerGroupsCache', () => {
     var answerGroup = {
-      rule_specs: [],
+      ruleSpecs: [],
       outcome: {
         dest: 'default',
         feedback: {
-          content_id: 'feedback_1',
+          contentId: 'feedback_1',
           html: ''
         },
-        labelled_as_correct: false,
-        param_changes: [],
-        refresher_exploration_id: null
+        labelledAsCorrect: false,
+        paramChanges: [],
+        refresherExplorationId: null
       }
     };
 

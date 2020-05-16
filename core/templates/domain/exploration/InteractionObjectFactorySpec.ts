@@ -54,63 +54,63 @@ describe('Interaction object factory', () => {
     defaultOutcomeDict = {
       dest: 'dest_default',
       feedback: {
-        content_id: 'default_outcome',
+        contentId: 'default_outcome',
         html: ''
       },
-      labelled_as_correct: false,
-      param_changes: [],
-      refresher_exploration_id: null,
-      missing_prerequisite_skill_id: null
+      labelledAsCorrect: false,
+      paramChanges: [],
+      refresherExplorationId: null,
+      missingPrerequisiteSkillId: null
     };
     answerGroupsDict = [{
-      rule_specs: [],
+      ruleSpecs: [],
       outcome: {
         dest: 'dest_1',
         feedback: {
-          content_id: 'outcome_1',
+          contentId: 'outcome_1',
           html: ''
         },
-        labelled_as_correct: false,
-        param_changes: [],
-        refresher_exploration_id: null,
-        missing_prerequisite_skill_id: null
+        labelledAsCorrect: false,
+        paramChanges: [],
+        refresherExplorationId: null,
+        missingPrerequisiteSkillId: null
       },
-      training_data: ['training_data'],
-      tagged_skill_misconception_id: 'skill_id-1'
+      trainingData: ['training_data'],
+      taggedSkillMisconceptionId: 'skill_id-1'
     }];
     hintsDict = [
       {
-        hint_content: {
+        hintContent: {
           html: '<p>First Hint</p>',
-          content_id: 'content_id1'
+          contentId: 'content_id1'
         }
       },
       {
-        hint_content: {
+        hintContent: {
           html: '<p>Second Hint</p>',
-          content_id: 'content_id2'
+          contentId: 'content_id2'
         }
       }
     ];
 
     solutionDict = {
-      answer_is_exclusive: false,
-      correct_answer: 'This is a correct answer!',
+      answerIsExclusive: false,
+      correctAnswer: 'This is a correct answer!',
       explanation: {
-        content_id: 'solution',
+        contentId: 'solution',
         html: 'This is the explanation to the answer'
       }
     };
 
     interactionDict = {
-      answer_groups: answerGroupsDict,
-      confirmed_unclassified_answers: [],
-      customization_args: {
+      answerGroups: answerGroupsDict,
+      confirmedUnclassifiedAnswers: [],
+      customizationArgs: {
         customArg: {
           value: 'custom_value'
         }
       },
-      default_outcome: defaultOutcomeDict,
+      defaultOutcome: defaultOutcomeDict,
       hints: hintsDict,
       id: 'interaction_id',
       solution: solutionDict
@@ -138,36 +138,36 @@ describe('Interaction object factory', () => {
     const testInteraction = iof.createFromBackendDict(interactionDict);
 
     let newAnswerGroup = {
-      rule_specs: [],
+      ruleSpecs: [],
       outcome: {
         dest: 'dest_3',
         feedback: {
-          content_id: 'outcome_3',
+          contentId: 'outcome_3',
           html: ''
         },
-        labelled_as_correct: false,
-        param_changes: [],
-        refresher_exploration_id: null,
-        missing_prerequisite_skill_id: null
+        labelledAsCorrect: false,
+        paramChanges: [],
+        refresherExplorationId: null,
+        missingPrerequisiteSkillId: null
       },
-      training_data: ['training_data'],
-      tagged_skill_misconception_id: 'skill_id-1'
+      trainingData: ['training_data'],
+      taggedSkillMisconceptionId: 'skill_id-1'
     };
     expect(testInteraction.answerGroups).toEqual([agof.createFromBackendDict({
-      rule_specs: [],
+      ruleSpecs: [],
       outcome: {
         dest: 'dest_1',
         feedback: {
-          content_id: 'outcome_1',
+          contentId: 'outcome_1',
           html: ''
         },
-        labelled_as_correct: false,
-        param_changes: [],
-        refresher_exploration_id: null,
-        missing_prerequisite_skill_id: null
+        labelledAsCorrect: false,
+        paramChanges: [],
+        refresherExplorationId: null,
+        missingPrerequisiteSkillId: null
       },
-      training_data: ['training_data'],
-      tagged_skill_misconception_id: 'skill_id-1'
+      trainingData: ['training_data'],
+      taggedSkillMisconceptionId: 'skill_id-1'
     })]);
     newAnswerGroup = agof.createFromBackendDict(newAnswerGroup);
     testInteraction.setAnswerGroups([newAnswerGroup]);
@@ -180,26 +180,26 @@ describe('Interaction object factory', () => {
     const newDefaultOutcomeDict = {
       dest: 'dest_default_new',
       feedback: {
-        content_id: 'default_outcome_new',
+        contentId: 'default_outcome_new',
         html: ''
       },
-      labelled_as_correct: false,
-      param_changes: [],
-      refresher_exploration_id: null,
-      missing_prerequisite_skill_id: null
+      labelledAsCorrect: false,
+      paramChanges: [],
+      refresherExplorationId: null,
+      missingPrerequisiteSkillId: null
     };
     const newDefaultOutcome = oof.createFromBackendDict(newDefaultOutcomeDict);
     expect(testInteraction.defaultOutcome).toEqual(
       oof.createFromBackendDict({
         dest: 'dest_default',
         feedback: {
-          content_id: 'default_outcome',
+          contentId: 'default_outcome',
           html: ''
         },
-        labelled_as_correct: false,
-        param_changes: [],
-        refresher_exploration_id: null,
-        missing_prerequisite_skill_id: null
+        labelledAsCorrect: false,
+        paramChanges: [],
+        refresherExplorationId: null,
+        missingPrerequisiteSkillId: null
       }));
     testInteraction.setDefaultOutcome(newDefaultOutcome);
     expect(testInteraction.defaultOutcome).toEqual(newDefaultOutcome);
@@ -268,57 +268,57 @@ describe('Interaction object factory', () => {
     const testInteraction = iof.createFromBackendDict(interactionDict);
 
     const newAnswerGroups = [{
-      rule_specs: [],
+      ruleSpecs: [],
       outcome: {
         dest: 'dest_1_new',
         feedback: {
-          content_id: 'outcome_1_new',
+          contentId: 'outcome_1_new',
           html: ''
         },
-        labelled_as_correct: false,
-        param_changes: [],
-        refresher_exploration_id: null,
-        missing_prerequisite_skill_id: null
+        labelledAsCorrect: false,
+        paramChanges: [],
+        refresherExplorationId: null,
+        missingPrerequisiteSkillId: null
       },
-      training_data: ['training_data_new'],
-      tagged_skill_misconception_id: 'skill_id-2'
+      trainingData: ['training_data_new'],
+      taggedSkillMisconceptionId: 'skill_id-2'
     }];
     const newDefaultOutcome = {
       dest: 'dest_default_new',
       feedback: {
-        content_id: 'default_outcome_new',
+        contentId: 'default_outcome_new',
         html: ''
       },
-      labelled_as_correct: false,
-      param_changes: [],
-      refresher_exploration_id: null,
-      missing_prerequisite_skill_id: null
+      labelledAsCorrect: false,
+      paramChanges: [],
+      refresherExplorationId: null,
+      missingPrerequisiteSkillId: null
     };
     const newHintDict = [
       {
-        hint_content: {
+        hintContent: {
           html: '<p>New Hint</p>',
-          content_id: 'content_id1_new'
+          contentId: 'content_id1_new'
         }
       }
     ];
     const newSolutionDict = {
-      answer_is_exclusive: false,
-      correct_answer: 'This is a new correct answer!',
+      answerIsExclusive: false,
+      correctAnswer: 'This is a new correct answer!',
       explanation: {
-        content_id: 'solution_new',
+        contentId: 'solution_new',
         html: 'This is the new explanation to the answer'
       }
     };
     const otherInteractionDict = {
-      answer_groups: newAnswerGroups,
-      confirmed_unclassified_answers: [],
-      customization_args: {
+      answerGroups: newAnswerGroups,
+      confirmedUnclassifiedAnswers: [],
+      customizationArgs: {
         customArg: {
           value: 'custom_arg'
         }
       },
-      default_outcome: newDefaultOutcome,
+      defaultOutcome: newDefaultOutcome,
       hints: newHintDict,
       id: 'interaction_id_new',
       solution: newSolutionDict

@@ -45,17 +45,17 @@ describe('Feedback thread object factory', () => {
      'summary dict', () => {
     var threadSummary = {
       status: 'open',
-      original_author_id: 'Test user 1',
-      last_updated_msecs: 1000,
-      last_message_text: 'last message',
-      total_message_count: 2,
-      last_message_is_read: false,
-      second_last_message_is_read: true,
-      author_last_message: 'Test user 2',
-      author_second_last_message: 'Test user 1',
-      exploration_title: 'Sample exploration 1',
-      exploration_id: '0',
-      thread_id: 'thread_id_1'
+      originalAuthorId: 'Test user 1',
+      lastUpdatedMsecs: 1000,
+      lastMessageText: 'last message',
+      totalMessageCount: 2,
+      lastMessageIsRead: false,
+      secondLastMessageIsRead: true,
+      authorLastMessage: 'Test user 2',
+      authorSecondLastMessage: 'Test user 1',
+      explorationTitle: 'Sample exploration 1',
+      explorationId: '0',
+      threadId: 'thread_id_1'
     };
 
     var feedbackThreadSummary = (

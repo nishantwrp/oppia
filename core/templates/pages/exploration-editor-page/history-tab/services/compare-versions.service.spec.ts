@@ -135,49 +135,49 @@ describe('Compare versions service', function() {
       for (var stateName in statesDetails) {
         var newStateData = {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: statesDetails[stateName].contentStr
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             }
           },
           interaction: {
-            answer_groups: [],
-            default_outcome: {
+            answerGroups: [],
+            defaultOutcome: {
               dest: 'default',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
             hints: []
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
         };
-        newStateData.interaction.answer_groups =
+        newStateData.interaction.answerGroups =
           statesDetails[stateName].ruleDests.map(function(ruleDestName) {
             return {
               outcome: {
                 dest: ruleDestName,
                 feedback: [],
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               },
-              rule_specs: []
+              ruleSpecs: []
             };
           });
         statesData[stateName] = newStateData;

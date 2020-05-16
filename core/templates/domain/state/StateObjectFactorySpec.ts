@@ -49,14 +49,14 @@ describe('State Object Factory', () => {
     wtof = TestBed.get(WrittenTranslationsObjectFactory);
 
     stateObject = {
-      classifier_model_id: null,
+      classifierModelId: null,
       content: {
         html: '',
-        content_id: 'content'
+        contentId: 'content'
       },
       interaction: {
         id: 'TextInput',
-        customization_args: {
+        customizationArgs: {
           rows: {
             value: 1
           },
@@ -64,34 +64,34 @@ describe('State Object Factory', () => {
             value: 'Type your answer here.'
           }
         },
-        answer_groups: [],
+        answerGroups: [],
         default_outcome: {
           dest: 'Introduction',
           feedback: {
-            content_id: 'default_outcome',
+            contentId: 'default_outcome',
             html: ''
           },
-          labelled_as_correct: false,
-          param_changes: [],
-          refresher_exploration_id: null,
-          missing_prerequisite_skill_id: null
+          labelledAsCorrect: false,
+          paramChanges: [],
+          refresherExplorationId: null,
+          missingPrerequisiteSkillId: null
         },
-        confirmed_unclassified_answers: [],
+        confirmedUnclassifiedAnswers: [],
         hints: [],
         solution: null
       },
-      param_changes: [],
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      paramChanges: [],
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
-      solicit_answer_details: false,
-      written_translations: {
-        translations_mapping: {
+      solicitAnswerDetails: false,
+      writtenTranslations: {
+        translationsMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       }
     };
@@ -99,21 +99,21 @@ describe('State Object Factory', () => {
 
   beforeAll(() => {
     constants.NEW_STATE_TEMPLATE = {
-      classifier_model_id: null,
+      classifierModelId: null,
       content: {
-        content_id: 'content',
+        contentId: 'content',
         html: ''
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
       interaction: {
-        answer_groups: [],
-        confirmed_unclassified_answers: [],
-        customization_args: {
+        answerGroups: [],
+        confirmedUnclassifiedAnswers: [],
+        customizationArgs: {
           rows: {
             value: 1
           },
@@ -121,27 +121,27 @@ describe('State Object Factory', () => {
             value: 'Type your answer here.'
           }
         },
-        default_outcome: {
+        defaultOutcome: {
           dest: '(untitled state)',
           feedback: {
-            content_id: 'default_outcome',
+            contentId: 'default_outcome',
             html: ''
           },
-          param_changes: [],
-          labelled_as_correct: false,
-          refresher_exploration_id: null,
-          missing_prerequisite_skill_id: null
+          paramChanges: [],
+          labelledAsCorrect: false,
+          refresherExplorationId: null,
+          missingPrerequisiteSkillId: null
         },
         hints: [],
         solution: null,
         id: 'TextInput'
       },
-      param_changes: [],
-      solicit_answer_details: false,
-      written_translations: {
-        translations_mapping: {
+      paramChanges: [],
+      solicitAnswerDetails: false,
+      writtenTranslations: {
+        translationsMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       }
     };

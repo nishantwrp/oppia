@@ -39,24 +39,24 @@ describe('Story contents object factory', () => {
           id: 'node_1',
           title: 'Title 1',
           description: 'Description 1',
-          prerequisite_skill_ids: ['skill_1'],
-          acquired_skill_ids: ['skill_2'],
-          destination_node_ids: ['node_2'],
+          prerequisiteSkillIds: ['skill_1'],
+          acquiredSkillIds: ['skill_2'],
+          destinationNodeIds: ['node_2'],
           outline: 'Outline',
-          exploration_id: null,
-          outline_is_finalized: false
+          explorationId: null,
+          outlineIsFinalized: false
         }, {
           id: 'node_2',
           title: 'Title 2',
           description: 'Description 2',
-          prerequisite_skill_ids: ['skill_2'],
-          acquired_skill_ids: ['skill_3', 'skill_4'],
-          destination_node_ids: [],
+          prerequisiteSkillIds: ['skill_2'],
+          acquiredSkillIds: ['skill_3', 'skill_4'],
+          destinationNodeIds: [],
           outline: 'Outline 2',
-          exploration_id: 'exp_1',
-          outline_is_finalized: true
+          explorationId: 'exp_1',
+          outlineIsFinalized: true
         }],
-      next_node_id: 'node_3'
+      nextNodeId: 'node_3'
     };
     _sampleStoryContents = storyContentsObjectFactory.createFromBackendDict(
       sampleStoryContentsBackendDict);

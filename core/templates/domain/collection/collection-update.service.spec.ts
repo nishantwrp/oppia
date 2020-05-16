@@ -65,12 +65,12 @@ describe('Collection update service', function() {
       id: 'collection_id',
       title: 'a title',
       objective: 'an objective',
-      language_code: 'en',
+      languageCode: 'en',
       tags: [],
       category: 'a category',
       version: '1',
       nodes: [{
-        exploration_id: 'exp_id0',
+        explorationId: 'exp_id0',
         exploration: {}
       }]
     };
@@ -102,7 +102,7 @@ describe('Collection update service', function() {
         _sampleCollection, 'exp_id1', _sampleExplorationSummaryBackendObject);
       expect(UndoRedoService.getCommittableChangeList()).toEqual([{
         cmd: 'add_collection_node',
-        exploration_id: 'exp_id1'
+        explorationId: 'exp_id1'
       }]);
     }
   );
@@ -122,7 +122,7 @@ describe('Collection update service', function() {
         .deleteCollectionNode(_sampleCollection, 'exp_id0');
       expect(UndoRedoService.getCommittableChangeList()).toEqual([{
         cmd: 'delete_collection_node',
-        exploration_id: 'exp_id0'
+        explorationId: 'exp_id0'
       }]);
     }
   );

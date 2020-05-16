@@ -166,179 +166,179 @@ describe('Audio preloader service', function() {
       objective: 'Your objective',
       tags: [],
       blurb: '',
-      author_notes: '',
-      states_schema_version: 15,
-      init_state_name: 'Introduction',
+      authorNotes: '',
+      statesSchemaVersion: 15,
+      initStateName: 'Introduction',
       states: {
         'State 1': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '<p>State 1 Content</p>'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
                   filename: 'en-1.mp3',
-                  file_size_bytes: 120000,
-                  needs_update: false,
-                  duration_secs: 1.2
+                  fileSizeBytes: 120000,
+                  needsUpdate: false,
+                  durationSecs: 1.2
                 }
               },
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
             id: 'Continue',
-            default_outcome: {
+            defaultOutcome: {
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
               dest: 'State 3',
-              param_changes: []
+              paramChanges: []
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               buttonText: {
                 value: 'Continue'
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         },
         'State 3': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'Congratulations, you have finished!',
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
                   filename: 'en-3.mp3',
-                  file_size_bytes: 120000,
-                  needs_update: false,
-                  duration_secs: 1.2
+                  fileSizeBytes: 120000,
+                  needsUpdate: false,
+                  durationSecs: 1.2
                 }
               }
             }
           },
           interaction: {
             id: 'EndExploration',
-            default_outcome: null,
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            defaultOutcome: null,
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               recommendedExplorationIds: {
                 value: []
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         },
         'State 2': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '<p>State 2 Content</p>'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
                   filename: 'en-2.mp3',
-                  file_size_bytes: 120000,
-                  needs_update: false,
-                  duration_secs: 1.2
+                  fileSizeBytes: 120000,
+                  needsUpdate: false,
+                  durationSecs: 1.2
                 }
               },
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
             id: 'Continue',
-            default_outcome: {
+            defaultOutcome: {
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
               dest: 'State 3',
-              param_changes: []
+              paramChanges: []
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               buttonText: {
                 value: 'Continue'
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         },
         Introduction: {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '<p>Introduction Content</p>',
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
                   filename: 'en-0.mp3',
-                  file_size_bytes: 120000,
-                  needs_update: false,
-                  duration_secs: 1.2
+                  fileSizeBytes: 120000,
+                  needsUpdate: false,
+                  durationSecs: 1.2
                 }
               },
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
           interaction: {
             id: 'TextInput',
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Introduction',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: '<p>Try again.</p>'
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               rows: {
                 value: 1
               },
@@ -347,56 +347,56 @@ describe('Audio preloader service', function() {
               }
             },
             solution: null,
-            answer_groups: [{
-              rule_specs: [{
+            answerGroups: [{
+              ruleSpecs: [{
                 inputs: {
                   x: '1'
                 },
-                rule_type: 'Contains'
+                ruleType: 'Contains'
               }],
               outcome: {
                 dest: 'State 1',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: "<p>Let's go to State 1</p>"
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               }
             }, {
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: '2'
                 },
-                rule_type: 'Contains'
+                ruleType: 'Contains'
               }],
               outcome: {
                 dest: 'State 2',
                 feedback: {
-                  content_id: 'feedback_2',
+                  contentId: 'feedback_2',
                   html: "<p>Let's go to State 2</p>"
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               }
             }],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         }
       },
-      param_specs: {},
-      param_changes: [],
+      paramSpecs: {},
+      paramChanges: [],
       version: 1
     };
 

@@ -109,99 +109,99 @@ describe('State Interaction controller', function() {
       ess.init({
         'First State': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'First State Content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
           interaction: {
             id: 'TextInput',
-            answer_groups: [{
-              rule_specs: [],
+            answerGroups: [{
+              ruleSpecs: [],
               outcome: {
                 dest: 'default',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               },
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'default',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
             hints: []
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           }
         },
         'End State': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: ''
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
           interaction: {
             id: 'TextInput',
-            answer_groups: [{
-              rule_specs: [],
+            answerGroups: [{
+              ruleSpecs: [],
               outcome: {
                 dest: 'default',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               }
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'default',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null
             },
             hints: []
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           }
         }

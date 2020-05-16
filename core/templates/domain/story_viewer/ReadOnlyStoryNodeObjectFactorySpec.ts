@@ -32,13 +32,13 @@ describe('Read only story node object factory', () => {
     var sampleReadOnlyStoryNodeBackendDict = {
       id: 'node_1',
       title: 'Title 1',
-      prerequisite_skill_ids: ['skill_1'],
-      acquired_skill_ids: ['skill_2'],
-      destination_node_ids: ['node_2'],
+      prerequisiteSkillIds: ['skill_1'],
+      acquiredSkillIds: ['skill_2'],
+      destinationNodeIds: ['node_2'],
       outline: 'Outline',
-      exploration_id: 'exp_id',
-      outline_is_finalized: false,
-      exp_summary_dict: {
+      explorationId: 'exp_id',
+      outlineIsFinalized: false,
+      expSummaryDict: {
         title: 'Title',
         status: 'private'
       },

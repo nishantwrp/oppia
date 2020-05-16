@@ -43,55 +43,55 @@ describe('States object factory', () => {
       statesDict = {
         'first state': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
           interaction: {
             id: 'RuleTest',
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: 'outcome 1',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               },
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: 10
                 },
-                rule_type: 'Equals'
+                ruleType: 'Equals'
               }],
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'default',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: []
+              labelledAsCorrect: false,
+              paramChanges: []
             },
             hints: [],
             solution: null
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
         }
@@ -100,182 +100,182 @@ describe('States object factory', () => {
       statesWithAudioDict = {
         'first state': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
                   filename: 'myfile1.mp3',
-                  file_size_bytes: 0.5,
-                  needs_update: false,
-                  duration_secs: 0.5
+                  fileSizeBytes: 0.5,
+                  needsUpdate: false,
+                  durationSecs: 0.5
                 },
                 'hi-en': {
                   filename: 'myfile3.mp3',
-                  file_size_bytes: 0.8,
-                  needs_update: false,
-                  duration_secs: 0.8
+                  fileSizeBytes: 0.8,
+                  needsUpdate: false,
+                  durationSecs: 0.8
                 }
               },
-              default_outcome: {
+              defaultOutcome: {
                 he: {
                   filename: 'myfile10.mp3',
-                  file_size_bytes: 0.5,
-                  needs_update: false,
-                  duration_secs: 0.5
+                  fileSizeBytes: 0.5,
+                  needsUpdate: false,
+                  durationSecs: 0.5
                 }
               },
-              feedback_1: {
+              feedback1: {
                 zh: {
                   filename: 'myfile4.mp3',
-                  file_size_bytes: 1.1,
-                  needs_update: false,
-                  duration_secs: 1.1
+                  fileSizeBytes: 1.1,
+                  needsUpdate: false,
+                  durationSecs: 1.1
                 }
               },
-              hint_1: {
+              hint1: {
                 es: {
                   filename: 'myfile5.mp3',
-                  file_size_bytes: 0.7,
-                  needs_update: false,
-                  duration_secs: 0.7
+                  fileSizeBytes: 0.7,
+                  needsUpdate: false,
+                  durationSecs: 0.7
                 },
                 zh: {
                   filename: 'myfile6.mp3',
-                  file_size_bytes: 0.9,
-                  needs_update: false,
-                  duration_secs: 0.9
+                  fileSizeBytes: 0.9,
+                  needsUpdate: false,
+                  durationSecs: 0.9
                 },
                 'hi-en': {
                   filename: 'myfile8.mp3',
-                  file_size_bytes: 1.2,
-                  needs_update: false,
-                  duration_secs: 1.2
+                  fileSizeBytes: 1.2,
+                  needsUpdate: false,
+                  durationSecs: 1.2
                 }
               },
-              hint_2: {
+              hint2: {
                 cs: {
                   filename: 'myfile7.mp3',
-                  file_size_bytes: 0.2,
-                  needs_update: false,
-                  duration_secs: 0.2
+                  fileSizeBytes: 0.2,
+                  needsUpdate: false,
+                  durationSecs: 0.2
                 }
               }
             }
           },
           interaction: {
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: 'second state',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: '<p>Good.</p>'
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null
               },
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: 20
                 },
-                rule_type: 'Equals'
+                ruleType: 'Equals'
               }]
             }],
-            confirmed_unclassified_answers: [],
-            customization_args: {},
-            default_outcome: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {},
+            defaultOutcome: {
               dest: 'new state',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: '<p>Feedback</p>'
               },
-              labelled_as_correct: false,
-              param_changes: []
+              labelledAsCorrect: false,
+              paramChanges: []
             },
             hints: [{
-              hint_content: {
-                content_id: 'hint_1',
+              hintContent: {
+                contentId: 'hint_1',
                 html: '<p>Here is a hint.</p>'
               }
             }, {
-              hint_content: {
-                content_id: 'hint_2',
+              hintContent: {
+                contentId: 'hint_2',
                 html: '<p>Here is another hint.</p>'
               }
             }],
             id: 'TextInput'
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              hint_1: {},
-              hint_2: {}
+              defaultOutcome: {},
+              feedback1: {},
+              hint1: {},
+              hint2: {}
             }
           }
         },
         'second state': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'more content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 'hi-en': {
                   filename: 'myfile2.mp3',
-                  file_size_bytes: 0.8,
-                  needs_update: false,
-                  duration_secs: 0.8
+                  fileSizeBytes: 0.8,
+                  needsUpdate: false,
+                  durationSecs: 0.8
                 }
               },
-              default_outcome: {},
+              defaultOutcome: {},
               solution: {
                 de: {
                   filename: 'myfile9.mp3',
-                  file_size_bytes: 0.5,
-                  needs_update: false,
-                  duration_secs: 0.5
+                  fileSizeBytes: 0.5,
+                  needsUpdate: false,
+                  durationSecs: 0.5
                 }
               }
             }
           },
           interaction: {
-            answer_groups: [],
-            confirmed_unclassified_answers: [],
-            customization_args: {},
-            default_outcome: {
+            answerGroups: [],
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {},
+            defaultOutcome: {
               dest: 'new state',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: []
+              labelledAsCorrect: false,
+              paramChanges: []
             },
             hints: [],
             solution: {
-              answer_is_exclusive: false,
-              correct_answer: 'answer',
+              answerIsExclusive: false,
+              correctAnswer: 'answer',
               explanation: {
-                content_id: 'solution',
+                contentId: 'solution',
                 html: '<p>This is an explanation.</p>'
               }
             },
             id: 'TextInput'
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           }
         }
@@ -284,21 +284,21 @@ describe('States object factory', () => {
 
     beforeAll(() => {
       constants.NEW_STATE_TEMPLATE = {
-        classifier_model_id: null,
+        classifierModelId: null,
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: ''
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {}
+            defaultOutcome: {}
           }
         },
         interaction: {
-          answer_groups: [],
-          confirmed_unclassified_answers: [],
-          customization_args: {
+          answerGroups: [],
+          confirmedUnclassifiedAnswers: [],
+          customizationArgs: {
             rows: {
               value: 1
             },
@@ -306,27 +306,27 @@ describe('States object factory', () => {
               value: 'Type your answer here.'
             }
           },
-          default_outcome: {
+          defaultOutcome: {
             dest: '(untitled state)',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: ''
             },
-            param_changes: [],
-            labelled_as_correct: false,
-            refresher_exploration_id: null,
-            missing_prerequisite_skill_id: null
+            paramChanges: [],
+            labelledAsCorrect: false,
+            refresherExplorationId: null,
+            missingPrerequisiteSkillId: null
           },
           hints: [],
           solution: null,
           id: 'TextInput'
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {}
+            defaultOutcome: {}
           }
         }
       };
@@ -341,21 +341,21 @@ describe('States object factory', () => {
       newStates.addState('new state');
       expect(newStates.getState('new state')).toEqual(
         sof.createFromBackendDict('new state', {
-          classifier_model_id: null,
+          classifierModelId: null,
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: ''
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
-            answer_groups: [],
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            answerGroups: [],
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               rows: {
                 value: 1
               },
@@ -363,26 +363,26 @@ describe('States object factory', () => {
                 value: 'Type your answer here.'
               }
             },
-            default_outcome: {
+            defaultOutcome: {
               dest: 'new state',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              param_changes: [],
-              labelled_as_correct: false,
-              refresher_exploration_id: null,
-              missing_prerequisite_skill_id: null
+              paramChanges: [],
+              labelledAsCorrect: false,
+              refresherExplorationId: null,
+              missingPrerequisiteSkillId: null
             },
             hints: [],
             id: 'TextInput'
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
         }));

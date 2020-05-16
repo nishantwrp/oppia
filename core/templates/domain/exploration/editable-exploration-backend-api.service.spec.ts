@@ -178,7 +178,7 @@ describe('Editable exploration backend API service', function() {
 
       // Send a request to update exploration
       EditableExplorationBackendApiService.updateExploration(
-        exploration.exploration_id, exploration.version,
+        exploration.explorationId, exploration.version,
         exploration.title, []
       ).then(successHandler, failHandler);
       $httpBackend.flush();
@@ -213,7 +213,7 @@ describe('Editable exploration backend API service', function() {
 
       // Send a request to update exploration
       EditableExplorationBackendApiService.updateExploration(
-        exploration.exploration_id,
+        exploration.explorationId,
         exploration.version,
         exploration.title, []
       ).then(successHandler, failHandler);
@@ -249,7 +249,7 @@ describe('Editable exploration backend API service', function() {
 
       // Send a request to update exploration
       EditableExplorationBackendApiService.updateExploration(
-        exploration.exploration_id,
+        exploration.explorationId,
         exploration.version,
         'Minor edits', []
       ).then(successHandler, failHandler);
@@ -261,7 +261,7 @@ describe('Editable exploration backend API service', function() {
       $httpBackend.expect('DELETE', '/createhandler/data/0')
         .respond({});
       EditableExplorationBackendApiService
-        .deleteExploration(exploration.exploration_id)
+        .deleteExploration(exploration.explorationId)
         .then(successHandler, failHandler);
       $httpBackend.flush();
 

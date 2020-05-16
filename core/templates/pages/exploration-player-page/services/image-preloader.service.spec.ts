@@ -172,67 +172,67 @@ describe('Image preloader service', function() {
       objective: 'Your objective',
       tags: [],
       blurb: '',
-      author_notes: '',
-      states_schema_version: 15,
-      init_state_name: 'Introduction',
+      authorNotes: '',
+      statesSchemaVersion: 15,
+      initStateName: 'Introduction',
       states: {
         'State 1': {
-          param_changes: [],
+          paramChanges: [],
           content: {
             html: '',
-            content_id: 'content'
+            contentId: 'content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
             id: 'Continue',
-            default_outcome: {
+            defaultOutcome: {
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
               dest: 'State 3',
-              param_changes: []
+              paramChanges: []
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               buttonText: {
                 value: 'Continue'
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         },
         'State 3': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'Congratulations, you have finished!'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {}
             }
           },
           interaction: {
             id: 'EndExploration',
-            default_outcome: null,
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            defaultOutcome: null,
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               recommendedExplorationIds: {
                 value: []
               }
@@ -241,40 +241,40 @@ describe('Image preloader service', function() {
             answer_groups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         },
         Introduction: {
-          classifier_model_id: null,
-          param_changes: [],
+          classifierModelId: null,
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'Multiple Choice'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {}
             }
           },
           interaction: {
             id: 'MultipleChoiceInput',
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Introduction',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: 'Try Again!'
               }
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               choices: {
                 value: [
                   '<p> Go to ItemSelection <oppia-noninteractive-image' +
@@ -288,49 +288,49 @@ describe('Image preloader service', function() {
                 ]
               }
             },
-            answer_groups: [
+            answerGroups: [
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 6',
                   feedback: {
-                    content_id: 'feedback_1',
+                    contentId: 'feedback_1',
                     html: '<p>We are going to ItemSelection' +
                           '<oppia-noninteractive-image filepath-with-value=' +
                           '"&amp;quot;sIOFeedback_height_50_width_50.png' +
                           '&amp;quot;"></oppia-noninteractive-image></p>'
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null,
-                  missing_prerequisite_skill_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null,
+                  missingPrerequisiteSkillId: null
                 },
-                rule_specs: [
+                ruleSpecs: [
                   {
                     inputs: {
                       x: 0
                     },
-                    rule_type: 'Equals'
+                    ruleType: 'Equals'
                   }
                 ]
               },
               {
-                labelled_as_correct: false,
+                labelledAsCorrect: false,
                 outcome: {
                   dest: 'State 1',
                   feedback: {
-                    content_id: 'feedback_2',
+                    contentId: 'feedback_2',
                     html: "Let's go to state 1 ImageAndRegion"
                   },
-                  param_changes: [],
-                  refresher_exploration_id: null,
-                  missing_prerequisite_skill_id: null
+                  paramChanges: [],
+                  refresherExplorationId: null,
+                  missingPrerequisiteSkillId: null
                 },
-                rule_specs: [
+                ruleSpecs: [
                   {
                     inputs: {
                       x: 1
                     },
-                    rule_type: 'Equals'
+                    ruleType: 'Equals'
                   }
                 ]
               }
@@ -338,46 +338,46 @@ describe('Image preloader service', function() {
             hints: [],
             solution: null
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {}
             }
           }
         },
         'State 6': {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '<p>Text Input Content</p>'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {},
-              hint_1: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {},
+              hint1: {}
             }
           },
           interaction: {
             id: 'TextInput',
-            default_outcome: {
+            defaultOutcome: {
               dest: 'State 6',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              labelled_as_correct: false,
-              param_changes: [],
-              refresher_exploration_id: null,
-              missing_prerequisite_skill_id: null
+              labelledAsCorrect: false,
+              paramChanges: [],
+              refresherExplorationId: null,
+              missingPrerequisiteSkillId: null
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               rows: {
                 value: 1
               },
@@ -385,46 +385,46 @@ describe('Image preloader service', function() {
                 value: ''
               }
             },
-            answer_groups: [{
-              rule_specs: [{
+            answerGroups: [{
+              ruleSpecs: [{
                 inputs: {
                   x: '1'
                 },
-                rule_type: 'Contains'
+                ruleType: 'Contains'
               }],
               outcome: {
                 dest: 'State 1',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: "<p>Let's go to State 1</p>"
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null,
-                missing_prerequisite_skill_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null,
+                missingPrerequisiteSkillId: null
               }
             }, {
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: '2'
                 },
-                rule_type: 'Contains'
+                ruleType: 'Contains'
               }],
               outcome: {
                 dest: 'State 1',
                 feedback: {
-                  content_id: 'feedback_2',
+                  contentId: 'feedback_2',
                   html: "<p>Let's go to State 1</p>"
                 },
-                labelled_as_correct: false,
-                param_changes: [],
-                refresher_exploration_id: null,
-                missing_prerequisite_skill_id: null
+                labelledAsCorrect: false,
+                paramChanges: [],
+                refresherExplorationId: null,
+                missingPrerequisiteSkillId: null
               }
             }],
             hints: [{
-              hint_content: {
-                content_id: 'hint_1',
+              hintContent: {
+                contentId: 'hint_1',
                 html: '<p><oppia-noninteractive-image filepath-with-value="' +
                       '&amp;quot;s6Hint1_height_60_width_60.png&amp;quot;">' +
                       '</oppia-noninteractive-image></p>'
@@ -432,21 +432,21 @@ describe('Image preloader service', function() {
             }],
             solution: null,
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {},
-              feedback_2: {},
-              hint_1: {}
+              defaultOutcome: {},
+              feedback1: {},
+              feedback2: {},
+              hint1: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         }
       },
-      param_specs: {},
-      param_changes: [],
+      paramSpecs: {},
+      paramChanges: [],
       version: 1
     };
 

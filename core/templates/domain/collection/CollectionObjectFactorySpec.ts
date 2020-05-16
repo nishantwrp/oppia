@@ -50,7 +50,7 @@ describe('Collection object factory', () => {
 
   var _addCollectionNode = function(explorationId) {
     var collectionNodeBackendObject = {
-      exploration_id: explorationId,
+      explorationId: explorationId,
       exploration: {}
     };
     return _sampleCollection.addCollectionNode(
@@ -76,7 +76,7 @@ describe('Collection object factory', () => {
   it('should contain a collection node defined in the backend object',
     () => {
       var collectionNodeBackendObject = {
-        exploration_id: 'exp_id0',
+        explorationId: 'exp_id0',
         exploration: {}
       };
       var collection = collectionObjectFactory.create({
@@ -96,7 +96,7 @@ describe('Collection object factory', () => {
       expect(_sampleCollection.getCollectionNodeCount()).toEqual(0);
 
       var collectionNodeBackendObject = {
-        exploration_id: 'exp_id0',
+        explorationId: 'exp_id0',
         exploration: {}
       };
       var collectionNode = collectionNodeObjectFactory.create(
@@ -117,7 +117,7 @@ describe('Collection object factory', () => {
 
   it('should not add duplicate explorations', () => {
     var collectionNodeBackendObject = {
-      exploration_id: 'exp_id0',
+      explorationId: 'exp_id0',
       exploration: {}
     };
     var collectionNode = collectionNodeObjectFactory.create(
@@ -135,11 +135,11 @@ describe('Collection object factory', () => {
     expect(_sampleCollection.getCollectionNodeCount()).toEqual(0);
 
     var collectionNodeBackendObject1 = {
-      exploration_id: 'exp_id0',
+      explorationId: 'exp_id0',
       exploration: {}
     };
     var collectionNodeBackendObject2 = {
-      exploration_id: 'exp_id1',
+      explorationId: 'exp_id1',
       exploration: {}
     };
     var collectionNode1 = collectionNodeObjectFactory.create(
@@ -165,7 +165,7 @@ describe('Collection object factory', () => {
     () => {
       expect(_getCollectionNode('exp_id0')).toBeUndefined();
       var collectionNodeBackendObject = {
-        exploration_id: 'exp_id0',
+        explorationId: 'exp_id0',
         exploration: {}
       };
       _sampleCollection.addCollectionNode(
@@ -260,12 +260,12 @@ describe('Collection object factory', () => {
       title: 'Another title',
       objective: 'Another objective',
       category: 'Another category',
-      language_code: 'en',
+      languageCode: 'en',
       version: 15,
       nodes: [],
     });
     secondCollection.addCollectionNode(collectionNodeObjectFactory.create({
-      exploration_id: 'exp_id5',
+      explorationId: 'exp_id5',
       exploration: {}
     }));
 

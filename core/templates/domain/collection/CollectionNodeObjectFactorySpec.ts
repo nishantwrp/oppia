@@ -28,8 +28,8 @@ describe('Collection node object factory', () => {
 
   var _createEmptyCollectionNode = function(explorationId) {
     return collectionNodeObjectFactory.create({
-      exploration_id: explorationId,
-      exploration_summary: {
+      explorationId: explorationId,
+      explorationSummary: {
         title: 'Title',
         status: 'private'
       }
@@ -43,8 +43,8 @@ describe('Collection node object factory', () => {
       objective: 'exp objective'
     };
     var collectionNodeBackendObject = {
-      exploration_id: 'exp_id0',
-      exploration_summary: explorationSummaryBackendObject
+      explorationId: 'exp_id0',
+      explorationSummary: explorationSummaryBackendObject
     };
 
     var collectionNode = collectionNodeObjectFactory.create(

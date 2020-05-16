@@ -93,17 +93,17 @@ export class FeedbackThreadSummaryObjectFactory {
       feedbackThreadSummaryBackendDict: any): FeedbackThreadSummary {
     return new FeedbackThreadSummary(
       feedbackThreadSummaryBackendDict.status,
-      feedbackThreadSummaryBackendDict.original_author_id,
-      feedbackThreadSummaryBackendDict.last_updated_msecs,
-      feedbackThreadSummaryBackendDict.last_message_text,
-      feedbackThreadSummaryBackendDict.total_message_count,
-      feedbackThreadSummaryBackendDict.last_message_is_read,
-      feedbackThreadSummaryBackendDict.second_last_message_is_read,
-      feedbackThreadSummaryBackendDict.author_last_message,
-      feedbackThreadSummaryBackendDict.author_second_last_message,
-      feedbackThreadSummaryBackendDict.exploration_title,
-      feedbackThreadSummaryBackendDict.exploration_id,
-      feedbackThreadSummaryBackendDict.thread_id);
+      feedbackThreadSummaryBackendDict.originalAuthorId,
+      feedbackThreadSummaryBackendDict.lastUpdatedMsecs,
+      feedbackThreadSummaryBackendDict.lastMessageText,
+      feedbackThreadSummaryBackendDict.totalMessageCount,
+      feedbackThreadSummaryBackendDict.lastMessageIsRead,
+      feedbackThreadSummaryBackendDict.secondLastMessageIsRead,
+      feedbackThreadSummaryBackendDict.authorLastMessage,
+      feedbackThreadSummaryBackendDict.authorSecondLastMessage,
+      feedbackThreadSummaryBackendDict.explorationTitle,
+      feedbackThreadSummaryBackendDict.explorationId,
+      feedbackThreadSummaryBackendDict.threadId);
   }
 }
 

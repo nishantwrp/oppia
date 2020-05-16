@@ -124,78 +124,78 @@ describe('Question object factory', function() {
       question_state_data: {
         content: {
           html: 'Question 1',
-          content_id: 'content_1'
+          contentId: 'content_1'
         },
         interaction: {
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'outcome 1',
               feedback: {
-                content_id: 'content_5',
+                contentId: 'content_5',
                 html: ''
               },
-              labelled_as_correct: true,
-              param_changes: [],
-              refresher_exploration_id: null
+              labelledAsCorrect: true,
+              paramChanges: [],
+              refresherExplorationId: null
             },
-            rule_specs: [{
+            ruleSpecs: [{
               inputs: {
                 x: 10
               },
-              rule_type: 'Equals'
+              ruleType: 'Equals'
             }],
           }],
-          confirmed_unclassified_answers: [],
-          customization_args: {},
-          default_outcome: {
+          confirmedUnclassifiedAnswers: [],
+          customizationArgs: {},
+          defaultOutcome: {
             dest: null,
             feedback: {
               html: 'Correct Answer',
-              content_id: 'content_2'
+              contentId: 'content_2'
             },
-            param_changes: [],
-            labelled_as_correct: false
+            paramChanges: [],
+            labelledAsCorrect: false
           },
           hints: [
             {
-              hint_content: {
+              hintContent: {
                 html: 'Hint 1',
-                content_id: 'content_3'
+                contentId: 'content_3'
               }
             }
           ],
           solution: {
-            correct_answer: 'This is the correct answer',
-            answer_is_exclusive: false,
+            correctAnswer: 'This is the correct answer',
+            answerIsExclusive: false,
             explanation: {
               html: 'Solution explanation',
-              content_id: 'content_4'
+              contentId: 'content_4'
             }
           },
           id: 'TextInput'
         },
-        param_changes: [],
-        recorded_voiceovers: {
-          voiceovers_mapping: {
-            content_1: {},
-            content_2: {},
-            content_3: {},
-            content_4: {},
-            content_5: {}
+        paramChanges: [],
+        recordedVoiceovers: {
+          voiceoversMapping: {
+            content1: {},
+            content2: {},
+            content3: {},
+            content4: {},
+            content5: {}
           }
         },
-        written_translations: {
-          translations_mapping: {
-            content_1: {},
-            content_2: {},
-            content_3: {},
-            content_4: {},
-            content_5: {}
+        writtenTranslations: {
+          translationsMapping: {
+            content1: {},
+            content2: {},
+            content3: {},
+            content4: {},
+            content5: {}
           }
         },
-        solicit_answer_details: false
+        solicitAnswerDetails: false
       },
-      language_code: 'en',
+      languageCode: 'en',
       version: 1
     };
     sampleQuestion = QuestionObjectFactory.createFromBackendDict(

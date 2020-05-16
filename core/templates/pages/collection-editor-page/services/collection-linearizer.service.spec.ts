@@ -62,8 +62,8 @@ describe('Collection linearizer service', function() {
     CollectionLinearizerService = $injector.get('CollectionLinearizerService');
 
     var firstCollectionNodeBackendObject = {
-      exploration_id: 'exp_id0',
-      exploration_summary: {
+      explorationId: 'exp_id0',
+      explorationSummary: {
         title: 'exp title0',
         category: 'exp category',
         objective: 'exp objective'
@@ -73,8 +73,8 @@ describe('Collection linearizer service', function() {
       firstCollectionNodeBackendObject);
 
     var secondCollectionNodeBackendObject = {
-      exploration_id: 'exp_id1',
-      exploration_summary: {
+      explorationId: 'exp_id1',
+      explorationSummary: {
         title: 'exp title1',
         category: 'exp category',
         objective: 'exp objective'
@@ -84,8 +84,8 @@ describe('Collection linearizer service', function() {
       secondCollectionNodeBackendObject);
 
     var thirdCollectionNodeBackendObject = {
-      exploration_id: 'exp_id2',
-      exploration_summary: {
+      explorationId: 'exp_id2',
+      explorationSummary: {
         title: 'exp title2',
         category: 'exp category',
         objective: 'exp objective'
@@ -225,8 +225,8 @@ describe('Collection linearizer service', function() {
     it('should correctly append a node to a non-empty collection', function() {
       var collection = createLinearCollection();
       var newCollectionNodeBackendObject = {
-        exploration_id: 'exp_id3',
-        exploration_summary: {
+        explorationId: 'exp_id3',
+        explorationSummary: {
           title: 'exp title3',
           category: 'exp category',
           objective: 'exp objective'

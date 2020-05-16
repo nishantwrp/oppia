@@ -67,22 +67,22 @@ describe('Outcome object factory', () => {
       const testOutcome = oof.createFromBackendDict({
         dest: 'A',
         feedback: 'feedback_1',
-        labelled_as_correct: true,
-        param_changes: [],
-        refresher_exploration_id: '1',
-        missing_prerequisite_skill_id: '2'
+        labelledAsCorrect: true,
+        paramChanges: [],
+        refresherExplorationId: '1',
+        missingPrerequisiteSkillId: '2'
       });
 
       expect(testOutcome.toBackendDict()).toEqual({
         dest: 'A',
         feedback: {
           html: undefined,
-          content_id: undefined
+          contentId: undefined
         },
-        labelled_as_correct: true,
-        param_changes: [],
-        refresher_exploration_id: '1',
-        missing_prerequisite_skill_id: '2'
+        labelledAsCorrect: true,
+        paramChanges: [],
+        refresherExplorationId: '1',
+        missingPrerequisiteSkillId: '2'
       });
     });
 });

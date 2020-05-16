@@ -251,10 +251,10 @@ describe('State Interaction controller', function() {
         var state = ess.getState('First State');
         scs.init('First State', state.content);
         siis.init(
-          'First State', state.interaction.id, state.interaction, 'widget_id');
+          'First State', state.interaction.id, state.interaction, 'widgetId');
         scas.init(
           'First State', state.interaction.customizationArgs,
-          state.interaction, 'widget_customization_args');
+          state.interaction, 'widgetCustomizationArgs');
 
         siis.displayed = 'TerminalInteraction';
         directiveScope.onCustomizationModalSavePostHook();
@@ -273,10 +273,10 @@ describe('State Interaction controller', function() {
         var state = ess.getState('End State');
         scs.init('End State', state.content);
         siis.init(
-          'End State', state.interaction.id, state.interaction, 'widget_id');
+          'End State', state.interaction.id, state.interaction, 'widgetId');
         scas.init(
           'End State', state.interaction.customizationArgs,
-          state.interaction, 'widget_customization_args');
+          state.interaction, 'widgetCustomizationArgs');
 
         siis.displayed = 'TerminalInteraction';
         directiveScope.onCustomizationModalSavePostHook();
@@ -294,10 +294,10 @@ describe('State Interaction controller', function() {
 
         var state = ess.getState('End State');
         siis.init(
-          'End State', state.interaction.id, state.interaction, 'widget_id');
+          'End State', state.interaction.id, state.interaction, 'widgetId');
         scas.init(
           'End State', state.interaction.customizationArgs,
-          state.interaction, 'widget_customization_args');
+          state.interaction, 'widgetCustomizationArgs');
 
         siis.displayed = 'TextInput';
         directiveScope.onCustomizationModalSavePostHook();

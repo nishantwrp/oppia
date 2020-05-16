@@ -36,17 +36,17 @@ describe('Questions List Service', function() {
   var questionBackendApiService = null;
   var httpTestingController = null;
   var sampleResponse = {
-    question_summary_dicts: [{
-      skill_descriptions: [],
+    questionSummaryDicts: [{
+      skillDescriptions: [],
       summary: {
-        creator_id: '1',
-        created_on_msec: 0,
-        last_updated_msec: 0,
+        creatorId: '1',
+        createdOnMsec: 0,
+        lastUpdatedMsec: 0,
         id: '0',
-        question_content: ''
+        questionContent: ''
       }
     }],
-    next_start_cursor: null
+    nextStartCursor: null
   };
   var CsrfService;
   var broadcastSpy;

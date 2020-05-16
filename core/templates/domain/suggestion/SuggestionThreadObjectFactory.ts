@@ -127,13 +127,13 @@ export class SuggestionThreadObjectFactory {
     return new SuggestionThread(
       suggestionThreadBackendDict.status, suggestionThreadBackendDict.subject,
       suggestionThreadBackendDict.summary,
-      suggestionThreadBackendDict.original_author_username,
-      suggestionThreadBackendDict.last_updated_msecs,
-      suggestionThreadBackendDict.message_count,
-      suggestionThreadBackendDict.thread_id,
+      suggestionThreadBackendDict.originalAuthorUsername,
+      suggestionThreadBackendDict.lastUpdatedMsecs,
+      suggestionThreadBackendDict.messageCount,
+      suggestionThreadBackendDict.threadId,
       this.threadMessageSummaryObjectFactory.createNew(
-        suggestionThreadBackendDict.last_nonempty_message_author,
-        suggestionThreadBackendDict.last_nonempty_message_text),
+        suggestionThreadBackendDict.lastNonemptyMessageAuthor,
+        suggestionThreadBackendDict.lastNonemptyMessageText),
       this.createEditExplorationStateContentSuggestionFromBackendDict(
         suggestionBackendDict));
   }

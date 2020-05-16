@@ -269,7 +269,7 @@ describe('Answer classification service with string classifier disabled',
         acs.getMatchingClassificationResult(
           stateName, state.interaction, 7, rules)
       ).toEqual(acrof.createNew(
-        oof.createNew('default', 'default_outcome', '', []), 2, 0,
+        oof.createNew('default', 'defaultOutcome', '', []), 2, 0,
         DEFAULT_OUTCOME_CLASSIFICATION)
       );
     });
@@ -501,23 +501,23 @@ describe('Answer classification service with string classifier enabled',
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
-            feedback_2: {}
+            defaultOutcome: {},
+            feedback1: {},
+            feedback2: {}
           }
         }
       });
 
       stateClassifierMapping = {
         stateName: {
-          algorithm_id: 'TestClassifier',
-          classifier_data: {},
-          data_schema_version: 1
+          algorithmId: 'TestClassifier',
+          classifierCata: {},
+          dataSchemaVersion: 1
         }
       };
       scms.init(stateClassifierMapping);
@@ -560,7 +560,7 @@ describe('Answer classification service with string classifier enabled',
         acs.getMatchingClassificationResult(
           stateName, state2.interaction, 0, rules)
       ).toEqual(acrof.createNew(
-        oof.createNew('default', 'default_outcome', '', []), 2, 0,
+        oof.createNew('default', 'defaultOutcome', '', []), 2, 0,
         DEFAULT_OUTCOME_CLASSIFICATION)
       );
     });
@@ -711,14 +711,14 @@ describe('Answer classification service with training data classification',
           },
           hints: []
         },
-        param_changes: [],
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        paramChanges: [],
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
-            feedback_2: {}
+            defaultOutcome: {},
+            feedback1: {},
+            feedback2: {}
           }
         }
       });

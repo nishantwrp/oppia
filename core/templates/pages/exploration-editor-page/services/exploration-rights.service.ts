@@ -70,10 +70,10 @@ angular.module('oppia').factory('ExplorationRightsService', [
           var data = response.data;
           AlertsService.clearWarnings();
           that.init(
-            data.rights.owner_names, data.rights.editor_names,
-            data.rights.voice_artist_names, data.rights.viewer_names,
-            data.rights.status, data.rights.cloned_from,
-            data.rights.community_owned, data.rights.viewable_if_private);
+            data.rights.ownerNames, data.rights.editorNames,
+            data.rights.voiceArtistNames, data.rights.viewerNames,
+            data.rights.status, data.rights.clonedFrom,
+            data.rights.communityOwned, data.rights.viewableIfPrivate);
         });
       },
       setViewability: function(viewableIfPrivate) {
@@ -88,10 +88,10 @@ angular.module('oppia').factory('ExplorationRightsService', [
           var data = response.data;
           AlertsService.clearWarnings();
           that.init(
-            data.rights.owner_names, data.rights.editor_names,
-            data.rights.voice_artist_names, data.rights.viewer_names,
-            data.rights.status, data.rights.cloned_from,
-            data.rights.community_owned, data.rights.viewable_if_private);
+            data.rights.ownerNames, data.rights.editorNames,
+            data.rights.voiceArtistNames, data.rights.viewerNames,
+            data.rights.status, data.rights.clonedFrom,
+            data.rights.communityOwned, data.rights.viewableIfPrivate);
         });
       },
       saveRoleChanges: function(newMemberUsername, newMemberRole) {
@@ -107,10 +107,10 @@ angular.module('oppia').factory('ExplorationRightsService', [
           var data = response.data;
           AlertsService.clearWarnings();
           that.init(
-            data.rights.owner_names, data.rights.editor_names,
-            data.rights.voice_artist_names, data.rights.viewer_names,
-            data.rights.status, data.rights.cloned_from,
-            data.rights.community_owned, data.rights.viewable_if_private);
+            data.rights.ownerNames, data.rights.editorNames,
+            data.rights.voiceArtistNames, data.rights.viewerNames,
+            data.rights.status, data.rights.clonedFrom,
+            data.rights.communityOwned, data.rights.viewableIfPrivate);
         });
       },
       publish: function() {
@@ -124,10 +124,10 @@ angular.module('oppia').factory('ExplorationRightsService', [
           var data = response.data;
           AlertsService.clearWarnings();
           that.init(
-            data.rights.owner_names, data.rights.editor_names,
-            data.rights.voice_artist_names, data.rights.viewer_names,
-            data.rights.status, data.rights.cloned_from,
-            data.rights.community_owned, data.rights.viewable_if_private);
+            data.rights.ownerNames, data.rights.editorNames,
+            data.rights.voiceArtistNames, data.rights.viewerNames,
+            data.rights.status, data.rights.clonedFrom,
+            data.rights.communityOwned, data.rights.viewableIfPrivate);
         });
       },
       saveModeratorChangeToBackend: function(emailBody) {
@@ -143,10 +143,10 @@ angular.module('oppia').factory('ExplorationRightsService', [
           var data = response.data;
           AlertsService.clearWarnings();
           that.init(
-            data.rights.owner_names, data.rights.editor_names,
-            data.rights.voice_artist_names, data.rights.viewer_names,
-            data.rights.status, data.rights.cloned_from,
-            data.rights.community_owned, data.rights.viewable_if_private);
+            data.rights.ownerNames, data.rights.editorNames,
+            data.rights.voiceArtistNames, data.rights.viewerNames,
+            data.rights.status, data.rights.clonedFrom,
+            data.rights.communityOwned, data.rights.viewableIfPrivate);
         });
       }
     };

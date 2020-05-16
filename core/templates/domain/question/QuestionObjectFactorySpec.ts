@@ -121,7 +121,7 @@ describe('Question object factory', function() {
 
     sampleQuestionBackendDict = {
       id: 'question_id',
-      question_state_data: {
+      questionStateData: {
         content: {
           html: 'Question 1',
           contentId: 'content_1'

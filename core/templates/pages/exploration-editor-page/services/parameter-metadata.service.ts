@@ -38,7 +38,7 @@ angular.module('oppia').factory('ParameterMetadataService', [
     var PARAM_SOURCE_ANSWER = 'answer';
     var PARAM_SOURCE_CONTENT = 'content';
     var PARAM_SOURCE_FEEDBACK = 'feedback';
-    var PARAM_SOURCE_PARAM_CHANGES = 'param_changes';
+    var PARAM_SOURCE_PARAM_CHANGES = 'paramChanges';
 
     var getMetadataFromParamChanges = function(paramChanges) {
       var result = [];

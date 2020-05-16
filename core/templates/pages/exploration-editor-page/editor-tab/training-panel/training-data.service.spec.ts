@@ -362,8 +362,8 @@ describe('TrainingDataService', function() {
   it('should get all potential outcomes of an interaction', function() {
     // First the answer group's outcome is listed, then the default.
     expect(tds.getAllPotentialOutcomes(ess.getState('State'))).toEqual([
-      oof.createNew('State', 'feedback_1', 'Feedback', []),
-      oof.createNew('State', 'default_outcome', 'Default', [])]);
+      oof.createNew('State', 'feedback1', 'Feedback', []),
+      oof.createNew('State', 'defaultOutcome', 'Default', [])]);
   });
 
   it('should remove answer from training data associated with given answer ' +

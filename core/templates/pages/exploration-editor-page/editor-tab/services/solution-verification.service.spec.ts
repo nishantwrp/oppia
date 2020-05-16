@@ -89,13 +89,13 @@ describe('Solution Verification Service', function() {
           content_id: 'content',
           html: 'First State Content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
-            hint_1: {},
-            hint_2: {}
+            defaultOutcome: {},
+            feedback1: {},
+            hint1: {},
+            hint2: {}
           }
         },
         interaction: {
@@ -203,10 +203,10 @@ describe('Solution Verification Service', function() {
   it('should verify a correct solution', function() {
     var state = ess.getState('First State');
     siis.init(
-      'First State', state.interaction.id, state.interaction, 'widget_id');
+      'First State', state.interaction.id, state.interaction, 'widgetId');
     scas.init(
       'First State', state.interaction.customizationArgs,
-      state.interaction, 'widget_customization_args');
+      state.interaction, 'widgetCustomizationArgs');
 
     siis.savedMemento = 'TextInput';
     ess.saveSolution('First State', sof.createNew(false, 'abc', 'nothing'));
@@ -228,10 +228,10 @@ describe('Solution Verification Service', function() {
   it('should verify an incorrect solution', function() {
     var state = ess.getState('First State');
     siis.init(
-      'First State', state.interaction.id, state.interaction, 'widget_id');
+      'First State', state.interaction.id, state.interaction, 'widgetid');
     scas.init(
       'First State', state.interaction.customizationArgs,
-      state.interaction, 'widget_customization_args');
+      state.interaction, 'widgetCustomizationArgs');
 
     siis.savedMemento = 'TextInput';
     ess.saveSolution('First State', sof.createNew(false, 'xyz', 'nothing'));

@@ -73,12 +73,12 @@ export class SuggestionObjectFactory {
     return new Suggestion(
       suggestionBackendDict.suggestion_type,
       suggestionBackendDict.suggestion_id, threadId,
-      suggestionBackendDict.target_type, suggestionBackendDict.target_id,
-      suggestionBackendDict.status, suggestionBackendDict.author_name,
-      suggestionBackendDict.change.state_name,
-      suggestionBackendDict.change.new_value,
-      suggestionBackendDict.change.old_value,
-      suggestionBackendDict.last_updated_msecs);
+      suggestionBackendDict.target_type, suggestionBackendDict.targetId,
+      suggestionBackendDict.status, suggestionBackendDict.authorName,
+      suggestionBackendDict.change.stateName,
+      suggestionBackendDict.change.newValue,
+      suggestionBackendDict.change.oldValue,
+      suggestionBackendDict.lastUpdatedMsecs);
   }
 }
 

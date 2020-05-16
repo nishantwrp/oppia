@@ -44,7 +44,7 @@ angular.module('oppia').directive('activityTilesInfinityGrid', [
               SearchService.loadMoreData(function(data, endOfPageIsReached) {
                 ctrl.allActivitiesInOrder =
                 ctrl.allActivitiesInOrder.concat(
-                  data.activity_list);
+                  data.activityList);
                 ctrl.endOfPageIsReached = endOfPageIsReached;
                 ctrl.searchResultsAreLoading = false;
               }, function(endOfPageIsReached) {

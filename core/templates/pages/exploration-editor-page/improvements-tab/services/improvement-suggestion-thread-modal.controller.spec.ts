@@ -71,17 +71,17 @@ describe('Improvement Suggestion Thread Modal Controller', function() {
 
     var mockSuggestionThreads = [{
       description: 'Suggestion',
-      last_updated: 1441870501231.642,
-      original_author_username: 'test_learner',
-      state_name: null,
+      lastUpdated: 1441870501231.642,
+      originalAuthorUsername: 'test_learner',
+      stateName: null,
       status: 'open',
       subject: 'Suggestion from a learner',
       summary: null,
-      thread_id: 'exp1.thread1'
+      threadId: 'exp1.thread1'
     }];
     var mockSuggestions = [{
-      assigned_reviewer_id: null,
-      author_name: 'author_1',
+      assignedReviewerId: null,
+      authorName: 'author_1',
       change: {
         new_value: {
           html: 'new content html',
@@ -92,15 +92,15 @@ describe('Improvement Suggestion Thread Modal Controller', function() {
         state_name: 'state_1',
         property_name: 'content'
       },
-      final_reviewer_id: null,
-      last_updated: 1528564605944.896,
-      score_category: 'content.Algebra',
+      finalReviewerId: null,
+      lastUpdated: 1528564605944.896,
+      scoreCategory: 'content.Algebra',
       status: 'received',
-      suggestion_id: 'exp1.thread1',
-      suggestion_type: 'edit_exploration_state_content',
-      target_id: 'exp_1',
-      target_type: 'exploration',
-      target_version_at_submission: 1,
+      suggestionId: 'exp1.thread1',
+      suggestionType: 'edit_exploration_state_content',
+      targetId: 'exp_1',
+      targetType: 'exploration',
+      targetVersionAtSubmission: 1,
     }];
 
     $httpBackend.whenGET('/threadlisthandler/' + expId).respond({

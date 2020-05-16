@@ -119,7 +119,7 @@ describe('Interaction object factory', () => {
 
   it('should create an object when default outcome is null', () => {
     const copyInteractionDict = { ...interactionDict };
-    copyInteractionDict.default_outcome = null;
+    copyInteractionDict.defaultOutcome = null;
 
     const testInteraction = iof.createFromBackendDict(copyInteractionDict);
 
@@ -328,14 +328,14 @@ describe('Interaction object factory', () => {
     expect(testInteraction).toEqual(otherInteraction);
     otherInteraction.customizationArgs.customArg.value = 'custom_arg_new';
     expect(testInteraction).toEqual(iof.createFromBackendDict({
-      answer_groups: newAnswerGroups,
-      confirmed_unclassified_answers: [],
-      customization_args: {
+      answerGroups: newAnswerGroups,
+      confirmedUnclassifiedAnswers: [],
+      customizationArgs: {
         customArg: {
           value: 'custom_arg'
         }
       },
-      default_outcome: newDefaultOutcome,
+      defaultOutcome: newDefaultOutcome,
       hints: newHintDict,
       id: 'interaction_id_new',
       solution: newSolutionDict

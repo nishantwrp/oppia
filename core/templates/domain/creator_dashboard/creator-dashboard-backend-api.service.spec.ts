@@ -30,7 +30,7 @@ describe('Creator Dashboard backend API service', () => {
   var SAMPLE_EXP_ID = 'hyuy4GUlvTqJ';
 
   var sampleDataResults = {
-    explorations_list: [{
+    explorationsList: [{
       id: SAMPLE_EXP_ID,
       title: 'Sample Title',
       activityType: 'exploration',

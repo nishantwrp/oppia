@@ -158,8 +158,8 @@ angular.module('oppia').directive('learnerViewInfo', [
                     return UrlInterpolationService.getStaticImageUrl(imagePath);
                   };
                   $scope.lastUpdatedString = getLastUpdatedString(
-                    expInfo.last_updated_msec);
-                  $scope.numViews = expInfo.num_views;
+                    expInfo.lastUpdatedMsec);
+                  $scope.numViews = expInfo.numViews;
                   $scope.objective = expInfo.objective;
                   $scope.explorationIsPrivate = (expInfo.status === 'private');
 

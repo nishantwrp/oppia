@@ -49,15 +49,15 @@ describe('Playthrough Object Factory', () => {
   it('should create a new playthrough from a backend dict', () => {
     var playthroughObject = this.pof.createFromBackendDict(
       {
-        playthrough_id: 'playthroughId1',
-        exp_id: 'expId1',
-        exp_version: 1,
-        issue_type: 'EarlyQuit',
-        issue_customization_args: {},
+        playthroughId: 'playthroughId1',
+        expId: 'expId1',
+        expVersion: 1,
+        issueType: 'EarlyQuit',
+        issueCustomizationArgs: {},
         actions: [{
-          action_type: 'AnswerSubmit',
-          action_customization_args: {},
-          schema_version: 1
+          actionType: 'AnswerSubmit',
+          actionCustomizationArgs: {},
+          schemaVersion: 1
         }]
       }
     );
@@ -79,14 +79,14 @@ describe('Playthrough Object Factory', () => {
     var playthroughDict = playthroughObject.toBackendDict();
     expect(playthroughDict).toEqual({
       id: 'playthroughId1',
-      exp_id: 'expId1',
-      exp_version: 1,
-      issue_type: 'EarlyQuit',
-      issue_customization_args: {},
+      expId: 'expId1',
+      expVersion: 1,
+      issueType: 'EarlyQuit',
+      issueCustomizationArgs: {},
       actions: [{
-        action_type: 'AnswerSubmit',
-        action_customization_args: {},
-        schema_version: 1
+        actionType: 'AnswerSubmit',
+        actionCustomizationArgs: {},
+        schemaVersion: 1
       }]
     });
   });

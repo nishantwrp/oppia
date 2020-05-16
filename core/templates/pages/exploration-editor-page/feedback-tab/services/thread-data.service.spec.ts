@@ -47,40 +47,40 @@ describe('retrieving threads service', () => {
     this.expId = 'exp1';
     this.mockFeedbackThreads = [
       {
-        last_updated: 1441870501230.642,
-        original_author_username: 'test_learner',
-        state_name: null,
+        lastUpdated: 1441870501230.642,
+        originalAuthorUsername: 'test_learner',
+        stateName: null,
         status: 'open',
         subject: 'Feedback from a learner',
         summary: null,
-        thread_id: 'exploration.exp1.abc1'
+        threadId: 'exploration.exp1.abc1'
       },
       {
-        last_updated: 1441870501231.642,
-        original_author_username: 'test_learner',
-        state_name: null,
+        lastUpdated: 1441870501231.642,
+        originalAuthorUsername: 'test_learner',
+        stateName: null,
         status: 'open',
         subject: 'Feedback from a learner',
         summary: null,
-        thread_id: 'exploration.exp1.def2'
+        threadId: 'exploration.exp1.def2'
       }
     ];
     this.mockSuggestionThreads = [
       {
         description: 'Suggestion',
-        last_updated: 1441870501231.642,
-        original_author_username: 'test_learner',
-        state_name: null,
+        lastUpdated: 1441870501231.642,
+        originalAuthorUsername: 'test_learner',
+        stateName: null,
         status: 'open',
         subject: 'Suggestion from a learner',
         summary: null,
-        thread_id: 'exploration.exp1.ghi3'
+        threadId: 'exploration.exp1.ghi3'
       }
     ];
     this.mockSuggestions = [
       {
-        assigned_reviewer_id: null,
-        author_name: 'author_1',
+        assignedReviewerId: null,
+        authorName: 'author_1',
         change: {
           new_value: {
             html: 'new content html',
@@ -91,15 +91,15 @@ describe('retrieving threads service', () => {
           state_name: 'state_1',
           property_name: 'content'
         },
-        final_reviewer_id: null,
-        last_updated: 1528564605944.896,
-        score_category: 'content.Algebra',
+        finalReviewerId: null,
+        lastUpdated: 1528564605944.896,
+        scoreCategory: 'content.Algebra',
         status: 'received',
-        suggestion_id: 'exploration.exp1.ghi3',
-        suggestion_type: 'edit_exploration_state_content',
-        target_id: 'exp1',
-        target_type: 'exploration',
-        target_version_at_submission: 1,
+        suggestionId: 'exploration.exp1.ghi3',
+        suggestionType: 'edit_exploration_state_content',
+        targetId: 'exp1',
+        targetType: 'exploration',
+        targetVersionAtSubmission: 1,
       }
     ];
     this.mockMessages = [
@@ -315,13 +315,13 @@ describe('retrieving threads service', () => {
   it('should successfully create a new thread', done => {
     let subject = 'New Subject';
     let mockCreatedFeedbackThread = {
-      last_updated: 1441870501230.642,
-      original_author_username: 'test_learner',
-      state_name: null,
+      lastUpdated: 1441870501230.642,
+      originalAuthorUsername: 'test_learner',
+      stateName: null,
       status: 'open',
       subject: subject,
       summary: null,
-      thread_id: 'exploration.exp1.jkl1'
+      threadId: 'exploration.exp1.jkl1'
     };
 
     $httpBackend.expectPOST('/threadlisthandler/exp1').respond(200);

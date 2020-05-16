@@ -25,13 +25,13 @@
             <exploration-summary-tile ng-if="tile.activity_type == 'exploration'"
                                       exploration-id="tile.id"
                                       exploration-title="tile.title"
-                                      last-updated-msec="tile.last_updated_msec"
+                                      last-updated-msec="tile.lastUpdatedMsec"
                                       objective="tile.objective"
                                       category="tile.category"
                                       ratings="tile.ratings"
-                                      num-views="tile.num_views"
-                                      thumbnail-icon-url="tile.thumbnail_icon_url"
-                                      thumbnail-bg-color="tile.thumbnail_bg_color"
+                                      num-views="tile.numViews"
+                                      thumbnail-icon-url="tile.thumbnailIconUrl"
+                                      thumbnail-bg-color="tile.thumbnailBgColor"
                                       class="protractor-test-exp-summary-tile">
             </exploration-summary-tile>
           </div>
@@ -69,10 +69,10 @@
           <div class="oppia-library-group-header-container">
             <h2 ng-class="{'active': $ctrl.activeGroupIndex === $index}" class="oppia-library-group-header">
               <a ng-if="group.has_full_results_page" class="protractor-test-library-<[group.protractor_id]>" ng-click="$ctrl.showFullResultsPage(group.categories, group.full_results_url)" tabindex="0">
-                <span translate="<[group.header_i18n_id]>"></span>
+                <span translate="<[group.headerI18nId]>"></span>
                 <span ng-show="$ctrl.activeGroupIndex === $index"><i class="material-icons md-32">&#xE315;</i></span>
               </a>
-              <span ng-if="!group.has_full_results_page" translate="<[group.header_i18n_id]>">
+              <span ng-if="!group.has_full_results_page" translate="<[group.headerI18nId]>">
               </span>
             </h2>
           </div>
@@ -95,25 +95,25 @@
                   <collection-summary-tile ng-if="tile.activity_type == 'collection'"
                                            collection-id="tile.id"
                                            collection-title="tile.title"
-                                           last-updated-msec="tile.last_updated_msec"
+                                           last-updated-msec="tile.lastUpdatedMsec"
                                            objective="tile.objective"
                                            node-count="tile.node_count"
                                            category="tile.category"
-                                           thumbnail-icon-url="tile.thumbnail_icon_url"
-                                           thumbnail-bg-color="tile.thumbnail_bg_color"
+                                           thumbnail-icon-url="tile.thumbnailIconUrl"
+                                           thumbnail-bg-color="tile.thumbnailBgColor"
                                            activity-is-owned-by-current-user="$ctrl.activitiesOwned.collections[tile.id]"
                                            show-learner-dashboard-icons-if-possible="true">
                   </collection-summary-tile>
                   <exploration-summary-tile ng-if="tile.activity_type == 'exploration'"
                                             exploration-id="tile.id"
                                             exploration-title="tile.title"
-                                            last-updated-msec="tile.last_updated_msec"
+                                            last-updated-msec="tile.lastUpdatedMsec"
                                             objective="tile.objective"
                                             category="tile.category"
                                             ratings="tile.ratings"
-                                            num-views="tile.num_views"
-                                            thumbnail-icon-url="tile.thumbnail_icon_url"
-                                            thumbnail-bg-color="tile.thumbnail_bg_color"
+                                            num-views="tile.numViews"
+                                            thumbnail-icon-url="tile.thumbnailIconUrl"
+                                            thumbnail-bg-color="tile.thumbnailBgColor"
                                             class="protractor-test-exp-summary-tile"
                                             activity-is-owned-by-current-user="$ctrl.activitiesOwned.explorations[tile.id]"
                                             show-learner-dashboard-icons-if-possible="true">
@@ -149,19 +149,19 @@
                 <collection-summary-tile ng-if="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].activity_type == 'collection'"
                                          collection-id="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].id"
                                          collection-title="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].title"
-                                         last-updated-msec="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].last_updated_msec"
+                                         last-updated-msec="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].lastUpdatedMsec"
                                          objective="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].objective"
-                                         node-count="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].node_count"
+                                         node-count="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].nodeCount"
                                          category="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].category"
-                                         thumbnail-icon-url="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnail_icon_url"
-                                         thumbnail-bg-color="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnail_bg_color"
+                                         thumbnail-icon-url="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnailIconUrl"
+                                         thumbnail-bg-color="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnailBgColor"
                                          show-learner-dashboard-icons-if-possible="true"
                                          container-is-narrow="true">
                 </collection-summary-tile>
                 <exploration-summary-tile ng-if="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].activity_type == 'exploration'"
                                           exploration-id="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].id"
                                           exploration-title="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].title"
-                                          last-updated-msec="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].last_updated_msec"
+                                          last-updated-msec="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].lastUpdatedMsec"
                                           objective="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].objective"
                                           category="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].category"
                                           ratings="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].ratings"

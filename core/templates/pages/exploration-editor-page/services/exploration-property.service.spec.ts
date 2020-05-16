@@ -140,18 +140,18 @@ describe('Exploration Property Service', function() {
       .callThrough();
 
     child.init(ParamChangesObjectFactory.createFromBackendList([{
-      customization_args: {
-        parse_with_jinja: true,
+      customizationArgs: {
+        parseWithJinja: true,
         value: ''
       },
-      generator_id: 'Copier',
+      generatorId: 'Copier',
       name: 'Param change 1'
     }, {
-      customization_args: {
-        parse_with_jinja: true,
+      customizationArgs: {
+        parseWithJinja: true,
         value: ''
       },
-      generator_id: 'RandomSelector',
+      generatorid: 'RandomSelector',
       name: 'Param change 2'
     }]));
     child.saveDisplayedValue();

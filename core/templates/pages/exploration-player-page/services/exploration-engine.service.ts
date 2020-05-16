@@ -279,7 +279,7 @@ angular.module('oppia').factory('ExplorationEngineService', [
             exploration.getAllVoiceoverLanguageCodes(),
             null,
             exploration.getLanguageCode(),
-            explorationDict.auto_tts_enabled);
+            explorationDict.autoTtsEnabled);
           AudioPreloaderService.init(exploration);
           AudioPreloaderService.kickOffAudioPreloader(initStateName);
           _loadInitialState(successCallback);

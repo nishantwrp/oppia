@@ -83,16 +83,16 @@ describe('FeedbackImprovementTaskObjectFactory', function() {
   describe('FeedbackImprovementTask', function() {
     beforeEach(function() {
       let feedbackThreadBackendDict = {
-        last_updated_msecs: 1000,
-        original_author_username: 'test_learner',
-        state_name: null,
+        lastUpdatedMsecs: 1000,
+        originalAuthorUsername: 'test_learner',
+        stateName: null,
         status: 'open',
         subject: 'Feedback from a learner',
         summary: null,
-        thread_id: 'exp1.thread1',
-        message_count: 10,
-        last_nonempty_message_author: 'author',
-        last_nonempty_message_text: 'tenth message'
+        threadId: 'exp1.thread1',
+        messageCount: 10,
+        lastNonemptyMessageAuthor: 'author',
+        lastNonemptyMessageText: 'tenth message'
       };
       this.mockThread = FeedbackThreadObjectFactory.createFromBackendDict(
         feedbackThreadBackendDict);

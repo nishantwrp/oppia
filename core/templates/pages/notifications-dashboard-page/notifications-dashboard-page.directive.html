@@ -13,7 +13,7 @@
       <a ng-href="<[$ctrl.getItemUrl(notification.activity_id, notification.type)]>"
          ng-repeat="notification in $ctrl.recentNotifications">
         <md-card class="oppia-dashboard-row"
-                 ng-class="{'oppia-dashboard-row-recent': $ctrl.lastSeenMsec && $ctrl.lastSeenMsec < notification.last_updated_ms && notification.author_username !== $ctrl.currentUsername}">
+                 ng-class="{'oppia-dashboard-row-recent': $ctrl.lastSeenMsec && $ctrl.lastSeenMsec < notification.lastUpdatedMs && notification.authorUsername !== $ctrl.currentUsername}">
           <div class="oppia-notification-content">
             <span>
               <span ng-if="notification.type === 'feedback_thread'"
@@ -46,7 +46,7 @@
             </span>
           </div>
           <div class="oppia-notification-last-updated">
-            <[$ctrl.getLocaleAbbreviatedDatetimeString(notification.last_updated_ms)]>
+            <[$ctrl.getLocaleAbbreviatedDatetimeString(notification.lastUpdatedMs)]>
           </div>
         </md-card>
       </a>

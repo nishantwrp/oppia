@@ -76,10 +76,10 @@ describe('State content editor directive', function() {
       ess = $injector.get('ExplorationStatesService');
 
       var rvoDict = {
-        voiceovers_mapping: {
+        voiceoversMapping: {
           content: {},
-          default_outcome: {},
-          feedback_1: {}
+          defaultOutcome: {},
+          feedback1: {}
         }
       };
 

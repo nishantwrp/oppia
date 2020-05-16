@@ -74,14 +74,14 @@ describe('PlaythroughImprovementTaskObjectFactory', function() {
 
     it('retrieves data from passed issue', function() {
       var issue = this.PlaythroughIssueObjectFactory.createFromBackendDict({
-        issue_type: 'EarlyQuit',
-        issue_customization_args: {
-          state_name: {value: 'Hola'},
-          time_spent_in_exp_in_msecs: {value: 5000},
+        issueType: 'EarlyQuit',
+        issueCustomizationArgs: {
+          stateName: {value: 'Hola'},
+          timeSpentInExpInMsecs: {value: 5000},
         },
-        playthrough_ids: ['1', '2'],
+        playthroughIds: ['1', '2'],
         schema_version: 1,
-        is_valid: true,
+        isValid: true,
       });
 
       var task = PlaythroughImprovementTaskObjectFactory.createNew(issue);
@@ -102,35 +102,35 @@ describe('PlaythroughImprovementTaskObjectFactory', function() {
     beforeEach(function() {
       this.earlyQuitIssue =
         this.PlaythroughIssueObjectFactory.createFromBackendDict({
-          issue_type: 'EarlyQuit',
-          issue_customization_args: {
-            state_name: {value: 'Hola'},
-            time_spent_in_exp_in_msecs: {value: 5000},
+          issueType: 'EarlyQuit',
+          issueCustomizationArgs: {
+            statename: {value: 'Hola'},
+            timeSpentInExpInMsecs: {value: 5000},
           },
-          playthrough_ids: [],
-          schema_version: 1,
-          is_valid: true,
+          playthroughIds: [],
+          schemaVersion: 1,
+          isValid: true,
         });
       this.multipleIncorrectSubmissionsIssue =
         this.PlaythroughIssueObjectFactory.createFromBackendDict({
-          issue_type: 'MultipleIncorrectSubmissions',
-          issue_customization_args: {
-            state_name: {value: 'Hola'},
-            num_times_answered_incorrectly: {value: 4},
+          issueType: 'MultipleIncorrectSubmissions',
+          issueCustomizationArgs: {
+            stateName: {value: 'Hola'},
+            numTimesAnsweredIncorrectly: {value: 4},
           },
-          playthrough_ids: [],
-          schema_version: 1,
-          is_valid: true,
+          playthroughIds: [],
+          schemaVersion: 1,
+          isValid: true,
         });
       this.cyclicTransitionsIssue =
         this.PlaythroughIssueObjectFactory.createFromBackendDict({
-          issue_type: 'CyclicTransitions',
-          issue_customization_args: {
-            state_names: {value: ['Hola', 'Me Llamo', 'Hola']},
+          issueType: 'CyclicTransitions',
+          issueCustomizationArgs: {
+            stateNames: {value: ['Hola', 'Me Llamo', 'Hola']},
           },
-          playthrough_ids: [],
-          schema_version: 1,
-          is_valid: true,
+          playthroughIds: [],
+          schemaVersion: 1,
+          isValid: true,
         });
       this.getIssuesSpy = spyOn(PlaythroughIssuesService, 'getIssues')
         .and.returnValue($q.resolve([
@@ -183,10 +183,10 @@ describe('PlaythroughImprovementTaskObjectFactory', function() {
   describe('PlaythroughImprovementTask', function() {
     beforeEach(function() {
       this.issue = this.PlaythroughIssueObjectFactory.createFromBackendDict({
-        issue_type: 'EarlyQuit',
-        issue_customization_args: {
-          state_name: {value: 'Hola'},
-          time_spent_in_exp_in_msecs: {value: 5000},
+        issueType: 'EarlyQuit',
+        issueCustomizationArgs: {
+          stateName: {value: 'Hola'},
+          timeSpentInExpInMsecs: {value: 5000},
         },
         playthrough_ids: [],
         schema_version: 1,

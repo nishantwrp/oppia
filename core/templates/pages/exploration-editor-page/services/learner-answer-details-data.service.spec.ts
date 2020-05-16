@@ -78,22 +78,22 @@ describe('Learner answer details service', function() {
   describe('when .fetchLearnerAnswerInfoData is called', function() {
     beforeEach(function() {
       sampleDataResults = {
-        learner_answer_info_data: [{
-          state_name: 'fakeStateName',
-          interaction_id: 'fakeInteractionId',
-          customization_args: 'fakeCustomizationArgs',
-          learner_answer_info_dicts: []
+        learnerAnswerInfoData: [{
+          stateName: 'fakeStateName',
+          interactionId: 'fakeInteractionId',
+          customizationArgs: 'fakeCustomizationArgs',
+          learnerAnswerInfoDicts: []
         }]
       };
     });
 
     it('should successfully fetch learner answer info data from the backend',
       function() {
-        sampleDataResults.learner_answer_info_data[0]
-          .learner_answer_info_dicts = [{
+        sampleDataResults.learnerAnswerInfoData[0]
+          .learnerAnswerInfoDicts = [{
             id: '123',
             answer: 'My answer',
-            answer_details: 'My answer details',
+            answerDetails: 'My answer details',
             created_on: 123456
           }];
 

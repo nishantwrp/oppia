@@ -79,14 +79,14 @@ describe('Notifications Dashboard Page', function() {
       var response = {
         recent_notifications: {
           type: 'feedback_thread',
-          activity_id: '0',
-          activity_title: 'Title',
-          last_updated_ms: 2000000,
-          author_id: 'user1',
+          activityId: '0',
+          activityTitle: 'Title',
+          lastUpdatedMs: 2000000,
+          authorId: 'user1',
           subject: 'This is a brief description of the notification'
         },
-        job_queued_msec: 1000000,
-        last_seen_msec: null,
+        jobQueuedMsec: 1000000,
+        lastSeenMsec: null,
         username: 'user1'
       };
 

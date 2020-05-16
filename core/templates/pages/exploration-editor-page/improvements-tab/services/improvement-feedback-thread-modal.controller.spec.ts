@@ -64,14 +64,14 @@ describe('Improvement Feedback Thread Modal Controller', function() {
       spyOn(ContextService, 'getExplorationId').and.returnValue('exp1');
 
       var mockFeedbackThreads = [{
-        last_updated: 1000,
-        original_author_username: 'author',
+        lastUpdated: 1000,
+        originalAuthorUsername: 'author',
         status: 'accepted',
         subject: 'sample subject',
         summary: 'sample summary',
-        message_count: 10,
-        state_name: 'state 1',
-        thread_id: 'exp1.thread1'
+        messageCount: 10,
+        stateName: 'state 1',
+        threadId: 'exp1.thread1'
       }];
 
       $httpBackend.whenGET('/threadlisthandler/' + expId).respond({
@@ -181,14 +181,14 @@ describe('Improvement Feedback Thread Modal Controller', function() {
       spyOn(ContextService, 'getExplorationId').and.returnValue('exp1');
 
       var mockFeedbackThreads = [{
-        last_updated: 1000,
-        original_author_username: 'author',
+        lastUpdated: 1000,
+        originalAuthorUsername: 'author',
         status: 'accepted',
         subject: 'sample subject',
         summary: 'sample summary',
-        message_count: 10,
-        state_name: 'state 1',
-        thread_id: null
+        messageCount: 10,
+        stateName: 'state 1',
+        threadId: null
       }];
 
       $httpBackend.whenGET('/threadlisthandler/' + expId)

@@ -74,7 +74,7 @@ describe('Answer classification result object factory', () => {
   beforeEach(() => {
     acrof = new AnswerClassificationResultObjectFactory();
     oof = new MockOutcomeObjectFactory();
-    DEFAULT_OUTCOME_CLASSIFICATION = 'default_outcome';
+    DEFAULT_OUTCOME_CLASSIFICATION = 'defaultOutcome';
   });
 
   it('should create a new result', () => {

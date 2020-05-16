@@ -307,7 +307,7 @@ describe('StateImprovementSuggestionService', () => {
     interface InteractionType {
       interaction: {
         // eslint-disable-next-line camelcase
-        default_outcome?: {
+        defaultOutcome?: {
           dest: string
         }
       }
@@ -317,7 +317,7 @@ describe('StateImprovementSuggestionService', () => {
       if (destStateName) {
         return {
           interaction: {
-            default_outcome: {
+            defaultOutcome: {
               dest: destStateName
             }
           }

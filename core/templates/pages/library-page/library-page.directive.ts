@@ -295,13 +295,13 @@ angular.module('oppia').directive('libraryPage', [
                             }
                           });
 
-                          response.data.explorations_list
+                          response.data.explorationsList
                             .forEach(function(ownedExplorations) {
                               ctrl.activitiesOwned.explorations[
                                 ownedExplorations.id] = true;
                             });
 
-                          response.data.collections_list
+                          response.data.collectionsList
                             .forEach(function(ownedCollections) {
                               ctrl.activitiesOwned.collections[
                                 ownedCollections.id] = true;

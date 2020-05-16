@@ -125,14 +125,14 @@ angular.module('oppia').factory('ExplorationStatesService', [
     };
 
     var CONTENT_ID_EXTRACTORS = {
-      answer_groups: function(answerGroups) {
+      answerGroups: function(answerGroups) {
         var contentIds = new Set();
         answerGroups.forEach(function(answerGroup) {
           contentIds.add(answerGroup.outcome.feedback.getContentId());
         });
         return contentIds;
       },
-      default_outcome: function(defaultOutcome) {
+      defaultOutcome: function(defaultOutcome) {
         var contentIds = new Set();
         if (defaultOutcome) {
           contentIds.add(defaultOutcome.feedback.getContentId());

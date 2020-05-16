@@ -85,12 +85,12 @@ export class Interaction {
   // TODO(#7165): Replace any with exact type.
   toBackendDict(): any {
     return {
-      answer_groups: this.answerGroups.map(function(answerGroup) {
+      answerGroups: this.answerGroups.map(function(answerGroup) {
         return answerGroup.toBackendDict();
       }),
-      confirmed_unclassified_answers: this.confirmedUnclassifiedAnswers,
-      customization_args: this.customizationArgs,
-      default_outcome:
+      confirmedUnclassifiedAnswers: this.confirmedUnclassifiedAnswers,
+      customizationArgs: this.customizationArgs,
+      defaultOutcome:
         this.defaultOutcome ? this.defaultOutcome.toBackendDict() : null,
       hints: this.hints.map(function(hint) {
         return hint.toBackendDict();
@@ -116,16 +116,16 @@ export class InteractionObjectFactory {
   createFromBackendDict(interactionDict: any): Interaction {
   /* eslint-enable dot-notation */
     var defaultOutcome;
-    if (interactionDict.default_outcome) {
+    if (interactionDict.defaultOutcome) {
       defaultOutcome = this.outcomeFactory.createFromBackendDict(
-        interactionDict.default_outcome);
+        interactionDict.defaultOutcome);
     } else {
       defaultOutcome = null;
     }
     return new Interaction(
-      this.generateAnswerGroupsFromBackend(interactionDict.answer_groups),
-      interactionDict.confirmed_unclassified_answers,
-      interactionDict.customization_args,
+      this.generateAnswerGroupsFromBackend(interactionDict.answerGroups),
+      interactionDict.confirmedUnclassifiedAnswers,
+      interactionDict.customizationArgs,
       defaultOutcome,
       this.generateHintsFromBackend(interactionDict.hints),
       interactionDict.id,

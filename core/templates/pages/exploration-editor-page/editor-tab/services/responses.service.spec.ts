@@ -58,25 +58,25 @@ describe('Responses Service', function() {
 
     interactionData = InteractionObjectFactory.createFromBackendDict({
       id: 'TextInput',
-      answer_groups: [{
+      answerGroups: [{
         outcome: {
           dest: '',
           feedback: {
-            content_id: 'feedback_1',
+            contentId: 'feedback_1',
             html: ''
           },
         },
-        rule_specs: [],
+        ruleSpecs: [],
       }],
-      default_outcome: {
+      defaultOutcome: {
         dest: 'Hola',
         feedback: {
-          content_id: '',
+          contentId: '',
           html: '',
         },
       },
-      confirmed_unclassified_answers: [],
-      customization_args: {
+      confirmedUnclassifiedAnswers: [],
+      customizationArgs: {
         rows: {
           value: true
         },
@@ -88,15 +88,15 @@ describe('Responses Service', function() {
     });
     interactionDataWithRules = InteractionObjectFactory.createFromBackendDict({
       id: 'TextInput',
-      answer_groups: [{
+      answerGroups: [{
         outcome: {
           dest: '',
           feedback: {
-            content_id: 'feedback_1',
+            contentId: 'feedback_1',
             html: ''
           },
         },
-        rule_specs: [{
+        ruleSpecs: [{
           type: '',
           inputs: {
             x: ['c', 'd', 'e'],
@@ -104,15 +104,15 @@ describe('Responses Service', function() {
           }
         }],
       }],
-      default_outcome: {
+      defaultOutcome: {
         dest: 'Hola',
         feedback: {
-          content_id: '',
+          contentId: '',
           html: '',
         },
       },
-      confirmed_unclassified_answers: [],
-      customization_args: {
+      confirmedUnclassifiedAnswers: [],
+      customizationArgs: {
         rows: {
           value: true
         },

@@ -181,34 +181,34 @@ describe('Exploration Warnings Service', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '{{HtmlValue}}'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {},
+          recordedVoiceovers: {
+            voiceoversMapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
             id: 'TextInput',
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [],
-              training_data: []
+              ruleSpecs: [],
+              trainingData: []
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Hola',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               },
             },
-            customization_args: {
+            customizationArgs: {
               rows: {
                 value: true
               },
@@ -218,10 +218,10 @@ describe('Exploration Warnings Service', function() {
             },
             hints: [],
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             },
           },
         }
@@ -263,44 +263,44 @@ describe('Exploration Warnings Service', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '{{HtmlValue}}'
           },
           recorded_voiceovers: {
             voiceovers_mapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
             id: 'Continue',
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [],
-              training_data: []
+              ruleSpecs: [],
+              trainingData: []
             }, {
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [],
-              training_data: []
+              ruleSpecs: [],
+              trainingData: []
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Hola',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               },
             },
-            customization_args: {
+            customizationArgs: {
               rows: {
                 value: true
               },
@@ -313,10 +313,10 @@ describe('Exploration Warnings Service', function() {
             },
             hints: [],
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             },
           },
         }
@@ -357,39 +357,39 @@ describe('Exploration Warnings Service', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '{{HtmlValue}}'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {},
+          recordedVoiceovers: {
+            voiceoversMapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [],
-              training_data: []
+              ruleSpecs: [],
+              trainingData: []
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Hola',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               },
             },
-            customization_args: {},
+            customizationArgs: {},
             hints: [],
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             },
           },
         }
@@ -429,41 +429,41 @@ describe('Exploration Warnings Service', function() {
         ExplorationStatesService.init({
           Hola: {
             content: {
-              content_id: 'content',
+              contentId: 'content',
               html: '{{HtmlValue}}'
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {},
+            recordedVoiceovers: {
+              voiceoversMapping: {},
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
               id: 'TextInput',
               solution: {
-                correct_answer: 'This is the correct answer',
-                answer_is_exclusive: false,
+                correctAnswer: 'This is the correct answer',
+                answerIsExclusive: false,
                 explanation: {
                   html: 'Solution explanation'
                 }
               },
-              answer_groups: [{
+              answerGroups: [{
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: 'feedback_1',
+                    contentId: 'feedback_1',
                     html: ''
                   },
                 },
-                rule_specs: [],
-                training_data: []
+                ruleSpecs: [],
+                trainingData: []
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: 'Hola',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 },
               },
-              customization_args: {
+              customizationArgs: {
                 rows: {
                   value: true
                 },
@@ -473,10 +473,10 @@ describe('Exploration Warnings Service', function() {
               },
               hints: [],
             },
-            written_translations: {
-              translations_mapping: {
+            writtenTranslations: {
+              translationsMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               },
             },
           }
@@ -521,41 +521,41 @@ describe('Exploration Warnings Service', function() {
         ExplorationStatesService.init({
           Hola: {
             content: {
-              content_id: 'content',
+              contentId: 'content',
               html: '{{HtmlValue}}'
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {},
+            recordedVoiceovers: {
+              voiceoversMapping: {},
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
               id: 'TextInput',
               solution: {
-                correct_answer: 'This is the correct answer',
-                answer_is_exclusive: false,
+                correctAnswer: 'This is the correct answer',
+                answerIsExclusive: false,
                 explanation: {
                   html: 'Solution explanation'
                 }
               },
-              answer_groups: [{
+              answerGroups: [{
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: 'feedback_1',
+                    contentId: 'feedback_1',
                     html: ''
                   },
                 },
-                rule_specs: [],
-                training_data: []
+                ruleSpecs: [],
+                trainingData: []
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: 'Hola',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 },
               },
-              customization_args: {
+              customizationArgs: {
                 rows: {
                   value: true
                 },
@@ -565,10 +565,10 @@ describe('Exploration Warnings Service', function() {
               },
               hints: [],
             },
-            written_translations: {
-              translations_mapping: {
+            writtenTranslations: {
+              translationsMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               },
             },
           }
@@ -627,41 +627,41 @@ describe('Exploration Warnings Service', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '{{HtmlValue}}'
           },
-          recorded_voiceovers: {
+          recordedVoiceovers: {
             voiceovers_mapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
             id: 'TextInput',
             solution: {
-              correct_answer: 'This is the correct answer',
-              answer_is_exclusive: false,
+              correctAnswer: 'This is the correct answer',
+              answerIsExclusive: false,
               explanation: {
                 html: 'Solution explanation'
               }
             },
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [],
-              training_data: []
+              ruleSpecs: [],
+              trainingData: []
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'State',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               },
             },
-            customization_args: {
+            customizationArgs: {
               rows: {
                 value: true
               },
@@ -671,10 +671,10 @@ describe('Exploration Warnings Service', function() {
             },
             hints: [],
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             },
           },
         }
@@ -715,41 +715,41 @@ describe('Exploration Warnings Service', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '{{HtmlValue}}'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {},
+          recordedVoiceovers: {
+            voiceoversMapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
             id: 'TextInput',
             solution: {
-              correct_answer: 'This is the correct answer',
-              answer_is_exclusive: false,
+              correctAnswer: 'This is the correct answer',
+              answerIsExclusive: false,
               explanation: {
                 html: 'Solution explanation'
               }
             },
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [],
-              training_data: []
+              ruleSpecs: [],
+              trainingData: []
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Hola',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               },
             },
-            customization_args: {
+            customizationArgs: {
               rows: {
                 value: true
               },
@@ -759,50 +759,50 @@ describe('Exploration Warnings Service', function() {
             },
             hints: [],
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             },
           },
         },
         State: {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: '{{HtmlValue}}'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {},
+          recordedVoiceovers: {
+            voiceoversMapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
             id: 'TextInput',
             solution: {
-              correct_answer: 'This is the correct answer',
-              answer_is_exclusive: false,
+              correctAnswer: 'This is the correct answer',
+              answerIsExclusive: false,
               explanation: {
                 html: 'Solution explanation'
               }
             },
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [],
-              training_data: []
+              ruleSpecs: [],
+              trainingData: []
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'State',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               },
             },
-            customization_args: {
+            customizationArgs: {
               rows: {
                 value: true
               },
@@ -812,10 +812,10 @@ describe('Exploration Warnings Service', function() {
             },
             hints: [],
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             },
           },
         }
@@ -884,39 +884,39 @@ describe('Exploration Warnings Service', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: ''
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {},
+          recordedVoiceovers: {
+            voiceoversMapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
             id: 'TextInput',
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: 'State',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: ''
                 },
               },
-              rule_specs: [{
+              ruleSpecs: [{
                 inputs: {
                   x: 10
                 },
-                rule_type: 'Equals'
+                ruleType: 'Equals'
               }],
-              training_data: ['1']
+              trainingData: ['1']
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: '',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               },
             },
-            customization_args: {
+            customizationArgs: {
               rows: {
                 value: 1
               },
@@ -926,46 +926,46 @@ describe('Exploration Warnings Service', function() {
             },
             hints: [],
           },
-          written_translations: {
-            translations_mapping: {
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {},
+              defaultOutcome: {},
             },
           },
         },
         State: {
-          param_changes: [],
+          paramChanges: [],
           content: {
-            content_id: '',
+            contentId: '',
             html: ''
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
             id: 'EndExploration',
-            default_outcome: null,
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            defaultOutcome: null,
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               recommendedExplorationIds: {
                 value: []
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
-          classifier_model_id: null
+          classifierModelId: null
         }
       });
       ExplorationWarningsService.updateWarnings();

@@ -111,26 +111,26 @@ describe('Training Modal Controller', function() {
         StateInteractionIdService.init('Init', 'TextInput');
         ResponsesService.init(InteractionObjectFactory.createFromBackendDict({
           id: 'TextInput',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'Init',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: ''
               },
             },
-            training_data: ['This is the answer'],
-            rule_specs: [],
+            trainingData: ['This is the answer'],
+            ruleSpecs: [],
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'Init',
             feedback: {
-              content_id: '',
+              contentId: '',
               html: '',
             }
           },
           hints: [],
-          confirmed_unclassified_answers: []
+          confirmedUnclassifiedAnswers: []
         }));
 
         $scope = $rootScope.$new();
@@ -268,26 +268,26 @@ describe('Training Modal Controller', function() {
       StateInteractionIdService.init('Init', 'TextInput');
       ResponsesService.init(InteractionObjectFactory.createFromBackendDict({
         id: 'TextInput',
-        answer_groups: [{
+        answerGroups: [{
           outcome: {
             dest: 'Init',
             feedback: {
-              content_id: '',
+              contentId: '',
               html: ''
             },
           },
-          training_data: ['This is the answer'],
-          rule_specs: [],
+          trainingData: ['This is the answer'],
+          ruleSpecs: [],
         }],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'Init',
           feedback: {
-            content_id: '',
+            contentId: '',
             html: '',
           }
         },
         hints: [],
-        confirmed_unclassified_answers: []
+        confirmedUnclassifiedAnswers: []
       }));
       $scope = $rootScope.$new();
       $controller('TrainingModalController', {
@@ -375,36 +375,36 @@ describe('Training Modal Controller', function() {
         StateInteractionIdService.init('Init', 'TextInput');
         ResponsesService.init(InteractionObjectFactory.createFromBackendDict({
           id: 'TextInput',
-          answer_groups: [{
+          answerGroups: [{
             outcome: {
               dest: 'Init',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: ''
               },
             },
-            rule_specs: [],
-            training_data: []
+            ruleSpecs: [],
+            trainingData: []
           }, {
             outcome: {
               dest: 'Hola',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: ''
               },
             },
-            rule_specs: [],
-            training_data: []
+            ruleSpecs: [],
+            trainingData: []
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'Hola',
             feedback: {
-              content_id: '',
+              contentId: '',
               html: '',
             },
           },
-          confirmed_unclassified_answers: [],
-          customization_args: {
+          confirmedUnclassifiedAnswers: [],
+          customizationArgs: {
             rows: {
               value: true
             },

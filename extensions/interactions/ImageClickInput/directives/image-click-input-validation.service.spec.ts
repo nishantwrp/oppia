@@ -67,7 +67,7 @@ describe('ImageClickInputValidationService', () => {
       dest: currentState,
       feedback: {
         html: '',
-        audio_translations: {}
+        audioTranslations: {}
       },
       labelledAsCorrect: false,
       paramChanges: [],

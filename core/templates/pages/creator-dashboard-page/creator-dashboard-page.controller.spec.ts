@@ -35,7 +35,7 @@ describe('Creator dashboard controller', () => {
 
     var CREATOR_DASHBOARD_DATA_URL = '/creatordashboardhandler/data';
     var dashboardData = {
-      explorations_list: [{
+      explorationsList: [{
         category: 'Featured category',
         id: 'featured_exp_id',
         num_open_threads: 2,
@@ -101,7 +101,7 @@ describe('Creator dashboard controller', () => {
 
     it('should have the correct data for creator dashboard', function() {
       $httpBackend.flush();
-      expect(ctrl.explorationsList).toEqual(dashboardData.explorations_list);
+      expect(ctrl.explorationsList).toEqual(dashboardData.explorationsList);
       expect(ctrl.collectionsList).toEqual(dashboardData.collections_list);
       expect(ctrl.dashboardStats).toEqual(dashboardData.dashboard_stats);
       expect(ctrl.lastWeekStats).toEqual(dashboardData.last_week_stats);

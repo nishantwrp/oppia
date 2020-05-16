@@ -29,42 +29,42 @@ describe('Playthrough Issues Service', function() {
   var explorationId = 'abc1';
   var explorationVersion = 1;
   var backendIssues = [{
-    issue_type: 'MultipleIncorrectSubmissions',
-    issue_customization_args: {
-      state_name: {
+    issueType: 'MultipleIncorrectSubmissions',
+    issueCustomizationArgs: {
+      stateName: {
         value: 'state_name1'
       },
-      state_names: {
+      stateBames: {
         value: ['state_name1', 'state_name2', 'state_name3']
       },
-      num_times_answered_incorrectly: {
+      numTimesAnsweredIncorrectly: {
         value: 7
       }
     },
-    playthrough_ids: ['playthrough_id2'],
-    schema_version: 1,
-    is_valid: true
+    playthroughIds: ['playthrough_id2'],
+    schemaVersion: 1,
+    isValid: true
   }];
   var backendPlaythrough = {
-    exp_id: 'exp_id1',
-    exp_version: 1,
-    issue_type: 'EarlyQuit',
-    issue_customization_args: {
-      state_name: {
+    expId: 'exp_id1',
+    expVersion: 1,
+    issueType: 'EarlyQuit',
+    issueCustomizationArgs: {
+      stateName: {
         value: 'state_name1'
       },
-      time_spent_in_exp_in_msecs: {
+      timeSpentInExpInMsecs: {
         value: 200
       }
     },
     actions: [{
-      action_type: 'ExplorationStart',
-      action_customization_args: {
-        state_name: {
+      actionType: 'ExplorationStart',
+      actionCustomizationArgs: {
+        stateName: {
           value: 'state_name1'
         }
       },
-      schema_version: 1
+      schemaVersion: 1
     }]
   };
 
@@ -134,7 +134,7 @@ describe('Playthrough Issues Service', function() {
 
   it('should render issue statement when its type is EarlyQuit', function() {
     var copiedBackendIssue = angular.copy(backendIssues[0]);
-    copiedBackendIssue.issue_type = 'EarlyQuit';
+    copiedBackendIssue.issueType = 'EarlyQuit';
     var issue = PlaythroughIssueObjectFactory.createFromBackendDict(
       copiedBackendIssue);
 
@@ -145,7 +145,7 @@ describe('Playthrough Issues Service', function() {
   it('should render issue statement when its type is CyclicStateTransitions',
     function() {
       var copiedBackendIssue = angular.copy(backendIssues[0]);
-      copiedBackendIssue.issue_type = 'CyclicStateTransitions';
+      copiedBackendIssue.issueType = 'CyclicStateTransitions';
       var issue = PlaythroughIssueObjectFactory.createFromBackendDict(
         copiedBackendIssue);
       var stateName = issue.issueCustomizationArgs.state_names.value[0];
@@ -171,7 +171,7 @@ describe('Playthrough Issues Service', function() {
 
   it('should render issue suggestion when its type is EarlyQuit', function() {
     var copiedBackendIssue = angular.copy(backendIssues[0]);
-    copiedBackendIssue.issue_type = 'EarlyQuit';
+    copiedBackendIssue.issueType = 'EarlyQuit';
     var issue = PlaythroughIssueObjectFactory.createFromBackendDict(
       copiedBackendIssue);
     var stateName = issue.issueCustomizationArgs.state_name.value;
@@ -184,7 +184,7 @@ describe('Playthrough Issues Service', function() {
   it('should render issue suggestion when its type is CyclicStateTransitions',
     function() {
       var copiedBackendIssue = angular.copy(backendIssues[0]);
-      copiedBackendIssue.issue_type = 'CyclicStateTransitions';
+      copiedBackendIssue.issueType = 'CyclicStateTransitions';
       var issue = PlaythroughIssueObjectFactory.createFromBackendDict(
         copiedBackendIssue);
       var statesName = issue.issueCustomizationArgs.state_names.value;

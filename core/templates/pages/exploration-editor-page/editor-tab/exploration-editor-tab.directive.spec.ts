@@ -158,14 +158,14 @@ describe('Exploration editor tab controller', function() {
       ess.init({
         'First State': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'First State Content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {},
-              feedback_1: {}
+              defaultOutcome: {},
+              feedback1: {}
             }
           },
           interaction: {

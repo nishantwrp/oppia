@@ -44,13 +44,13 @@ describe('ParamChanges Object Factory', () => {
       let paramName = 'param_1';
       let paramName2 = 'param_2';
       let backendList = [{
-        customization_args: cArgs,
-        generator_id: gId,
+        customizationArgs: cArgs,
+        generatorId: gId,
         name: paramName
       },
       {
-        customization_args: cArgs,
-        generator_id: gId,
+        customizationArgs: cArgs,
+        generatorId: gId,
         name: paramName2
       }];
 

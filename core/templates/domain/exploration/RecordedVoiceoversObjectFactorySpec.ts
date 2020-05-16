@@ -28,90 +28,90 @@ describe('RecordedVoiceovers object factory', () => {
   let vof: VoiceoverObjectFactory = null;
   var rv = null;
   var rvDict = {
-    voiceovers_mapping: {
+    voiceoversMapping: {
       content: {
         en: {
           filename: 'filename1.mp3',
-          file_size_bytes: 100000,
-          needs_update: false,
-          duration_secs: 10.0
+          fileSizeBytes: 100000,
+          needsUpdate: false,
+          durationSecs: 10.0
         },
         hi: {
           filename: 'filename2.mp3',
-          file_size_bytes: 11000,
-          needs_update: false,
-          duration_secs: 0.11
+          fileSizeBytes: 11000,
+          needsUpdate: false,
+          durationSecs: 0.11
         }
       },
-      default_outcome: {
+      defaultOutcome: {
         en: {
           filename: 'filename3.mp3',
-          file_size_bytes: 3000,
-          needs_update: false,
-          duration_secs: 0.33
+          fileSizeBytes: 3000,
+          needsUpdate: false,
+          durationSecs: 0.33
         },
         hi: {
           filename: 'filename4.mp3',
-          file_size_bytes: 5000,
-          needs_update: false,
-          duration_secs: 0.5
+          fileSizeBytes: 5000,
+          needsUpdate: false,
+          durationSecs: 0.5
         }
       },
-      feedback_1: {
+      feedback1: {
         en: {
           filename: 'filename5.mp3',
-          file_size_bytes: 2000,
-          needs_update: false,
-          duration_secs: 0.2
+          fileSizeBytes: 2000,
+          needsUpdate: false,
+          durationSecs: 0.2
         },
         hi: {
           filename: 'filename6.mp3',
-          file_size_bytes: 9000,
-          needs_update: false,
-          duration_secs: 0.9
+          fileSizeBytes: 9000,
+          needsUpdate: false,
+          durationSecs: 0.9
         }
       },
-      feedback_2: {
+      feedback2: {
         en: {
           filename: 'filename7.mp3',
-          file_size_bytes: 1000,
-          needs_update: false,
-          duration_secs: 0.1
+          fileSizeBytes: 1000,
+          needsUpdate: false,
+          durationSecs: 0.1
         },
         hi: {
           filename: 'filename8.mp3',
-          file_size_bytes: 600,
-          needs_update: false,
-          duration_secs: 0.06
+          fileSizeBytes: 600,
+          needsUpdate: false,
+          durationSecs: 0.06
         }
       },
-      hint_1: {
+      hint1: {
         en: {
           filename: 'filename9.mp3',
-          file_size_bytes: 104000,
-          needs_update: false,
-          duration_secs: 10.4
+          fileSizeBytes: 104000,
+          needsUpdate: false,
+          durationSecs: 10.4
         },
         hi: {
           filename: 'filename10.mp3',
-          file_size_bytes: 1000,
-          needs_update: true,
-          duration_secs: 0.1
+          fileSizeBytes: 1000,
+          needsUpdate: true,
+          durationSecs: 0.1
         }
       },
-      hint_2: {},
+      hint2: {},
       solution: {
         en: {
           filename: 'filename13.mp3',
-          file_size_bytes: 15080,
-          needs_update: false,
-          duration_secs: 1.5
+          fileSizeBytes: 15080,
+          needsUpdate: false,
+          durationSecs: 1.5
         },
         hi: {
           filename: 'filename14.mp3',
-          file_size_bytes: 10500,
-          needs_update: false,
-          duration_secs: 1.05
+          fileSizeBytes: 10500,
+          needsUpdate: false,
+          durationSecs: 1.05
         }
       }
     }
@@ -138,15 +138,15 @@ describe('RecordedVoiceovers object factory', () => {
     expect(rv.getBindableVoiceovers('content')).toEqual({
       en: vof.createFromBackendDict({
         filename: 'filename1.mp3',
-        file_size_bytes: 100000,
-        needs_update: false,
-        duration_secs: 10.0
+        fileSizeBytes: 100000,
+        needsUpdate: false,
+        durationSecs: 10.0
       }),
       hi: vof.createFromBackendDict({
         filename: 'filename2.mp3',
-        file_size_bytes: 11000,
-        needs_update: false,
-        duration_secs: 0.11
+        fileSizeBytes: 11000,
+        needsUpdate: false,
+        durationSecs: 0.11
       })
     });
   });
@@ -156,9 +156,9 @@ describe('RecordedVoiceovers object factory', () => {
       expect(rv.getVoiceover('hint_1', 'en')).toEqual(
         vof.createFromBackendDict({
           filename: 'filename9.mp3',
-          file_size_bytes: 104000,
-          needs_update: false,
-          duration_secs: 10.4
+          fileSizeBytes: 104000,
+          needsUpdate: false,
+          durationSecs: 10.4
         }));
     });
 
@@ -167,15 +167,15 @@ describe('RecordedVoiceovers object factory', () => {
     expect(rv.getBindableVoiceovers('content')).toEqual({
       en: vof.createFromBackendDict({
         filename: 'filename1.mp3',
-        file_size_bytes: 100000,
-        needs_update: true,
-        duration_secs: 10.0
+        fileSizeBytes: 100000,
+        needsUpdate: true,
+        durationSecs: 10.0
       }),
       hi: vof.createFromBackendDict({
         filename: 'filename2.mp3',
-        file_size_bytes: 11000,
-        needs_update: true,
-        duration_secs: 0.11
+        fileSizeBytes: 11000,
+        needsUpdate: true,
+        durationSecs: 0.11
       })
     });
   });
@@ -220,9 +220,9 @@ describe('RecordedVoiceovers object factory', () => {
     expect(rv.getBindableVoiceovers('hint_2')).toEqual({
       en: vof.createFromBackendDict({
         filename: 'filename11.mp3',
-        file_size_bytes: 1000,
-        needs_update: false,
-        duration_secs: 0.1
+        fileSizeBytes: 1000,
+        needsUpdate: false,
+        durationSecs: 0.1
       })
     });
     expect(() => {
@@ -235,9 +235,9 @@ describe('RecordedVoiceovers object factory', () => {
     expect(rv.getBindableVoiceovers('content')).toEqual({
       en: vof.createFromBackendDict({
         filename: 'filename1.mp3',
-        file_size_bytes: 100000,
-        needs_update: false,
-        duration_secs: 10.0
+        fileSizeBytes: 100000,
+        needsUpdate: false,
+        durationSecs: 10.0
       })
     });
   });
@@ -248,9 +248,9 @@ describe('RecordedVoiceovers object factory', () => {
       expect(rv.getVoiceover('content', 'hi')).toEqual(
         vof.createFromBackendDict({
           filename: 'filename2.mp3',
-          file_size_bytes: 11000,
-          needs_update: true,
-          duration_secs: 0.11
+          fileSizeBytes: 11000,
+          needsUpdate: true,
+          durationSecs: 0.11
         }));
     });
 

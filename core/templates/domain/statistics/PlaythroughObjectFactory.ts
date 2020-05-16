@@ -65,10 +65,10 @@ export class Playthrough {
     });
     return {
       id: this.playthroughId,
-      exp_id: this.expId,
-      exp_version: this.expVersion,
-      issue_type: this.issueType,
-      issue_customization_args: this.issueCustomizationArgs,
+      expId: this.expId,
+      expVersion: this.expVersion,
+      issueType: this.issueType,
+      issueCustomizationArgs: this.issueCustomizationArgs,
       actions: actionDicts
     };
   }
@@ -108,9 +108,9 @@ export class PlaythroughObjectFactory {
       this.learnerActionObjectFactory.createFromBackendDict);
 
     return new Playthrough(
-      playthroughBackendDict.playthrough_id, playthroughBackendDict.exp_id,
-      playthroughBackendDict.exp_version, playthroughBackendDict.issue_type,
-      playthroughBackendDict.issue_customization_args, actions);
+      playthroughBackendDict.playthroughId, playthroughBackendDict.expId,
+      playthroughBackendDict.expVersion, playthroughBackendDict.issueType,
+      playthroughBackendDict.issueCustomizationArgs, actions);
   }
 }
 

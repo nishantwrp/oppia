@@ -185,39 +185,39 @@ describe('StateTopAnswersStatsService', function() {
 
     ExplorationStatesService.init({
       Hola: {
-        content: {content_id: 'content', html: ''},
-        param_changes: [],
+        content: {contentId: 'content', html: ''},
+        paramChanges: [],
         interaction: {
-          answer_groups: [{
-            rule_specs: [{rule_type: 'Contains', inputs: {x: 'hola'}}],
+          answerGroups: [{
+            ruleSpecs: [{ruleType: 'Contains', inputs: {x: 'hola'}}],
             outcome: {
               dest: 'Me Llamo',
-              feedback: {content_id: 'feedback_1', html: 'buen trabajo!'},
-              labelled_as_correct: true,
+              feedback: {contentId: 'feedback_1', html: 'buen trabajo!'},
+              labelledAsCorrect: true,
             },
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'Hola',
-            feedback: {content_id: 'default_outcome', html: 'try again!'},
-            labelled_as_correct: false,
+            feedback: {contentId: 'default_outcome', html: 'try again!'},
+            labelledAsCorrect: false,
           },
           hints: [],
           id: 'TextInput',
         },
-        classifier_model_id: 0,
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        classifierModelId: 0,
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
+            defaultOutcome: {},
+            feedback1: {},
           },
         },
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
+            defaultOutcome: {},
+            feedback1: {},
           },
         },
       },

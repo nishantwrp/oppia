@@ -458,7 +458,7 @@ describe('Extracting Image file names in the state service', () => {
                 }]
               }
             ],
-            customization_args: {
+            customizationArgs: {
               highlightRegionsOnHover: {
                 value: true
               },
@@ -562,8 +562,8 @@ describe('Extracting Image file names in the state service', () => {
               paramChanges: [],
               refresherExplorationId: null
             },
-            confirmed_unclassified_answers: [],
-            customization_args: {
+            confirmedUnclassifiedAnswers: [],
+            customizationArgs: {
               rows: {
                 value: 1
               },

@@ -238,7 +238,7 @@ describe('Image preloader service', function() {
               }
             },
             solution: null,
-            answer_groups: [],
+            answerGroups: [],
             hints: []
           },
           solicitAnswerDetails: false,

@@ -88,14 +88,14 @@ export class FeedbackThreadObjectFactory {
     return new FeedbackThread(
       feedbackThreadBackendDict.status, feedbackThreadBackendDict.subject,
       feedbackThreadBackendDict.summary,
-      feedbackThreadBackendDict.original_author_username,
-      feedbackThreadBackendDict.last_updated_msecs,
-      feedbackThreadBackendDict.message_count,
-      feedbackThreadBackendDict.state_name,
-      feedbackThreadBackendDict.thread_id,
+      feedbackThreadBackendDict.originalAuthorUsername,
+      feedbackThreadBackendDict.lastUpdatedMsecs,
+      feedbackThreadBackendDict.messageCount,
+      feedbackThreadBackendDict.stateName,
+      feedbackThreadBackendDict.threadId,
       this.threadMessageSummaryObjectFactory.createNew(
-        feedbackThreadBackendDict.last_nonempty_message_author,
-        feedbackThreadBackendDict.last_nonempty_message_text));
+        feedbackThreadBackendDict.lastNonemptyMessageAuthor,
+        feedbackThreadBackendDict.lastNonemptyMessageText));
   }
 }
 

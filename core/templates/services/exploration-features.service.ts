@@ -21,10 +21,10 @@ import { downgradeInjectable } from '@angular/upgrade/static';
 import { Injectable } from '@angular/core';
 
 export interface IExplorationDataDict {
-  'param_changes': IParamChanges[] | [];
+  'paramChanges': IParamChanges[] | [];
   states: {
     [propsName : string]: {
-      'param_changes': IParamChanges[] | []
+      'paramChanges': IParamChanges[] | []
     }
   };
 }
@@ -34,9 +34,9 @@ export interface IFeatureDataDict {
 }
 export interface IParamChanges {
   name: string;
-  'generator_id': string;
-  'customization_args': {
-    'parse_with_jinja': boolean,
+  'generatorId': string;
+  'customizationArgs': {
+    'parseWithJinja': boolean,
     value: string
   };
 }
@@ -62,12 +62,12 @@ export class ExplorationFeaturesService {
       featuresData.is_improvements_tab_enabled;
     ExplorationFeaturesService.settings.isPlaythroughRecordingEnabled =
       featuresData.is_exploration_whitelisted;
-    if (explorationData.param_changes &&
-        explorationData.param_changes.length > 0) {
+    if (explorationData.paramChanges &&
+        explorationData.paramChanges.length > 0) {
       this.enableParameters();
     } else {
       for (var state in explorationData.states) {
-        if (explorationData.states[state].param_changes.length > 0) {
+        if (explorationData.states[state].paramChanges.length > 0) {
           this.enableParameters();
           break;
         }

@@ -17,10 +17,10 @@
  * Voiceover domain objects.
  */
 export interface IVoiceoverDict {
-  'duration_secs': number;
+  durationSecs: number;
   filename: string;
-  'file_size_bytes': number;
-  'needs_update': boolean;
+  fileSizeBytes: number;
+  needsUpdate: boolean;
 }
 
 import { downgradeInjectable } from '@angular/upgrade/static';
@@ -56,9 +56,9 @@ export class Voiceover {
   toBackendDict(): IVoiceoverDict {
     return {
       filename: this.filename,
-      file_size_bytes: this.fileSizeBytes,
-      needs_update: this.needsUpdate,
-      duration_secs: this.durationSecs
+      fileSizeBytes: this.fileSizeBytes,
+      needsUpdate: this.needsUpdate,
+      durationSecs: this.durationSecs
     };
   }
 }
@@ -76,9 +76,9 @@ export class VoiceoverObjectFactory {
       translationBackendDict: IVoiceoverDict): Voiceover {
     return new Voiceover(
       translationBackendDict.filename,
-      translationBackendDict.file_size_bytes,
-      translationBackendDict.needs_update,
-      translationBackendDict.duration_secs);
+      translationBackendDict.fileSizeBytes,
+      translationBackendDict.needsUpdate,
+      translationBackendDict.durationSecs);
   }
 }
 

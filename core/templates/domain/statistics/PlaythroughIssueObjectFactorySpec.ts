@@ -39,11 +39,11 @@ describe('Playthrough Issue Object Factory', () => {
 
   it('should create a new exploration issue from a backend dict', () => {
     const playthroughIssueObject = piof.createFromBackendDict({
-      issue_type: 'EarlyQuit',
-      issue_customization_args: {},
-      playthrough_ids: [],
-      schema_version: 1,
-      is_valid: true
+      issueType: 'EarlyQuit',
+      issueCustomizationArgs: {},
+      playthroughIds: [],
+      schemaVersion: 1,
+      isValid: true
     });
 
     expect(playthroughIssueObject.issueType).toEqual('EarlyQuit');
@@ -55,11 +55,11 @@ describe('Playthrough Issue Object Factory', () => {
 
   it('should convert exploration issue to backend dict', () => {
     const playthroughDict = {
-      issue_type: 'EarlyQuit',
-      issue_customization_args: {},
-      playthrough_ids: [],
-      schema_version: 1,
-      is_valid: true
+      issueType: 'EarlyQuit',
+      issueCustomizationArgs: {},
+      playthroughIds: [],
+      schemaVersion: 1,
+      isValid: true
     };
     const playthroughIssueObject = piof.createFromBackendDict(playthroughDict);
 

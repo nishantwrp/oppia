@@ -28,13 +28,13 @@ describe('SuggestionObjectFactory', () => {
 
   it('should create a new suggestion from a backend dict.', () => {
     let suggestionBackendDict = {
-      suggestion_id: 'exploration.exp1.thread1',
-      suggestion_type: 'edit_exploration_state_content',
-      target_type: 'exploration',
-      target_id: 'exp1',
-      target_version_at_submission: 1,
+      suggestionId: 'exploration.exp1.thread1',
+      suggestionType: 'edit_exploration_state_content',
+      targetType: 'exploration',
+      targetId: 'exp1',
+      targetVersionAtSubmission: 1,
       status: 'accepted',
-      author_name: 'author',
+      authorName: 'author',
       change: {
         cmd: 'edit_state_property',
         property_name: 'content',
@@ -42,7 +42,7 @@ describe('SuggestionObjectFactory', () => {
         new_value: 'new suggestion content',
         old_value: 'old suggestion content'
       },
-      last_updated_msecs: 1000
+      lastUpdatedMsecs: 1000
     };
     let suggestion = this.factory.createFromBackendDict(suggestionBackendDict);
     expect(suggestion.suggestionType).toEqual('edit_exploration_state_content');

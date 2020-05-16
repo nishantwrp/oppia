@@ -65,7 +65,7 @@ describe('State Object Factory', () => {
           }
         },
         answerGroups: [],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'Introduction',
           feedback: {
             contentId: 'default_outcome',
@@ -160,7 +160,7 @@ describe('State Object Factory', () => {
   it('should correctly create a state object when param_changes length ' +
     'is greater than 0', () => {
     const paramChanges = [{
-      customization_args: {
+      customizationArgs: {
         parseWithJinja: false,
         value: '10'
       },
@@ -181,7 +181,7 @@ describe('State Object Factory', () => {
   it('should create a default state object', () => {
     const stateName = 'Default state';
     const stateObjectDefault = sof.createDefaultState(stateName);
-    stateObject.interaction.default_outcome.dest = stateName;
+    stateObject.interaction.defaultOutcome.dest = stateName;
 
     expect(stateObjectDefault.toBackendDict()).toEqual(stateObject);
   });

@@ -67,11 +67,11 @@ export class PlaythroughIssue {
   // give tslint errors against underscore_casing in favor of camelCasing.
   toBackendDict(): any {
     return {
-      issue_type: this.issueType,
-      issue_customization_args: this.issueCustomizationArgs,
-      playthrough_ids: this.playthroughIds,
-      schema_version: this.schemaVersion,
-      is_valid: this.isValid
+      issueType: this.issueType,
+      issueCustomizationArgs: this.issueCustomizationArgs,
+      playthroughIds: this.playthroughIds,
+      schemaVersion: this.schemaVersion,
+      isValid: this.isValid
     };
   }
 }
@@ -99,11 +99,11 @@ export class PlaythroughIssueObjectFactory {
   // camelCasing.
   createFromBackendDict(explorationIssueBackendDict: any): PlaythroughIssue {
     return new PlaythroughIssue(
-      explorationIssueBackendDict.issue_type,
-      explorationIssueBackendDict.issue_customization_args,
-      explorationIssueBackendDict.playthrough_ids,
-      explorationIssueBackendDict.schema_version,
-      explorationIssueBackendDict.is_valid);
+      explorationIssueBackendDict.issueType,
+      explorationIssueBackendDict.issueCustomizationArgs,
+      explorationIssueBackendDict.playthroughIds,
+      explorationIssueBackendDict.schemaVersion,
+      explorationIssueBackendDict.isValid);
   }
 }
 

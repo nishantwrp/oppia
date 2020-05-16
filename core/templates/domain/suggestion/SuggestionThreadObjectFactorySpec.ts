@@ -32,25 +32,25 @@ describe('SuggestionThreadObjectFactory', () => {
 
   beforeEach(() => {
     this.suggestionThreadBackendDict = {
-      last_updated_msecs: 1000,
-      original_author_username: 'author',
+      lastUpdatedMsecs: 1000,
+      originalAuthorUsername: 'author',
       status: 'accepted',
       subject: 'sample subject',
       summary: 'sample summary',
-      message_count: 10,
-      state_name: 'state 1',
-      thread_id: 'exploration.exp1.thread1',
-      last_nonempty_message_author: 'author',
-      last_nonempty_message_text: 'tenth message',
+      messageCount: 10,
+      stateName: 'state 1',
+      threadId: 'exploration.exp1.thread1',
+      lastNonemptyMessageAuthor: 'author',
+      lastNonemptyMessageText: 'tenth message',
     };
     this.suggestionBackendDict = {
-      suggestion_id: 'exploration.exp1.thread1',
-      suggestion_type: '',
-      target_type: 'exploration',
-      target_id: 'exp1',
-      target_version_at_submission: 1,
+      suggestionId: 'exploration.exp1.thread1',
+      suggestionType: '',
+      targetType: 'exploration',
+      targetId: 'exp1',
+      targetVersionAtSubmission: 1,
       status: 'accepted',
-      author_name: 'author',
+      authorName: 'author',
       change: {
         cmd: 'edit_state_property',
         property_name: 'content',
@@ -58,7 +58,7 @@ describe('SuggestionThreadObjectFactory', () => {
         new_value: { html: 'new suggestion content' },
         old_value: { html: 'old suggestion content' }
       },
-      last_updated_msecs: 1000
+      lastUpdatedMsecs: 1000
     };
   });
 

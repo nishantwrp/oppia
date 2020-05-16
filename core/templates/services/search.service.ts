@@ -119,11 +119,11 @@ angular.module('oppia').factory('SearchService', [
           _lastQuery = searchQuery;
           _lastSelectedCategories = angular.copy(selectedCategories);
           _lastSelectedLanguageCodes = angular.copy(selectedLanguageCodes);
-          _searchCursor = data.search_cursor;
+          _searchCursor = data.searchCursor;
           numSearchesInProgress--;
 
           $rootScope.$broadcast(
-            'initialSearchResultsLoaded', data.activity_list);
+            'initialSearchResultsLoaded', data.activityList);
           _isCurrentlyFetchingResults = false;
           var checkMismatch = function(searchQuery) {
             var isMismatch = true;

@@ -50,94 +50,94 @@ describe('Router Service', () => {
     ExplorationStatesService.init({
       newState: {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: ''
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
+            defaultOutcome: {},
           },
         },
-        param_changes: [],
+        paramChanges: [],
         interaction: {
-          answer_groups: [{
-            rule_specs: [],
+          answerGroups: [{
+            ruleSpecs: [],
             outcome: {
               dest: 'Me Llamo',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: 'buen trabajo!',
               },
             },
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'Hola',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: 'try again!',
             },
-            labelled_as_correct: false,
+            labelledAsCorrect: false,
           },
           hints: [],
           id: 'TextInput',
           solution: null,
         },
-        written_translations: {
-          translations_mapping: {
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
+            defaultOutcome: {},
           },
         }
       },
       initState: {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: ''
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
+            defaultOutcome: {},
           },
         },
-        param_changes: [],
+        paramChanges: [],
         interaction: {
-          answer_groups: [{
-            rule_specs: [],
+          answerGroups: [{
+            ruleSpecs: [],
             outcome: {
               dest: 'Me Llamo',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: 'buen trabajo!',
               },
             },
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'Hola',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: 'try again!',
             },
-            labelled_as_correct: false,
+            labelledAsCorrect: false,
           },
           hints: [],
           id: 'TextInput',
           solution: null,
         },
-        written_translations: {
-          translations_mapping: {
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
+            defaultOutcome: {},
           },
         }
       }
     });
     ExplorationFeaturesService.init({
-      param_changes: []
+      paramChanges: []
     }, {
-      is_improvements_tab_enabled: false,
-      is_exploration_whitelisted: false
+      isImprovementsTabEnabled: false,
+      isExplorationWhitelisted: false
     });
   }));
 

@@ -127,14 +127,14 @@ describe('Learner answer info service', function() {
         },
         hints: []
       },
-      param_changes: [],
-      solicit_answer_details: true,
-      written_translations: {
-        translations_mapping: {
+      paramChanges: [],
+      solicitAnswerDetails: true,
+      writtenTranslations: {
+        translationsMapping: {
           content: {},
-          default_outcome: {},
-          feedback_1: {},
-          feedback_2: {}
+          defaultOutcome: {},
+          feedback1: {},
+          feedback2: {}
         }
       }
     };
@@ -153,7 +153,7 @@ describe('Learner answer info service', function() {
     thirdState = sof.createFromBackendDict('demo state', stateDict);
     spyOn(AnswerClassificationService, 'getMatchingClassificationResult')
       .and.returnValue(acrof.createNew(
-        oof.createNew('default', 'default_outcome', '', []), 2, 0,
+        oof.createNew('default', 'defaultOutcome', '', []), 2, 0,
         DEFAULT_OUTCOME_CLASSIFICATION));
     mockAnswer = 'This is my answer';
     mockInteractionRulesService = {

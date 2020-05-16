@@ -37,7 +37,7 @@
             </span>
           </div>
 
-          <div ng-switch-when="widget_customization_args" class="state-edit-desc">
+          <div ng-switch-when="widgetCustomizationArgs" class="state-edit-desc">
             <span ng-if="lostChange.isOldValueEmpty()">
               Added Interaction Customizations
             </span>
@@ -49,7 +49,7 @@
             </span>
           </div>
 
-          <div ng-switch-when="answer_groups">
+          <div ng-switch-when="answerGroups">
             <div ng-if="lostChange.getRelativeChangeToGroups() === 'added'" class="state-edit-desc answer-group">
               <strong>Added answer group: </strong>
               <p class="sub-edit">
@@ -115,7 +115,7 @@
             </div>
           </div>
 
-          <div ng-switch-when="default_outcome">
+          <div ng-switch-when="defaultOutcome">
             <div ng-if="lostChange.getRelativeChangeToGroups() === 'added'" class="state-edit-desc default-outcome">
               Added default outcome:
               <p class="sub-edit">

@@ -52,8 +52,8 @@ export class ParamChange {
   // give tslint errors against underscore_casing in favor of camelCasing.
   toBackendDict(): any {
     return {
-      customization_args: this.customizationArgs,
-      generator_id: this.generatorId,
+      customizationArgs: this.customizationArgs,
+      generatorId: this.generatorId,
       name: this.name
     };
   }
@@ -73,8 +73,8 @@ export class ParamChangeObjectFactory {
   createFromBackendDict(
       paramChangeBackendDict: any): ParamChange {
     return new ParamChange(
-      paramChangeBackendDict.customization_args,
-      paramChangeBackendDict.generator_id,
+      paramChangeBackendDict.customizationArgs,
+      paramChangeBackendDict.generatorId,
       paramChangeBackendDict.name);
   }
   createEmpty(paramName: string): ParamChange {

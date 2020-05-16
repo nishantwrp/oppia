@@ -288,19 +288,19 @@ angular.module('oppia').directive('creatorDashboardPage', [
                   SUBSCRIPTION_SORT_BY_KEYS.USERNAME;
                 ctrl.isCurrentSortDescending = true;
                 ctrl.isCurrentSubscriptionSortDescending = true;
-                ctrl.explorationsList = responseData.explorations_list;
-                ctrl.collectionsList = responseData.collections_list;
-                ctrl.subscribersList = responseData.subscribers_list;
-                ctrl.dashboardStats = responseData.dashboard_stats;
-                ctrl.lastWeekStats = responseData.last_week_stats;
-                ctrl.myExplorationsView = responseData.display_preference;
+                ctrl.explorationsList = responseData.explorationsList;
+                ctrl.collectionsList = responseData.collectionsList;
+                ctrl.subscribersList = responseData.subscribersList;
+                ctrl.dashboardStats = responseData.dashboardStats;
+                ctrl.lastWeekStats = responseData.lastWeekStats;
+                ctrl.myExplorationsView = responseData.displayPreference;
                 var numberOfCreatedSuggestions = (
-                  responseData.threads_for_created_suggestions_list.length);
+                  responseData.threadsForCreatedSuggestionsList.length);
                 var numberOfSuggestionsToReview = (
-                  responseData.threads_for_suggestions_to_review_list.length);
+                  responseData.threadsForSuggestionsToReviewList.length);
                 ctrl.mySuggestionsList = [];
                 for (var i = 0; i < numberOfCreatedSuggestions; i++) {
-                  if (responseData.created_suggestions_list.length !==
+                  if (responseData.createdSuggestionsList.length !==
                       numberOfCreatedSuggestions) {
                     $log.error('Number of suggestions does not match number' +
                               'of suggestion threads');
@@ -308,21 +308,21 @@ angular.module('oppia').directive('creatorDashboardPage', [
                   for (var j = 0; j < numberOfCreatedSuggestions; j++) {
                     var suggestionThreadId = SuggestionsService
                       .getThreadIdFromSuggestionBackendDict(
-                        responseData.created_suggestions_list[j]);
+                        responseData.createdSuggestionsList[j]);
                     var threadDict = (
-                      responseData.threads_for_created_suggestions_list[i]);
+                      responseData.threadsForCreatedSuggestionsList[i]);
                     if (threadDict.thread_id === suggestionThreadId) {
                       var suggestionThread = (
                         SuggestionThreadObjectFactory.createFromBackendDicts(
                           threadDict,
-                          responseData.created_suggestions_list[j]));
+                          responseData.createdSuggestionsList[j]));
                       ctrl.mySuggestionsList.push(suggestionThread);
                     }
                   }
                 }
                 ctrl.suggestionsToReviewList = [];
                 for (var i = 0; i < numberOfSuggestionsToReview; i++) {
-                  if (responseData.suggestions_to_review_list.length !==
+                  if (responseData.suggestionsToReviewList.length !==
                       numberOfSuggestionsToReview) {
                     $log.error('Number of suggestions does not match number' +
                               'of suggestion threads');
@@ -330,14 +330,14 @@ angular.module('oppia').directive('creatorDashboardPage', [
                   for (var j = 0; j < numberOfSuggestionsToReview; j++) {
                     var suggestionThreadId = SuggestionsService
                       .getThreadIdFromSuggestionBackendDict(
-                        responseData.suggestions_to_review_list[j]);
+                        responseData.suggestionsToReviewList[j]);
                     var threadDict = (
-                      responseData.threads_for_suggestions_to_review_list[i]);
-                    if (threadDict.thread_id === suggestionThreadId) {
+                      responseData.threadsForSuggestionsToReviewList[i]);
+                    if (threadDict.threadId === suggestionThreadId) {
                       var suggestionThread = (
                         SuggestionThreadObjectFactory.createFromBackendDicts(
                           threadDict,
-                          responseData.suggestions_to_review_list[j]));
+                          responseData.suggestionsToReviewList[j]));
                       ctrl.suggestionsToReviewList.push(suggestionThread);
                     }
                   }

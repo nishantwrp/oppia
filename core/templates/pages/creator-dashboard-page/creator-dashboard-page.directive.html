@@ -201,7 +201,7 @@
             </td>
             <td>
               <a ng-href="<[$ctrl.getExplorationUrl(exploration.id)]>" class="oppia-dashboard-list-summary protractor-test-exp-summary-row-last-updated">
-                <[$ctrl.getLocaleAbbreviatedDatetimeString(exploration.last_updated_msec)]>
+                <[$ctrl.getLocaleAbbreviatedDatetimeString(exploration.lastUpdatedMsec)]>
               </a>
             </td>
           </tr>
@@ -282,7 +282,7 @@
                     tooltip-placement="top">
               </span>
               <span class="oppia-dashboard-card-statistic-value">
-                <[$ctrl.getLocaleAbbreviatedDatetimeString(exploration.last_updated_msec)]>
+                <[$ctrl.getLocaleAbbreviatedDatetimeString(exploration.lastUpdatedMsec)]>
               </span>
             </li>
             <li>
@@ -365,11 +365,11 @@
         <collection-summary-tile class="protractor-test-collection-card"
                                  collection-id="collection.id"
                                  collection-title="collection.title"
-                                 last-updated-msec="collection.last_updated"
-                                 node-count="collection.node_count"
+                                 last-updated-msec="collection.lastUpdated"
+                                 node-count="collection.nodeCount"
                                  objective="collection.objective"
-                                 thumbnail-icon-url="collection.thumbnail_icon_url"
-                                 thumbnail-bg-color="collection.thumbnail_bg_color"
+                                 thumbnail-icon-url="collection.thumbnailIconUrl"
+                                 thumbnail-bg-color="collection.thumbnailBgColor"
                                  is-linked-to-editor-page="true">
         </collection-summary-tile>
       </span>

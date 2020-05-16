@@ -215,7 +215,7 @@ describe('Editable question backend API service', function() {
           question = data.questionObject.toBackendDict(false);
         });
       $httpBackend.flush();
-      question.question_state_data.content.html = 'New Question Content';
+      question.questionStateData.content.html = 'New Question Content';
       question.version = '2';
       var questionWrapper = {
         question_dict: question

@@ -28,11 +28,11 @@ describe('Param Change Object Factory', () => {
 
   it('should create a param change object from backend dict', () => {
     const sampleData = {
-      customization_args: {
-        parse_with_jinja: false,
+      customizationArgs: {
+        parseWithJinja: false,
         value: '10'
       },
-      generator_id: 'Copier',
+      generatorId: 'Copier',
       name: 'Param change from backend'
     };
     const paramChangeObject = (
@@ -44,11 +44,11 @@ describe('Param Change Object Factory', () => {
   it('should reset a copier custom customization args from param change ' +
     'object', () => {
     const sampleData = {
-      customization_args: {
-        parse_with_jinja: false,
+      customizationArgs: {
+        parseWithJinja: false,
         value: ''
       },
-      generator_id: 'Copier',
+      generatorId: 'Copier',
       name: 'Reset copier custom customization args'
     };
     const paramChangeObject = (
@@ -56,11 +56,11 @@ describe('Param Change Object Factory', () => {
     paramChangeObject.resetCustomizationArgs();
 
     expect(paramChangeObject.toBackendDict()).toEqual({
-      customization_args: {
-        parse_with_jinja: true,
+      customizationArgs: {
+        parseWithJinja: true,
         value: '5'
       },
-      generator_id: 'Copier',
+      generatorId: 'Copier',
       name: 'Reset copier custom customization args'
     });
   });
@@ -68,11 +68,11 @@ describe('Param Change Object Factory', () => {
   it('should reset a random selector custom customization args from param ' +
     'change object', () => {
     const sampleData = {
-      customization_args: {
-        parse_with_jinja: false,
+      customizationArgs: {
+        parseWithJinja: false,
         value: '10'
       },
-      generator_id: 'RandomSelector',
+      generatorId: 'RandomSelector',
       name: 'Reset random selector custom customization args'
     };
     const paramChangeObject = (
@@ -80,10 +80,10 @@ describe('Param Change Object Factory', () => {
     paramChangeObject.resetCustomizationArgs();
 
     expect(paramChangeObject.toBackendDict()).toEqual({
-      customization_args: {
-        list_of_values: ['sample value']
+      customizationArgs: {
+        listOfValues: ['sample value']
       },
-      generator_id: 'RandomSelector',
+      generatorId: 'RandomSelector',
       name: 'Reset random selector custom customization args'
     });
   });
@@ -93,11 +93,11 @@ describe('Param Change Object Factory', () => {
       pcof.createEmpty('param'));
 
     expect(emptyParamChangeObject.toBackendDict()).toEqual({
-      customization_args: {
-        parse_with_jinja: true,
+      customizationArgs: {
+        parseWithJinja: true,
         value: '',
       },
-      generator_id: 'Copier',
+      generatorId: 'Copier',
       name: 'param'
     });
   });
@@ -107,11 +107,11 @@ describe('Param Change Object Factory', () => {
       pcof.createDefault('param'));
 
     expect(emptyParamChangeObject.toBackendDict()).toEqual({
-      customization_args: {
-        parse_with_jinja: true,
+      customizationArgs: {
+        parseWithJinja: true,
         value: '5',
       },
-      generator_id: 'Copier',
+      generatorId: 'Copier',
       name: 'param'
     });
   });

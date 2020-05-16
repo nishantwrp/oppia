@@ -68,29 +68,29 @@ describe('HintsAndSolutionManager service', function() {
     EVENT_NEW_CARD_AVAILABLE = $injector.get('EVENT_NEW_CARD_AVAILABLE');
 
     firstHint = hof.createFromBackendDict({
-      hint_content: {
+      hintContent: {
         html: 'one',
-        audio_translations: {}
+        audioTranslations: {}
       }
     });
     secondHint = hof.createFromBackendDict({
-      hint_content: {
+      hintContent: {
         html: 'two',
-        audio_translations: {}
+        audioTranslations: {}
       }
     });
     thirdHint = hof.createFromBackendDict({
-      hint_content: {
+      hintContent: {
         html: 'three',
-        audio_translations: {}
+        audioTranslations: {}
       }
     });
     solution = sof.createFromBackendDict({
-      answer_is_exclusive: false,
-      correct_answer: 'This is a correct answer!',
+      answerIsExclusive: false,
+      correctAnswer: 'This is a correct answer!',
       explanation: {
         html: 'This is the explanation to the answer',
-        audio_translations: {}
+        audioTranslations: {}
       }
     });
 

@@ -42,22 +42,22 @@ describe('ExplorationFeatureService', () => {
       is_exploration_whitelisted: true,
     };
     explorationData = {
-      param_changes: [testParamChanges],
+      paramChanges: [testParamChanges],
       states: {}
     };
     explorationData2 = {
-      param_changes: [],
+      paramChanges: [],
       states: {
         testState: {
-          param_changes: [testParamChanges],
+          paramChanges: [testParamChanges],
         }
       }
     };
     testParamChanges = {
       name: 'param_1',
-      generator_id: 'test_id',
-      customization_args: {
-        parse_with_jinja: true,
+      generatorId: 'test_id',
+      customizationArgs: {
+        parseWithJinja: true,
         value: '1'
       }
     };

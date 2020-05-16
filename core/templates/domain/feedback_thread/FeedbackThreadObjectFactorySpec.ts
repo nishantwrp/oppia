@@ -32,16 +32,16 @@ describe('FeedbackThreadObjectFactory', () => {
   describe('.createFromBackendDict', () => {
     it('should create a new feedback thread from a backend dict.', () => {
       let feedbackThreadBackendDict = {
-        last_updated_msecs: 1000,
-        original_author_username: 'author',
+        lastUpdatedMsecs: 1000,
+        originalAuthorUsername: 'author',
         status: 'accepted',
         subject: 'sample subject',
         summary: 'sample summary',
-        message_count: 10,
-        state_name: 'state 1',
-        thread_id: 'exp1.thread1',
-        last_nonempty_message_author: 'author',
-        last_nonempty_message_text: 'tenth message'
+        messageCount: 10,
+        stateName: 'state 1',
+        threadId: 'exp1.thread1',
+        lastNonemptyMessageAuthor: 'author',
+        lastNonemptyMessageText: 'tenth message'
       };
 
       let feedbackThread =
@@ -68,16 +68,16 @@ describe('FeedbackThreadObjectFactory', () => {
       it('should update message-related fields', () => {
         let feedbackThread =
           this.feedbackThreadObjectFactory.createFromBackendDict({
-            last_updated_msecs: 1000,
-            original_author_username: 'author',
+            lastUpdatedMsecs: 1000,
+            originalAuthorUsername: 'author',
             status: 'accepted',
             subject: 'sample subject',
             summary: 'sample summary',
-            message_count: 10,
-            state_name: 'state 1',
-            thread_id: 'exp1.thread1',
-            last_nonempty_message_author: 'author',
-            last_nonempty_message_text: 'tenth message'
+            messageCount: 10,
+            stateName: 'state 1',
+            threadId: 'exp1.thread1',
+            lastNonemptyMessageAuthor: 'author',
+            lastNonemptyMessageText: 'tenth message'
           });
 
         expect(feedbackThread.getMessages()).toEqual([]);

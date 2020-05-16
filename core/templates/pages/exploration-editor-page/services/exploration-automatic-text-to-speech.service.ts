@@ -23,7 +23,7 @@ require(
 angular.module('oppia').factory('ExplorationAutomaticTextToSpeechService', [
   'ExplorationPropertyService', function(ExplorationPropertyService) {
     var child = Object.create(ExplorationPropertyService);
-    child.propertyName = 'auto_tts_enabled';
+    child.propertyName = 'autoTtsEnabled';
 
     child._isValid = function(value) {
       return (typeof value === 'boolean');

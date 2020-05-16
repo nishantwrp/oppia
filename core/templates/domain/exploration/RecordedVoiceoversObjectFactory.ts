@@ -17,7 +17,7 @@
  * RecordedVoiceovers domain objects.
  */
 export interface IRecordedVoiceOverBackendDict {
-  'voiceovers_mapping': {
+  voiceoversMapping: {
     [propName: string]: {
       [propName: string]: IVoiceoverDict
     }
@@ -140,7 +140,7 @@ export class RecordedVoiceovers {
       voiceoversMappingDict[contentId] = languageCodeToVoiceoverDict;
     }
     return {
-      voiceovers_mapping: voiceoversMappingDict
+      voiceoversMapping: voiceoversMappingDict
     };
   }
 }
@@ -155,7 +155,7 @@ export class RecordedVoiceoversObjectFactory {
       recordedVoiceoversDict: IRecordedVoiceOverBackendDict):
         RecordedVoiceovers {
     var voiceoversMapping = {};
-    var voiceoversMappingDict = recordedVoiceoversDict.voiceovers_mapping;
+    var voiceoversMappingDict = recordedVoiceoversDict.voiceoversMapping;
     Object.keys(voiceoversMappingDict).forEach((contentId) => {
       var languageCodeToVoiceoverDict = voiceoversMappingDict[contentId];
       var languageCodeToVoiceover = {};

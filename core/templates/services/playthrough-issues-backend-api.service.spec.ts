@@ -32,14 +32,14 @@ describe('PlaythroughIssuesBackendApiService', () => {
   let playthroughIssueObjectFactory: PlaythroughIssueObjectFactory = null;
 
   let backendIssues = [{
-    issue_type: 'MultipleIncorrectSubmissions',
-    issue_customization_args: {
-      state_name: { value: 'state_name1' },
-      num_times_answered_incorrectly: { value: 7 }
+    issueType: 'MultipleIncorrectSubmissions',
+    issueCustomizationArgs: {
+      stateName: { value: 'state_name1' },
+      numTimesAnsweredIncorrectly: { value: 7 }
     },
-    playthrough_ids: ['playthrough_id2'],
-    schema_version: 1,
-    is_valid: true
+    playthroughIds: ['playthrough_id2'],
+    schemaVersion: 1,
+    isValid: true
   }];
 
   beforeEach(() => {
@@ -108,19 +108,19 @@ describe('PlaythroughIssuesBackendApiService', () => {
     it('should return the playthrough data provided by the backend', fakeAsync(
       () => {
         let backendPlaythrough = {
-          exp_id: 'exp_id1',
-          exp_version: 1,
-          issue_type: 'EarlyQuit',
-          issue_customization_args: {
-            state_name: { value: 'state_name1' },
-            time_spent_in_exp_in_msecs: { value: 200 }
+          expId: 'exp_id1',
+          expVersion: 1,
+          issueType: 'EarlyQuit',
+          issueCustomizationArgs: {
+            stateName: { value: 'state_name1' },
+            timeSpentInExpInMsecs: { value: 200 }
           },
           actions: [{
-            action_type: 'ExplorationStart',
-            action_customization_args: {
-              state_name: { value: 'state_name1' }
+            actionType: 'ExplorationStart',
+            actionCustomization_args: {
+              stateName: { value: 'state_name1' }
             },
-            schema_version: 1
+            schemaVersion: 1
           }]
         };
 

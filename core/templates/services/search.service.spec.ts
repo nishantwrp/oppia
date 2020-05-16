@@ -261,8 +261,8 @@ describe('Search service', function() {
     $httpBackend.expect('GET', '/searchhandler/data?q=example&category=' +
       '("exploration")&language_code=("en" OR "hi")')
       .respond(200, {
-        search_cursor: 'notempty',
-        activity_list: []
+        searchCursor: 'notempty',
+        activityList: []
       });
     SearchService.executeSearchQuery(
       searchQuery, categories, languageCodes, successHandler);
@@ -299,8 +299,8 @@ describe('Search service', function() {
     $httpBackend.expect('GET', '/searchhandler/data?q=example&category=' +
       '("exploration")&language_code=("en" OR "hi")')
       .respond({
-        search_cursor: 'notempty',
-        activity_list: []
+        searchCursor: 'notempty',
+        activityList: []
       });
     SearchService.executeSearchQuery(
       searchQuery, categories, languageCodes, successHandler);
@@ -358,8 +358,8 @@ describe('Search service', function() {
     $httpBackend.expect('GET', '/searchhandler/data?q=example&category=' +
       '("exploration")&language_code=("en" OR "hi")')
       .respond(200, {
-        search_cursor: 'notempty',
-        activity_list: []
+        searchCursor: 'notempty',
+        activityList: []
       });
     SearchService.executeSearchQuery(
       searchQuery, categories, languageCodes, successHandler);
@@ -394,8 +394,8 @@ describe('Search service', function() {
       $httpBackend.expect('GET', '/searchhandler/data?q=example&category=' +
         '("exploration")&language_code=("en" OR "hi")')
         .respond(200, {
-          search_cursor: 'notempty',
-          activity_list: []
+          searchCursor: 'notempty',
+          activityList: []
         });
       SearchService.executeSearchQuery(
         searchQuery, categories, languageCodes, successHandler);
@@ -427,8 +427,8 @@ describe('Search service', function() {
       $httpBackend.expect('GET', '/searchhandler/data?q=example&category=' +
         '("exploration")&language_code=("en" OR "hi")')
         .respond(200, {
-          search_cursor: 'notempty',
-          activity_list: []
+          searchCursor: 'notempty',
+          activityList: []
         });
       SearchService.executeSearchQuery(
         searchQuery, categories, languageCodes, successHandler);

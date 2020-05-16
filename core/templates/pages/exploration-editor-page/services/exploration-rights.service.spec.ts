@@ -32,14 +32,14 @@ describe('Exploration rights service', function() {
   var CsrfService = null;
   var sampleDataResults = {
     rights: {
-      owner_names: ['abc'],
-      editor_names: [],
-      voice_artist_names: [],
-      viewer_names: [],
+      ownerNames: ['abc'],
+      editorNames: [],
+      voiceArtistNames: [],
+      viewerNames: [],
       status: 'private',
-      cloned_from: 'e1234',
-      community_owned: true,
-      viewable_if_private: true
+      clonedFrom: 'e1234',
+      communityOwned: true,
+      viewableIfPrivate: true
     }
   };
   var clearWarningsSpy = null;
@@ -89,27 +89,27 @@ describe('Exploration rights service', function() {
     expect(ers.viewableIfPrivate()).toBeUndefined();
 
     ers.init(
-      sampleDataResults.rights.owner_names,
-      sampleDataResults.rights.editor_names,
-      sampleDataResults.rights.voice_artist_names,
-      sampleDataResults.rights.viewer_names,
+      sampleDataResults.rights.ownerNames,
+      sampleDataResults.rights.editorNames,
+      sampleDataResults.rights.voiceArtistNames,
+      sampleDataResults.rights.viewerNames,
       sampleDataResults.rights.status,
-      sampleDataResults.rights.cloned_from,
-      sampleDataResults.rights.community_owned,
-      sampleDataResults.rights.viewable_if_private
+      sampleDataResults.rights.clonedFrom,
+      sampleDataResults.rights.communityOwned,
+      sampleDataResults.rights.viewableIfPrivate
     );
 
-    expect(ers.ownerNames).toEqual(sampleDataResults.rights.owner_names);
-    expect(ers.editorNames).toEqual(sampleDataResults.rights.editor_names);
+    expect(ers.ownerNames).toEqual(sampleDataResults.rights.ownerNames);
+    expect(ers.editorNames).toEqual(sampleDataResults.rights.editorNames);
     expect(ers.voiceArtistNames).toEqual(
-      sampleDataResults.rights.voice_artist_names);
-    expect(ers.viewerNames).toEqual(sampleDataResults.rights.viewer_names);
+      sampleDataResults.rights.voiceArtistNames);
+    expect(ers.viewerNames).toEqual(sampleDataResults.rights.viewerNames);
     expect(ers.isPrivate()).toEqual(true);
-    expect(ers.clonedFrom()).toEqual(sampleDataResults.rights.cloned_from);
+    expect(ers.clonedFrom()).toEqual(sampleDataResults.rights.clonedFrom);
     expect(ers.isCommunityOwned()).toBe(
-      sampleDataResults.rights.community_owned);
+      sampleDataResults.rights.communityOwned);
     expect(ers.viewableIfPrivate()).toBe(
-      sampleDataResults.rights.viewable_if_private);
+      sampleDataResults.rights.viewableIfPrivate);
   });
 
   it('should reports the correct cloning status', function() {
@@ -181,7 +181,7 @@ describe('Exploration rights service', function() {
 
   it('should change exploration right viewability', function() {
     var sampleDataResultsCopy = angular.copy(sampleDataResults);
-    sampleDataResultsCopy.rights.viewable_if_private = true;
+    sampleDataResultsCopy.rights.viewableIfPrivate = true;
 
     $httpBackend.expectPUT('/createhandler/rights/12345').respond(
       200, sampleDataResultsCopy);
@@ -211,13 +211,13 @@ describe('Exploration rights service', function() {
 
   it('should save a new member', function() {
     var sampleDataResultsCopy = angular.copy(sampleDataResults);
-    sampleDataResultsCopy.rights.viewer_names.push('newUser');
+    sampleDataResultsCopy.rights.viewerNames.push('newUser');
 
     $httpBackend.expectPUT('/createhandler/rights/12345').respond(
       200, sampleDataResultsCopy);
     ers.saveRoleChanges('newUser', 'viewer').then(function() {
       expect(ers.viewerNames).toEqual(
-        sampleDataResultsCopy.rights.viewer_names);
+        sampleDataResultsCopy.rights.viewerNames);
     });
     $httpBackend.flush();
   });
@@ -270,17 +270,17 @@ describe('Exploration rights service', function() {
     $httpBackend.flush();
 
     expect(clearWarningsSpy).toHaveBeenCalled();
-    expect(ers.ownerNames).toEqual(sampleDataResults.rights.owner_names);
-    expect(ers.editorNames).toEqual(sampleDataResults.rights.editor_names);
+    expect(ers.ownerNames).toEqual(sampleDataResults.rights.ownerNames);
+    expect(ers.editorNames).toEqual(sampleDataResults.rights.editorNames);
     expect(ers.voiceArtistNames).toEqual(
-      sampleDataResults.rights.voice_artist_names);
-    expect(ers.viewerNames).toEqual(sampleDataResults.rights.viewer_names);
+      sampleDataResults.rights.voiceArtistNames);
+    expect(ers.viewerNames).toEqual(sampleDataResults.rights.viewerNames);
     expect(ers.isPrivate()).toEqual(true);
-    expect(ers.clonedFrom()).toEqual(sampleDataResults.rights.cloned_from);
+    expect(ers.clonedFrom()).toEqual(sampleDataResults.rights.clonedFrom);
     expect(ers.isCommunityOwned()).toBe(
-      sampleDataResults.rights.community_owned);
+      sampleDataResults.rights.communityOwned);
     expect(ers.viewableIfPrivate()).toBe(
-      sampleDataResults.rights.viewable_if_private);
+      sampleDataResults.rights.viewableIfPrivate);
   });
 
   it('should reject handler when saving moderator change to backend fails',

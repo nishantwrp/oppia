@@ -70,157 +70,157 @@ describe('Parameter Metadata Service', function() {
         return StatesObjectFactory.createFromBackendDict({
           Hola: {
             content: {
-              content_id: 'content',
+              contentId: 'content',
               html: '{{HtmlValue}}'
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {
+            recordedVoiceovers: {
+              voiceoversMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               },
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
-              answer_groups: [{
-                rule_specs: [],
+              answerGroups: [{
+                ruleSpecs: [],
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: 'feedback_1',
+                    contentId: 'feedback_1',
                     html: '{{FeedbackValue}}'
                   },
                 },
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: 'Hola',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 },
               },
               hints: [],
             },
-            written_translations: {
-              translations_mapping: {
+            writtenTranslations: {
+              translationsMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               },
             },
           },
           State: {
             content: {
-              content_id: 'content',
+              contentId: 'content',
               html: 'content'
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {
+            recordedVoiceovers: {
+              voiceoversMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               }
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
-              answer_groups: [{
-                rule_specs: [],
+              answerGroups: [{
+                ruleSpecs: [],
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: 'feedback_1',
+                    contentId: 'feedback_1',
                     html: '{{StateFeedbackValue}}'
                   },
                 },
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: 'State',
                 feedback: {
-                  content_id: 'default_outcome',
+                  contentId: 'default_outcome',
                   html: ''
                 },
               },
               hints: []
             },
-            written_translations: {
-              translations_mapping: {
+            writtenTranslations: {
+              translationsMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               }
             }
           },
           State2: {
             content: {
-              content_id: 'content',
+              contentId: 'content',
               html: 'content'
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {
+            recordedVoiceovers: {
+              voiceoversMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               }
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
-              answer_groups: [{
-                rule_specs: [],
+              answerGroups: [{
+                ruleSpecs: [],
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: '',
+                    contentId: '',
                     html: ''
                   }
                 }
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: 'State2',
                 feedback: {
-                  content_id: 'default_outcome',
+                  contentId: 'default_outcome',
                   html: ''
                 },
               },
               hints: []
             },
-            written_translations: {
-              translations_mapping: {
+            writtenTranslations: {
+              translationsMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               }
             }
           },
           State3: {
             content: {
-              content_id: 'content',
+              contentId: 'content',
               html: 'content'
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {
+            recordedVoiceovers: {
+              voiceoversMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               }
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
-              answer_groups: [{
-                rule_specs: [],
+              answerGroups: [{
+                ruleSpecs: [],
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: '',
+                    contentId: '',
                     html: ''
                   }
                 }
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: 'State2',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: ''
                 },
               },
               hints: []
             },
-            written_translations: {
-              translations_mapping: {
+            writtenTranslations: {
+              translationsMapping: {
                 content: {},
-                default_outcome: {},
+                defaultOutcome: {},
               }
             }
           }

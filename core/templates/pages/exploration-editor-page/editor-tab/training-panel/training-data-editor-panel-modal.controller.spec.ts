@@ -106,32 +106,32 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
       });
       ResponsesService.init(InteractionObjectFactory.createFromBackendDict({
         id: 'TextInput',
-        answer_groups: [{
+        answerGroups: [{
           outcome: {
             dest: '',
             feedback: {
-              content_id: 'feedback_2',
+              contentId: 'feedback_2',
               html: ''
             },
           },
-          rule_specs: [{
+          ruleSpecs: [{
             type: '',
             inputs: {
               x: ['c', 'd', 'e'],
               y: ['a', 'b', 'c']
             }
           }],
-          training_data: ['Answer1', 'Answer2']
+          trainingData: ['Answer1', 'Answer2']
         }],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'Hola',
           feedback: {
-            content_id: 'feedback_1',
+            contentId: 'feedback_1',
             html: '',
           },
         },
-        confirmed_unclassified_answers: [],
-        customization_args: {
+        confirmedUnclassifiedAnswers: [],
+        customizationArgs: {
           rows: {
             value: true
           },
@@ -297,26 +297,26 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
       });
       ResponsesService.init(InteractionObjectFactory.createFromBackendDict({
         id: 'TextInput',
-        answer_groups: [{
+        answerGroups: [{
           outcome: {
             dest: '',
             feedback: {
-              content_id: 'feedback_2',
+              contentId: 'feedback_2',
               html: ''
             },
           },
-          rule_specs: [],
-          training_data: ['Answer1', 'Answer2']
+          ruleSpecs: [],
+          trainingData: ['Answer1', 'Answer2']
         }],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'Hola',
           feedback: {
-            content_id: 'feedback_1',
+            contentId: 'feedback_1',
             html: '',
           },
         },
-        confirmed_unclassified_answers: [],
-        customization_args: {
+        confirmedUnclassifiedAnswers: [],
+        customizationArgs: {
           rows: {
             value: true
           },
@@ -415,26 +415,26 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
       });
       ResponsesService.init(InteractionObjectFactory.createFromBackendDict({
         id: 'TextInput',
-        answer_groups: [{
+        answerGroups: [{
           outcome: {
             dest: '',
             feedback: {
-              content_id: 'feedback_2',
+              contentId: 'feedback_2',
               html: ''
             },
           },
-          rule_specs: [],
-          training_data: ['Answer1']
+          ruleSpecs: [],
+          trainingData: ['Answer1']
         }],
-        default_outcome: {
+        defaultOutcome: {
           dest: 'Hola',
           feedback: {
-            content_id: 'feedback_1',
+            contentId: 'feedback_1',
             html: '',
           },
         },
-        confirmed_unclassified_answers: [],
-        customization_args: {
+        confirmedUnclassifiedAnswers: [],
+        customizationArgs: {
           rows: {
             value: true
           },

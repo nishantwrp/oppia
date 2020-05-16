@@ -127,7 +127,7 @@ describe('Exploration Property Service', function() {
 
   it('should save displayed value when is ParamChanges object', function() {
     var child = Object.create(ExplorationPropertyService);
-    child.propertyName = 'param_changes';
+    child.propertyName = 'paramChanges';
     child._normalize = function(paramChanges) {
       // Changing paramChanges so hasChanged() turns to be true on line 87.
       paramChanges.forEach(function(paramChange) {

@@ -234,15 +234,15 @@ describe('Skill editor state service', function() {
       description: 'test description',
       misconceptions: [misconceptionDict1, misconceptionDict2],
       rubrics: [rubricDict],
-      skill_contents: skillContentsDict,
-      language_code: 'en',
+      skillContents: skillContentsDict,
+      languageCode: 'en',
       version: 3,
-      prerequisite_skill_ids: []
+      prerequisiteSkillIds: []
     };
 
     skillRightsObject = {
-      skill_id: 'skill_id_1',
-      can_edit_skill_description: true
+      skillId: 'skill_id_1',
+      canEditSkillDescription: true
     };
     fakeSkillRightsBackendApiService.backendSkillRightsObject = (
       skillRightsObject);

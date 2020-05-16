@@ -49,9 +49,9 @@ describe('State card object factory', () => {
       TestBed.get(VoiceoverObjectFactory);
 
     let interactionDict = {
-      answer_groups: [],
-      confirmed_unclassified_answers: [],
-      customization_args: {
+      answerGroups: [],
+      confirmedUnclassifiedAnswers: [],
+      customizationArgs: {
         rows: {
           value: 1
         },
@@ -59,13 +59,13 @@ describe('State card object factory', () => {
           value: 'Type your answer here.'
         }
       },
-      default_outcome: {
+      defaultOutcome: {
         dest: '(untitled state)',
         feedback: {
-          content_id: 'default_outcome',
+          contentId: 'default_outcome',
           html: ''
         },
-        param_changes: []
+        paramChanges: []
       },
       hints: [],
       id: 'TextInput'

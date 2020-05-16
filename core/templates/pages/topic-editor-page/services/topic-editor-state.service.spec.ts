@@ -218,27 +218,27 @@ describe('Topic editor state service', function() {
         id: '0',
         name: 'Topic Name',
         description: 'Topic Description',
-        canonical_story_references: [{
-          story_id: 'story_1',
-          story_is_published: true
+        canonicalStoryReferences: [{
+          storyId: 'story_1',
+          storyIsPublished: true
         }],
-        additional_story_references: [{
-          story_id: 'story_2',
-          story_is_published: true
+        additionalStoryReferences: [{
+          storyId: 'story_2',
+          storyIsPublished: true
         }],
-        uncategorized_skill_ids: ['skill_1'],
+        uncategorizedSkillIds: ['skill_1'],
         subtopics: [],
-        language_code: 'en',
-        next_subtopic_id: 1,
-        subtopic_schema_version: '1',
+        languageCode: 'en',
+        nextSubtopicId: 1,
+        subtopicSchemaVersion: '1',
         version: '1'
       },
       groupedSkillSummaries: {},
       skillIdToDescriptionDict: {
-        skill_1: 'Description 1'
+        skill1: 'Description 1'
       },
       skillIdToRubricsDict: {
-        skill_1: [{
+        skill1: [{
           difficulty: 'Easy',
           explanations: ['Easy explanation']
         }, {
@@ -256,36 +256,36 @@ describe('Topic editor state service', function() {
         id: '0',
         name: 'Topic Name 2',
         description: 'Topic Description 2',
-        canonical_story_references: [{
-          story_id: 'story_3',
-          story_is_published: true
+        canonicalStoryReferences: [{
+          storyId: 'story_3',
+          storyIsPublished: true
         }],
-        additional_story_references: [{
-          story_id: 'story_4',
-          story_is_published: true
+        additionalStoryReferences: [{
+          storyId: 'story_4',
+          storyIsPublished: true
         }],
-        uncategorized_skill_ids: ['skill_5'],
+        uncategorizedSkillIds: ['skill_5'],
         subtopics: [
           {
             id: 1,
             title: 'Title',
-            skill_ids: ['skill_2']
+            skillIds: ['skill_2']
           }, {
             id: 2,
             title: 'Title 2',
-            skill_ids: ['skill_3']
+            skillIds: ['skill_3']
           }
         ],
-        language_code: 'en',
-        next_subtopic_id: 3,
-        subtopic_schema_version: '1',
+        languageCode: 'en',
+        nextSubtopicId: 3,
+        subtopicSchemaVersion: '1',
         version: '1'
       },
       groupedSkillSummaries: {},
       skillIdToDescriptionDict: {
-        skill_2: 'Description 2',
-        skill_3: 'Description 3',
-        skill_5: 'Description 5'
+        skill2: 'Description 2',
+        skill3: 'Description 3',
+        skill5: 'Description 5'
       },
       skillIdToRubricsDict: {
         skill_2: [],
@@ -305,45 +305,45 @@ describe('Topic editor state service', function() {
 
     secondTopicRightsObject = {
       id: '0',
-      can_edit_topic: 'true',
-      is_published: 'false',
-      can_publish_topic: 'false'
+      canEditTopic: 'true',
+      isPublished: 'false',
+      canPublishTopic: 'false'
     };
 
     var subtopicPageObject = {
       id: 'validTopicId-0',
-      topic_id: 'validTopicId',
-      page_contents: {
-        subtitled_html: {
+      topicId: 'validTopicId',
+      pageContents: {
+        subtitledHtml: {
           html: '<p>Data</p>',
-          content_id: 'content'
+          contentId: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {}
           }
         }
       },
-      language_code: 'en'
+      languageCode: 'en'
     };
     fakeEditableTopicBackendApiService.newBackendSubtopicPageObject = (
       subtopicPageObject);
 
     secondSubtopicPageObject = {
       id: 'validTopicId-0',
-      topic_id: 'validTopicId',
-      page_contents: {
-        subtitled_html: {
+      topicId: 'validTopicId',
+      pageContents: {
+        subtitledHtml: {
           html: '<p>Data</p>',
-          content_id: 'content'
+          contentId: 'content'
         },
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {}
           }
         }
       },
-      language_code: 'en'
+      languageCode: 'en'
     };
   }));
 

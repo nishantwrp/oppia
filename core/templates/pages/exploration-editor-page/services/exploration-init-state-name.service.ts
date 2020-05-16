@@ -25,7 +25,7 @@ require(
 angular.module('oppia').factory('ExplorationInitStateNameService', [
   'ExplorationPropertyService', function(ExplorationPropertyService) {
     var child = Object.create(ExplorationPropertyService);
-    child.propertyName = 'init_state_name';
+    child.propertyName = 'initStateName';
     return child;
   }
 ]);

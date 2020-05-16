@@ -139,15 +139,15 @@ describe('Story editor state service', function() {
       title: 'Story title',
       description: 'Story Description',
       notes: '<p>Notes/p>',
-      story_contents: {
-        initial_node_id: 'node_1',
-        next_node_id: 'node_2',
+      storyContents: {
+        initialNodeId: 'node_1',
+        nextNodeId: 'node_2',
         nodes: []
       },
-      language_code: 'en',
-      story_contents_schema_version: '1',
+      languageCode: 'en',
+      storyContentsSchemaVersion: '1',
       version: '1',
-      corresponding_topic_id: 'topic_id'
+      correspondingTopicId: 'topic_id'
     };
 
     secondBackendStoryObject = {
@@ -155,15 +155,15 @@ describe('Story editor state service', function() {
       title: 'Story title  2',
       description: 'Story Description 2',
       notes: '<p>Notes 2/p>',
-      story_contents: {
-        initial_node_id: 'node_2',
-        next_node_id: 'node_1',
+      storyContents: {
+        initialNodeId: 'node_2',
+        nextNodeId: 'node_1',
         nodes: []
       },
-      language_code: 'en',
-      story_contents_schema_version: '1',
+      languageCode: 'en',
+      storyContentsSchemaVersion: '1',
       version: '1',
-      corresponding_topic_id: 'topic_id'
+      correspondingTopicId: 'topic_id'
     };
   }));
 

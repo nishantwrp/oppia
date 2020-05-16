@@ -47,9 +47,9 @@ angular.module('oppia').factory('StateRulesStatsService', [
 
         if (!state.interaction.id) {
           return $q.resolve({
-            state_name: state.name,
-            exploration_id: explorationId,
-            visualizations_info: [],
+            stateName: state.name,
+            explorationId: explorationId,
+            visualizationsInfo: [],
           });
         }
 
@@ -63,9 +63,9 @@ angular.module('oppia').factory('StateRulesStatsService', [
           ].join('/')
         ).then(function(response) {
           return {
-            state_name: state.name,
-            exploration_id: explorationId,
-            visualizations_info: response.data.visualizations_info.map(
+            stateName: state.name,
+            explorationId: explorationId,
+            visualizationsInfo: response.data.visualizationsInfo.map(
               function(vizInfo) {
                 var newVizInfo = angular.copy(vizInfo);
                 newVizInfo.data.forEach(function(vizInfoDatum) {
@@ -76,8 +76,8 @@ angular.module('oppia').factory('StateRulesStatsService', [
                         FractionObjectFactory.fromDict(
                           vizInfoDatum.answer).toString();
                   }
-                  if (newVizInfo.addressed_info_is_supported) {
-                    vizInfoDatum.is_addressed =
+                  if (newVizInfo.addressedInfoIsSupported) {
+                    vizInfoDatum.isAddressed =
                       AnswerClassificationService
                         .isClassifiedExplicitlyOrGoesToNewState(
                           state.name, state, vizInfoDatum.answer,

@@ -63,7 +63,7 @@ angular.module('oppia').factory('ExplorationStatesService', [
     // Properties that have a different backend representation from the
     // frontend and must be converted.
     var BACKEND_CONVERSIONS = {
-      answer_groups: function(answerGroups) {
+      answerGroups: function(answerGroups) {
         return answerGroups.map(function(answerGroup) {
           return answerGroup.toBackendDict();
         });
@@ -71,10 +71,10 @@ angular.module('oppia').factory('ExplorationStatesService', [
       content: function(content) {
         return content.toBackendDict();
       },
-      recorded_voiceovers: function(recordedVoiceovers) {
+      recordedVoiceovers: function(recordedVoiceovers) {
         return recordedVoiceovers.toBackendDict();
       },
-      default_outcome: function(defaultOutcome) {
+      defaultOutcome: function(defaultOutcome) {
         if (defaultOutcome) {
           return defaultOutcome.toBackendDict();
         } else {
@@ -86,12 +86,12 @@ angular.module('oppia').factory('ExplorationStatesService', [
           return hint.toBackendDict();
         });
       },
-      param_changes: function(paramChanges) {
+      paramChanges: function(paramChanges) {
         return paramChanges.map(function(paramChange) {
           return paramChange.toBackendDict();
         });
       },
-      param_specs: function(paramSpecs) {
+      paramSpecs: function(paramSpecs) {
         return paramSpecs.toBackendDict();
       },
       solution: function(solution) {
@@ -101,27 +101,27 @@ angular.module('oppia').factory('ExplorationStatesService', [
           return null;
         }
       },
-      written_translations: function(writtenTranslations) {
+      writtenTranslations: function(writtenTranslations) {
         return writtenTranslations.toBackendDict();
       }
     };
 
     // Maps backend names to the corresponding frontend dict accessor lists.
     var PROPERTY_REF_DATA = {
-      answer_groups: ['interaction', 'answerGroups'],
-      confirmed_unclassified_answers: [
+      answerGroups: ['interaction', 'answerGroups'],
+      confirmedUnclassifiedAnswers: [
         'interaction', 'confirmedUnclassifiedAnswers'],
       content: ['content'],
-      recorded_voiceovers: ['recordedVoiceovers'],
-      default_outcome: ['interaction', 'defaultOutcome'],
-      param_changes: ['paramChanges'],
-      param_specs: ['paramSpecs'],
+      recordedVoiceovers: ['recordedVoiceovers'],
+      defaultOutcome: ['interaction', 'defaultOutcome'],
+      paramChanges: ['paramChanges'],
+      paramSpecs: ['paramSpecs'],
       hints: ['interaction', 'hints'],
-      solicit_answer_details: ['solicitAnswerDetails'],
+      solicitAnswerDetails: ['solicitAnswerDetails'],
       solution: ['interaction', 'solution'],
-      widget_id: ['interaction', 'id'],
-      widget_customization_args: ['interaction', 'customizationArgs'],
-      written_translations: ['writtenTranslations']
+      widgetId: ['interaction', 'id'],
+      widgetCustomizationArgs: ['interaction', 'customizationArgs'],
+      writtenTranslations: ['writtenTranslations']
     };
 
     var CONTENT_ID_EXTRACTORS = {
@@ -301,56 +301,56 @@ angular.module('oppia').factory('ExplorationStatesService', [
         saveStateProperty(stateName, 'content', newContent);
       },
       getStateParamChangesMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'param_changes');
+        return getStatePropertyMemento(stateName, 'paramChanges');
       },
       saveStateParamChanges: function(stateName, newParamChanges) {
-        saveStateProperty(stateName, 'param_changes', newParamChanges);
+        saveStateProperty(stateName, 'paramChanges', newParamChanges);
       },
       getInteractionIdMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'widget_id');
+        return getStatePropertyMemento(stateName, 'widgetId');
       },
       saveInteractionId: function(stateName, newInteractionId) {
-        saveStateProperty(stateName, 'widget_id', newInteractionId);
+        saveStateProperty(stateName, 'widgetId', newInteractionId);
         stateInteractionSavedCallbacks.forEach(function(callback) {
           callback(stateName);
         });
       },
       getInteractionCustomizationArgsMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'widget_customization_args');
+        return getStatePropertyMemento(stateName, 'widgetCustomizationArgs');
       },
       saveInteractionCustomizationArgs: function(
           stateName, newCustomizationArgs) {
         saveStateProperty(
-          stateName, 'widget_customization_args', newCustomizationArgs);
+          stateName, 'widgetCustomizationArgs', newCustomizationArgs);
         stateInteractionSavedCallbacks.forEach(function(callback) {
           callback(stateName);
         });
       },
       getInteractionAnswerGroupsMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'answer_groups');
+        return getStatePropertyMemento(stateName, 'answerGroups');
       },
       saveInteractionAnswerGroups: function(stateName, newAnswerGroups) {
-        saveStateProperty(stateName, 'answer_groups', newAnswerGroups);
+        saveStateProperty(stateName, 'answerGroups', newAnswerGroups);
         stateInteractionSavedCallbacks.forEach(function(callback) {
           callback(stateName);
         });
       },
       getConfirmedUnclassifiedAnswersMemento: function(stateName) {
         return getStatePropertyMemento(
-          stateName, 'confirmed_unclassified_answers');
+          stateName, 'confirmedUnclassifiedAnswers');
       },
       saveConfirmedUnclassifiedAnswers: function(stateName, newAnswers) {
         saveStateProperty(
-          stateName, 'confirmed_unclassified_answers', newAnswers);
+          stateName, 'confirmedUnclassifiedAnswers', newAnswers);
         stateInteractionSavedCallbacks.forEach(function(callback) {
           callback(stateName);
         });
       },
       getInteractionDefaultOutcomeMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'default_outcome');
+        return getStatePropertyMemento(stateName, 'defaultOutcome');
       },
       saveInteractionDefaultOutcome: function(stateName, newDefaultOutcome) {
-        saveStateProperty(stateName, 'default_outcome', newDefaultOutcome);
+        saveStateProperty(stateName, 'defaultOutcome', newDefaultOutcome);
       },
       getHintsMemento: function(stateName) {
         return getStatePropertyMemento(stateName, 'hints');
@@ -365,25 +365,25 @@ angular.module('oppia').factory('ExplorationStatesService', [
         saveStateProperty(stateName, 'solution', newSolution);
       },
       getRecordedVoiceoversMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'recorded_voiceovers');
+        return getStatePropertyMemento(stateName, 'recordedVoiceovers');
       },
       saveRecordedVoiceovers: function(stateName, newRecordedVoiceovers) {
         saveStateProperty(
-          stateName, 'recorded_voiceovers', newRecordedVoiceovers);
+          stateName, 'recordedVoiceovers', newRecordedVoiceovers);
       },
       getSolicitAnswerDetailsMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'solicit_answer_details');
+        return getStatePropertyMemento(stateName, 'solicitAnswerDetails');
       },
       saveSolicitAnswerDetails: function(stateName, newSolicitAnswerDetails) {
         saveStateProperty(
-          stateName, 'solicit_answer_details', newSolicitAnswerDetails);
+          stateName, 'solicitAnswerDetails', newSolicitAnswerDetails);
       },
       getWrittenTranslationsMemento: function(stateName) {
-        return getStatePropertyMemento(stateName, 'written_translations');
+        return getStatePropertyMemento(stateName, 'writtenTranslations');
       },
       saveWrittenTranslations: function(stateName, newWrittenTranslations) {
         saveStateProperty(
-          stateName, 'written_translations', newWrittenTranslations);
+          stateName, 'writtenTranslations', newWrittenTranslations);
       },
       isInitialized: function() {
         return _states !== null;

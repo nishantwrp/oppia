@@ -113,7 +113,7 @@ angular.module('oppia').directive('moderatorPage', [
               // Update the explorationData object with information about newly-
               // discovered explorations.
               var data = response.data;
-              var explorationIdsToExplorationData = data.exp_ids_to_exp_data;
+              var explorationIdsToExplorationData = data.expIdsToExpData;
               for (var expId in explorationIdsToExplorationData) {
                 if (!ctrl.explorationData.hasOwnProperty(expId)) {
                   ctrl.explorationData[expId] = (

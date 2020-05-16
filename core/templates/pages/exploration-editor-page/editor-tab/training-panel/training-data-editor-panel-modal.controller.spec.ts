@@ -64,31 +64,31 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: '',
+            contentId: '',
             html: 'This is Hola State'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
-              feedback_1: {}
+          recordedVoiceovers: {
+            voiceoversMapping: {
+              feedback1: {}
             },
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
-            answer_groups: [{
-              rule_specs: [],
+            answerGroups: [{
+              ruleSpecs: [],
               outcome: {
                 dest: 'Hola',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: '',
                 },
               },
-              training_data: ['Answer2']
+              trainingData: ['Answer2']
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Hola',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: '',
               },
             },
@@ -96,10 +96,10 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
             id: 'TextInput',
             solution: null,
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
-              feedback_1: {}
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
+              feedback1: {}
             },
           },
         },
@@ -255,31 +255,31 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: '',
+            contentId: '',
             html: 'This is Hola State'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
-              feedback_1: {}
+          recordedVoiceovers: {
+            voiceoversMapping: {
+              feedback1: {}
             },
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
-            answer_groups: [{
-              rule_specs: [],
+            answerGroups: [{
+              ruleSpecs: [],
               outcome: {
                 dest: 'Hola',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: '',
                 },
               },
-              training_data: ['Answer2']
+              trainingData: ['Answer2']
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Hola',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: '',
               },
             },
@@ -287,10 +287,10 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
             id: 'TextInput',
             solution: null,
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
-              feedback_1: {}
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
+              feedback1: {}
             },
           },
         },
@@ -373,31 +373,31 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
       ExplorationStatesService.init({
         Hola: {
           content: {
-            content_id: '',
+            contentId: '',
             html: 'This is Hola State'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
-              feedback_1: {}
+          recordedVoiceovers: {
+            voiceoversMapping: {
+              feedback1: {}
             },
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
-            answer_groups: [{
-              rule_specs: [],
+            answerGroups: [{
+              ruleSpecs: [],
               outcome: {
                 dest: 'Hola',
                 feedback: {
-                  content_id: 'feedback_1',
+                  contentId: 'feedback_1',
                   html: '',
                 },
               },
-              training_data: ['Answer2']
+              trainingData: ['Answer2']
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: 'Hola',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: '',
               },
             },
@@ -405,10 +405,10 @@ describe('TrainingDataEditorPanelServiceModalController', function() {
             id: 'TextInput',
             solution: null,
           },
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
-              feedback_1: {}
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
+              feedback1: {}
             },
           },
         },

@@ -298,7 +298,7 @@ class BaseHandler(webapp2.RequestHandler):
         snake_case_re = re.compile(r'([^\-_\s])[\-_\s]+([^\-_\s])')
 
         return ''.join([
-            string[0].lower() if not string[:2].isupper() else string[0],
+            string[0] if not string[:2].isupper() else string[0],
             snake_case_re.sub(
                 lambda m: m.group(1) + m.group(2).upper(), string[1:]),
         ])
@@ -340,9 +340,6 @@ class BaseHandler(webapp2.RequestHandler):
             b'max-age=31536000; includeSubDomains')
         self.response.headers[b'X-Content-Type-Options'] = b'nosniff'
         self.response.headers[b'X-Xss-Protection'] = b'1; mode=block'
-        values['content_sad'] = True
-        values['content_1'] = True
-        values['content_1_dasd'] = True
 
         values_with_camelized_keys = self.camelize(values)
         json_output = json.dumps(

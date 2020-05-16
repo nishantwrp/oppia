@@ -15,14 +15,14 @@
               <th>Community-owned?</th>
             </tr>
             <tr ng-repeat="commit in $ctrl.allCommits track by $index">
-              <td><[$ctrl.getDatetimeAsString(commit.last_updated)]></td>
+              <td><[$ctrl.getDatetimeAsString(commit.lastUpdated)]></td>
               <td>
-                <a ng-href="<[$ctrl.getExplorationCreateUrl(commit.exploration_id)]>">
-                  <[$ctrl.explorationData[commit.exploration_id].title]>
+                <a ng-href="<[$ctrl.getExplorationCreateUrl(commit.explorationId)]>">
+                  <[$ctrl.explorationData[commit.explorationId].title]>
                 </a>
               </td>
               <td>
-                <[$ctrl.explorationData[commit.exploration_id].category]>
+                <[$ctrl.explorationData[commit.explorationId].category]>
               </td>
               <td><[commit.username]></td>
               <td><[commit.commit_message]></td>

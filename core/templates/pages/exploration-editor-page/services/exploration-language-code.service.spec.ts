@@ -40,7 +40,7 @@ describe('Exploration Language Code Service', function() {
   }));
 
   it('should test the child object properties', function() {
-    expect(elcs.propertyName).toBe('language_code');
+    expect(elcs.propertyName).toBe('languageCode');
     expect(elcs.getSupportedContentLanguages()).toBeInstanceOf(Object);
     elcs.displayed = 'en';
     expect(elcs.getCurrentLanguageDescription()).toBe('English');

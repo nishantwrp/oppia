@@ -78,104 +78,104 @@ describe('Sidebar state name controller', function() {
       ess.init({
         'First State': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'First State Content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
-            answer_groups: [],
-            default_outcome: {
+            answerGroups: [],
+            defaultOutcome: {
               dest: 'Second State',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              param_changes: []
+              paramChanges: []
             },
             hints: []
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
         },
         'Second State': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'Second State Content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
-            answer_groups: [],
-            default_outcome: {
+            answerGroups: [],
+            defaultOutcome: {
               dest: 'Second State',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              param_changes: []
+              paramChanges: []
             },
             hints: []
           },
-          param_changes: [],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          paramChanges: [],
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
         },
         'Third State': {
           content: {
-            content_id: 'content',
+            contentId: 'content',
             html: 'This is some content.'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
           interaction: {
-            answer_groups: [],
-            default_outcome: {
+            answerGroups: [],
+            defaultOutcome: {
               dest: 'Second State',
               feedback: {
-                content_id: 'default_outcome',
+                contentId: 'default_outcome',
                 html: ''
               },
-              param_changes: []
+              paramChanges: []
             },
             hints: []
           },
-          param_changes: [{
+          paramChanges: [{
             name: 'comparison',
-            generator_id: 'Copier',
-            customization_args: {
+            generatorId: 'Copier',
+            customizationArgs: {
               value: 'something clever',
-              parse_with_jinja: false
+              parseWithJinja: false
             }
           }],
-          solicit_answer_details: false,
-          written_translations: {
-            translations_mapping: {
+          solicitAnswerDetails: false,
+          writtenTranslations: {
+            translationsMapping: {
               content: {},
-              default_outcome: {}
+              defaultOutcome: {}
             }
           },
         }

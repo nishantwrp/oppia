@@ -146,48 +146,48 @@ describe('ExplorationStatesService', function() {
 
     ExplorationStatesService.init({
       Hola: {
-        content: {content_id: 'content', html: ''},
-        recorded_voiceovers: {
-          voiceovers_mapping: {
+        content: {contentId: 'content', html: ''},
+        recordedVoiceovers: {
+          voiceoversMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
+            defaultOutcome: {},
+            feedback1: {},
           },
         },
-        param_changes: [],
+        paramChanges: [],
         interaction: {
-          answer_groups: [{
-            rule_specs: [{rule_type: 'Contains', inputs: {x: 'hola'}}],
+          answerGroups: [{
+            ruleSpecs: [{ruleType: 'Contains', inputs: {x: 'hola'}}],
             outcome: {
               dest: 'Me Llamo',
               feedback: {
-                content_id: 'feedback_1',
+                contentId: 'feedback_1',
                 html: 'buen trabajo!',
               },
-              labelled_as_correct: true,
+              labelledAsCorrect: true,
             },
           }],
-          default_outcome: {
+          defaultOutcome: {
             dest: 'Hola',
             feedback: {
-              content_id: 'default_outcome',
+              contentId: 'default_outcome',
               html: 'try again!',
             },
-            labelled_as_correct: false,
+            labelledAsCorrect: false,
           },
           hints: [],
           id: 'TextInput',
           solution: null,
         },
-        solicit_answer_details: false,
-        written_translations: {
-          translations_mapping: {
+        solicitAnswerDetails: false,
+        writtenTranslations: {
+          translationsMapping: {
             content: {},
-            default_outcome: {},
-            feedback_1: {},
+            defaultOutcome: {},
+            feedback1: {},
           },
         },
-        classifier_model_id: 0,
+        classifierModelId: 0,
       },
     });
   });

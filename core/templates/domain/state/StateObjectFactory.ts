@@ -64,14 +64,14 @@ export class State {
   toBackendDict(): any {
     return {
       content: this.content.toBackendDict(),
-      classifier_model_id: this.classifierModelId,
+      classifierModelId: this.classifierModelId,
       interaction: this.interaction.toBackendDict(),
-      param_changes: this.paramChanges.map((paramChange) => {
+      paramChanges: this.paramChanges.map((paramChange) => {
         return paramChange.toBackendDict();
       }),
-      recorded_voiceovers: this.recordedVoiceovers.toBackendDict(),
-      solicit_answer_details: this.solicitAnswerDetails,
-      written_translations: this.writtenTranslations.toBackendDict()
+      recordedVoiceovers: this.recordedVoiceovers.toBackendDict(),
+      solicitAnswerDetails: this.solicitAnswerDetails,
+      writtenTranslations: this.writtenTranslations.toBackendDict()
     };
   }
 
@@ -101,14 +101,16 @@ export class StateObjectFactory {
 
   createDefaultState(newStateName: string): State {
     var newStateTemplate = constants.NEW_STATE_TEMPLATE;
+    // These should remain in snake_case because the NEW_STATE_TEMPLATE
+    // in constants.js is in snake_case because it is used in backend too.
     var newState = this.createFromBackendDict(newStateName, {
       classifier_model_id: newStateTemplate.classifier_model_id,
       content: newStateTemplate.content,
       interaction: newStateTemplate.interaction,
-      param_changes: newStateTemplate.param_changes,
-      recorded_voiceovers: newStateTemplate.recorded_voiceovers,
-      solicit_answer_details: newStateTemplate.solicit_answer_details,
-      written_translations: newStateTemplate.written_translations
+      paramChanges: newStateTemplate.param_changes,
+      recordedVoiceovers: newStateTemplate.recorded_voiceovers,
+      solicitAnswerDetails: newStateTemplate.solicit_answer_details,
+      writtenTranslations: newStateTemplate.written_translations
     });
     newState.interaction.defaultOutcome.dest = newStateName;
     return newState;
@@ -117,16 +119,16 @@ export class StateObjectFactory {
   createFromBackendDict(stateName: string, stateDict: any): State {
     return new State(
       stateName,
-      stateDict.classifier_model_id,
+      stateDict.classifierModelId,
       this.subtitledHtmlObject.createFromBackendDict(stateDict.content),
       this.interactionObject.createFromBackendDict(stateDict.interaction),
       this.paramchangesObject.createFromBackendList(
-        stateDict.param_changes),
+        stateDict.paramChanges),
       this.recordedVoiceoversObject.createFromBackendDict(
-        stateDict.recorded_voiceovers),
-      stateDict.solicit_answer_details,
+        stateDict.recordedVoiceovers),
+      stateDict.solicitAnswerDetails,
       this.writtenTranslationsObject.createFromBackendDict(
-        stateDict.written_translations));
+        stateDict.writtenTranslations));
   }
 }
 

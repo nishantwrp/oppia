@@ -40,6 +40,6 @@ describe('Exploration Init State Name Service', function() {
   }));
 
   it('should test the child object properties', function() {
-    expect(eisns.propertyName).toBe('init_state_name');
+    expect(eisns.propertyName).toBe('initStateName');
   });
 });

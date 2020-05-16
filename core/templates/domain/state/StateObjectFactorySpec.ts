@@ -161,20 +161,20 @@ describe('State Object Factory', () => {
     'is greater than 0', () => {
     const paramChanges = [{
       customization_args: {
-        parse_with_jinja: false,
+        parseWithJinja: false,
         value: '10'
       },
-      generator_id: 'Copier',
+      generatorId: 'Copier',
       name: 'Param change 1',
     }];
-    stateObject.param_changes = paramChanges;
+    stateObject.paramChanges = paramChanges;
     const stateObjectBackend = sof.createFromBackendDict(
       'State name', stateObject);
 
     expect(stateObjectBackend.toBackendDict()).toEqual({
       ...stateObject,
       // Overrides the param_changes from stateObject
-      param_changes: paramChanges
+      paramChanges: paramChanges
     });
   });
 

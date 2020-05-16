@@ -63,47 +63,47 @@ describe('Training Modal Controller', function() {
         ExplorationStatesService.init({
           Init: {
             content: {
-              content_id: '',
+              contentId: '',
               html: ''
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {},
+            recordedVoiceovers: {
+              voiceoversMapping: {},
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
               id: 'TextInput',
-              answer_groups: [{
-                rule_specs: [],
+              answerGroups: [{
+                ruleSpecs: [],
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: '',
+                    contentId: '',
                     html: '',
                   }
                 },
-                training_data: ['Not the answer']
+                trainingData: ['Not the answer']
               }, {
-                rule_specs: [],
+                ruleSpecs: [],
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: '',
+                    contentId: '',
                     html: '',
                   }
                 },
-                training_data: ['This is the answer']
+                trainingData: ['This is the answer']
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: '',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 },
               },
               hints: [],
             },
-            written_translations: {
-              translations_mapping: {},
+            writtenTranslations: {
+              translationsMapping: {},
             }
           },
         });
@@ -202,55 +202,55 @@ describe('Training Modal Controller', function() {
       ExplorationStatesService.init({
         Init: {
           content: {
-            content_id: '',
+            contentId: '',
             html: ''
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {},
+          recordedVoiceovers: {
+            voiceoversMapping: {},
           },
-          param_changes: [],
+          paramChanges: [],
           interaction: {
-            answer_groups: [{
+            answerGroups: [{
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 }
               },
-              training_data: ['Not the answer'],
-              rule_specs: [],
+              trainingData: ['Not the answer'],
+              ruleSpecs: [],
             }, {
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 },
               },
-              training_data: ['Answer'],
-              rule_specs: []
+              trainingData: ['Answer'],
+              ruleSpecs: []
             }, {
               outcome: {
                 dest: '',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 }
               },
-              training_data: ['This is the answer'],
-              rule_specs: [],
+              trainingData: ['This is the answer'],
+              ruleSpecs: [],
             }],
-            default_outcome: {
+            defaultOutcome: {
               dest: '',
               feedback: {
-                content_id: '',
+                contentId: '',
                 html: '',
               }
             },
             hints: [],
             id: 'TextInput',
-            customization_args: {
+            customizationArgs: {
               rows: {
                 value: 1
               },
@@ -259,8 +259,8 @@ describe('Training Modal Controller', function() {
               }
             },
           },
-          written_translations: {
-            translations_mapping: {},
+          writtenTranslations: {
+            translationsMapping: {},
           }
         },
       });
@@ -337,37 +337,37 @@ describe('Training Modal Controller', function() {
         ExplorationStatesService.init({
           Init: {
             content: {
-              content_id: '',
+              contentId: '',
               html: ''
             },
-            recorded_voiceovers: {
-              voiceovers_mapping: {},
+            recordedVoiceovers: {
+              voiceoversMapping: {},
             },
-            param_changes: [],
+            paramChanges: [],
             interaction: {
-              answer_groups: [{
-                rule_specs: [],
+              answerGroups: [{
+                ruleSpecs: [],
                 outcome: {
                   dest: '',
                   feedback: {
-                    content_id: '',
+                    contentId: '',
                     html: '',
                   },
                 },
-                training_data: ['']
+                trainingData: ['']
               }],
-              default_outcome: {
+              defaultOutcome: {
                 dest: '',
                 feedback: {
-                  content_id: '',
+                  contentId: '',
                   html: '',
                 },
               },
               hints: [],
               id: 'TextInput',
             },
-            written_translations: {
-              translations_mapping: {},
+            writtenTranslations: {
+              translationsMapping: {},
             }
           },
         });

@@ -28,12 +28,12 @@ angular.module('oppia').factory('ExplorationPropertyService', [
     // (title, category, etc.)
 
     var BACKEND_CONVERSIONS = {
-      param_changes: function(paramChanges) {
+      paramChanges: function(paramChanges) {
         return paramChanges.map(function(paramChange) {
           return paramChange.toBackendDict();
         });
       },
-      param_specs: function(paramSpecs) {
+      paramSpecs: function(paramSpecs) {
         return paramSpecs.toBackendDict();
       },
     };

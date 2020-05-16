@@ -74,7 +74,7 @@ describe('Exploration history', function() {
 
     var VERSION_1_STATE_1_CONTENTS = {
       1: {
-        text: 'classifier_model_id: null',
+        text: 'classifierModelId: null',
         highlighted: false
       },
       2: {
@@ -82,7 +82,7 @@ describe('Exploration history', function() {
         highlighted: false
       },
       3: {
-        text: '  content_id: content',
+        text: '  contentId: content',
         highlighted: false
       },
       4: {
@@ -94,7 +94,7 @@ describe('Exploration history', function() {
         highlighted: false
       },
       6: {
-        text: '  answer_groups:',
+        text: '  answerGroups:',
         highlighted: true
       },
       7: {
@@ -110,7 +110,7 @@ describe('Exploration history', function() {
         highlighted: true
       },
       10: {
-        text: '        content_id: feedback_1',
+        text: '        contentId: feedback_1',
         highlighted: true
       },
       11: {
@@ -118,23 +118,23 @@ describe('Exploration history', function() {
         highlighted: true
       },
       12: {
-        text: '      labelled_as_correct: false',
+        text: '      labelledAsCorrect: false',
         highlighted: true
       },
       13: {
-        text: '      missing_prerequisite_skill_id: null',
+        text: '      missingPrerequisiteSkillId: null',
         highlighted: true
       },
       14: {
-        text: '      param_changes: []',
+        text: '      paramChanges: []',
         highlighted: true
       },
       15: {
-        text: '      refresher_exploration_id: null',
+        text: '      refresherExplorationId: null',
         highlighted: true
       },
       16: {
-        text: '    rule_specs:',
+        text: '    ruleSpecs:',
         highlighted: true
       },
       17: {
@@ -146,27 +146,27 @@ describe('Exploration history', function() {
         highlighted: true
       },
       19: {
-        text: '      rule_type: Equals',
+        text: '      ruleType: Equals',
         highlighted: true
       },
       20: {
-        text: '    tagged_skill_misconception_id: null',
+        text: '    taggedSkillMisconceptionId: null',
         highlighted: true
       },
       21: {
-        text: '    training_data: []',
+        text: '    trainingData: []',
         highlighted: true
       },
       22: {
-        text: '  confirmed_unclassified_answers: []',
+        text: '  confirmedUnclassifiedAnswers: []',
         highlighted: false
       },
       23: {
-        text: '  customization_args: {}',
+        text: '  customizationArgs: {}',
         highlighted: false
       },
       24: {
-        text: '  default_outcome:',
+        text: '  defaultOutcome:',
         highlighted: false
       },
       25: {
@@ -178,7 +178,7 @@ describe('Exploration history', function() {
         highlighted: false
       },
       27: {
-        text: '      content_id: default_outcome',
+        text: '      contentId: default_outcome',
         highlighted: false
       },
       28: {
@@ -186,19 +186,19 @@ describe('Exploration history', function() {
         highlighted: false
       },
       29: {
-        text: '    labelled_as_correct: false',
+        text: '    labelledAsCorrect: false',
         highlighted: false
       },
       30: {
-        text: '    missing_prerequisite_skill_id: null',
+        text: '    missingPrerequisiteSkillId: null',
         highlighted: false
       },
       31: {
-        text: '    param_changes: []',
+        text: '    paramChanges: []',
         highlighted: false
       },
       32: {
-        text: '    refresher_exploration_id: null',
+        text: '    refresherExplorationId: null',
         highlighted: false
       },
       33: {
@@ -214,15 +214,15 @@ describe('Exploration history', function() {
         highlighted: false
       },
       36: {
-        text: 'param_changes: []',
+        text: 'paramChanges: []',
         highlighted: false
       },
       37: {
-        text: 'recorded_voiceovers:',
+        text: 'recordedVoiceovers:',
         highlighted: false
       },
       38: {
-        text: '  voiceovers_mapping:',
+        text: '  voiceoversMapping:',
         highlighted: false
       },
       39: {
@@ -230,23 +230,23 @@ describe('Exploration history', function() {
         highlighted: false
       },
       40: {
-        text: '    default_outcome: {}',
+        text: '    defaultOutcome: {}',
         highlighted: false
       },
       41: {
-        text: '    feedback_1: {}',
+        text: '    feedback1: {}',
         highlighted: true
       },
       42: {
-        text: 'solicit_answer_details: false',
+        text: 'solicitAnswerDetails: false',
         highlighted: false
       },
       43: {
-        text: 'written_translations:',
+        text: 'writtenTranslations:',
         highlighted: false
       },
       44: {
-        text: '  translations_mapping:',
+        text: '  translationsMapping:',
         highlighted: false
       },
       45: {
@@ -254,11 +254,11 @@ describe('Exploration history', function() {
         highlighted: false
       },
       46: {
-        text: '    default_outcome: {}',
+        text: '    defaultOutcome: {}',
         highlighted: true
       },
       47: {
-        text: '    feedback_1: {}',
+        text: '    feedback1: {}',
         highlighted: true
       },
       48: {
@@ -269,7 +269,7 @@ describe('Exploration history', function() {
 
     var VERSION_2_STATE_1_CONTENTS = {
       1: {
-        text: 'classifier_model_id: null',
+        text: 'classifierModelId: null',
         highlighted: false
       },
       2: {
@@ -277,7 +277,7 @@ describe('Exploration history', function() {
         highlighted: false
       },
       3: {
-        text: '  content_id: content',
+        text: '  contentId: content',
         highlighted: false
       },
       4: {
@@ -289,19 +289,19 @@ describe('Exploration history', function() {
         highlighted: false
       },
       6: {
-        text: '  answer_groups: []',
+        text: '  answerGroups: []',
         highlighted: true
       },
       7: {
-        text: '  confirmed_unclassified_answers: []',
+        text: '  confirmedUnclassifiedAnswers: []',
         highlighted: false
       },
       8: {
-        text: '  customization_args: {}',
+        text: '  customizationArgs: {}',
         highlighted: false
       },
       9: {
-        text: '  default_outcome:',
+        text: '  defaultOutcome:',
         highlighted: false
       },
       // Note that highlighting *underneath* a line is still considered a
@@ -315,7 +315,7 @@ describe('Exploration history', function() {
         highlighted: false
       },
       12: {
-        text: '      content_id: default_outcome',
+        text: '      contentId: default_outcome',
         highlighted: false
       },
       13: {
@@ -323,19 +323,19 @@ describe('Exploration history', function() {
         highlighted: false
       },
       14: {
-        text: '    labelled_as_correct: false',
+        text: '    labelledAsCorrect: false',
         highlighted: false
       },
       15: {
-        text: '    missing_prerequisite_skill_id: null',
+        text: '    missingPrerequisiteSkillId: null',
         highlighted: false
       },
       16: {
-        text: '    param_changes: []',
+        text: '    paramChanges: []',
         highlighted: false
       },
       17: {
-        text: '    refresher_exploration_id: null',
+        text: '    refresherExplorationId: null',
         highlighted: false
       },
       18: {
@@ -351,15 +351,15 @@ describe('Exploration history', function() {
         highlighted: false
       },
       21: {
-        text: 'param_changes: []',
+        text: 'paramChanges: []',
         highlighted: false
       },
       22: {
-        text: 'recorded_voiceovers:',
+        text: 'recordedVoiceovers:',
         highlighted: false
       },
       23: {
-        text: '  voiceovers_mapping:',
+        text: '  voiceoversMapping:',
         highlighted: false
       },
       24: {
@@ -367,19 +367,19 @@ describe('Exploration history', function() {
         highlighted: false
       },
       25: {
-        text: '    default_outcome: {}',
+        text: '    defaultOutcome: {}',
         highlighted: true
       },
       26: {
-        text: 'solicit_answer_details: false',
+        text: 'solicitAnswerDetails: false',
         highlighted: false
       },
       27: {
-        text: 'written_translations:',
+        text: 'writtenTranslations:',
         highlighted: false
       },
       28: {
-        text: '  translations_mapping:',
+        text: '  translationsMapping:',
         highlighted: false
       },
       29: {
@@ -387,7 +387,7 @@ describe('Exploration history', function() {
         highlighted: false
       },
       30: {
-        text: '    default_outcome: {}',
+        text: '    defaultOutcome: {}',
         highlighted: true
       },
       31: {
@@ -397,38 +397,38 @@ describe('Exploration history', function() {
     };
 
     var STATE_2_STRING =
-      'classifier_model_id: null\n' +
+      'classifierModelId: null\n' +
       'content:\n' +
-      '  content_id: content\n' +
+      '  contentId: content\n' +
       '  html: <p>this is card 2</p>\n' +
       'interaction:\n' +
-      '  answer_groups: []\n' +
-      '  confirmed_unclassified_answers: []\n' +
-      '  customization_args:\n' +
+      '  answerGroups: []\n' +
+      '  confirmedUnclassifiedAnswers: []\n' +
+      '  customizationArgs:\n' +
       '    buttonText:\n' +
       '      value: Continue\n' +
-      '  default_outcome:\n' +
+      '  defaultOutcome:\n' +
       '    dest: final card\n' +
       '    feedback:\n' +
-      '      content_id: default_outcome\n' +
+      '      contentId: default_outcome\n' +
       '      html: \'\'\n' +
-      '    labelled_as_correct: false\n' +
-      '    missing_prerequisite_skill_id: null\n' +
-      '    param_changes: []\n' +
-      '    refresher_exploration_id: null\n' +
+      '    labelledAsCorrect: false\n' +
+      '    missingPrerequisiteSkillId: null\n' +
+      '    paramChanges: []\n' +
+      '    refresherExplorationId: null\n' +
       '  hints: []\n' +
       '  id: Continue\n' +
       '  solution: null\n' +
-      'param_changes: []\n' +
-      'recorded_voiceovers:\n' +
-      '  voiceovers_mapping:\n' +
+      'paramChanges: []\n' +
+      'recordedVoiceovers:\n' +
+      '  voiceoversMapping:\n' +
       '    content: {}\n' +
-      '    default_outcome: {}\n' +
-      'solicit_answer_details: false\n' +
-      'written_translations:\n' +
-      '  translations_mapping:\n' +
+      '    defaultOutcome: {}\n' +
+      'solicitAnswerDetails: false\n' +
+      'writtenTranslations:\n' +
+      '  translationsMapping:\n' +
       '    content: {}\n' +
-      '    default_outcome: {}\n' +
+      '    defaultOutcome: {}\n' +
       '';
 
     var expectedHistoryStates = [{

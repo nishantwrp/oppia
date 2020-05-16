@@ -23,7 +23,7 @@ angular.module('oppia').factory('ExplorationLanguageCodeService', [
   'ExplorationPropertyService', 'SUPPORTED_CONTENT_LANGUAGES',
   function(ExplorationPropertyService, SUPPORTED_CONTENT_LANGUAGES) {
     var child = Object.create(ExplorationPropertyService);
-    child.propertyName = 'language_code';
+    child.propertyName = 'languageCode';
     child.getSupportedContentLanguages = function() {
       return SUPPORTED_CONTENT_LANGUAGES;
     };

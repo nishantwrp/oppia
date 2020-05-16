@@ -52,85 +52,85 @@ describe('Exploration object factory', () => {
 
     firstState = {
       content: {
-        content_id: 'content',
+        contentId: 'content',
         html: 'content'
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'myfile1.mp3',
-              file_size_bytes: 210000,
-              needs_update: false,
-              duration_secs: 4.3
+              fileSizeVytes: 210000,
+              needsUpdate: false,
+              durationSecs: 4.3
             },
             'hi-en': {
               filename: 'myfile3.mp3',
-              file_size_bytes: 430000,
-              needs_update: false,
-              duration_secs: 2.1
+              fileSizeBytes: 430000,
+              needsUpdate: false,
+              durationSecs: 2.1
             }
           },
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
       interaction: {
-        answer_groups: [],
-        confirmed_unclassified_answers: [],
-        customization_args: {},
-        default_outcome: {
+        answerGroups: [],
+        confirmedUnclassifiedAnswers: [],
+        customizationArgs: {},
+        defaultOutcome: {
           dest: 'new state',
           feedback: [],
-          param_changes: []
+          paramChanges: []
         },
         hints: [],
         id: 'TextInput'
       },
-      param_changes: [],
-      solicit_answer_details: false,
-      written_translations: {
-        translations_mapping: {
+      paramChanges: [],
+      solicitAnswerDetails: false,
+      writtenTranslations: {
+        translationsMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
     };
     secondState = {
       content: {
-        content_id: 'content',
+        contentId: 'content',
         html: 'more content'
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {
             'hi-en': {
               filename: 'myfile2.mp3',
-              file_size_bytes: 120000,
-              needs_update: false,
-              duration_secs: 1.2
+              fileSizeBytes: 120000,
+              needsUpdate: false,
+              durationSecs: 1.2
             }
           },
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
       interaction: {
-        answer_groups: [],
-        confirmed_unclassified_answers: [],
-        customization_args: {},
-        default_outcome: {
+        answerGroups: [],
+        confirmedUnclassifiedAnswers: [],
+        customizationArgs: {},
+        defaultOutcome: {
           dest: 'new state',
           feedback: [],
-          param_changes: []
+          paramChanges: []
         },
         hints: [],
         id: 'EndExploration'
       },
-      param_changes: [],
-      solicit_answer_details: false,
-      written_translations: {
-        translations_mapping: {
+      paramChanges: [],
+      solicitAnswerDetails: false,
+      writtenTranslations: {
+        translationsMapping: {
           content: {},
-          default_outcome: {}
+          defaultOutcome: {}
         }
       },
     };

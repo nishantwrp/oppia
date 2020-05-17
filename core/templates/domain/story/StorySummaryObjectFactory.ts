@@ -57,18 +57,16 @@ export class StorySummaryObjectFactory {
   createFromBackendDict(storySummaryBackendDict: {
     id: string;
     title: string;
-    // eslint-disable-next-line camelcase
-    node_count: number;
+    nodeCount: number;
     description: string;
-    // eslint-disable-next-line camelcase
-    story_is_published: boolean;
+    storyIsPublished: boolean;
   }): StorySummary {
     return new StorySummary(
       storySummaryBackendDict.id,
       storySummaryBackendDict.title,
-      storySummaryBackendDict.node_count,
+      storySummaryBackendDict.nodeCount,
       storySummaryBackendDict.description,
-      storySummaryBackendDict.story_is_published
+      storySummaryBackendDict.storyIsPublished
     );
   }
 }

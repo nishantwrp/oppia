@@ -124,7 +124,7 @@ angular.module('oppia').directive('learnerViewInfo', [
                     RatingComputationService.computeAverageRating(
                       expInfo.ratings));
                   var contributorsSummary = (
-                    expInfo.human_readable_contributors_summary || {});
+                    expInfo.humanReadableContributorsSummary || {});
                   $scope.contributorNames = Object.keys(
                     contributorsSummary).sort(
                     function(contributorUsername1, contributorUsername2) {
@@ -140,7 +140,7 @@ angular.module('oppia').directive('learnerViewInfo', [
                     expInfo.tags);
                   $scope.explorationTitle = expInfo.title;
                   $scope.infoCardBackgroundCss = {
-                    'background-color': expInfo.thumbnail_bg_color
+                    'background-color': expInfo.thumbnailBgColor
                   };
                   $scope.titleWrapper = function() {
                     var titleHeight =
@@ -153,7 +153,7 @@ angular.module('oppia').directive('learnerViewInfo', [
                     return titleCss;
                   };
                   $scope.infoCardBackgroundImageUrl = expInfo
-                    .thumbnail_icon_url;
+                    .thumbnailIconUrl;
                   $scope.getStaticImageUrl = function(imagePath) {
                     return UrlInterpolationService.getStaticImageUrl(imagePath);
                   };

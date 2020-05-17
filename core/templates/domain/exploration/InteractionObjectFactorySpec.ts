@@ -82,13 +82,13 @@ describe('Interaction object factory', () => {
       {
         hintContent: {
           html: '<p>First Hint</p>',
-          contentId: 'content_id1'
+          contentId: 'contentId1'
         }
       },
       {
         hintContent: {
           html: '<p>Second Hint</p>',
-          contentId: 'content_id2'
+          contentId: 'contentId2'
         }
       }
     ];
@@ -226,20 +226,20 @@ describe('Interaction object factory', () => {
     const testInteraction = iof.createFromBackendDict(interactionDict);
 
     const newSolutionDict = {
-      answer_is_exclusive: false,
-      correct_answer: 'This is a new correct answer!',
+      answerIsExclusive: false,
+      correctAnswer: 'This is a new correct answer!',
       explanation: {
-        content_id: 'solution_new',
+        contentId: 'solution_new',
         html: 'This is the new explanation to the answer'
       }
     };
     const newSolution = sof.createFromBackendDict(newSolutionDict);
     expect(testInteraction.solution).toEqual(
       sof.createFromBackendDict({
-        answer_is_exclusive: false,
-        correct_answer: 'This is a correct answer!',
+        answerIsExclusive: false,
+        correctAnswer: 'This is a correct answer!',
         explanation: {
-          content_id: 'solution',
+          contentId: 'solution',
           html: 'This is the explanation to the answer'
         }
       }));
@@ -251,9 +251,9 @@ describe('Interaction object factory', () => {
     const testInteraction = iof.createFromBackendDict(interactionDict);
 
     const newHintDict = {
-      hint_content: {
+      hintContent: {
         html: '<p>New Hint</p>',
-        content_id: 'content_id_new'
+        contentId: 'contentId_new'
       }
     };
     const newHint = hof.createFromBackendDict(newHintDict);
@@ -298,7 +298,7 @@ describe('Interaction object factory', () => {
       {
         hintContent: {
           html: '<p>New Hint</p>',
-          contentId: 'content_id1_new'
+          contentId: 'contentId1_new'
         }
       }
     ];

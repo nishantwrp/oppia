@@ -35,9 +35,9 @@ describe('State classifier mapping service', () => {
     it('should return correct classifier details.', () => {
       mappingService.init({
         stateName1: {
-          algorithm_id: 'TestClassifier',
-          classifier_data: {},
-          data_schema_version: 1
+          algorithmId: 'TestClassifier',
+          classifierData: {},
+          dataSchemaVersion: 1
         }
       });
 

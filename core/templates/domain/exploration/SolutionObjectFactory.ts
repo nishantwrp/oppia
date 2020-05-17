@@ -34,17 +34,13 @@ import { SubtitledHtml, SubtitledHtmlObjectFactory } from
 import { UnitsObjectFactory } from 'domain/objects/UnitsObjectFactory.ts';
 
 export interface ExplanationBackendDict {
-  /* eslint-disable camelcase */
-  content_id: string;
-  /* eslint-enable camelcase */
+  contentId: string;
   html: string;
 }
 
 export interface SolutionBackendDict {
-  /* eslint-disable camelcase */
-  answer_is_exclusive: boolean;
-  correct_answer: string;
-  /* eslint-enable camelcase */
+  answerIsExclusive: boolean;
+  correctAnswer: string;
   explanation: ExplanationBackendDict;
 }
 
@@ -68,8 +64,8 @@ export class Solution {
 
   toBackendDict(): SolutionBackendDict {
     return {
-      answer_is_exclusive: this.answerIsExclusive,
-      correct_answer: this.correctAnswer,
+      answerIsExclusive: this.answerIsExclusive,
+      correctAnswer: this.correctAnswer,
       explanation: this.explanation.toBackendDict()
     };
   }
@@ -140,8 +136,8 @@ export class SolutionObjectFactory {
     return new Solution(
       this.ehfs,
       this.shof,
-      solutionBackendDict.answer_is_exclusive,
-      solutionBackendDict.correct_answer,
+      solutionBackendDict.answerIsExclusive,
+      solutionBackendDict.correctAnswer,
       this.shof.createFromBackendDict(
         solutionBackendDict.explanation));
   }

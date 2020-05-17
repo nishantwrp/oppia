@@ -74,14 +74,14 @@ export class ThreadMessageObjectFactory {
   // camelCasing.
   createFromBackendDict(threadMessageBackendDict: any): ThreadMessage {
     return new ThreadMessage(
-      threadMessageBackendDict.author_username,
-      threadMessageBackendDict.created_on_msecs,
-      threadMessageBackendDict.entity_type, threadMessageBackendDict.entity_id,
-      threadMessageBackendDict.message_id, threadMessageBackendDict.text,
-      threadMessageBackendDict.updated_status,
-      threadMessageBackendDict.updated_subject,
+      threadMessageBackendDict.authorUsername,
+      threadMessageBackendDict.createdOnMsecs,
+      threadMessageBackendDict.entityType, threadMessageBackendDict.entityId,
+      threadMessageBackendDict.messageId, threadMessageBackendDict.text,
+      threadMessageBackendDict.updatedStatus,
+      threadMessageBackendDict.updatedSubject,
       this.threadMessageSummaryObjectFactory.createNew(
-        threadMessageBackendDict.author_username,
+        threadMessageBackendDict.authorUsername,
         threadMessageBackendDict.text));
   }
 }

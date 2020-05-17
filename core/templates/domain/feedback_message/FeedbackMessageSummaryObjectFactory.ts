@@ -70,13 +70,13 @@ export class FeedbackMessageSummaryObjectFactory {
     return new FeedbackMessageSummary(
       feedbackMessageSummaryBackendDict.message_id,
       feedbackMessageSummaryBackendDict.text,
-      feedbackMessageSummaryBackendDict.updated_status,
-      feedbackMessageSummaryBackendDict.suggestion_html,
-      feedbackMessageSummaryBackendDict.current_content_html,
+      feedbackMessageSummaryBackendDict.updatedStatus,
+      feedbackMessageSummaryBackendDict.suggestionHtml,
+      feedbackMessageSummaryBackendDict.currentContentHtml,
       feedbackMessageSummaryBackendDict.description,
-      feedbackMessageSummaryBackendDict.author_username,
-      feedbackMessageSummaryBackendDict.author_picture_data_url,
-      feedbackMessageSummaryBackendDict.created_on_msecs);
+      feedbackMessageSummaryBackendDict.authorUsername,
+      feedbackMessageSummaryBackendDict.authorPictureDataUrl,
+      feedbackMessageSummaryBackendDict.createdOnMsecs);
   }
 }
 

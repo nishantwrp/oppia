@@ -80,7 +80,7 @@ angular.module('oppia').directive('topicLandingPage', [
           };
 
           ctrl.onClickGetStartedButton = function() {
-            var collectionId = topicData.collection_id;
+            var collectionId = topicData.collectionId;
             SiteAnalyticsService.registerOpenCollectionFromLandingPageEvent(
               collectionId);
             $timeout(function() {

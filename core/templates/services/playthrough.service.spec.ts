@@ -144,9 +144,9 @@ describe('PlaythroughService', () => {
         playthroughService.recordPlaythrough(false);
 
         let postData = {
-          playthrough_data: playthroughService.playthrough.toBackendDict(),
-          issue_schema_version: 1,
-          playthrough_id: null
+          playthroughData: playthroughService.playthrough.toBackendDict(),
+          issueSchemaVersion: 1,
+          playthroughId: null
         };
         let req = httpTestingController.expectOne(
           '/explorehandler/store_playthrough/expId');
@@ -172,9 +172,9 @@ describe('PlaythroughService', () => {
         playthroughService.recordPlaythrough(false);
 
         let postData = {
-          playthrough_data: playthroughService.playthrough.toBackendDict(),
-          issue_schema_version: 1,
-          playthrough_id: null
+          playthroughData: playthroughService.playthrough.toBackendDict(),
+          issueSchemaVersion: 1,
+          playthroughId: null
         };
         let req = httpTestingController.expectOne(
           '/explorehandler/store_playthrough/expId');
@@ -216,9 +216,9 @@ describe('PlaythroughService', () => {
         playthroughService.recordPlaythrough(false);
 
         let postData = {
-          playthrough_data: playthroughService.playthrough.toBackendDict(),
-          issue_schema_version: 1,
-          playthrough_id: null
+          playthroughData: playthroughService.playthrough.toBackendDict(),
+          issueSchemaVersion: 1,
+          playthroughId: null
         };
         let req = httpTestingController.expectOne(
           '/explorehandler/store_playthrough/expId');
@@ -263,9 +263,9 @@ describe('PlaythroughService', () => {
         playthroughService.recordPlaythrough(false);
 
         let postData = {
-          playthrough_data: playthroughService.playthrough.toBackendDict(),
-          issue_schema_version: 1,
-          playthrough_id: null
+          playthroughData: playthroughService.playthrough.toBackendDict(),
+          issueSchemaVersion: 1,
+          playthroughId: null
         };
         let req = httpTestingController.expectOne(
           '/explorehandler/store_playthrough/expId');

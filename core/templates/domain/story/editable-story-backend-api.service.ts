@@ -34,9 +34,9 @@ angular.module('oppia').factory('EditableStoryBackendApiService', [
 
       $http.get(storyDataUrl).then(function(response) {
         var story = angular.copy(response.data.story);
-        var topicName = angular.copy(response.data.topic_name);
-        var storyIsPublished = response.data.story_is_published;
-        var skillSummaries = angular.copy(response.data.skill_summaries);
+        var topicName = angular.copy(response.data.topicName);
+        var storyIsPublished = response.data.storyIsPublished;
+        var skillSummaries = angular.copy(response.data.skillSummaries);
         if (successCallback) {
           successCallback({
             story: story,

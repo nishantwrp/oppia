@@ -58,8 +58,8 @@ export class SkillOpportunity {
 export class SkillOpportunityObjectFactory {
   createFromBackendDict(backendDict: any): SkillOpportunity {
     return new SkillOpportunity(
-      backendDict.id, backendDict.skill_description, backendDict.topic_name,
-      backendDict.question_count);
+      backendDict.id, backendDict.skillDescription, backendDict.topicName,
+      backendDict.questionCount);
   }
 }
 

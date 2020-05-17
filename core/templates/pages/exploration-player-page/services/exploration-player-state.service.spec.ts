@@ -147,7 +147,7 @@ describe('Exploration Player State Service', () => {
         title: 'exploration title',
         states: {}
       },
-      session_id: '123'
+      sessionId: '123'
     }, {}, {}]);
     spyOn($q, 'all').and.returnValue(deferred.promise);
     spyOn(StatsReportingService, 'initSession').and.callFake((

@@ -45,20 +45,20 @@ describe('Parameter Metadata Service', function() {
     $provide.value('ExplorationParamChangesService', {
       savedMemento: [{
         customizationArgs: {
-          parse_with_jinja: false,
+          parseWithJinja: false,
           value: '5'
         },
         generatorId: 'Copier',
         name: 'ParamChange1'
       }, {
         customizationArgs: {
-          parse_with_jinja: true,
+          parseWithJinja: true,
           value: '{{ParamChange2}}'
         },
         generatorId: 'Copier',
       }, {
         customizationArgs: {
-          parse_with_jinja: true,
+          parseWithJinja: true,
           value: '5'
         },
         generatorId: 'RandomSelector',

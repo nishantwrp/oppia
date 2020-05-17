@@ -125,7 +125,7 @@ angular.module('oppia').factory('ExplorationEngineService', [
       var newParams = angular.copy(oldParams);
       if (paramChanges.every(function(pc) {
         if (pc.generatorId === 'Copier') {
-          if (!pc.customizationArgs.parse_with_jinja) {
+          if (!pc.customizationArgs.parseWithJinja) {
             newParams[pc.name] = pc.customizationArgs.value;
           } else {
             var paramValue = ExpressionInterpolationService.processUnicode(

@@ -45,7 +45,7 @@ angular.module('oppia').factory('ParameterMetadataService', [
       for (var i = 0; i < paramChanges.length; i++) {
         var pc = paramChanges[i];
         if (pc.generatorId === 'Copier') {
-          if (!pc.customizationArgs.parse_with_jinja) {
+          if (!pc.customizationArgs.parseWithJinja) {
             result.push(ParamMetadataObjectFactory.createWithSetAction(
               pc.name, PARAM_SOURCE_PARAM_CHANGES, i));
           } else {

@@ -48,12 +48,12 @@ export class AnswerGroup {
   // which give tslint errors against underscore_casing in favor of camelCasing.
   toBackendDict(): any {
     return {
-      rule_specs: this.rules.map((rule: Rule) => {
+      ruleSpecs: this.rules.map((rule: Rule) => {
         return rule.toBackendDict();
       }),
       outcome: this.outcome.toBackendDict(),
-      training_data: this.trainingData,
-      tagged_skill_misconception_id: this.taggedSkillMisconceptionId
+      trainingData: this.trainingData,
+      taggedSkillMisconceptionId: this.taggedSkillMisconceptionId
     };
   }
 }
@@ -91,11 +91,11 @@ export class AnswerGroupObjectFactory {
   // which give tslint errors against underscore_casing in favor of camelCasing.
   createFromBackendDict(answerGroupBackendDict: any): AnswerGroup {
     return new AnswerGroup(
-      this.generateRulesFromBackend(answerGroupBackendDict.rule_specs),
+      this.generateRulesFromBackend(answerGroupBackendDict.ruleSpecs),
       this.outcomeObjectFactory.createFromBackendDict(
         answerGroupBackendDict.outcome),
-      answerGroupBackendDict.training_data,
-      answerGroupBackendDict.tagged_skill_misconception_id);
+      answerGroupBackendDict.trainingData,
+      answerGroupBackendDict.taggedSkillMisconceptionId);
   }
 }
 

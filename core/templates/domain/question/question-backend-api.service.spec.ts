@@ -118,7 +118,7 @@ describe('Question backend Api service', () => {
     flushMicrotasks();
 
     expect(successHandler).toHaveBeenCalledWith(
-      sampleDataResults.question_dicts);
+      sampleDataResults.questionDicts);
     expect(failHandler).not.toHaveBeenCalled();
   }));
 
@@ -141,7 +141,7 @@ describe('Question backend Api service', () => {
     flushMicrotasks();
 
     expect(successHandler).toHaveBeenCalledWith(
-      sampleDataResults.question_dicts);
+      sampleDataResults.questionDicts);
     expect(failHandler).not.toHaveBeenCalled();
   }));
 

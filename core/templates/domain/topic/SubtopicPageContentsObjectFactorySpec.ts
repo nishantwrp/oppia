@@ -34,10 +34,10 @@ describe('Subtopic page contents object factory', () => {
   const expectedDefaultObject = {
     subtitled_html: {
       html: '',
-      content_id: 'content'
+      contentId: 'content'
     },
-    recorded_voiceovers: {
-      voiceovers_mapping: {
+    recordedVoiceovers: {
+      voiceoversMapping: {
         content: {}
       }
     }
@@ -46,16 +46,16 @@ describe('Subtopic page contents object factory', () => {
   const backendDict = {
     subtitled_html: {
       html: 'test content',
-      content_id: 'content'
+      contentId: 'content'
     },
-    recorded_voiceovers: {
-      voiceovers_mapping: {
+    recordedVoiceovers: {
+      voiceoversMapping: {
         content: {
           en: {
             filename: 'test.mp3',
-            file_size_bytes: 100,
-            needs_update: false,
-            duration_secs: 0.2
+            fileSizeBytes: 100,
+            needsUpdate: false,
+            durationSecs: 0.2
           }
         }
       }
@@ -91,9 +91,9 @@ describe('Subtopic page contents object factory', () => {
     expect(sampleSubtopicPageContents.getRecordedVoiceovers().getVoiceover(
       'content', 'en').toBackendDict()).toEqual({
       filename: 'test.mp3',
-      file_size_bytes: 100,
-      needs_update: false,
-      duration_secs: 0.2
+      fileSizeBytes: 100,
+      needsUpdate: false,
+      durationSecs: 0.2
     });
   });
 
@@ -125,7 +125,7 @@ describe('Subtopic page contents object factory', () => {
     expect(sampleSubtopicPageContents.getSubtitledHtml()).toEqual(
       subtitledHtmlObjectFactory.createFromBackendDict({
         html: 'test content',
-        content_id: 'content'
+        contentId: 'content'
       }));
 
     sampleSubtopicPageContents.setSubtitledHtml(
@@ -134,7 +134,7 @@ describe('Subtopic page contents object factory', () => {
     expect(sampleSubtopicPageContents.getSubtitledHtml()).toEqual(
       subtitledHtmlObjectFactory.createFromBackendDict({
         html: 'new html content',
-        content_id: 'new id'
+        contentId: 'new id'
       }));
   });
 
@@ -145,20 +145,20 @@ describe('Subtopic page contents object factory', () => {
     expect(sampleSubtopicPageContents.getRecordedVoiceovers().getVoiceover(
       'content', 'en').toBackendDict()).toEqual({
       filename: 'test.mp3',
-      file_size_bytes: 100,
-      needs_update: false,
-      duration_secs: 0.2
+      fileSizeBytes: 100,
+      needsUpdate: false,
+      durationSecs: 0.2
     });
 
     sampleSubtopicPageContents.setRecordedVoiceovers(
       recordedVoiceoversObjectFactory.createFromBackendDict({
-        voiceovers_mapping: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'new_file.mp3',
-              file_size_bytes: 300,
-              needs_update: false,
-              duration_secs: 0.6
+              fileSizeBytes: 300,
+              needsUpdate: false,
+              durationSecs: 0.6
             }
           }
         }
@@ -167,9 +167,9 @@ describe('Subtopic page contents object factory', () => {
     expect(sampleSubtopicPageContents.getRecordedVoiceovers().getVoiceover(
       'content', 'en').toBackendDict()).toEqual({
       filename: 'new_file.mp3',
-      file_size_bytes: 300,
-      needs_update: false,
-      duration_secs: 0.6
+      fileSizeBytes: 300,
+      needsUpdate: false,
+      durationSecs: 0.6
     });
   });
 });

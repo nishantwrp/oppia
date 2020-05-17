@@ -84,18 +84,18 @@ angular.module('oppia').factory('ExplorationPlayerStateService', [
 
     var initializeExplorationServices = function(
         returnDict, arePretestsAvailable, callback) {
-      StateClassifierMappingService.init(returnDict.state_classifier_mapping);
+      StateClassifierMappingService.init(returnDict.stateClassifierMapping);
       // For some cases, version is set only after
       // ReadOnlyExplorationBackendApiService.loadExploration() has completed.
       // Use returnDict.version for non-null version value.
       StatsReportingService.initSession(
         explorationId, returnDict.exploration.title, returnDict.version,
-        returnDict.session_id, UrlService.getCollectionIdFromExplorationUrl());
+        returnDict.sessionId, UrlService.getCollectionIdFromExplorationUrl());
       PlaythroughService.initSession(
         explorationId, returnDict.version,
-        returnDict.record_playthrough_probability);
+        returnDict.recordPlaythroughProbability);
       PlayerCorrectnessFeedbackEnabledService.init(
-        returnDict.correctness_feedback_enabled);
+        returnDict.correctnessFeedbackEnabled);
       ExplorationEngineService.init(
         returnDict.exploration, returnDict.version,
         returnDict.preferredAudioLanguageCode, returnDict.autoTtsEnabled,
@@ -160,7 +160,7 @@ angular.module('oppia').factory('ExplorationPlayerStateService', [
         ExplorationEngineService.init(
           explorationData, null, null, null, callback);
         PlayerCorrectnessFeedbackEnabledService.init(
-          explorationData.correctness_feedback_enabled);
+          explorationData.correctnessFeedbackEnabled);
         NumberAttemptsService.reset();
       });
     };

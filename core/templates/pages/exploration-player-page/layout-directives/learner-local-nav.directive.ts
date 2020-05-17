@@ -146,7 +146,7 @@ angular.module('oppia').directive('learnerLocalNav', [
             ReadOnlyExplorationBackendApiService
               .loadExploration(ctrl.explorationId)
               .then(function(exploration) {
-                ctrl.canEdit = exploration.can_edit;
+                ctrl.canEdit = exploration.canEdit;
               });
             ctrl.username = '';
             LoaderService.showLoadingScreen('Loading');

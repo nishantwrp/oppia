@@ -41,30 +41,30 @@ describe('Audio translation manager service', () => {
     testAudioTranslations = {
       en: vof.createFromBackendDict({
         filename: 'audio-en.mp3',
-        file_size_bytes: 0.5,
-        needs_update: false,
-        duration_secs: 0.5
+        fileSizeBytes: 0.5,
+        needsUpdate: false,
+        durationSecs: 0.5
       }),
       es: vof.createFromBackendDict({
         filename: 'audio-es.mp3',
-        file_size_bytes: 0.5,
-        needs_update: false,
-        duration_secs: 0.5
+        fileSizeBytes: 0.5,
+        needsUpdate: false,
+        durationSecs: 0.5
       })
     };
 
     testAudioTranslations2 = {
       zh: vof.createFromBackendDict({
         filename: 'audio-zh.mp3',
-        file_size_bytes: 0.5,
-        needs_update: false,
-        duration_secs: 0.5
+        fileSizeBytes: 0.5,
+        needsUpdate: false,
+        durationSecs: 0.5
       }),
       'hi-en': vof.createFromBackendDict({
         filename: 'audio-hi-en.mp3',
-        file_size_bytes: 0.5,
-        needs_update: false,
-        duration_secs: 0.5
+        fileSizeBytes: 0.5,
+        needsUpdate: false,
+        durationSecs: 0.5
       })
     };
   });
@@ -75,45 +75,45 @@ describe('Audio translation manager service', () => {
       expect(atms.getCurrentAudioTranslations()).toEqual({
         en: vof.createFromBackendDict({
           filename: 'audio-en.mp3',
-          file_size_bytes: 0.5,
-          needs_update: false,
-          duration_secs: 0.5
+          fileSizeBytes: 0.5,
+          needsUpdate: false,
+          durationSecs: 0.5
         }),
         es: vof.createFromBackendDict({
           filename: 'audio-es.mp3',
-          file_size_bytes: 0.5,
-          needs_update: false,
-          duration_secs: 0.5
+          fileSizeBytes: 0.5,
+          needsUpdate: false,
+          durationSecs: 0.5
         })
       });
       atms.setSecondaryAudioTranslations(testAudioTranslations2, '', '');
       expect(atms.getCurrentAudioTranslations()).toEqual({
         zh: vof.createFromBackendDict({
           filename: 'audio-zh.mp3',
-          file_size_bytes: 0.5,
-          needs_update: false,
-          duration_secs: 0.5
+          fileSizeBytes: 0.5,
+          needsUpdate: false,
+          durationSecs: 0.5
         }),
         'hi-en': vof.createFromBackendDict({
           filename: 'audio-hi-en.mp3',
-          file_size_bytes: 0.5,
-          needs_update: false,
-          duration_secs: 0.5
+          fileSizeBytes: 0.5,
+          needsUpdate: false,
+          durationSecs: 0.5
         })
       });
       atms.clearSecondaryAudioTranslations();
       expect(atms.getCurrentAudioTranslations()).toEqual({
         en: vof.createFromBackendDict({
           filename: 'audio-en.mp3',
-          file_size_bytes: 0.5,
-          needs_update: false,
-          duration_secs: 0.5
+          fileSizeBytes: 0.5,
+          needsUpdate: false,
+          durationSecs: 0.5
         }),
         es: vof.createFromBackendDict({
           filename: 'audio-es.mp3',
-          file_size_bytes: 0.5,
-          needs_update: false,
-          duration_secs: 0.5
+          fileSizeBytes: 0.5,
+          needsUpdate: false,
+          durationSecs: 0.5
         })
       });
     });

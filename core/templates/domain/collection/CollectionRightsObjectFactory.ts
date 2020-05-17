@@ -42,11 +42,11 @@ export class CollectionRights {
   // underscore_cased keys which give tslint errors against underscore_casing
   // in favor of camelCasing.
   constructor(collectionRightsObject: any) {
-    this._collectionId = collectionRightsObject.collection_id;
-    this._canEdit = collectionRightsObject.can_edit;
-    this._canUnpublish = collectionRightsObject.can_unpublish;
-    this._isPrivate = collectionRightsObject.is_private;
-    this._ownerNames = collectionRightsObject.owner_names;
+    this._collectionId = collectionRightsObject.collectionId;
+    this._canEdit = collectionRightsObject.canEdit;
+    this._canUnpublish = collectionRightsObject.canUnpublish;
+    this._isPrivate = collectionRightsObject.isPrivate;
+    this._ownerNames = collectionRightsObject.ownerNames;
   }
 
   getCollectionId(): number {

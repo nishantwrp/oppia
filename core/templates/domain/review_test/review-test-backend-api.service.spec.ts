@@ -33,7 +33,7 @@ describe('Review test backend API service', () => {
 
   var sampleDataResults = {
     story_name: 'Story Name',
-    skill_descriptions: {}
+    skillDescriptions: {}
   };
 
   beforeEach(() => {

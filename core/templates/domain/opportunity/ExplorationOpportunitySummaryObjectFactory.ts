@@ -77,9 +77,9 @@ export class ExplorationOpportunitySummary {
 export class ExplorationOpportunitySummaryObjectFactory {
   createFromBackendDict(backendDict: any): ExplorationOpportunitySummary {
     return new ExplorationOpportunitySummary(
-      backendDict.id, backendDict.topic_name, backendDict.story_title,
-      backendDict.chapter_title, backendDict.content_count,
-      backendDict.translation_counts);
+      backendDict.id, backendDict.topicName, backendDict.storyTitle,
+      backendDict.chapterTitle, backendDict.contentCount,
+      backendDict.translationCounts);
   }
 }
 

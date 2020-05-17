@@ -74,19 +74,19 @@ describe('State card object factory', () => {
       'State 1', '<p>Content</p>', '<interaction></interaction>',
       interactionObjectFactory.createFromBackendDict(interactionDict),
       recordedVoiceoversObjectFactory.createFromBackendDict({
-        voiceovers_mapping: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'filename1.mp3',
-              file_size_bytes: 100000,
-              needs_update: false,
-              duration_secs: 10.0
+              fileSizeBytes: 100000,
+              needsUpdate: false,
+              durationSecs: 10.0
             },
             hi: {
               filename: 'filename2.mp3',
-              file_size_bytes: 11000,
-              needs_update: false,
-              duration_secs: 0.11
+              fileSizeBytes: 11000,
+              needsUpdate: false,
+              durationSecs: 0.11
             }
           }
         }
@@ -107,29 +107,29 @@ describe('State card object factory', () => {
       'content')).toEqual({
       en: voiceoverObjectFactory.createFromBackendDict({
         filename: 'filename1.mp3',
-        file_size_bytes: 100000,
-        needs_update: false,
-        duration_secs: 10.0
+        fileSizeBytes: 100000,
+        needsUpdate: false,
+        durationSecs: 10.0
       }),
       hi: voiceoverObjectFactory.createFromBackendDict({
         filename: 'filename2.mp3',
-        file_size_bytes: 11000,
-        needs_update: false,
-        duration_secs: 0.11
+        fileSizeBytes: 11000,
+        needsUpdate: false,
+        durationSecs: 0.11
       })
     });
     expect(_sampleCard.getVoiceovers()).toEqual({
       en: voiceoverObjectFactory.createFromBackendDict({
         filename: 'filename1.mp3',
-        file_size_bytes: 100000,
-        needs_update: false,
-        duration_secs: 10.0
+        fileSizeBytes: 100000,
+        needsUpdate: false,
+        durationSecs: 10.0
       }),
       hi: voiceoverObjectFactory.createFromBackendDict({
         filename: 'filename2.mp3',
-        file_size_bytes: 11000,
-        needs_update: false,
-        duration_secs: 0.11
+        fileSizeBytes: 11000,
+        needsUpdate: false,
+        durationSecs: 0.11
       })
     });
 

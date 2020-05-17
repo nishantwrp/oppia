@@ -33,7 +33,7 @@ describe('Story contents object factory', () => {
     storyContentsObjectFactory = TestBed.get(StoryContentsObjectFactory);
 
     var sampleStoryContentsBackendDict = {
-      initial_node_id: 'node_1',
+      initialNodeId: 'node_1',
       nodes: [
         {
           id: 'node_1',
@@ -89,9 +89,9 @@ describe('Story contents object factory', () => {
   it('should correctly set initial node id when first node is ' +
     'created', () => {
     var sampleStoryContentsBackendDict = {
-      initial_node_id: null,
+      initialNodeId: null,
       nodes: [],
-      next_node_id: 'node_1'
+      nextNodeId: 'node_1'
     };
     var storyContents = storyContentsObjectFactory.createFromBackendDict(
       sampleStoryContentsBackendDict);

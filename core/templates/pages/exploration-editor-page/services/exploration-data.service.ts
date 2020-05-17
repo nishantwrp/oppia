@@ -184,8 +184,8 @@ angular.module('oppia').factory('ExplorationDataService', [
             explorationData.data = response;
             if (successCallback) {
               successCallback(
-                response.is_version_of_draft_valid,
-                response.draft_changes);
+                response.isVersionOfDraftValid,
+                response.draftChanges);
             }
           }, function() {
             if (errorCallback) {

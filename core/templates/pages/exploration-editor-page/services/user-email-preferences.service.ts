@@ -82,8 +82,8 @@ angular.module('oppia').factory('UserEmailPreferencesService', [
             var data = response.data;
             AlertsService.clearWarnings();
             that.init(
-              data.email_preferences.mute_feedback_notifications,
-              data.email_preferences.mute_suggestion_notifications);
+              data.emailPreferences.muteFeedbackNotifications,
+              data.emailPreferences.muteSuggestionNotifications);
           }
         );
       }

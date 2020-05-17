@@ -58,13 +58,13 @@ export class ContributionOpportunitiesBackendApiService {
       opportunityType === constants.OPPORTUNITY_TYPE_VOICEOVER ||
       opportunityType === constants.OPPORTUNITY_TYPE_TRANSLATION) {
       return new ExplorationOpportunitySummary(opportunityDict.id,
-        opportunityDict.topic_name, opportunityDict.story_title,
-        opportunityDict.chapter_title, opportunityDict.content_count,
+        opportunityDict.topicName, opportunityDict.storyTitle,
+        opportunityDict.chapterTitle, opportunityDict.contentCount,
         opportunityDict.translation_counts);
     } else if (opportunityType === constants.OPPORTUNITY_TYPE_SKILL) {
       return new SkillOpportunity(
         opportunityDict.id, opportunityDict.skill_description,
-        opportunityDict.topic_name, opportunityDict.question_count);
+        opportunityDict.topicName, opportunityDict.questionCount);
     }
   }
 

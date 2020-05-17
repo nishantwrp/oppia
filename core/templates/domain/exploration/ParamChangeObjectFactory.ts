@@ -24,11 +24,11 @@ import { downgradeInjectable } from '@angular/upgrade/static';
 
 var DEFAULT_CUSTOMIZATION_ARGS = {
   Copier: {
-    parse_with_jinja: true,
+    parseWithJinja: true,
     value: '5'
   },
   RandomSelector: {
-    list_of_values: ['sample value']
+    listOfValues: ['sample value']
   }
 };
 
@@ -79,7 +79,7 @@ export class ParamChangeObjectFactory {
   }
   createEmpty(paramName: string): ParamChange {
     return new ParamChange({
-      parse_with_jinja: true,
+      parseWithJinja: true,
       value: ''
     }, 'Copier', paramName);
   }

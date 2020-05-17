@@ -149,20 +149,20 @@ describe('Exploration Warnings Service', function() {
       $provide.value('ExplorationParamChangesService', {
         savedMemento: [{
           customizationArgs: {
-            parse_with_jinja: false,
+            parseWithJinja: false,
             value: '5'
           },
           generatorId: 'Copier',
           name: 'ParamChange1'
         }, {
           customizationArgs: {
-            parse_with_jinja: true,
+            parseWithJinja: true,
             value: '{{ParamChange2}}'
           },
           generatorId: 'Copier',
         }, {
           customizationArgs: {
-            parse_with_jinja: true,
+            parseWithJinja: true,
             value: '5'
           },
           generatorId: 'RandomSelector',
@@ -266,8 +266,8 @@ describe('Exploration Warnings Service', function() {
             contentId: 'content',
             html: '{{HtmlValue}}'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {},
+          recordedVoiceovers: {
+            voiceoversMapping: {},
           },
           paramChanges: [],
           interaction: {
@@ -631,7 +631,7 @@ describe('Exploration Warnings Service', function() {
             html: '{{HtmlValue}}'
           },
           recordedVoiceovers: {
-            voiceovers_mapping: {},
+            voiceoversMapping: {},
           },
           paramChanges: [],
           interaction: {
@@ -868,7 +868,7 @@ describe('Exploration Warnings Service', function() {
       $provide.value('ExplorationParamChangesService', {
         savedMemento: [{
           customizationArgs: {
-            parse_with_jinja: true,
+            parseWithJinja: true,
             value: ''
           },
           generatorId: 'Copier',

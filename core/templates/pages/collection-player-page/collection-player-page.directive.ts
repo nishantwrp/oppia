@@ -172,12 +172,12 @@ angular.module('oppia').directive('collectionPlayerPage', [
             iconParametersArray.push({
               thumbnailIconUrl:
                 collectionNodes[0].getExplorationSummaryObject(
-                ).thumbnail_icon_url.replace('subjects', 'inverted_subjects'),
+                ).thumbnailIconUrl.replace('subjects', 'inverted_subjects'),
               left: '225px',
               top: '35px',
               thumbnailBgColor:
                 collectionNodes[0].getExplorationSummaryObject(
-                ).thumbnail_bg_color
+                ).thumbnailBgColor
             });
 
             // Here x and y represent the co-ordinates for the icons in the
@@ -202,12 +202,12 @@ angular.module('oppia').directive('collectionPlayerPage', [
               iconParametersArray.push({
                 thumbnailIconUrl:
                   collectionNodes[i].getExplorationSummaryObject(
-                  ).thumbnail_icon_url.replace('subjects', 'inverted_subjects'),
+                  ).thumbnailIconUrl.replace('subjects', 'inverted_subjects'),
                 left: x + 'px',
                 top: y + 'px',
                 thumbnailBgColor:
                   collectionNodes[i].getExplorationSummaryObject(
-                  ).thumbnail_bg_color
+                  ).thumbnailBgColor
               });
             }
             return iconParametersArray;

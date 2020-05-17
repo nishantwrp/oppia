@@ -45,7 +45,7 @@ export class WrittenTranslation {
   toBackendDict(): any {
     return {
       html: this.html,
-      needs_update: this.needsUpdate
+      needsUpdate: this.needsUpdate
     };
   }
 }
@@ -64,7 +64,7 @@ export class WrittenTranslationObjectFactory {
   createFromBackendDict(translationBackendDict: any) {
     return new WrittenTranslation(
       translationBackendDict.html,
-      translationBackendDict.needs_update);
+      translationBackendDict.needsUpdate);
   }
 }
 

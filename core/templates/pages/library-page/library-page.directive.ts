@@ -275,11 +275,11 @@ angular.module('oppia').directive('libraryPage', [
                           var ACTIVITY_TYPE_COLLECTION = 'collection';
                           activitySummaryDicts.forEach(function(
                               activitySummaryDict) {
-                            if (activitySummaryDict.activity_type === (
+                            if (activitySummaryDict.activityType === (
                               ACTIVITY_TYPE_EXPLORATION)) {
                               ctrl.activitiesOwned.explorations[
                                 activitySummaryDict.id] = false;
-                            } else if (activitySummaryDict.activity_type === (
+                            } else if (activitySummaryDict.activityType === (
                               ACTIVITY_TYPE_COLLECTION)) {
                               ctrl.activitiesOwned.collections[
                                 activitySummaryDict.id] = false;
@@ -287,7 +287,7 @@ angular.module('oppia').directive('libraryPage', [
                               $log.error('INVALID ACTIVITY TYPE: Activity' +
                               '(id: ' + activitySummaryDict.id +
                               ', name: ' + activitySummaryDict.title +
-                              ', type: ' + activitySummaryDict.activity_type +
+                              ', type: ' + activitySummaryDict.activityType +
                               ') has an invalid activity type, which could ' +
                               'not be recorded as an exploration or a ' +
                               'collection.'

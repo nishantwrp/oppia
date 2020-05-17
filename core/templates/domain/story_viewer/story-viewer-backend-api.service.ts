@@ -73,8 +73,8 @@ export class StoryViewerBackendApiService {
     this.http.post(chapterCompletionUrl, {}).toPromise().then((data: any) => {
       successCallback({
         summaries: data.summaries,
-        nextNodeId: data.next_node_id,
-        readyForReviewTest: data.ready_for_review_test});
+        nextNodeId: data.nextNodeId,
+        readyForReviewTest: data.readyForReviewTest});
     });
   }
 

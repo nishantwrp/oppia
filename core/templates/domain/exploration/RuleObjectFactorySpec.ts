@@ -32,7 +32,7 @@ describe('RuleObjectFactory', () => {
       x: [['<p>list_of_sets_of_html_strings</p>']]
     };
     ruleBackendDict = {
-      rule_type: 'rule_type_1',
+      ruleType: 'rule_type_1',
       inputs: inputBackend
     };
   });

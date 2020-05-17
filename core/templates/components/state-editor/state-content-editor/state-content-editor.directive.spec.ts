@@ -41,7 +41,7 @@ describe('State content editor directive', function() {
 
   var _getContent = function(contentId, contentString) {
     return shof.createFromBackendDict({
-      content_id: contentId,
+      contentId: contentId,
       html: contentString
     });
   };

@@ -40,6 +40,6 @@ describe('Exploration Param Specs Service', function() {
   }));
 
   it('should test the child object properties', function() {
-    expect(epcs.propertyName).toBe('param_specs');
+    expect(epcs.propertyName).toBe('paramSpecs');
   });
 });

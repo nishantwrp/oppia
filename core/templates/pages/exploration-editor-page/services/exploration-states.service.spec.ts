@@ -250,12 +250,12 @@ describe('ExplorationStatesService', function() {
   it('should save the solicitAnswerDetails correctly', function() {
     expect(
       ExplorationStatesService.getSolicitAnswerDetailsMemento(
-        'Hola', 'solicit_answer_details')).toEqual(false);
+        'Hola', 'solicitAnswerDetails')).toEqual(false);
     spyOn(ChangeListService, 'editStateProperty');
     ExplorationStatesService.saveSolicitAnswerDetails('Hola', true);
     expect(ChangeListService.editStateProperty).toHaveBeenCalledWith(
-      'Hola', 'solicit_answer_details', true, false);
+      'Hola', 'solicitAnswerDetails', true, false);
     expect(ExplorationStatesService.getSolicitAnswerDetailsMemento(
-      'Hola', 'solicit_answer_details')).toEqual(true);
+      'Hola', 'solicitAnswerDetails')).toEqual(true);
   });
 });

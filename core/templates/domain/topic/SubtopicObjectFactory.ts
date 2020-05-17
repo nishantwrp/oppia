@@ -150,18 +150,18 @@ export class SubtopicObjectFactory {
   create(subtopicBackendDict, skillIdToDescriptionMap) {
     return new Subtopic(
       subtopicBackendDict.id, subtopicBackendDict.title,
-      subtopicBackendDict.skill_ids, skillIdToDescriptionMap,
-      this.skillSummaryObjectFactory, subtopicBackendDict.thumbnail_filename,
-      subtopicBackendDict.thumbnail_bg_color);
+      subtopicBackendDict.skillIds, skillIdToDescriptionMap,
+      this.skillSummaryObjectFactory, subtopicBackendDict.thumbnailFilename,
+      subtopicBackendDict.thumbnailBgColor);
   }
 
   createFromTitle(subtopicId, title) {
     return this.create({
       id: subtopicId,
       title: title,
-      skill_ids: [],
-      thumbnail_filename: null,
-      thumbnail_bg_color: null
+      skillIds: [],
+      thumbnailFilename: null,
+      thumbnailBgColor: null
     }, {});
   }
 }

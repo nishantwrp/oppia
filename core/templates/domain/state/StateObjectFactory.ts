@@ -104,7 +104,7 @@ export class StateObjectFactory {
     // These should remain in snake_case because the NEW_STATE_TEMPLATE
     // in constants.js is in snake_case because it is used in backend too.
     var newState = this.createFromBackendDict(newStateName, {
-      classifier_model_id: newStateTemplate.classifier_model_id,
+      classifierModelId: newStateTemplate.classifier_model_id,
       content: newStateTemplate.content,
       interaction: newStateTemplate.interaction,
       paramChanges: newStateTemplate.param_changes,

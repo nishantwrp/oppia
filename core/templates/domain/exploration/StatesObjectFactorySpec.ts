@@ -400,20 +400,20 @@ describe('States object factory', () => {
         .toEqual({
           'first state': [vof.createFromBackendDict({
             filename: 'myfile3.mp3',
-            file_size_bytes: 0.8,
-            needs_update: false,
-            duration_secs: 0.8
+            fileSizeBytes: 0.8,
+            needsUpdate: false,
+            durationSecs: 0.8
           }), vof.createFromBackendDict({
             filename: 'myfile8.mp3',
-            file_size_bytes: 1.2,
-            needs_update: false,
-            duration_secs: 1.2
+            fileSizeBytes: 1.2,
+            needsUpdate: false,
+            durationSecs: 1.2
           })],
           'second state': [vof.createFromBackendDict({
             filename: 'myfile2.mp3',
-            file_size_bytes: 0.8,
-            needs_update: false,
-            duration_secs: 0.8
+            fileSizeBytes: 0.8,
+            needsUpdate: false,
+            durationSecs: 0.8
           })]
         });
     });

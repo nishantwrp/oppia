@@ -55,8 +55,8 @@ export class PretestQuestionBackendApiService {
 
     this.http.get(pretestDataUrl).toPromise().then((data: any) => {
       var pretestQuestionDicts = (
-        cloneDeep(data.pretest_question_dicts));
-      this._cursor = data.next_start_cursor;
+        cloneDeep(data.pretestQuestionDicts));
+      this._cursor = data.nextStartCursor;
       if (successCallback) {
         successCallback(pretestQuestionDicts);
       }

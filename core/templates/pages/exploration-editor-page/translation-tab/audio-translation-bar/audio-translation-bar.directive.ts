@@ -302,8 +302,8 @@ angular.module('oppia').directive('audioTranslationBar', [
               }
               StateRecordedVoiceoversService.displayed.addVoiceover(
                 contentId, languageCode, filename, recordedAudioFile.size,
-                response.duration_secs);
-              $scope.durationSecs = Math.round(response.duration_secs);
+                response.durationSecs);
+              $scope.durationSecs = Math.round(response.durationSecs);
               saveRecordedVoiceoversChanges();
               AlertsService.addSuccessMessage(
                 'Succesfuly uploaded recorded audio.');
@@ -437,7 +437,7 @@ angular.module('oppia').directive('audioTranslationBar', [
               $scope.selectedRecording = false;
               $scope.audioNeedsUpdate = audioTranslationObject.needsUpdate;
               $scope.durationSecs =
-                Math.round(audioTranslationObject.duration_secs);
+                Math.round(audioTranslationObject.durationSecs);
             } else {
               $scope.isAudioAvailable = false;
               $scope.audioBlob = null;
@@ -541,7 +541,7 @@ angular.module('oppia').directive('audioTranslationBar', [
                           languageCode: languageCode,
                           filename: generatedFilename,
                           fileSizeBytes: uploadedFile.size,
-                          durationSecs: response.duration_secs
+                          durationSecs: response.durationSecs
                         });
                       }, function(errorResponse) {
                         $scope.errorMessage = (

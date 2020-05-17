@@ -27,9 +27,9 @@ describe('Voiceover object factory', () => {
     vof = new VoiceoverObjectFactory();
     voiceover = vof.createFromBackendDict({
       filename: 'a.mp3',
-      file_size_bytes: 200000,
-      needs_update: false,
-      duration_secs: 10.0
+      fileSizeBytes: 200000,
+      needsUpdate: false,
+      durationSecs: 10.0
     });
   });
 
@@ -37,9 +37,9 @@ describe('Voiceover object factory', () => {
     voiceover.markAsNeedingUpdate();
     expect(voiceover).toEqual(vof.createFromBackendDict({
       filename: 'a.mp3',
-      file_size_bytes: 200000,
-      needs_update: true,
-      duration_secs: 10.0
+      fileSizeBytes: 200000,
+      needsUpdate: true,
+      durationSecs: 10.0
     }));
   });
 
@@ -47,26 +47,26 @@ describe('Voiceover object factory', () => {
     voiceover.toggleNeedsUpdateAttribute();
     expect(voiceover).toEqual(vof.createFromBackendDict({
       filename: 'a.mp3',
-      file_size_bytes: 200000,
-      needs_update: true,
-      duration_secs: 10.0
+      fileSizeBytes: 200000,
+      needsUpdate: true,
+      durationSecs: 10.0
     }));
 
     voiceover.toggleNeedsUpdateAttribute();
     expect(voiceover).toEqual(vof.createFromBackendDict({
       filename: 'a.mp3',
-      file_size_bytes: 200000,
-      needs_update: false,
-      duration_secs: 10.0
+      fileSizeBytes: 200000,
+      needsUpdate: false,
+      durationSecs: 10.0
     }));
   });
 
   it('should convert to backend dict correctly', () => {
     expect(voiceover.toBackendDict()).toEqual({
       filename: 'a.mp3',
-      file_size_bytes: 200000,
-      needs_update: false,
-      duration_secs: 10.0
+      fileSizeBytes: 200000,
+      needsUpdate: false,
+      durationSecs: 10.0
     });
   });
 
@@ -74,9 +74,9 @@ describe('Voiceover object factory', () => {
     expect(vof.createNew('filename.mp3', 100000, 5.0)).toEqual(
       vof.createFromBackendDict({
         filename: 'filename.mp3',
-        file_size_bytes: 100000,
-        needs_update: false,
-        duration_secs: 5.0
+        fileSizeBytes: 100000,
+        needsUpdate: false,
+        durationSecs: 5.0
       })
     );
   });

@@ -32,15 +32,15 @@ describe('Subtopic viewer backend API service', () => {
     page_contents: {
       subtitled_html: {
         html: 'test content',
-        content_id: 'content'
+        contentId: 'content'
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'test.mp3',
-              file_size_bytes: 100,
-              needs_update: false
+              fileSizeBytes: 100,
+              needsUpdate: false
             }
           }
         }

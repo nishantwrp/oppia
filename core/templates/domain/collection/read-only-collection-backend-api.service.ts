@@ -67,7 +67,7 @@ export class ReadOnlyCollectionBackendApiService {
   // TODO(#7165): Replace 'any' with the exact type.
   private _cacheCollectionDetails(details: any) {
     this._collectionDetailsCache[details.collection.id] = {
-      canEdit: details.can_edit,
+      canEdit: details.canEdit,
       title: details.collection.title,
     };
   }

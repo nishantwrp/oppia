@@ -85,8 +85,8 @@ export class SubtopicPageContents {
   // camelCasing.
   toBackendDict(): any {
     return {
-      subtitled_html: this._subtitledHtml.toBackendDict(),
-      recorded_voiceovers: this._recordedVoiceovers.toBackendDict()
+      subtitledHtml: this._subtitledHtml.toBackendDict(),
+      recordedVoiceovers: this._recordedVoiceovers.toBackendDict()
     };
   }
 }
@@ -114,9 +114,9 @@ export class SubtopicPageContentsObjectFactory {
   createFromBackendDict(backendDict: any): SubtopicPageContents {
     return new SubtopicPageContents(
       this.subtitledHtmlObjectFactory.createFromBackendDict(
-        backendDict.subtitled_html),
+        backendDict.subtitledHtml),
       this.recordedVoiceoversObjectFactory.createFromBackendDict(
-        backendDict.recorded_voiceovers));
+        backendDict.recordedVoiceovers));
   }
 }
 

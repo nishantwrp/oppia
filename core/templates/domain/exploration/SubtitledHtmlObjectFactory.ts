@@ -18,7 +18,7 @@
  */
 
 export interface ISubtitledHtmlBackendDict {
-  'content_id': string;
+  contentId: string;
   html: string;
 }
 
@@ -52,7 +52,7 @@ export class SubtitledHtml {
   toBackendDict(): ISubtitledHtmlBackendDict {
     return {
       html: this._html,
-      content_id: this._contentId
+      contentId: this._contentId
     };
   }
 
@@ -68,7 +68,7 @@ export class SubtitledHtmlObjectFactory {
   createFromBackendDict(
       subtitledHtmlBackendDict: ISubtitledHtmlBackendDict): SubtitledHtml {
     return new SubtitledHtml(
-      subtitledHtmlBackendDict.html, subtitledHtmlBackendDict.content_id);
+      subtitledHtmlBackendDict.html, subtitledHtmlBackendDict.contentId);
   }
 
   createDefault(html: string, contentId: string): SubtitledHtml {

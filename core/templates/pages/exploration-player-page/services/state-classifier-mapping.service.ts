@@ -39,11 +39,11 @@ export class StateClassifierMappingService {
     for (var stateName in backendStateClassifierMapping) {
       if (backendStateClassifierMapping.hasOwnProperty(stateName)) {
         algorithmId = backendStateClassifierMapping[
-          stateName].algorithm_id;
+          stateName].algorithmId;
         classifierData = backendStateClassifierMapping[
-          stateName].classifier_data;
+          stateName].classifierData;
         dataSchemaVersion = backendStateClassifierMapping[
-          stateName].data_schema_version;
+          stateName].dataSchemaVersion;
         this.stateClassifierMapping[stateName] =
           this.classifierObjectFactory.create(
             algorithmId, classifierData, dataSchemaVersion);

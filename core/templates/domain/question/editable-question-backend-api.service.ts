@@ -68,13 +68,13 @@ angular.module('oppia').factory('EditableQuestionBackendApiService', [
       $http.get(questionDataUrl).then(function(response) {
         var questionObject =
           QuestionObjectFactory.createFromBackendDict(
-            response.data.question_dict);
+            response.data.questionDict);
         var skillDicts = angular.copy(
-          response.data.associated_skill_dicts);
+          response.data.associatedSkillDicts);
         if (successCallback) {
           successCallback({
             questionObject: questionObject,
-            associated_skill_dicts: skillDicts
+            associatedSkillDicts: skillDicts
           });
         }
       }, function(errorResponse) {
@@ -99,7 +99,7 @@ angular.module('oppia').factory('EditableQuestionBackendApiService', [
       };
       $http.put(editableQuestionDataUrl, putData).then(function(response) {
         // The returned data is an updated question dict.
-        var questionDict = angular.copy(response.data.question_dict);
+        var questionDict = angular.copy(response.data.questionDict);
 
         if (successCallback) {
           successCallback(questionDict);

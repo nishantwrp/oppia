@@ -605,7 +605,7 @@ describe('Topic update service', function() {
   it('should set/unset changes to a subtopic page\'s page content', function() {
     var newSampleSubtitledHtmlDict = {
       html: 'new content',
-      content_id: 'content'
+      contentId: 'content'
     };
     var newSampleSubtitledHtml =
       subtitledHtmlObjectFactory.createFromBackendDict(
@@ -613,16 +613,16 @@ describe('Topic update service', function() {
     expect(_sampleSubtopicPage.getPageContents().toBackendDict()).toEqual({
       subtitled_html: {
         html: 'test content',
-        content_id: 'content'
+        contentId: 'content'
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'test.mp3',
-              file_size_bytes: 100,
-              needs_update: false,
-              duration_secs: 0.1
+              fileSizeBytes: 100,
+              needsUpdate: false,
+              durationSecs: 0.1
             }
           }
         }
@@ -633,16 +633,16 @@ describe('Topic update service', function() {
     expect(_sampleSubtopicPage.getPageContents().toBackendDict()).toEqual({
       subtitled_html: {
         html: 'new content',
-        content_id: 'content'
+        contentId: 'content'
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'test.mp3',
-              file_size_bytes: 100,
-              needs_update: false,
-              duration_secs: 0.1
+              fileSizeBytes: 100,
+              needsUpdate: false,
+              durationSecs: 0.1
             }
           }
         }
@@ -653,16 +653,16 @@ describe('Topic update service', function() {
     expect(_sampleSubtopicPage.getPageContents().toBackendDict()).toEqual({
       subtitled_html: {
         html: 'test content',
-        content_id: 'content'
+        contentId: 'content'
       },
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      recordedVoiceovers: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'test.mp3',
-              file_size_bytes: 100,
-              needs_update: false,
-              duration_secs: 0.1
+              fileSizeBytes: 100,
+              needsUpdate: false,
+              durationSecs: 0.1
             }
           }
         }
@@ -674,7 +674,7 @@ describe('Topic update service', function() {
     function() {
       var newSampleSubtitledHtmlDict = {
         html: 'new content',
-        content_id: 'content'
+        contentId: 'content'
       };
       var newSampleSubtitledHtml =
         subtitledHtmlObjectFactory.createFromBackendDict(
@@ -688,7 +688,7 @@ describe('Topic update service', function() {
         new_value: newSampleSubtitledHtml.toBackendDict(),
         old_value: {
           html: 'test content',
-          content_id: 'content'
+          contentId: 'content'
         }
       }]);
     }
@@ -698,13 +698,13 @@ describe('Topic update service', function() {
      'page audio data',
   function() {
     var newRecordedVoiceoversDict = {
-      voiceovers_mapping: {
+      voiceoversMapping: {
         content: {
           en: {
             filename: 'test_2.mp3',
-            file_size_bytes: 1000,
-            needs_update: false,
-            duration_secs: 1.0
+            fileSizeBytes: 1000,
+            needsUpdate: false,
+            durationSecs: 1.0
           }
         }
       }
@@ -719,13 +719,13 @@ describe('Topic update service', function() {
       subtopic_id: 1,
       new_value: newVoiceovers.toBackendDict(),
       old_value: {
-        voiceovers_mapping: {
+        voiceoversMapping: {
           content: {
             en: {
               filename: 'test.mp3',
-              file_size_bytes: 100,
-              needs_update: false,
-              duration_secs: 0.1
+              fileSizeBytes: 100,
+              needsUpdate: false,
+              durationSecs: 0.1
             }
           }
         }

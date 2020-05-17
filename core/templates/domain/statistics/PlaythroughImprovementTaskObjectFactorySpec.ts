@@ -80,7 +80,7 @@ describe('PlaythroughImprovementTaskObjectFactory', function() {
           timeSpentInExpInMsecs: {value: 5000},
         },
         playthroughIds: ['1', '2'],
-        schema_version: 1,
+        schemaVersion: 1,
         isValid: true,
       });
 
@@ -189,7 +189,7 @@ describe('PlaythroughImprovementTaskObjectFactory', function() {
           timeSpentInExpInMsecs: {value: 5000},
         },
         playthrough_ids: [],
-        schema_version: 1,
+        schemaVersion: 1,
         is_valid: true,
       });
     });

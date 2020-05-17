@@ -79,8 +79,8 @@ angular.module('oppia').directive('contributionsAndReview', [
               var requiredData = {
                 id: suggestion.suggestion_id,
                 heading: $filter('formatRtePreview')(
-                  change.question_dict.question_state_data.content.html),
-                subheading: details.skill_description,
+                  change.questionDict.questionStateData.content.html),
+                subheading: details.skillDescription,
                 labelText: SUGGESTION_LABELS[suggestion.status].text,
                 labelColor: SUGGESTION_LABELS[suggestion.status].color,
                 actionButtonTitle: (
@@ -103,8 +103,8 @@ angular.module('oppia').directive('contributionsAndReview', [
               var requiredData = {
                 id: suggestion.suggestion_id,
                 heading: $filter('formatRtePreview')(change.translation_html),
-                subheading: (details.topic_name + ' / ' + details.story_title +
-                  ' / ' + details.chapter_title),
+                subheading: (details.topicName + ' / ' + details.storyTitle +
+                  ' / ' + details.chapterTitle),
                 labelText: SUGGESTION_LABELS[suggestion.status].text,
                 labelColor: SUGGESTION_LABELS[suggestion.status].color,
                 actionButtonTitle: (

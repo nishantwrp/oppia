@@ -35,11 +35,11 @@ describe('Worked example object factory', () => {
     workedExampleDict = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
   });

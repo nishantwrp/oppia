@@ -148,12 +148,12 @@ angular.module('oppia').directive('storyViewerPage', [
             iconParametersArray.push({
               thumbnailIconUrl:
                 storyNodes[0].getExplorationSummaryObject(
-                ).thumbnail_icon_url.replace('subjects', 'inverted_subjects'),
+                ).thumbnailIconUrl.replace('subjects', 'inverted_subjects'),
               left: '225px',
               top: '35px',
               thumbnailBgColor:
                 storyNodes[0].getExplorationSummaryObject(
-                ).thumbnail_bg_color
+                ).thumbnailBgColor
             });
 
             // Here x and y represent the co-ordinates for the icons in the
@@ -182,7 +182,7 @@ angular.module('oppia').directive('storyViewerPage', [
                 (storyNodes[i].getId() !==
                 ctrl.storyPlaythroughObject.getNextPendingNodeId())) {
                 let hexCode = storyNodes[i].getExplorationSummaryObject(
-                ).thumbnail_bg_color;
+                ).thumbnailBgColor;
                 // Adds a 50% opacity to the color.
                 // Changes the luminosity level of the faded color.
                 // Signed value, negative => darker.
@@ -204,12 +204,12 @@ angular.module('oppia').directive('storyViewerPage', [
                     Math.max(0, blue + (blue * lum)), 255)).toString(16);
               } else {
                 thumbnailColor = storyNodes[i].getExplorationSummaryObject(
-                ).thumbnail_bg_color;
+                ).thumbnailBgColor;
               }
               iconParametersArray.push({
                 thumbnailIconUrl:
                   storyNodes[i].getExplorationSummaryObject(
-                  ).thumbnail_icon_url.replace('subjects', 'inverted_subjects'),
+                  ).thumbnailIconUrl.replace('subjects', 'inverted_subjects'),
                 left: x + 'px',
                 top: y + 'px',
                 thumbnailBgColor: thumbnailColor
@@ -275,8 +275,8 @@ angular.module('oppia').directive('storyViewerPage', [
                 let firstChapterSummary =
                   ctrl.storyPlaythroughObject.getInitialNode().
                     getExplorationSummaryObject();
-                ctrl.thumbnailBgColor = firstChapterSummary.thumbnail_bg_color;
-                ctrl.thumbnailIconUrl = firstChapterSummary.thumbnail_icon_url;
+                ctrl.thumbnailBgColor = firstChapterSummary.thumbnailBgColor;
+                ctrl.thumbnailIconUrl = firstChapterSummary.thumbnailIconUrl;
                 LoaderService.hideLoadingScreen();
                 ctrl.generatePathParameters();
                 // TODO(#8521): Remove the use of $rootScope.$apply()

@@ -44,15 +44,15 @@ describe('Subtopic data object factory', () => {
         page_contents: {
           subtitled_html: {
             html: 'test content',
-            content_id: 'content'
+            contentId: 'content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
                   filename: 'test.mp3',
-                  file_size_bytes: 100,
-                  needs_update: false
+                  fileSizeBytes: 100,
+                  needsUpdate: false
                 }
               }
             }
@@ -68,17 +68,17 @@ describe('Subtopic data object factory', () => {
       expect(_sampleSubtopicData.getSubtopicTitle()).toEqual('sample_title');
       expect(_sampleSubtopicData.getPageContents()).toEqual(
         subtopicPageContentsObjectFactory.createFromBackendDict({
-          subtitled_html: {
+          subtitledHtml: {
             html: 'test content',
-            content_id: 'content'
+            contentId: 'content'
           },
-          recorded_voiceovers: {
-            voiceovers_mapping: {
+          recordedVoiceovers: {
+            voiceoversMapping: {
               content: {
                 en: {
                   filename: 'test.mp3',
-                  file_size_bytes: 100,
-                  needs_update: false
+                  fileSizeBytes: 100,
+                  needsUpdate: false
                 }
               }
             }

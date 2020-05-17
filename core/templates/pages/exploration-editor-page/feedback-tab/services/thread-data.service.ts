@@ -178,7 +178,7 @@ angular.module('oppia').factory('ThreadDataService', [
         // TODO(#8016): Move this $http call to a backend-api.service with unit
         // tests.
         return $http.get(getFeedbackStatsHandlerUrl()).then(response => {
-          return openThreadsCount = response.data.num_open_threads;
+          return openThreadsCount = response.data.numOpenThreads;
         });
       },
 

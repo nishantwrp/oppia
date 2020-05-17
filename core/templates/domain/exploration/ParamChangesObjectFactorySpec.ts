@@ -26,7 +26,7 @@ import { ParamChangesObjectFactory } from
 describe('ParamChanges Object Factory', () => {
   let pcsof: ParamChangesObjectFactory;
   const cArgs = {
-    parse_with_jinja: true,
+    parseWithJinja: true,
     value: ''
   };
   const gId = 'Copier';

@@ -23,7 +23,7 @@ require(
 angular.module('oppia').factory('ExplorationParamSpecsService', [
   'ExplorationPropertyService', function(ExplorationPropertyService) {
     var child = Object.create(ExplorationPropertyService);
-    child.propertyName = 'param_specs';
+    child.propertyName = 'paramSpecs';
     return child;
   }
 ]);

@@ -158,7 +158,7 @@ angular.module('oppia').directive('previewTab', [
                     ctrl.loadPreviewState(initStateNameForPreview, []);
                   });
                 PlayerCorrectnessFeedbackEnabledService.init(
-                  returnDict.correctness_feedback_enabled);
+                  returnDict.correctnessFeedbackEnabled);
                 NumberAttemptsService.reset();
               });
             }, 200);

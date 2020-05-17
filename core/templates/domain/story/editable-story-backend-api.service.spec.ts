@@ -112,9 +112,9 @@ describe('Editable story backend API service', function() {
 
       expect(successHandler).toHaveBeenCalledWith({
         story: sampleDataResults.story,
-        topicName: sampleDataResults.topic_name,
+        topicName: sampleDataResults.topicName,
         storyIsPublished: true,
-        skillSummaries: sampleDataResults.skill_summaries
+        skillSummaries: sampleDataResults.skillSummaries
       });
       expect(failHandler).not.toHaveBeenCalled();
     }

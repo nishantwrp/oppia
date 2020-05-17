@@ -161,11 +161,11 @@ describe('retrieving threads service', () => {
     ThreadDataService.getThreadsAsync().then(
       threadData => {
         for (let mockFeedbackThread of this.mockFeedbackThreads) {
-          expect(ThreadDataService.getThread(mockFeedbackThread.thread_id))
+          expect(ThreadDataService.getThread(mockFeedbackThread.threadId))
             .not.toBeNull();
         }
         for (let mockSuggestionThread of this.mockSuggestionThreads) {
-          expect(ThreadDataService.getThread(mockSuggestionThread.thread_id))
+          expect(ThreadDataService.getThread(mockSuggestionThread.threadId))
             .not.toBeNull();
         }
         done();

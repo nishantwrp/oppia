@@ -62,7 +62,7 @@ describe('Improvement Modal Service', function() {
     openModalSpy = spyOn($uibModal, 'open').and.callThrough();
 
     thread = FeedbackThreadObjectFactory.createFromBackendDict({
-      thread_id: '0'
+      threadId: '0'
     });
   }));
 

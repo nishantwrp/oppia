@@ -45,56 +45,56 @@ describe('Concept card backend API service', function() {
     var example1 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
     var example2 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
     var example3 = {
       question: {
         html: 'worked example question 3',
-        content_id: 'worked_example_q_3'
+        contentId: 'worked_example_q_3'
       },
       explanation: {
         html: 'worked example explanation 3',
-        content_id: 'worked_example_e_3'
+        contentId: 'worked_example_e_3'
       }
     };
     var example4 = {
       question: {
         html: 'worked example question 4',
-        content_id: 'worked_example_q_4'
+        contentId: 'worked_example_q_4'
       },
       explanation: {
         html: 'worked example explanation 4',
-        content_id: 'worked_example_e_4'
+        contentId: 'worked_example_e_4'
       }
     };
     var conceptCardDict1 = {
       explanation: {
         html: 'test explanation 1',
-        content_id: 'explanation_1'
+        contentId: 'explanation_1'
       },
-      worked_examples: [example1, example2],
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      workedExamples: [example1, example2],
+      recordedVoiceovers: {
+        voiceoversMapping: {
           explanation: {},
-          worked_example_q_1: {},
-          worked_example_e_1: {},
-          worked_example_q_2: {},
-          worked_example_e_2: {}
+          workedExampleQ1: {},
+          workedExampleE1: {},
+          workedExampleQ2: {},
+          workedExampleE2: {}
         }
       }
     };
@@ -102,30 +102,30 @@ describe('Concept card backend API service', function() {
     var conceptCardDict2 = {
       explanation: {
         html: 'test explanation 2',
-        content_id: 'explanation_2'
+        contentId: 'explanation_2'
       },
-      worked_examples: [example3, example4],
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      workedExamples: [example3, example4],
+      recordedVoiceovers: {
+        voiceoversMapping: {
           explanation: {},
-          worked_example_q_3: {},
-          worked_example_e_3: {},
-          worked_example_q_4: {},
-          worked_example_e_4: {}
+          workedExampleQ3: {},
+          workedExampleE3: {},
+          workedExampleQ4: {},
+          workedExampleE4: {}
         }
       }
     };
 
     sampleResponse1 = {
-      concept_card_dicts: [conceptCardDict1]
+      conceptCardDicts: [conceptCardDict1]
     };
 
     sampleResponse2 = {
-      concept_card_dicts: [conceptCardDict2]
+      conceptCardDicts: [conceptCardDict2]
     };
 
     sampleResponse3 = {
-      concept_card_dicts: [conceptCardDict1, conceptCardDict2]
+      conceptCardDicts: [conceptCardDict1, conceptCardDict2]
     };
   }));
 

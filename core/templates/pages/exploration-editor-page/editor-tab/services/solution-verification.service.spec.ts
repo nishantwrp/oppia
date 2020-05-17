@@ -86,7 +86,7 @@ describe('Solution Verification Service', function() {
     ess.init({
       'First State': {
         content: {
-          content_id: 'content',
+          contentId: 'content',
           html: 'First State Content'
         },
         recordedVoiceovers: {

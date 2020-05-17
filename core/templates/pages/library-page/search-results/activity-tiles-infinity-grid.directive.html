@@ -2,7 +2,7 @@
      $ctrl.showMoreActivities()" infinite-scroll-distance="1"
      infinite-scroll-disabled="$ctrl.endOfPageIsReached || $ctrl.searchResultsAreLoading">
   <div ng-repeat="activity in $ctrl.allActivitiesInOrder track by $index" style="display: inline-block;">
-    <collection-summary-tile ng-if="activity.activity_type === 'collection'"
+    <collection-summary-tile ng-if="activity.activityType === 'collection'"
                              collection-id="activity.id"
                              collection-title="activity.title"
                              last-updated-msec="activity.lastUpdatedMsec"
@@ -14,7 +14,7 @@
                              container-is-narrow="$ctrl.libraryWindowIsNarrow"
                              class="protractor-test-collection-summary-tile">
     </collection-summary-tile>
-    <exploration-summary-tile ng-if="activity.activity_type === 'exploration'"
+    <exploration-summary-tile ng-if="activity.activityType === 'exploration'"
                               exploration-id="activity.id"
                               exploration-title="activity.title"
                               last-updated-msec="activity.lastUpdatedMsec"
@@ -23,7 +23,7 @@
                               ratings="activity.ratings"
                               thumbnail-icon-url="activity.thumbnailIconUrl"
                               thumbnail-bg-color="activity.thumbnailBgColor"
-                              num-views="activity.num_views"
+                              num-views="activity.numViews"
                               contributors-summary="activity.humanReadableContributorsSummary"
                               is-community-owned="activity.communityOwned"
                               is-community-editable="activity.communityEditable"

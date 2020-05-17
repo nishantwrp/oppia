@@ -59,7 +59,7 @@ angular.module('oppia').directive('explorationFooter', [
                   var summaryBackendObject = null;
                   if (summaries.length > 0) {
                     var contributorSummary = (
-                      summaries[0].human_readable_contributors_summary);
+                      summaries[0].humanReadableContributorsSummary);
                     $scope.contributorNames = (
                       Object.keys(contributorSummary).sort(
                         function(contributorUsername1, contributorUsername2) {

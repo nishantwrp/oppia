@@ -129,7 +129,7 @@ export class WrittenTranslations {
       translationsMappingDict[contentId] = languageToWrittenTranslationDict;
     }
 
-    return {translations_mapping: translationsMappingDict};
+    return {translationsMapping: translationsMappingDict};
   }
 }
 
@@ -146,11 +146,11 @@ export class WrittenTranslationsObjectFactory {
   // camelCasing.
   createFromBackendDict(writtenTranslationsDict: any): WrittenTranslations {
     var translationsMapping = {};
-    Object.keys(writtenTranslationsDict.translations_mapping).forEach(
+    Object.keys(writtenTranslationsDict.translationsMapping).forEach(
       (contentId) => {
         translationsMapping[contentId] = {};
         var languageCodeToWrittenTranslationDict = (
-          writtenTranslationsDict.translations_mapping[contentId]);
+          writtenTranslationsDict.translationsMapping[contentId]);
         Object.keys(languageCodeToWrittenTranslationDict).forEach(
           (langCode) => {
             translationsMapping[contentId][langCode] = (

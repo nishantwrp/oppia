@@ -38,30 +38,30 @@ describe('Creator dashboard controller', () => {
       explorationsList: [{
         category: 'Featured category',
         id: 'featured_exp_id',
-        num_open_threads: 2,
-        num_total_threads: 3,
+        numOpenThreads: 2,
+        numTotalThreads: 3,
         status: 'public',
         title: 'Featured exploration'
       }, {
         category: 'Private category',
         id: 'private_exp_id',
-        num_open_threads: 0,
-        num_total_threads: 0,
+        numOpenThreads: 0,
+        numTotalThreads: 0,
         status: 'private',
         title: 'Private exploration'
       }],
-      collections_list: [],
-      dashboard_stats: {
-        total_plays: 2,
-        average_ratings: 3,
-        num_ratings: 2,
-        total_open_feedback: 1
+      collectionsList: [],
+      dashboardStats: {
+        totalPlays: 2,
+        averageRatings: 3,
+        numRatings: 2,
+        totalOpenFeedback: 1
       },
-      last_week_stats: {
-        total_plays: 1,
-        average_ratings: 4,
-        num_ratings: 1,
-        total_open_feedback: 0
+      lastWeekStats: {
+        totalPlays: 1,
+        averageRatings: 4,
+        numRatings: 1,
+        totalOpenFeedback: 0
       }
     };
 
@@ -102,9 +102,9 @@ describe('Creator dashboard controller', () => {
     it('should have the correct data for creator dashboard', function() {
       $httpBackend.flush();
       expect(ctrl.explorationsList).toEqual(dashboardData.explorationsList);
-      expect(ctrl.collectionsList).toEqual(dashboardData.collections_list);
-      expect(ctrl.dashboardStats).toEqual(dashboardData.dashboard_stats);
-      expect(ctrl.lastWeekStats).toEqual(dashboardData.last_week_stats);
+      expect(ctrl.collectionsList).toEqual(dashboardData.collectionsList);
+      expect(ctrl.dashboardStats).toEqual(dashboardData.dashboardStats);
+      expect(ctrl.lastWeekStats).toEqual(dashboardData.lastWeekStats);
     });
   });
 });

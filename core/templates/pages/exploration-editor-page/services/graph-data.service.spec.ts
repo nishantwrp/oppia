@@ -54,7 +54,7 @@ describe('Graph Data Service', function() {
         paramChanges: [],
         interaction: {
           answerGroups: [{
-            rule_specs: [{ruleType: 'Contains', inputs: {x: 'hola'}}],
+            ruleSpecs: [{ruleType: 'Contains', inputs: {x: 'hola'}}],
             outcome: {
               dest: 'Me Llamo',
               feedback: {

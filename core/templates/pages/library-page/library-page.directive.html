@@ -22,7 +22,7 @@
           </h2>
 
           <div ng-repeat="tile in $ctrl.activityList" style="display: inline-block;">
-            <exploration-summary-tile ng-if="tile.activity_type == 'exploration'"
+            <exploration-summary-tile ng-if="tile.activityType == 'exploration'"
                                       exploration-id="tile.id"
                                       exploration-title="tile.title"
                                       last-updated-msec="tile.lastUpdatedMsec"
@@ -92,7 +92,7 @@
                  ng-swipe-left="$ctrl.scroll($index, false)">
               <div class="oppia-library-carousel-tiles">
                 <div ng-repeat="tile in group.activity_summary_dicts" style="display: inline-block;">
-                  <collection-summary-tile ng-if="tile.activity_type == 'collection'"
+                  <collection-summary-tile ng-if="tile.activityType == 'collection'"
                                            collection-id="tile.id"
                                            collection-title="tile.title"
                                            last-updated-msec="tile.lastUpdatedMsec"
@@ -104,7 +104,7 @@
                                            activity-is-owned-by-current-user="$ctrl.activitiesOwned.collections[tile.id]"
                                            show-learner-dashboard-icons-if-possible="true">
                   </collection-summary-tile>
-                  <exploration-summary-tile ng-if="tile.activity_type == 'exploration'"
+                  <exploration-summary-tile ng-if="tile.activityType == 'exploration'"
                                             exploration-id="tile.id"
                                             exploration-title="tile.title"
                                             last-updated-msec="tile.lastUpdatedMsec"
@@ -146,7 +146,7 @@
                  ng-swipe-right="$ctrl.decrementLeftmostCardIndex($index)"
                  ng-swipe-left="$ctrl.incrementLeftmostCardIndex($index)">
               <div class="oppia-library-carousel-tiles">
-                <collection-summary-tile ng-if="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].activity_type == 'collection'"
+                <collection-summary-tile ng-if="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].activityType == 'collection'"
                                          collection-id="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].id"
                                          collection-title="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].title"
                                          last-updated-msec="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].lastUpdatedMsec"
@@ -158,16 +158,16 @@
                                          show-learner-dashboard-icons-if-possible="true"
                                          container-is-narrow="true">
                 </collection-summary-tile>
-                <exploration-summary-tile ng-if="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].activity_type == 'exploration'"
+                <exploration-summary-tile ng-if="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].activityType == 'exploration'"
                                           exploration-id="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].id"
                                           exploration-title="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].title"
                                           last-updated-msec="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].lastUpdatedMsec"
                                           objective="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].objective"
                                           category="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].category"
                                           ratings="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].ratings"
-                                          num-views="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].num_views"
-                                          thumbnail-icon-url="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnail_icon_url"
-                                          thumbnail-bg-color="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnail_bg_color"
+                                          num-views="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].numViews"
+                                          thumbnail-icon-url="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnailIconUrl"
+                                          thumbnail-bg-color="group.activity_summary_dicts[$ctrl.leftmostCardIndices[$index]].thumbnailBgColor"
                                           class="protractor-test-exp-summary-tile"
                                           show-learner-dashboard-icons-if-possible="true"
                                           container-is-narrow="true">

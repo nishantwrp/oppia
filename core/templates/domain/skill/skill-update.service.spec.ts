@@ -100,38 +100,38 @@ describe('Skill update service', function() {
     var example1 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
 
     var example2 = {
       question: {
         html: 'worked example question 2',
-        content_id: 'worked_example_q_2'
+        contentId: 'worked_example_q_2'
       },
       explanation: {
         html: 'worked example explanation 2',
-        content_id: 'worked_example_e_2'
+        contentId: 'worked_example_e_2'
       }
     };
 
     var skillContentsDict = {
       explanation: {
         html: 'test explanation',
-        content_id: 'explanation',
+        contentId: 'explanation',
       },
-      worked_examples: [example1, example2],
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      workedExamples: [example1, example2],
+      recordedVoiceovers: {
+        voiceoversMapping: {
           explanation: {},
-          worked_example_q_1: {},
-          worked_example_e_1: {},
-          worked_example_q_2: {},
-          worked_example_e_2: {}
+          workedExampleQ1: {},
+          workedExampleE1: {},
+          workedExampleQ2: {},
+          workedExampleE2: {}
         }
       }
     };
@@ -172,11 +172,11 @@ describe('Skill update service', function() {
       property_name: 'explanation',
       old_value: {
         html: 'test explanation',
-        content_id: 'explanation'
+        contentId: 'explanation'
       },
       new_value: {
         html: 'new explanation',
-        content_id: 'explanation'
+        contentId: 'explanation'
       }
     }]);
     expect(skill.getConceptCard().getExplanation()).toEqual(
@@ -342,31 +342,31 @@ describe('Skill update service', function() {
     var example1 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
     var example2 = {
       question: {
         html: 'worked example question 2',
-        content_id: 'worked_example_q_2'
+        contentId: 'worked_example_q_2'
       },
       explanation: {
         html: 'worked example explanation 2',
-        content_id: 'worked_example_e_2'
+        contentId: 'worked_example_e_2'
       }
     };
     var newExample = {
       question: {
         html: 'worked example question 3',
-        content_id: 'worked_example_q_3'
+        contentId: 'worked_example_q_3'
       },
       explanation: {
         html: 'worked example explanation 3',
-        content_id: 'worked_example_e_3'
+        contentId: 'worked_example_e_3'
       }
     };
     SkillUpdateService.addWorkedExample(
@@ -392,21 +392,21 @@ describe('Skill update service', function() {
     var example1 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
     var example2 = {
       question: {
         html: 'worked example question 2',
-        content_id: 'worked_example_q_2'
+        contentId: 'worked_example_q_2'
       },
       explanation: {
         html: 'worked example explanation 2',
-        content_id: 'worked_example_e_2'
+        contentId: 'worked_example_e_2'
       }
     };
     SkillUpdateService.deleteWorkedExample(skill, 0);
@@ -429,31 +429,31 @@ describe('Skill update service', function() {
     var example1 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
     var example2 = {
       question: {
         html: 'worked example question 2',
-        content_id: 'worked_example_q_2'
+        contentId: 'worked_example_q_2'
       },
       explanation: {
         html: 'worked example explanation 2',
-        content_id: 'worked_example_e_2'
+        contentId: 'worked_example_e_2'
       }
     };
     var modifiedExample1 = {
       question: {
         html: 'new question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'new explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
     SkillUpdateService.updateWorkedExample(

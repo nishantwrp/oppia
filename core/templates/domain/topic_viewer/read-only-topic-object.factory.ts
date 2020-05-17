@@ -148,9 +148,9 @@ export class ReadOnlyTopicObjectFactory {
               storyDict.description, true);
           });
     return new ReadOnlyTopic(
-      topicDataDict.topic_name, topicDataDict.topic_id, canonicalStories,
+      topicDataDict.topicName, topicDataDict.topicId, canonicalStories,
       additionalStories, uncategorizedSkills, subtopics, degreesOfMastery,
-      skillDescriptions, topicDataDict.train_tab_should_be_displayed);
+      skillDescriptions, topicDataDict.trainTabShouldBeDisplayed);
   }
 }
 

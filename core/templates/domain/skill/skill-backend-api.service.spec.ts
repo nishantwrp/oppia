@@ -73,21 +73,21 @@ describe('Skill backend API service', function() {
     var example1 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       answer: {
         html: 'worked example answer 1',
-        content_id: 'worked_example_a_1'
+        contentId: 'worked_example_a_1'
       }
     };
     var example2 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       answer: {
         html: 'worked example answer 1',
-        content_id: 'worked_example_a_1'
+        contentId: 'worked_example_a_1'
       }
     };
 

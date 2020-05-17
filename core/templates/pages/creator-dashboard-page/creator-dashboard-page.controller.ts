@@ -311,7 +311,7 @@ angular.module('oppia').directive('creatorDashboardPage', [
                         responseData.createdSuggestionsList[j]);
                     var threadDict = (
                       responseData.threadsForCreatedSuggestionsList[i]);
-                    if (threadDict.thread_id === suggestionThreadId) {
+                    if (threadDict.threadId === suggestionThreadId) {
                       var suggestionThread = (
                         SuggestionThreadObjectFactory.createFromBackendDicts(
                           threadDict,
@@ -345,8 +345,8 @@ angular.module('oppia').directive('creatorDashboardPage', [
 
                 if (ctrl.dashboardStats && ctrl.lastWeekStats) {
                   ctrl.relativeChangeInTotalPlays = (
-                    ctrl.dashboardStats.total_plays - (
-                      ctrl.lastWeekStats.total_plays)
+                    ctrl.dashboardStats.totalPlays - (
+                      ctrl.lastWeekStats.totalPlays)
                   );
                 }
 

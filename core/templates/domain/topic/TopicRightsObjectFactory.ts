@@ -87,8 +87,8 @@ export class TopicRightsObjectFactory {
   createFromBackendDict(topicRightsBackendObject: any) {
     return new TopicRights(
       topicRightsBackendObject.published,
-      topicRightsBackendObject.can_publish_topic,
-      topicRightsBackendObject.can_edit_topic
+      topicRightsBackendObject.canPublishTopic,
+      topicRightsBackendObject.canEditTopic
     );
   }
 

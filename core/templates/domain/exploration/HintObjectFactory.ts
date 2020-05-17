@@ -35,7 +35,7 @@ export class Hint {
   // camelCasing.
   toBackendDict(): any {
     return {
-      hint_content: this.hintContent.toBackendDict()
+      hintContent: this.hintContent.toBackendDict()
     };
   }
 }
@@ -53,7 +53,7 @@ export class HintObjectFactory {
   createFromBackendDict(hintBackendDict: any): Hint {
     return new Hint(
       this.subtitledHtmlObjectFactory.createFromBackendDict(
-        hintBackendDict.hint_content));
+        hintBackendDict.hintContent));
   }
 
   createNew(hintContentId: string, hintContent: string): Hint {

@@ -36,7 +36,7 @@ export class CollectionNode {
   constructor(collectionNodeBackendObject: any) {
     this._explorationId = collectionNodeBackendObject.explorationId;
     this._explorationSummaryObject = cloneDeep(
-      collectionNodeBackendObject.exploration_summary);
+      collectionNodeBackendObject.explorationSummary);
   }
 
   // Returns the ID of the exploration represented by this collection node.

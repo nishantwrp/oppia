@@ -17,8 +17,8 @@
  * skill rights domain objects.
  */
 export interface ISkillRightBackend {
-  'can_edit_skill_description': boolean,
-  'skill_id': string
+  'canEditSkillDescription': boolean,
+  'skillId': string
 }
 import { downgradeInjectable } from '@angular/upgrade/static';
 import { Injectable } from '@angular/core';
@@ -57,8 +57,8 @@ export class SkillRightsObjectFactory {
   createFromBackendDict(
       skillRightsBackendDict: ISkillRightBackend): SkillRights {
     return new SkillRights(
-      skillRightsBackendDict.skill_id,
-      skillRightsBackendDict.can_edit_skill_description);
+      skillRightsBackendDict.skillId,
+      skillRightsBackendDict.canEditSkillDescription);
   }
   createInterstitialSkillRights(): SkillRights {
     return new SkillRights(null, false);

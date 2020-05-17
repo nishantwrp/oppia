@@ -22,7 +22,7 @@ import { Injectable } from '@angular/core';
 
 export interface IBackendRuleDict {
   inputs: IRuleInput,
-  'rule_type': string
+  ruleType: string
 }
 // The rule inputs are dependent on the 'type' of rule
 // that's why 'any' is used here
@@ -40,7 +40,7 @@ export class Rule {
   }
   toBackendDict(): IBackendRuleDict {
     return {
-      rule_type: this.type,
+      ruleType: this.type,
       inputs: this.inputs
     };
   }
@@ -55,7 +55,7 @@ export class RuleObjectFactory {
   }
 
   createFromBackendDict(ruleDict: IBackendRuleDict): Rule {
-    return new Rule(ruleDict.rule_type, ruleDict.inputs);
+    return new Rule(ruleDict.ruleType, ruleDict.inputs);
   }
 }
 

@@ -743,9 +743,9 @@ angular.module('oppia').directive('conversationSkin', [
                       if (res.story_nodes[i].id === nodeId &&
                           (i + 1) < res.story_nodes.length) {
                         $scope.storyNodeIdToAdd = (
-                          res.story_nodes[i].destination_node_ids[0]);
+                          res.story_nodes[i].destinationNodeIds[0]);
                         nextStoryNode.push(
-                          res.story_nodes[i + 1].exp_summary_dict);
+                          res.story_nodes[i + 1].expSummaryDict);
                         break;
                       }
                     }

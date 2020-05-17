@@ -19,8 +19,8 @@
 
 export interface IConceptCardBackendDict {
   explanation: ISubtitledHtmlBackendDict,
-  'worked_examples': Array<IWorkedExampleBackendDict>,
-  'recorded_voiceovers': IRecordedVoiceOverBackendDict
+  workedExamples: Array<IWorkedExampleBackendDict>,
+  recordedVoiceovers: IRecordedVoiceOverBackendDict
 }
 
 import { downgradeInjectable } from '@angular/upgrade/static';
@@ -52,11 +52,11 @@ export class ConceptCard {
   toBackendDict(): IConceptCardBackendDict {
     return {
       explanation: this._explanation.toBackendDict(),
-      worked_examples: this._workedExamples.map(
+      workedExamples: this._workedExamples.map(
         (workedExample: WorkedExample) => {
           return workedExample.toBackendDict();
         }),
-      recorded_voiceovers: this._recordedVoiceovers.toBackendDict()
+      recordedVoiceovers: this._recordedVoiceovers.toBackendDict()
     };
   }
 
@@ -140,7 +140,7 @@ export class ConceptCardObjectFactory {
   // editor until the actual skill is fetched from the backend.
   createInterstitialConceptCard(): ConceptCard {
     let recordedVoiceoversDict = {
-      voiceovers_mapping: {
+      voiceoversMapping: {
         COMPONENT_NAME_EXPLANATION: {}
       }
     };
@@ -159,9 +159,9 @@ export class ConceptCardObjectFactory {
       this.subtitledHtmlObjectFactory.createFromBackendDict(
         conceptCardBackendDict.explanation),
       this._generateWorkedExamplesFromBackendDict(
-        conceptCardBackendDict.worked_examples),
+        conceptCardBackendDict.workedExamples),
       this.recordedVoiceoversObjectFactory.createFromBackendDict(
-        conceptCardBackendDict.recorded_voiceovers));
+        conceptCardBackendDict.recordedVoiceovers));
   }
 }
 

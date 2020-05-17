@@ -166,7 +166,7 @@ describe('Lost Change Object Factory', () => {
         outcome: oof.createFromBackendDict({
           dest: 'outcome 2',
           feedback: {
-            content_id: 'feedback_2',
+            contentId: 'feedback_2',
             html: 'Html'
           },
         }),
@@ -182,7 +182,7 @@ describe('Lost Change Object Factory', () => {
         outcome: oof.createFromBackendDict({
           dest: 'outcome 1',
           feedback: {
-            content_id: 'feedback_2',
+            contentId: 'feedback_2',
             html: 'Html'
           },
         }),

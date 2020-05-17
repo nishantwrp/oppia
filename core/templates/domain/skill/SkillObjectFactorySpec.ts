@@ -82,21 +82,21 @@ describe('Skill object factory', () => {
     example1 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
     example2 = {
       question: {
         html: 'worked example question 1',
-        content_id: 'worked_example_q_1'
+        contentId: 'worked_example_q_1'
       },
       explanation: {
         html: 'worked example explanation 1',
-        content_id: 'worked_example_e_1'
+        contentId: 'worked_example_e_1'
       }
     };
 
@@ -104,14 +104,14 @@ describe('Skill object factory', () => {
     skillContentsDict = {
       explanation: {
         html: 'test explanation',
-        content_id: 'explanation',
+        contentId: 'explanation',
       },
-      worked_examples: [example1, example2],
-      recorded_voiceovers: {
-        voiceovers_mapping: {
+      workedExamples: [example1, example2],
+      recordedVoiceovers: {
+        voiceoversMapping: {
           explanation: {},
-          worked_example_1: {},
-          worked_example_2: {}
+          workedExample1: {},
+          workedExample2: {}
         }
       }
     };

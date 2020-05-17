@@ -50,7 +50,7 @@ export class QuestionBackendApiService {
         fetch_by_difficulty: questionsSortedByDifficulty.toString()
       });
     this.http.get(questionDataUrl).toPromise().then((response: any) => {
-      var questionDicts = cloneDeep(response.question_dicts);
+      var questionDicts = cloneDeep(response.questionDicts);
       if (successCallback) {
         successCallback(questionDicts);
       }
@@ -76,8 +76,8 @@ export class QuestionBackendApiService {
       });
     this.http.get(questionsDataUrl).toPromise().then((response: any) => {
       var questionSummaries = cloneDeep(
-        response.question_summary_dicts);
-      var nextCursor = response.next_start_cursor;
+        response.questionSummaryDicts);
+      var nextCursor = response.nextStartCursor;
       if (successCallback) {
         successCallback({
           questionSummaries: questionSummaries,

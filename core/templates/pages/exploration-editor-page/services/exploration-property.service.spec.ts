@@ -163,7 +163,7 @@ describe('Exploration Property Service', function() {
 
   it('should save displayed value when is ParamSpecs object', function() {
     var child = Object.create(ExplorationPropertyService);
-    child.propertyName = 'param_specs';
+    child.propertyName = 'paramSpecs';
     child._normalize = function(paramSpecs) {
       // Changing paramSpecs so hasChanged() turns to be true on line 87.
       var paramSpec = ParamSpecObjectFactory.createDefault();

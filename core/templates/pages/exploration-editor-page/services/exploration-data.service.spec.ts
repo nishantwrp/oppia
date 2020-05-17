@@ -298,7 +298,7 @@ describe('Exploration data service', function() {
     $httpBackend.flush();
 
     expect(successHandler).toHaveBeenCalledWith(
-      response.is_version_of_draft_valid, response.draft_changes);
+      response.isVersionOfDraftValid, response.draftChanges);
     expect(failHandler).not.toHaveBeenCalled();
   });
 
@@ -315,8 +315,8 @@ describe('Exploration data service', function() {
     });
     var changeList = [];
     var response = {
-      is_version_of_draft_valid: true,
-      draft_changes: ''
+      isVersionOfDraftValid: true,
+      draftChanges: ''
     };
 
     // data.exploration won't receive a value.
@@ -332,7 +332,7 @@ describe('Exploration data service', function() {
     $httpBackend.flush();
 
     expect(successHandler).toHaveBeenCalledWith(
-      response.is_version_of_draft_valid, response.draft_changes);
+      response.isVersionOfDraftValid, response.draftChanges);
     expect(failHandler).not.toHaveBeenCalled();
   });
 

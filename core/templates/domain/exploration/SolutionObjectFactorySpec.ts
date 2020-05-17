@@ -36,10 +36,10 @@ describe('Solution object factory', () => {
       });
       sof = TestBed.get(SolutionObjectFactory);
       solution = sof.createFromBackendDict({
-        answer_is_exclusive: false,
-        correct_answer: 'This is a correct answer!',
+        answerIsExclusive: false,
+        correctAnswer: 'This is a correct answer!',
         explanation: {
-          content_id: 'solution',
+          contentId: 'solution',
           html: 'This is the explanation to the answer'
         }
       });
@@ -47,10 +47,10 @@ describe('Solution object factory', () => {
 
     it('should get the backend dict from a solution', () => {
       const expectedSolution = {
-        answer_is_exclusive: false,
-        correct_answer: 'This is a correct answer!',
+        answerIsExclusive: false,
+        correctAnswer: 'This is a correct answer!',
         explanation: {
-          content_id: 'solution',
+          contentId: 'solution',
           html: 'This is the explanation to the answer'
         }
       };
@@ -65,10 +65,10 @@ describe('Solution object factory', () => {
         'This is the explanation to the answer',
         'solution');
       const expectedSolution = {
-        answer_is_exclusive: true,
-        correct_answer: 'This is the correct answer!',
+        answerIsExclusive: true,
+        correctAnswer: 'This is the correct answer!',
         explanation: {
-          content_id: 'solution',
+          contentId: 'solution',
           html: 'This is the explanation to the answer'
         }
       };
@@ -150,10 +150,10 @@ describe('Solution object factory', () => {
 
     it('should handle when answer exclusivity is true', () => {
       const solution = sof.createFromBackendDict({
-        answer_is_exclusive: true,
-        correct_answer: 'This is a correct answer!',
+        answerIsExclusive: true,
+        correctAnswer: 'This is a correct answer!',
         explanation: {
-          content_id: 'solution',
+          contentId: 'solution',
           html: 'This is the explanation to the answer'
         }
       });

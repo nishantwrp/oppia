@@ -32,9 +32,9 @@ describe('Subtopic object factory', () => {
 
     var sampleSubtopicBackendObject = {
       id: 1,
-      thumbnail_filename: 'image.png',
+      thumbnailFilename: 'image.png',
       title: 'Title',
-      skill_ids: ['skill_1', 'skill_2']
+      skillIds: ['skill_1', 'skill_2']
     };
     var sampleSkillIdToDesriptionMap = {
       skill_1: 'Description 1',

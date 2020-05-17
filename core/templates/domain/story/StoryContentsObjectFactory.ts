@@ -414,8 +414,8 @@ export class StoryContentsObjectFactory {
           storyContentsBackendObject.nodes[i]));
     }
     return new StoryContents(
-      storyContentsBackendObject.initial_node_id, nodes,
-      storyContentsBackendObject.next_node_id,
+      storyContentsBackendObject.initialNodeId, nodes,
+      storyContentsBackendObject.nextNodeId,
       this.storyNodeObjectFactory);
   }
 }

@@ -346,8 +346,8 @@ angular.module('oppia').directive('questionsList', [
             EditableQuestionBackendApiService.fetchQuestion(
               questionSummaryForOneSkill.getQuestionId()).then(
               function(response) {
-                if (response.associated_skill_dicts) {
-                  response.associated_skill_dicts.forEach(function(skillDict) {
+                if (response.associatedSkillDicts) {
+                  response.associatedSkillDicts.forEach(function(skillDict) {
                     ctrl.misconceptionsBySkill[skillDict.id] =
                       skillDict.misconceptions.map(function(misconception) {
                         return MisconceptionObjectFactory.createFromBackendDict(

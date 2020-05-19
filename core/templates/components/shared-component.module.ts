@@ -18,7 +18,7 @@
 import 'core-js/es7/reflect';
 import 'zone.js';
 
-angular.module('oppia');
+angular.module('oppia', []);
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

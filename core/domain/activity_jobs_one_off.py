@@ -42,7 +42,7 @@ class ActivityContributorsSummaryOneOffJob(jobs.BaseMapReduceOneOffJobManager):
 
     @staticmethod
     def map(model):
-        if model.deleted:
+        if model:
             return
 
         if isinstance(model, collection_models.CollectionModel):

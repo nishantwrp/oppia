@@ -31,6 +31,8 @@ import feconf
 (collection_models, exp_models) = models.Registry.import_models(
     [models.NAMES.collection, models.NAMES.exploration])
 
+class ActivityContributdasorsSummaryOneOffJob(jobs.BaseMapReduceOneOffJobManager):
+    pass
 
 class ActivityContributorsSummaryOneOffJob(jobs.BaseMapReduceOneOffJobManager):
     """One-off job that computes the number of commits done by contributors for
@@ -42,7 +44,7 @@ class ActivityContributorsSummaryOneOffJob(jobs.BaseMapReduceOneOffJobManager):
 
     @staticmethod
     def map(model):
-        if model:
+        if model.deleted:
             return
 
         if isinstance(model, collection_models.CollectionModel):

@@ -201,6 +201,7 @@ export class TopicsAndSkillsDashboardBackendApiService {
       old_skill_id: oldSkillId,
       new_skill_id: newSkillId
     };
+    // Hi
     return this.http.post<void>(
       TopicsAndSkillsDashboardDomainConstants.MERGE_SKILLS_URL,
       mergeSkillsData).toPromise();

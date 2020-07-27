@@ -202,6 +202,7 @@ export class TopicsAndSkillsDashboardBackendApiService {
       new_skill_id: newSkillId
     };
     // Hi
+    // @ts-ignore
     return this.http.post<void>(
       TopicsAndSkillsDashboardDomainConstants.MERGE_SKILLS_URL,
       mergeSkillsData).toPromise();

@@ -186,6 +186,7 @@ export class TopicsAndSkillsDashboardBackendApiService {
         num_skills_to_fetch: itemsPerPage,
         next_cursor: nextCursor
       }).toPromise().then(response => {
+      // Hi
       return {
         skillSummaries: response.skill_summary_dicts.map(
           backendDict => this.augmentedSkillSummaryObjectFactory

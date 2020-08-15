@@ -96,7 +96,7 @@ export class PlayerPositionService {
     return this.learnerJustSubmittedAnAnswer;
   }
 
-  get onActiveCardChanged() {
+  get onActiveCardChanged(): EventEmitter<unknown> {
     return this._activeCardChangedEventEmitter;
   }
 }

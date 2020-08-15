@@ -269,6 +269,7 @@
         "default": "array"
       }
     ],
+    "@typescript-eslint/explicit-module-boundary-types": ["error"],
     "wrap-iife": [
       "error",
       "any"

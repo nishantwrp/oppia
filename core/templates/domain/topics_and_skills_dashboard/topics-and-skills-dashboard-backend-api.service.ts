@@ -180,7 +180,7 @@ export class TopicsAndSkillsDashboardBackendApiService {
 
   fetchSkillsDashboardData(
       filter: TopicsAndSkillsDashboardFilter,
-      itemsPerPage, nextCursor): Promise<SkillsDashboardData> {
+      itemsPerPage: number, nextCursor: string): Promise<SkillsDashboardData> {
     return this.http.post<SkillsDashboardDataBackendDict>(
       TopicsAndSkillsDashboardDomainConstants.SKILL_DASHBOARD_DATA_URL, {
         classroom_name: filter.classroom,

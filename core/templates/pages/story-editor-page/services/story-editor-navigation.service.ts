@@ -34,16 +34,16 @@ export class StoryEditorNavigationService {
     chapterIndex: number = null;
     constructor(private windowRef: WindowRef) {}
 
-    getActiveTab() {
+    getActiveTab(): string {
       return this.activeTab;
     }
-    setChapterId(id) {
+    setChapterId(id: string): void {
       this.chapterId = id;
     }
-    getChapterIndex() {
+    getChapterIndex(): number {
       return this.chapterIndex;
     }
-    getChapterId() {
+    getChapterId(): string {
       return this.chapterId;
     }
     navigateToChapterEditorWithId(id, index) {

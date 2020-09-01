@@ -6,7 +6,7 @@ declare namespace JQueryUI {
         tolerance?: string;
     }
     interface DroppableOptions {
-        containment?: string;
+        containment?: strig;
     }
     interface UI {
         ddmanager?: {

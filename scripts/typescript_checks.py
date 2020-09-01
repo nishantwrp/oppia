@@ -38,10 +38,18 @@ _PARSER.add_argument(
     '--strict_checks',
     help='optional; if specified, compiles typescript using strict config.',
     action='store_true')
+_PARSER.add_argument(
+    '--declaration_files',
+    help='optional; if specified, compiles the declaration files.',
+    action='store_true')
 
 COMPILED_JS_DIR = os.path.join('local_compiled_js_for_test', '')
 TSCONFIG_FILEPATH = 'tsconfig.json'
 STRICT_TSCONFIG_FILEPATH = 'tsconfig-strict.json'
+TYPINGS_DIR = os.path.join(os.getcwd(), 'typings')
+DECLARATION_FILES_DIR = os.path.join(os.getcwd(), 'test_declaration_files')
+BUNDLED_CODE_FILENAME = 'bundled_code.ts'
+BUNDLED_CODE_FILEPATH = os.path.join(DECLARATION_FILES_DIR, BUNDLED_CODE_FILENAME)
 
 
 def validate_compiled_js_dir():
@@ -88,11 +96,68 @@ def compile_and_check_typescript(config_path):
     else:
         python_utils.PRINT('Compilation successful!')
 
+def compile_and_check_declaration_files():
+    node_path = common.NODE_PATH
+    os.environ['PATH'] = '%s/bin:' % node_path + os.environ['PATH']
+
+    files_in_typings_dir = os.listdir(TYPINGS_DIR)
+    bundled_code = ""
+
+    for file_name in files_in_typings_dir:
+        if file_name.endswith('.d.ts'):
+            file_path = os.path.join(TYPINGS_DIR, file_name)
+            with python_utils.open_file(file_path, 'r') as f:
+                bundled_code += f.read()
+
+    if os.path.exists(DECLARATION_FILES_DIR):
+        shutil.rmtree(DECLARATION_FILES_DIR)
+
+    os.mkdir(DECLARATION_FILES_DIR)
+
+    with python_utils.open_file(BUNDLED_CODE_FILEPATH, 'w+') as f:
+        f.write(bundled_code)
+
+    tsconfig_for_testing_declaration_files = {
+        'skipLibCheck': True,
+        'include': [],
+        'files': [BUNDLED_CODE_FILENAME]
+    }
+
+    tsconfig_for_testing_declaration_files_json = json.dumps(
+         tsconfig_for_testing_declaration_files)
+
+    with python_utils.open_file(
+        os.path.join(DECLARATION_FILES_DIR, 'tsconfig.json'), 'w+') as f:
+        f.write(unicode(tsconfig_for_testing_declaration_files_json))
+
+    python_utils.PRINT('Compiling declaration files...')
+    cmd = [
+        './node_modules/typescript/bin/tsc', '--project',
+        os.path.join(DECLARATION_FILES_DIR, 'tsconfig.json')]
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    error_messages = []
+    for line in iter(process.stdout.readline, ''):
+        error_messages.append(line)
+    if os.path.exists(DECLARATION_FILES_DIR):
+        shutil.rmtree(DECLARATION_FILES_DIR)
+    if error_messages:
+        python_utils.PRINT('Errors found during compilation\n')
+        for message in error_messages:
+            python_utils.PRINT(message)
+        sys.exit(1)
+    else:
+        python_utils.PRINT('Compilation successful!')
+
 
 def main(args=None):
     """Run the typescript checks."""
 
     parsed_args = _PARSER.parse_args(args=args)
+
+    if parsed_args.declaration_files:
+        compile_and_check_declaration_files()
+        return
+
     compile_and_check_typescript(
         STRICT_TSCONFIG_FILEPATH
         if parsed_args.strict_checks else

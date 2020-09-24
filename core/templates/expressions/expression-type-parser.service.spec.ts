@@ -25,16 +25,15 @@ import 'App.ts';
 import 'services/utils.service.ts';
 
 describe('Expression type parser service', () => {
-
+  var eps = null;
+  var ests = null;
+  var etps = null;
   var isString = null;
-  var eps : ExpressionParserService;
-  var ests : ExpressionSyntaxTreeService;
-  var etps : ExpressionParserService;
 
   beforeEach(() => {
-    eps = new ExpressionParserService();
-    ests= new ExpressionSyntaxTreeService();
-    etps= new ExpressionTypeParserService();
+    eps = TestBed.get(ExpressionParserService);
+    ests = TestBed.get(ExpressionSyntaxTreeService);
+    etps = TestBed.get(ExpressionTypeParserService);
   });
 
   var ENVS = [

@@ -56,29 +56,28 @@ export class ExpressionTypeParserService {
       if (parsed.length === 0) {
         throw new Error(
           'Parser generated an intermediate node with zero children');
-        }
-
-        if (parsed[0] === '#') {
-          return ExpressionSyntaxTreeService.lookupEnvs(parsed[1], envs);
-        }
-
-        // Get the types of the arguments.
-        var args = parsed.slice(1).map(function(item) {
-          return this.getType(item, envs);
-        });
-
-        // The first element should be a function name.
-        return ExpressionSyntaxTreeService.lookupEnvs(
-          parsed[0], envs).getType(args);
       }
 
-      // If 'parsed' is not an array, it should be a terminal node with the
-      // actual value.
-      return (
+      if (parsed[0] === '#') {
+        return ExpressionSyntaxTreeService.lookupEnvs(parsed[1], envs);
+      }
+
+      // Get the types of the arguments.
+      var args = parsed.slice(1).map(function(item) {
+        return this.getType(item, envs);
+      });
+
+      // The first element should be a function name.
+      return ExpressionSyntaxTreeService.lookupEnvs(
+        parsed[0], envs).getType(args);
+    }
+
+    // If 'parsed' is not an array, it should be a terminal node with the
+    // actual value.
+    return (
         isNaN(+parsed) ?
           this.PARAMETER_TYPES.UNICODE_STRING :
           this.PARAMETER_TYPES.REAL);
-      
     };
   }
 

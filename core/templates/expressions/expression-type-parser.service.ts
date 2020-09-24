@@ -16,21 +16,30 @@
  * @fileoverview Unit tests for Expression Type Parser Service.
  */
 
-require('expressions/expression-parser.service.ts');
-require('expressions/expression-syntax-tree.service.ts');
+import { downgradeInjectable } from '@angular/upgrade/static';
+import { Injectable } from '@angular/core';
 
-angular.module('oppia').factory('ExpressionTypeParserService', [
-  'ExpressionParserService', 'ExpressionSyntaxTreeService',
-  'PARAMETER_TYPES',
-  function(
-      ExpressionParserService, ExpressionSyntaxTreeService,
-      PARAMETER_TYPES) {
-    var getExpressionOutputType = function(expression, envs) {
-      return ExpressionSyntaxTreeService.applyFunctionToParseTree(
-        ExpressionParserService.parse(expression), envs, getType);
-    };
+import { ExpressionParserService } from
+  'expressions/expression-parser.service.ts';
+  import { EnvDict, Expr, ExpressionSyntaxTreeService } from
+  'expressions/expression-syntax-tree.service';
 
-    /**
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class ExpressionTypeParserService {
+    constructor(
+      private expressionParserService: ExpressionParserService,
+      private expressionSyntaxTreeService: ExpressionSyntaxTreeService,
+      private PARAMETER_TYPES){}
+
+      getExpressionOutputType(expression: string, envs: EnvDict[]): Expr {
+        return this.expressionSyntaxTreeService.applyFunctionToParseTree(
+          this.expressionParserService.parse(expression), envs,
+          (parsed, envs) => this.getType(parsed, envs));
+      }
+
+      /**
      * @param {*} parsed Parse output from the parser. See parser.pegjs for
      *     the data structure.
      * @param {!Array.<!Object>} envs Represents a nested name space
@@ -39,7 +48,8 @@ angular.module('oppia').factory('ExpressionTypeParserService', [
      *     are strings representing a parameter type (i.e. they are equal to
      *     values in the PARAMETER_TYPES object).
      */
-    var getType = function(parsed, envs) {
+    
+    getType(parsed, envs: EnvDict[]): Expr {
       // The intermediate nodes of the parse tree are arrays. The terminal
       // nodes are JavaScript primitives (as described in the "Parser output"
       // section of parser.pegjs).
@@ -55,7 +65,7 @@ angular.module('oppia').factory('ExpressionTypeParserService', [
 
         // Get the types of the arguments.
         var args = parsed.slice(1).map(function(item) {
-          return getType(item, envs);
+          return this.getType(item, envs);
         });
 
         // The first element should be a function name.
@@ -67,13 +77,12 @@ angular.module('oppia').factory('ExpressionTypeParserService', [
       // actual value.
       return (
         isNaN(+parsed) ?
-          PARAMETER_TYPES.UNICODE_STRING :
-          PARAMETER_TYPES.REAL);
-    };
-
-    return {
-      getType: getType,
-      getExpressionOutputType: getExpressionOutputType
+          this.PARAMETER_TYPES.UNICODE_STRING :
+          this.PARAMETER_TYPES.REAL);
+      
     };
   }
-]);
+
+angular.module('oppia').factory(
+  'ExpressionTypeParserService',
+  downgradeInjectable(ExpressionTypeParserService));

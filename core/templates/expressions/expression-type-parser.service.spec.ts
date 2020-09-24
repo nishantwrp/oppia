@@ -16,36 +16,26 @@
  * @fileoverview Unit tests for Expression Type Parser Service.
  */
 
-// TODO(#7222): Remove the following block of unnnecessary imports once
-// the code corresponding to the spec is upgraded to Angular 8.
-import { UpgradedServices } from 'services/UpgradedServices';
-// ^^^ This block is to be removed.
+import { TestBed } from '@angular/core/testing';
 
-require('App.ts');
-require('expressions/expression-parser.service.ts');
-require('expressions/expression-syntax-tree.service.ts');
-require('expressions/expression-type-parser.service.ts');
-require('services/utils.service.ts');
+import { ExpressionParserService } from 'expressions/expression-parser.service';
+import { ExpressionSyntaxTreeService } from 'expressions/expression-syntax-tree.service';
+import { ExpressionTypeParserService } from 'expressions/expression-type-parser.service';
+import 'App.ts';
+import 'services/utils.service.ts';
 
-describe('Expression type parser service', function() {
-  beforeEach(angular.mock.module('oppia'));
-  beforeEach(angular.mock.module('oppia', function($provide) {
-    var ugs = new UpgradedServices();
-    for (let [key, value] of Object.entries(ugs.getUpgradedServices())) {
-      $provide.value(key, value);
-    }
-  }));
+describe('Expression type parser service', () => {
 
-  var etps = null;
-  var eps = null;
-  var ests = null;
   var isString = null;
-  beforeEach(angular.mock.inject(function($injector) {
-    etps = $injector.get('ExpressionTypeParserService');
-    eps = $injector.get('ExpressionParserService');
-    ests = $injector.get('ExpressionSyntaxTreeService');
-    isString = $injector.get('UtilsService').isString;
-  }));
+  var eps : ExpressionParserService;
+  var ests : ExpressionSyntaxTreeService;
+  var etps : ExpressionParserService;
+
+  beforeEach(() => {
+    eps = new ExpressionParserService();
+    ests= new ExpressionSyntaxTreeService();
+    etps= new ExpressionTypeParserService();
+  });
 
   var ENVS = [
     {
@@ -58,7 +48,7 @@ describe('Expression type parser service', function() {
     }
   ];
 
-  it('should determine the correct types for the expressions', function() {
+  it('should determine the correct types for the expressions', () => {
     [
       ['2', 'Real'],
       ['numZero', 'Real'],
@@ -88,7 +78,7 @@ describe('Expression type parser service', function() {
       ['abs(-3)', 'Real'],
       ['pow(num100_001, numZero)', 'Real'],
       ['log(9, 3)', 'Real']
-    ].forEach(function(test) {
+    ].forEach((test) => {
       var expression = test[0];
       var expected = test[1];
       if (test.length > 2) {
@@ -104,7 +94,7 @@ describe('Expression type parser service', function() {
       var parsedJson = JSON.stringify(parsed);
       var failed = false;
 
-      var recordFailure = function(result, exception) {
+      var recordFailure = (result, exception) => {
         console.error('input     : ' + expression);
         console.error('parsed    : ' + parsedJson);
         if (result !== undefined) {

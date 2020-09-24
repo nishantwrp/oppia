@@ -21,25 +21,25 @@ import { Injectable } from '@angular/core';
 
 import { ExpressionParserService } from
   'expressions/expression-parser.service.ts';
-  import { EnvDict, Expr, ExpressionSyntaxTreeService } from
+import { EnvDict, Expr, ExpressionSyntaxTreeService } from
   'expressions/expression-syntax-tree.service';
 
   @Injectable({
     providedIn: 'root'
   })
-  export class ExpressionTypeParserService {
-    constructor(
+export class ExpressionTypeParserService {
+  constructor(
       private expressionParserService: ExpressionParserService,
       private expressionSyntaxTreeService: ExpressionSyntaxTreeService,
-      private PARAMETER_TYPES){}
+      private PARAMETER_TYPES) {}
 
-      getExpressionOutputType(expression: string, envs: EnvDict[]): Expr {
-        return this.expressionSyntaxTreeService.applyFunctionToParseTree(
-          this.expressionParserService.parse(expression), envs,
-          (parsed, envs) => this.getType(parsed, envs));
-      }
+  getExpressionOutputType(expression: string, envs: EnvDict[]): Expr {
+    return this.expressionSyntaxTreeService.applyFunctionToParseTree(
+      this.expressionParserService.parse(expression), envs,
+      (parsed, envs) => this.getType(parsed, envs));
+  }
 
-      /**
+  /**
      * @param {*} parsed Parse output from the parser. See parser.pegjs for
      *     the data structure.
      * @param {!Array.<!Object>} envs Represents a nested name space
@@ -48,15 +48,14 @@ import { ExpressionParserService } from
      *     are strings representing a parameter type (i.e. they are equal to
      *     values in the PARAMETER_TYPES object).
      */
-    
-    getType(parsed, envs: EnvDict[]): Expr {
-      // The intermediate nodes of the parse tree are arrays. The terminal
-      // nodes are JavaScript primitives (as described in the "Parser output"
-      // section of parser.pegjs).
-      if (parsed instanceof Array) {
-        if (parsed.length === 0) {
-          throw new Error(
-            'Parser generated an intermediate node with zero children');
+  getType(parsed, envs: EnvDict[]): Expr {
+    // The intermediate nodes of the parse tree are arrays. The terminal
+    // nodes are JavaScript primitives (as described in the "Parser output"
+    // section of parser.pegjs).
+    if (parsed instanceof Array) {
+      if (parsed.length === 0) {
+        throw new Error(
+          'Parser generated an intermediate node with zero children');
         }
 
         if (parsed[0] === '#') {

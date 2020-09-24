@@ -48,7 +48,7 @@ export class ExpressionTypeParserService {
      *     are strings representing a parameter type (i.e. they are equal to
      *     values in the PARAMETER_TYPES object).
      */
-  getType(parsed, envs: EnvDict[]): Expr {
+  getType(parsed: any, envs: EnvDict[]): Expr {
     // The intermediate nodes of the parse tree are arrays. The terminal
     // nodes are JavaScript primitives (as described in the "Parser output"
     // section of parser.pegjs).
@@ -78,8 +78,8 @@ export class ExpressionTypeParserService {
         isNaN(+parsed) ?
           this.PARAMETER_TYPES.UNICODE_STRING :
           this.PARAMETER_TYPES.REAL);
-    };
   }
+}
 
 angular.module('oppia').factory(
   'ExpressionTypeParserService',

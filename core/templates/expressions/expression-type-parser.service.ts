@@ -36,7 +36,7 @@ export class ExpressionTypeParserService {
   getExpressionOutputType(expression: string, envs: EnvDict[]): Expr {
     return this.expressionSyntaxTreeService.applyFunctionToParseTree(
       this.expressionParserService.parse(expression), envs,
-      (parsed, envs) => this.getType(parsed, envs));
+      (parsed: object, envs: EnvDict[]) => this.getType(parsed, envs));
   }
 
   /**

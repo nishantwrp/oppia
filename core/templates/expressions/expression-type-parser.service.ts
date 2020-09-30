@@ -19,6 +19,7 @@
 import { downgradeInjectable } from '@angular/upgrade/static';
 import { Injectable } from '@angular/core';
 
+import { AppConstants } from 'app.constants';
 import { ExpressionParserService } from
   'expressions/expression-parser.service.ts';
 import { EnvDict, Expr, ExpressionSyntaxTreeService } from
@@ -30,8 +31,7 @@ import { EnvDict, Expr, ExpressionSyntaxTreeService } from
 export class ExpressionTypeParserService {
   constructor(
       private expressionParserService: ExpressionParserService,
-      private expressionSyntaxTreeService: ExpressionSyntaxTreeService,
-      private PARAMETER_TYPES: Expr | Expr[]) {}
+      private expressionSyntaxTreeService: ExpressionSyntaxTreeService) {}
 
   getExpressionOutputType(expression: string, envs: EnvDict[]): Expr {
     return this.expressionSyntaxTreeService.applyFunctionToParseTree(
@@ -76,8 +76,8 @@ export class ExpressionTypeParserService {
     // actual value.
     return (
         isNaN(+parsed) ?
-          this.PARAMETER_TYPES.UNICODE_STRING :
-          this.PARAMETER_TYPES.REAL);
+          AppConstants.PARAMETER_TYPES.UNICODE_STRING :
+          AppConstants.PARAMETER_TYPES.REAL);
   }
 }
 

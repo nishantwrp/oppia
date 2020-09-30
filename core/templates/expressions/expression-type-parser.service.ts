@@ -31,12 +31,12 @@ export class ExpressionTypeParserService {
   constructor(
       private expressionParserService: ExpressionParserService,
       private expressionSyntaxTreeService: ExpressionSyntaxTreeService,
-      private PARAMETER_TYPES: Expr) {}
+      private PARAMETER_TYPES: Expr | Expr[]) {}
 
   getExpressionOutputType(expression: string, envs: EnvDict[]): Expr {
     return this.expressionSyntaxTreeService.applyFunctionToParseTree(
       this.expressionParserService.parse(expression), envs,
-      (parsed: Expr, envs: EnvDict[]) => this.getType(parsed, envs));
+      (parsed: Expr | Expr, envs: EnvDict[]) => this.getType(parsed, envs));
   }
 
   /**
@@ -48,7 +48,7 @@ export class ExpressionTypeParserService {
      *     are strings representing a parameter type (i.e. they are equal to
      *     values in the PARAMETER_TYPES object).
      */
-  getType(parsed: Expr, envs: EnvDict[]): Expr {
+  getType(parsed: Expr | Expr[], envs: EnvDict[]): Expr {
     // The intermediate nodes of the parse tree are arrays. The terminal
     // nodes are JavaScript primitives (as described in the "Parser output"
     // section of parser.pegjs).

@@ -59,7 +59,7 @@ export class ExpressionTypeParserService {
       }
 
       if (parsed[0] === '#') {
-        return ExpressionSyntaxTreeService.lookupEnvs(parsed[1], envs);
+        return this.expressionSyntaxTreeService.lookupEnvs(parsed[1], envs);
       }
 
       // Get the types of the arguments.
@@ -68,7 +68,7 @@ export class ExpressionTypeParserService {
       });
 
       // The first element should be a function name.
-      return ExpressionSyntaxTreeService.lookupEnvs(
+      return this.expressionSyntaxTreeService.lookupEnvs(
         parsed[0], envs).getType(args);
     }
 

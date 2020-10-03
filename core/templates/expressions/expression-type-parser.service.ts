@@ -22,7 +22,7 @@ import { Injectable } from '@angular/core';
 import { AppConstants } from 'app.constants';
 import { ExpressionParserService } from
   'expressions/expression-parser.service.ts';
-import { EnvDict, Expr, ExpressionSyntaxTreeService } from
+import { EnvDict, Expr, ExpressionSyntaxTreeService, SystemEnv } from
   'expressions/expression-syntax-tree.service';
 
   @Injectable({
@@ -59,7 +59,9 @@ export class ExpressionTypeParserService {
       }
 
       if (parsed[0] === '#') {
-        return this.expressionSyntaxTreeService.lookupEnvs(parsed[1], envs);
+        return (
+          <Expr> this.expressionSyntaxTreeService.lookupEnvs(
+            <string> parsed[1], envs));
       }
 
       // Get the types of the arguments.
@@ -68,8 +70,8 @@ export class ExpressionTypeParserService {
       });
 
       // The first element should be a function name.
-      return this.expressionSyntaxTreeService.lookupEnvs(
-        parsed[0], envs).getType(args);
+      return (<SystemEnv> this.expressionSyntaxTreeService.lookupEnvs(
+        <string> parsed[0], envs)).getType(args);
     }
 
     // If 'parsed' is not an array, it should be a terminal node with the
